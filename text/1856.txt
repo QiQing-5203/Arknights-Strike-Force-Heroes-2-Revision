@@ -1,0 +1,111 @@
+var 
+--- RECORDSEPARATOR ---
+candidates:Array
+--- RECORDSEPARATOR ---
+ = [];
+--- RECORDSEPARATOR ---
+for (var i:uint = 0; i < 
+--- RECORDSEPARATOR ---
+game.units.length; i++) {
+--- RECORDSEPARATOR ---
+if (game.units[i] == this) continue;
+--- RECORDSEPARATOR ---
+if (game.units[i].dead) continue;
+--- RECORDSEPARATOR ---
+if (team && team == 
+--- RECORDSEPARATOR ---
+game.units[i].team) continue;
+--- RECORDSEPARATOR ---
+if (game.units[i].status.sInvis == 1) 
+--- RECORDSEPARATOR ---
+continue;
+--- RECORDSEPARATOR ---
+if (game.units[i].status.sSpawn) 
+--- RECORDSEPARATOR ---
+continue;
+--- RECORDSEPARATOR ---
+var dist:Number = UT.getDist(x, y, 
+--- RECORDSEPARATOR ---
+game.units[i].x, game.units[i].y);
+--- RECORDSEPARATOR ---
+if (dist < Math.min(gun.curGun.range 
+--- RECORDSEPARATOR ---
+* 10, aimRange)) {
+--- RECORDSEPARATOR ---
+candidates.push({dist:dist, 
+--- RECORDSEPARATOR ---
+unit:game.units[i], 
+--- RECORDSEPARATOR ---
+rot:UT.
+--- RECORDSEPARATOR ---
+getRotation
+--- RECORDSEPARATOR ---
+(x, y, 
+--- RECORDSEPARATOR ---
+game.units[i].x, game.units[i].y) });
+--- RECORDSEPARATOR ---
+}}
+--- RECORDSEPARATOR ---
+if(!
+--- RECORDSEPARATOR ---
+status
+--- RECORDSEPARATOR ---
+.sWallhack){
+--- RECORDSEPARATOR ---
+var canHit:Boolean;
+--- RECORDSEPARATOR ---
+for (var i:uint = 0; i < 
+--- RECORDSEPARATOR ---
+candidates.length; i++) {
+--- RECORDSEPARATOR ---
+canHit = true;
+--- RECORDSEPARATOR ---
+for (var d:uint = 0; canHit && d < 
+--- RECORDSEPARATOR ---
+candidates
+--- RECORDSEPARATOR ---
+[i].dist; d += 20) {
+--- RECORDSEPARATOR ---
+if 
+--- RECORDSEPARATOR ---
+(mov.hitTest(UT.xMoveToRot(candidates
+--- RECORDSEPARATOR ---
+[i].rot, d), 
+--- RECORDSEPARATOR ---
+UT.yMoveToRot(
+--- RECORDSEPARATOR ---
+candidates
+--- RECORDSEPARATOR ---
+[i].rot, d)-
+--- RECORDSEPARATOR ---
+(mov.crouching?20:50))) {
+--- RECORDSEPARATOR ---
+canHit = false;}}
+--- RECORDSEPARATOR ---
+if (!canHit) { candidates.splice(i, 
+--- RECORDSEPARATOR ---
+1);i--; }}}
+--- RECORDSEPARATOR ---
+var 
+--- RECORDSEPARATOR ---
+candidates:Array
+--- RECORDSEPARATOR ---
+ = [];
+--- RECORDSEPARATOR ---
+for (var i:uint = 0; i < 
+--- RECORDSEPARATOR ---
+game.units.length; i++) {
+--- RECORDSEPARATOR ---
+if (game.units[i] == this) continue;
+--- RECORDSEPARATOR ---
+if (game.units[i].dead) continue;
+--- RECORDSEPARATOR ---
+if (team && team == 
+--- RECORDSEPARATOR ---
+game.units[i].team) continue;
+--- RECORDSEPARATOR ---
+if (game.units[i].status.sInvis == 1) 
+--- RECORDSEPARATOR ---
+continue;
+--- RECORDSEPARATOR ---
+if (game.units[i].status.sSpawn) 

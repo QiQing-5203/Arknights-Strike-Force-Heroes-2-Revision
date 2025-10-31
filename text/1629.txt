@@ -1,0 +1,1 @@
+Deals splash damage+5% Critical chanceGun may randomly jamChance to set enemies on fireChance to lower enemies damage

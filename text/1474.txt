@@ -1,0 +1,7 @@
+    生命值
+--- RECORDSEPARATOR ---
+    暴击率
+--- RECORDSEPARATOR ---
+    精准度
+--- RECORDSEPARATOR ---
+    备弹量

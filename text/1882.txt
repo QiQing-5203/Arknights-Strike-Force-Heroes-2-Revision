@@ -1,0 +1,15 @@
+Disposal Bay
+--- RECORDSEPARATOR ---
+Control Room
+--- RECORDSEPARATOR ---
+Dock 001A
+--- RECORDSEPARATOR ---
+A11-urBASE
+--- RECORDSEPARATOR ---
+Bridge
+--- RECORDSEPARATOR ---
+Power S201
+--- RECORDSEPARATOR ---
+Command 3B
+--- RECORDSEPARATOR ---
+milkSHAKE
