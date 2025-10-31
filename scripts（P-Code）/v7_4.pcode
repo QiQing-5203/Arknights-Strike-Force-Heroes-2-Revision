@@ -1,0 +1,64 @@
+package
+{
+   import flash.media.Sound;
+   
+   public dynamic class v7_4 extends Sound
+   {
+      
+      {
+         method
+            name null
+            returns null
+            
+            body
+               maxstack 4
+               localcount 1
+               initscopedepth 5
+               maxscopedepth 6
+               
+               code
+                  getlocal0
+                  jump ofs000b
+                  call 5
+                  throw
+                  newclass 479
+         ofs000b:
+                  pushscope
+                  returnvoid
+               end ; code
+            end ; body
+         end ; method
+      }
+      
+      public function v7_4()
+      {
+         method
+            name null
+            returns null
+            
+            body
+               maxstack 4
+               localcount 1
+               initscopedepth 6
+               maxscopedepth 7
+               
+               code
+                  jump ofs000b
+                  callmethod 3491, 6
+                  call 6
+                  throw
+         ofs000b:
+                  getlocal0
+                  pushscope
+                  getlocal0
+                  constructsuper 0
+                  returnvoid
+                  jump ofs0015
+         ofs0015:
+                  ifle ofs0019
+               end ; code
+            end ; body
+         end ; method
+      }
+   }
+}
