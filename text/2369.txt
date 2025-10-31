@@ -1,0 +1,5 @@
+按下 Q 键
+--- RECORDSEPARATOR ---
+或 SHIFT 键
+--- RECORDSEPARATOR ---
+来切换武器

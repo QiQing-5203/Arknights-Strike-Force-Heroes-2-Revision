@@ -1,0 +1,5 @@
+按住 WASD 键
+--- RECORDSEPARATOR ---
+或者 方向键
+--- RECORDSEPARATOR ---
+来控制移动

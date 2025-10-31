@@ -1,0 +1,15 @@
+0x0001024
+--- RECORDSEPARATOR ---
+Full Capacity
+--- RECORDSEPARATOR ---
+Sealed
+--- RECORDSEPARATOR ---
+R-BE10ng
+--- RECORDSEPARATOR ---
+Operational
+--- RECORDSEPARATOR ---
+Half Capacity
+--- RECORDSEPARATOR ---
+Shields 50%
+--- RECORDSEPARATOR ---
+bRING b0YS

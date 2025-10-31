@@ -1,0 +1,5 @@
+An exception 06 has occured at 0028:C11B3ADC in VxD DiskTSD(03)
+--- RECORDSEPARATOR ---
+000001600061. This was called from 0029:13834C3D34 in WV245JHD(2)
+--- RECORDSEPARATOR ---
+Several reasons may have caused this:

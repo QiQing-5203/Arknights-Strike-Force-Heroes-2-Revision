@@ -1,0 +1,5 @@
+按下 W 键
+--- RECORDSEPARATOR ---
+上方向键 或 空格键
+--- RECORDSEPARATOR ---
+进行跳跃

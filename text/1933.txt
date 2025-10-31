@@ -1,0 +1,3 @@
+sign like airport
+--- RECORDSEPARATOR ---
+itinerary monitor
