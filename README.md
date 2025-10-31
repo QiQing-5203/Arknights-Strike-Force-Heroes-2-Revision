@@ -3,7 +3,7 @@
 
 > **铳响纷鸣，弹火涤薪**
 
-[![GitHub release (latest by date)](https://img.shields.io/github/v/release/您的用户名/您的仓库名)](https://github.com/您的用户名/您的仓库名/releases)
+[![GitHub release (latest by date)](https://img.shields.io/github/v/release/您的用户名/您的仓库名)](https://github.com/QiQing-5203/Arknights-Strike-Force-Heroes-2-Revision/releases)
 [![GitHub issues](https://img.shields.io/github/issues/您的用户名/您的仓库名)](https://github.com/QiQing-5203/Arknights-Strike-Force-Heroes-2-Revision/issues)
 
 **一场连接泰拉与星海的if线巨构……**
@@ -32,7 +32,7 @@
 *   **运行环境**：需要安装Adobe Flash Player或支持Flash的独立播放器以运行。
 
 ### 下载与运行
-1.  前往 [Release页面]() 下载最新版本的`Arknights：SFH v1.18.2.swf`游戏文件。
+1.  前往 [Release页面](https://github.com/QiQing-5203/Arknights-Strike-Force-Heroes-2-Revision/releases) 下载最新版本的`Arknights：SFH v1.18.2.swf`游戏文件。
 2.  使用上述Flash播放器打开该文件，即可开始游戏。
 
 ## 游戏特色
@@ -71,7 +71,7 @@
 ## 如何参与贡献
 
 我们始终倾听并关注社区的声音。您可以通过以下方式参与：
-1.  **反馈BUG**：在 [Issues](链接到Issues页面) 中提交您遇到的游戏BUG或提供优化建议。
+1.  **反馈BUG**：在 [Issues](https://github.com/QiQing-5203/Arknights-Strike-Force-Heroes-2-Revision/issues) 中提交您遇到的游戏BUG或提供优化建议。
 2.  **参与讨论**：可以在 [官方交流群](https://qm.qq.com/q/h244xLnzLq) 及 [Discussions](https://github.com/QiQing-5203/Arknights-Strike-Force-Heroes-2-Revision/discussions) 中分享您的游戏心得或剧情解读。
 3.  **代码贡献**：如果您熟悉ActionScript与P-Code，欢迎提交Pull Request来修复问题或增加新功能。
 
