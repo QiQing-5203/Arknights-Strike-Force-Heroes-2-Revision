@@ -72,7 +72,7 @@
 
 我们始终倾听并关注社区的声音。您可以通过以下方式参与：
 1.  **反馈BUG**：在 [Issues](链接到Issues页面) 中提交您遇到的游戏BUG或提供优化建议。
-2.  **参与讨论**：可以在 [官方交流群](https://qm.qq.com/q/h244xLnzLq) 及[Discussions]() 中分享您的游戏心得或剧情解读。
+2.  **参与讨论**：可以在 [官方交流群](https://qm.qq.com/q/h244xLnzLq) 及 [Discussions](https://github.com/QiQing-5203/Arknights-Strike-Force-Heroes-2-Revision/discussions) 中分享您的游戏心得或剧情解读。
 3.  **代码贡献**：如果您熟悉ActionScript与P-Code，欢迎提交Pull Request来修复问题或增加新功能。
 
 ---
