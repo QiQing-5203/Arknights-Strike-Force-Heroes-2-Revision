@@ -4,7 +4,7 @@
 > **铳响纷鸣，弹火涤薪**
 
 [![GitHub release (latest by date)](https://img.shields.io/github/v/release/您的用户名/您的仓库名)](https://github.com/您的用户名/您的仓库名/releases)
-[![GitHub issues](https://img.shields.io/github/issues/您的用户名/您的仓库名)](https://github.com/QiQing-5203/Arknights-Strike-Force-Heroes-2-Revision/issues)
+[![GitHub issues](https://github.com/QiQing-5203/Arknights-Strike-Force-Heroes-2-Revision/issues)
 
 **一场连接泰拉与星海的if线巨构……**
 
