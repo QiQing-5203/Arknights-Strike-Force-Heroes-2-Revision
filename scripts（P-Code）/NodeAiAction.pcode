@@ -1,0 +1,302 @@
+package
+{
+   import flash.display.Sprite;
+   import flash.text.TextField;
+   
+   public class NodeAiAction extends Sprite
+   {
+      
+      {
+         method
+            name null
+            returns null
+            
+            body
+               maxstack 4
+               localcount 1
+               initscopedepth 8
+               maxscopedepth 9
+               
+               code
+                  getlocal0
+                  jump ofs000b
+                  call 7
+                  throw
+                  newfunction 3491
+         ofs000b:
+                  pushscope
+                  returnvoid
+               end ; code
+            end ; body
+         end ; method
+      }
+      
+      public var txt_con:TextField;
+      
+      public var txt_action:TextField;
+      
+      public var con:String;
+      
+      public var action:String;
+      
+      public function NodeAiAction()
+      {
+         method
+            name null
+            returns null
+            
+            body
+               maxstack 6
+               localcount 3
+               initscopedepth 9
+               maxscopedepth 10
+               
+               code
+                  getlocal0
+                  pushscope
+                  jump ofs000d
+                  call 7
+                  throw
+                  callstatic 3491, 7
+         ofs000d:
+                  getlocal0
+                  constructsuper 0
+                  getlex QName(PackageNamespace(""),"name")
+                  pushstring "_"
+                  callproperty QName(Namespace("http://adobe.com/AS3/2006/builtin"),"split"), 1
+                  jump ofs0022
+                  ifeq ofs0022
+         ofs0022:
+                  coerce QName(PackageNamespace(""),"Array")
+                  setlocal1
+                  getlocal0
+                  jump ofs0030
+                  returnvalue
+                  construct 121
+                  pushwith
+                  setlocal1
+                  setlocal1
+         ofs0030:
+                  getlocal1
+                  pushbyte 0
+                  getproperty MultinameL([PrivateNamespace(null,"245"),PackageNamespace(""),Namespace("http://adobe.com/AS3/2006/builtin"),PrivateNamespace(null,"246"),PackageInternalNs(""),ProtectedNamespace("NodeAiAction"),StaticProtectedNs("NodeAiAction"),StaticProtectedNs("flash.display:Sprite"),StaticProtectedNs("flash.display:DisplayObjectContainer"),StaticProtectedNs("flash.display:InteractiveObject"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                  initproperty QName(PackageNamespace(""),"action")
+                  getlocal0
+                  getlocal1
+                  pushtrue
+                  iftrue ofs0047
+                  returnvoid
+                  popscope
+                  newfunction 20
+                  throw
+                  istypelate
+                  coerce_s
+         ofs0047:
+                  pushbyte 1
+                  getproperty MultinameL([PrivateNamespace(null,"245"),PackageNamespace(""),Namespace("http://adobe.com/AS3/2006/builtin"),PrivateNamespace(null,"246"),PackageInternalNs(""),ProtectedNamespace("NodeAiAction"),StaticProtectedNs("NodeAiAction"),StaticProtectedNs("flash.display:Sprite"),StaticProtectedNs("flash.display:DisplayObjectContainer"),StaticProtectedNs("flash.display:InteractiveObject"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                  initproperty QName(PackageNamespace(""),"con")
+                  getlocal0
+                  getproperty QName(PackageNamespace(""),"txt_con")
+                  getlocal0
+                  getproperty QName(PackageNamespace(""),"con")
+                  jump ofs0060
+                  returnvalue
+                  callsupervoid QName(PackageNamespace("Box2D.Dynamics.Contacts"),"b2ContactEdge"), 15
+                  throw
+         ofs0060:
+                  callproperty QName(Namespace("http://adobe.com/AS3/2006/builtin"),"toUpperCase"), 0
+                  setproperty QName(PackageNamespace(""),"text")
+                  jump ofs0104
+                  ifstrictne ofs006f
+         ofs006f:
+                  label
+                  getlocal0
+                  jump ofs0079
+                  ifgt ofs0079
+         ofs0079:
+                  getproperty QName(PackageNamespace(""),"txt_action")
+                  pushfalse
+                  iffalse ofs0088
+                  returnvoid
+                  greaterequals
+                  newarray 115
+                  pushwith
+                  setlocal2
+                  bitand
+         ofs0088:
+                  pushstring "Crouch"
+                  setproperty QName(PackageNamespace(""),"text")
+                  jump ofs01cb
+                  pushwith
+                  setlocal2
+         ofs0094:
+                  label
+                  getlocal0
+                  getproperty QName(PackageNamespace(""),"txt_action")
+                  pushfalse
+                  iffalse ofs00a5
+                  returnvoid
+                  popscope
+                  pushwith
+                  newfunction 22
+                  throw
+                  setlocal0
+         ofs00a5:
+                  pushstring "Jump"
+                  setproperty QName(PackageNamespace(""),"text")
+                  jump ofs01cb
+                  pushwith
+                  setlocal2
+         ofs00b1:
+                  label
+                  getlocal0
+                  getproperty QName(PackageNamespace(""),"txt_action")
+                  jump ofs00c0
+                  popscope
+                  newfunction 30
+                  throw
+                  pushnull
+                  nextvalue
+         ofs00c0:
+                  pushstring "Fix P"
+                  setproperty QName(PackageNamespace(""),"text")
+                  jump ofs01cb
+                  pushwith
+                  setlocal0
+         ofs00cc:
+                  label
+                  getlocal0
+                  jump ofs00d6
+                  ifstricteq ofs00d6
+         ofs00d6:
+                  getproperty QName(PackageNamespace(""),"txt_action")
+                  pushstring "Fix C"
+                  setproperty QName(PackageNamespace(""),"text")
+                  jump ofs01cb
+                  jump ofs00e7
+         ofs00e7:
+                  negate
+                  divide
+                  returnvalue
+                  dup
+                  bitor
+                  pushfalse
+         ofs00ed:
+                  label
+                  getlocal0
+                  getproperty QName(PackageNamespace(""),"txt_action")
+                  pushstring "Fix D"
+                  setproperty QName(PackageNamespace(""),"text")
+                  jump ofs01cb
+                  pushwith
+                  setlocal3
+                  getlocal3
+         ofs00ff:
+                  label
+                  jump ofs01cb
+         ofs0104:
+                  getlocal0
+                  getproperty QName(PackageNamespace(""),"action")
+                  jump ofs0112
+                  nextvalue
+                  pushwith
+                  newfunction 11
+                  pop
+                  modulo
+         ofs0112:
+                  setlocal2
+                  pushstring "c"
+                  getlocal2
+                  ifstricteq ofs011f
+                  jump ofs0132
+         ofs011f:
+                  pushbyte 0
+                  jump ofs01a8
+                  ifeq ofs0129
+         ofs0129:
+                  jump ofs012d
+         ofs012d:
+                  popscope
+                  constructprop QName(PackageNamespace(""),"Stats_Streaks"), 7
+                  pushwith
+         ofs0132:
+                  pushstring "j"
+                  getlocal2
+                  ifstricteq ofs013e
+                  jump ofs0148
+         ofs013e:
+                  pushbyte 1
+                  jump ofs01a8
+                  ifne ofs0148
+         ofs0148:
+                  pushstring "fp"
+                  jump ofs0153
+                  ifstrictne ofs0153
+         ofs0153:
+                  getlocal2
+                  jump ofs015e
+                  popscope
+                  greaterequals
+                  lshift
+                  setlocal3
+                  decrement
+                  multiply
+         ofs015e:
+                  ifstricteq ofs0166
+                  jump ofs0170
+         ofs0166:
+                  pushbyte 2
+                  jump ofs01a8
+                  ifne ofs0170
+         ofs0170:
+                  pushstring "fc"
+                  getlocal2
+                  ifstrictne ofs017e
+                  pushbyte 3
+                  jump ofs01a8
+         ofs017e:
+                  pushstring "fd"
+                  getlocal2
+                  jump ofs018c
+                  setlocal3
+                  callsuper QName(PackageNamespace(""),"useSkills"), 12
+                  setlocal1
+         ofs018c:
+                  ifstricteq ofs0194
+                  jump ofs019c
+         ofs0194:
+                  pushbyte 4
+                  jump ofs01a8
+                  popscope
+                  setlocal3
+         ofs019c:
+                  jump ofs01a6
+                  pushbyte 5
+                  jump ofs01a6
+         ofs01a6:
+                  pushbyte 5
+         ofs01a8:
+                  kill 2
+                  jump ofs01b4
+                  instanceof
+                  returnvalue
+                  setlocal0
+                  decrement
+                  pop
+                  bitor
+         ofs01b4:
+                  lookupswitch ofs00ff, [ofs006f, ofs0094, ofs00b1, ofs00cc, ofs00ed, ofs00ff]
+         ofs01cb:
+                  findproperty QName(PackageNamespace(""),"visible")
+                  pushfalse
+                  initproperty QName(PackageNamespace(""),"visible")
+                  returnvoid
+                  jump ofs01d7
+         ofs01d7:
+                  ifstrictne ofs01db
+               end ; code
+            end ; body
+         end ; method
+      }
+   }
+}

@@ -1,0 +1,101 @@
+package
+{
+   public class Range
+   {
+      
+      {
+         method
+            name null
+            returns null
+            
+            body
+               maxstack 4
+               localcount 1
+               initscopedepth 3
+               maxscopedepth 4
+               
+               code
+                  getlocal0
+                  pushscope
+                  jump ofs000d
+                  callstatic 3492, 6
+                  call 6
+                  throw
+         ofs000d:
+                  returnvoid
+               end ; code
+            end ; body
+         end ; method
+      }
+      
+      public var min:Number;
+      
+      public var max:Number;
+      
+      public var cur:Number;
+      
+      public var old:Number;
+      
+      public var x:Number;
+      
+      public var y:Number;
+      
+      public function Range(param1:Number = 0, param2:Number = 0, param3:Number = 0)
+      {
+         method
+            name null
+            flag HAS_OPTIONAL
+            param QName(PackageNamespace(""),"Number")
+            param QName(PackageNamespace(""),"Number")
+            param QName(PackageNamespace(""),"Number")
+            optional Integer(0)
+            optional Integer(0)
+            optional Integer(0)
+            returns null
+            
+            body
+               maxstack 5
+               localcount 4
+               initscopedepth 4
+               maxscopedepth 5
+               
+               code
+                  jump ofs000b
+                  call 9
+                  throw
+                  callmethod 3492, 9
+         ofs000b:
+                  getlocal0
+                  pushscope
+                  getlocal0
+                  constructsuper 0
+                  getlocal0
+                  jump ofs0019
+                  ifstricteq ofs0019
+         ofs0019:
+                  getlocal1
+                  initproperty QName(PackageNamespace(""),"min")
+                  getlocal0
+                  getlocal2
+                  pushtrue
+                  iftrue ofs002c
+                  pushtrue
+                  throw
+                  popscope
+                  lshift
+                  pushscope
+                  returnvalue
+                  pushnull
+                  newactivation
+         ofs002c:
+                  initproperty QName(PackageNamespace(""),"max")
+                  getlocal0
+                  getlocal3
+                  initproperty QName(PackageNamespace(""),"cur")
+                  returnvoid
+               end ; code
+            end ; body
+         end ; method
+      }
+   }
+}

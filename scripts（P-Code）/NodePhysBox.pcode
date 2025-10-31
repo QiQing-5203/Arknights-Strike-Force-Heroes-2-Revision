@@ -1,0 +1,75 @@
+package
+{
+   import flash.display.Sprite;
+   
+   public class NodePhysBox extends Sprite
+   {
+      
+      {
+         method
+            name null
+            returns null
+            
+            body
+               maxstack 4
+               localcount 1
+               initscopedepth 8
+               maxscopedepth 9
+               
+               code
+                  getlocal0
+                  jump ofs000b
+                  newclass 478
+                  call 8
+                  throw
+         ofs000b:
+                  pushscope
+                  returnvoid
+               end ; code
+            end ; body
+         end ; method
+      }
+      
+      public function NodePhysBox()
+      {
+         method
+            name null
+            returns null
+            
+            body
+               maxstack 5
+               localcount 1
+               initscopedepth 9
+               maxscopedepth 10
+               
+               code
+                  jump ofs000b
+                  callmethod 3490, 6
+                  call 6
+                  throw
+         ofs000b:
+                  getlocal0
+                  pushscope
+                  getlocal0
+                  constructsuper 0
+                  findproperty QName(PackageNamespace(""),"visible")
+                  jump ofs001b
+                  ifle ofs001b
+         ofs001b:
+                  pushfalse
+                  jump ofs0026
+                  nextvalue
+                  typeof
+                  pushnull
+                  typeof
+                  negate
+                  returnvalue
+         ofs0026:
+                  initproperty QName(PackageNamespace(""),"visible")
+                  returnvoid
+               end ; code
+            end ; body
+         end ; method
+      }
+   }
+}

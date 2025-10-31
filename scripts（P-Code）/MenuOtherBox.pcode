@@ -1,0 +1,1410 @@
+package
+{
+   import flash.display.MovieClip;
+   import flash.text.TextField;
+   
+   public class MenuOtherBox extends MovieClip
+   {
+      
+      {
+         method
+            name null
+            returns null
+            
+            body
+               maxstack 4
+               localcount 1
+               initscopedepth 9
+               maxscopedepth 10
+               
+               code
+                  getlocal0
+                  pushscope
+                  jump ofs000c
+                  call 7
+                  throw
+                  newclass 476
+         ofs000c:
+                  returnvoid
+               end ; code
+            end ; body
+         end ; method
+      }
+      
+      public var mc_sell:MovieClip;
+      
+      public var rarity:MovieClip;
+      
+      public var hitbox:MovieClip;
+      
+      public var lock:MovieClip;
+      
+      public var txt_level:TextField;
+      
+      public var mc:MovieClip;
+      
+      private var menu:Menu;
+      
+      public var inv;
+      
+      public var item;
+      
+      public var shit:Boolean;
+      
+      private var fullPrice:Boolean;
+      
+      public var lowLevel:Boolean;
+      
+      public function MenuOtherBox()
+      {
+         method
+            name null
+            returns null
+            
+            body
+               maxstack 4
+               localcount 1
+               initscopedepth 10
+               maxscopedepth 11
+               
+               code
+                  getlocal0
+                  jump ofs000c
+                  call 8
+                  callmethod 3493, 8
+                  throw
+         ofs000c:
+                  pushscope
+                  getlocal0
+                  constructsuper 0
+                  returnvoid
+               end ; code
+            end ; body
+         end ; method
+      }
+      
+      public function setItem(param1:*, param2:Menu, param3:Boolean = false) : void
+      {
+         trait method QName(PackageNamespace(""),"setItem")
+            dispid 0
+            method
+               name null
+               flag HAS_OPTIONAL
+               param null
+               param QName(PackageNamespace(""),"Menu")
+               param QName(PackageNamespace(""),"Boolean")
+               optional False()
+               returns QName(PackageNamespace(""),"void")
+               
+               body
+                  maxstack 6
+                  localcount 4
+                  initscopedepth 10
+                  maxscopedepth 11
+                  
+                  code
+                     getlocal0
+                     jump ofs000b
+                     call 9
+                     throw
+                     newclass 476
+            ofs000b:
+                     pushscope
+                     getlocal0
+                     getlocal2
+                     initproperty QName(PrivateNamespace(null,"86"),"menu")
+                     getlocal1
+                     jump ofs001a
+                     ifstrictne ofs001a
+            ofs001a:
+                     iffalse ofs0022
+                     jump ofs0098
+            ofs0022:
+                     getlocal0
+                     pushnull
+                     initproperty QName(PackageNamespace(""),"inv")
+                     jump ofs0031
+                     popscope
+                     pushwith
+                     newfunction 102
+                     throw
+                     nextvalue
+            ofs0031:
+                     getlocal0
+                     pushnull
+                     initproperty QName(PackageNamespace(""),"item")
+                     getlocal0
+                     getproperty QName(PackageNamespace(""),"mc")
+                     pushfalse
+                     setproperty QName(PackageNamespace(""),"visible")
+                     findproperty QName(PackageNamespace(""),"buttonMode")
+                     pushfalse
+                     initproperty QName(PackageNamespace(""),"buttonMode")
+                     jump ofs004f
+                     popscope
+                     newfunction 78
+                     throw
+                     istypelate
+                     setlocal2
+            ofs004f:
+                     findpropstrict QName(PackageNamespace(""),"gotoAndStop")
+                     pushbyte 1
+                     callpropvoid QName(PackageNamespace(""),"gotoAndStop"), 1
+                     getlocal0
+                     getproperty QName(PackageNamespace(""),"txt_level")
+                     pushstring ""
+                     setproperty QName(PackageNamespace(""),"text")
+                     getlocal0
+                     getproperty QName(PackageNamespace(""),"rarity")
+                     jump ofs006f
+                     setlocal2
+                     pushwith
+                     newfunction 61
+                     throw
+                     returnvalue
+            ofs006f:
+                     pushbyte 1
+                     callpropvoid QName(PackageNamespace(""),"gotoAndStop"), 1
+                     getlocal0
+                     getproperty QName(PackageNamespace(""),"mc_sell")
+                     pushfalse
+                     jump ofs0082
+                     ifstrictne ofs0082
+            ofs0082:
+                     setproperty QName(PackageNamespace(""),"visible")
+                     getlocal0
+                     getproperty QName(PackageNamespace(""),"lock")
+                     pushfalse
+                     jump ofs0094
+                     popscope
+                     pushwith
+                     multiply
+                     divide
+                     setlocal2
+                     setlocal2
+            ofs0094:
+                     setproperty QName(PackageNamespace(""),"visible")
+                     returnvoid
+            ofs0098:
+                     getlocal0
+                     getlocal3
+                     initproperty QName(PrivateNamespace(null,"86"),"fullPrice")
+                     getlocal0
+                     jump ofs00a8
+                     setlocal1
+                     newfunction 96
+                     pop
+                     returnvalue
+                     negate
+            ofs00a8:
+                     getlocal1
+                     initproperty QName(PackageNamespace(""),"inv")
+                     getlocal0
+                     getlocal0
+                     getproperty QName(PackageNamespace(""),"inv")
+                     callproperty Multiname("createFinalItem",[PrivateNamespace(null,"86"),PackageNamespace(""),PrivateNamespace(null,"264"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("MenuOtherBox"),StaticProtectedNs("MenuOtherBox"),StaticProtectedNs("flash.display:MovieClip"),StaticProtectedNs("flash.display:Sprite"),StaticProtectedNs("flash.display:DisplayObjectContainer"),StaticProtectedNs("flash.display:InteractiveObject"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")]), 0
+                     initproperty QName(PackageNamespace(""),"item")
+                     getlocal0
+                     jump ofs00c2
+                     setlocal1
+                     constructprop QName(PackageNamespace("fl.core"),"UIComponent"), 18
+                     throw
+            ofs00c2:
+                     getproperty QName(PackageNamespace(""),"item")
+                     getlex QName(PackageNamespace(""),"Stats_Armor")
+                     istypelate
+                     iftrue ofs00d0
+                     jump ofs00ef
+            ofs00d0:
+                     getlocal0
+                     jump ofs00d9
+                     ifgt ofs00d9
+            ofs00d9:
+                     getlocal0
+                     pushtrue
+                     iftrue ofs00e6
+                     returnvoid
+                     bitxor
+                     newfunction 108
+                     pop
+                     convert_s
+                     instanceof
+            ofs00e6:
+                     getproperty QName(PackageNamespace(""),"item")
+                     getproperty Multiname("shit",[PrivateNamespace(null,"86"),PackageNamespace(""),PrivateNamespace(null,"264"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("MenuOtherBox"),StaticProtectedNs("MenuOtherBox"),StaticProtectedNs("flash.display:MovieClip"),StaticProtectedNs("flash.display:Sprite"),StaticProtectedNs("flash.display:DisplayObjectContainer"),StaticProtectedNs("flash.display:InteractiveObject"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                     initproperty QName(PackageNamespace(""),"shit")
+            ofs00ef:
+                     getlocal0
+                     getproperty QName(PackageNamespace(""),"item")
+                     getlex QName(PackageNamespace(""),"Stats_Attachments")
+                     istypelate
+                     jump ofs0100
+                     checkfilter
+                     newfunction 34
+                     pop
+                     bitxor
+                     returnvoid
+            ofs0100:
+                     iftrue ofs0108
+                     jump ofs010d
+            ofs0108:
+                     getlocal0
+                     pushfalse
+                     initproperty QName(PackageNamespace(""),"shit")
+            ofs010d:
+                     findproperty QName(PackageNamespace(""),"visible")
+                     pushtrue
+                     initproperty QName(PackageNamespace(""),"visible")
+                     jump ofs011e
+                     pushscope
+                     newfunction 41
+                     throw
+                     convert_d
+                     nextname
+            ofs011e:
+                     findproperty QName(PackageNamespace(""),"buttonMode")
+                     pushtrue
+                     initproperty QName(PackageNamespace(""),"buttonMode")
+                     findpropstrict QName(PackageNamespace(""),"gotoAndStop")
+                     pushbyte 1
+                     jump ofs0132
+                     iflt ofs0132
+            ofs0132:
+                     callpropvoid QName(PackageNamespace(""),"gotoAndStop"), 1
+                     getlocal0
+                     getproperty QName(PackageNamespace(""),"mc")
+                     pushtrue
+                     jump ofs0144
+                     modulo
+                     callpropvoid QName(PackageNamespace("Box2D.Dynamics"),"b2FixtureDef"), 8
+                     pushwith
+            ofs0144:
+                     setproperty QName(PackageNamespace(""),"visible")
+                     getlocal0
+                     getproperty QName(PackageNamespace(""),"mc")
+                     getlocal0
+                     getproperty QName(PackageNamespace(""),"item")
+                     getproperty Multiname("sprite",[PrivateNamespace(null,"86"),PackageNamespace(""),PrivateNamespace(null,"264"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("MenuOtherBox"),StaticProtectedNs("MenuOtherBox"),StaticProtectedNs("flash.display:MovieClip"),StaticProtectedNs("flash.display:Sprite"),StaticProtectedNs("flash.display:DisplayObjectContainer"),StaticProtectedNs("flash.display:InteractiveObject"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                     callpropvoid QName(PackageNamespace(""),"gotoAndStop"), 1
+                     getlocal0
+                     pushtrue
+                     iftrue ofs0163
+                     returnvoid
+                     popscope
+                     multiply
+                     pushnull
+                     setlocal1
+                     increment
+                     setlocal0
+            ofs0163:
+                     getproperty QName(PackageNamespace(""),"txt_level")
+                     pushstring "LV "
+                     getlocal0
+                     getproperty QName(PackageNamespace(""),"inv")
+                     getproperty Multiname("level",[PrivateNamespace(null,"86"),PackageNamespace(""),PrivateNamespace(null,"264"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("MenuOtherBox"),StaticProtectedNs("MenuOtherBox"),StaticProtectedNs("flash.display:MovieClip"),StaticProtectedNs("flash.display:Sprite"),StaticProtectedNs("flash.display:DisplayObjectContainer"),StaticProtectedNs("flash.display:InteractiveObject"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                     add
+                     jump ofs017b
+                     equals
+                     bitand
+                     convert_d
+                     throw
+                     setlocal2
+                     setlocal0
+            ofs017b:
+                     setproperty QName(PackageNamespace(""),"text")
+                     getlocal0
+                     getproperty QName(PackageNamespace(""),"rarity")
+                     getlocal0
+                     getproperty QName(PackageNamespace(""),"inv")
+                     jump ofs018e
+                     iflt ofs018e
+            ofs018e:
+                     getproperty Multiname("rarity",[PrivateNamespace(null,"86"),PackageNamespace(""),PrivateNamespace(null,"264"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("MenuOtherBox"),StaticProtectedNs("MenuOtherBox"),StaticProtectedNs("flash.display:MovieClip"),StaticProtectedNs("flash.display:Sprite"),StaticProtectedNs("flash.display:DisplayObjectContainer"),StaticProtectedNs("flash.display:InteractiveObject"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                     jump ofs019b
+                     dup
+                     newfunction 74
+                     pop
+                     divide
+                     convert_s
+            ofs019b:
+                     pushbyte 5
+                     add
+                     callpropvoid QName(PackageNamespace(""),"gotoAndStop"), 1
+                     getlocal0
+                     getproperty QName(PackageNamespace(""),"mc_sell")
+                     pushfalse
+                     setproperty QName(PackageNamespace(""),"visible")
+                     getlocal0
+                     getproperty QName(PackageNamespace(""),"mc_sell")
+                     jump ofs01b8
+                     setlocal2
+                     callsuper QName(PackageNamespace(""),"startCampaign"), 16
+                     setlocal0
+            ofs01b8:
+                     pushtrue
+                     setproperty QName(PackageNamespace(""),"buttonMode")
+                     getlocal0
+                     getproperty QName(PackageNamespace(""),"mc_sell")
+                     pushtrue
+                     setproperty QName(PackageNamespace(""),"mouseEnabled")
+                     jump ofs01cd
+                     pushfalse
+                     callpropvoid QName(PrivateNamespace(null),"Command"), 30
+                     pop
+            ofs01cd:
+                     getlocal0
+                     getproperty QName(PackageNamespace(""),"txt_level")
+                     pushfalse
+                     setproperty QName(PackageNamespace(""),"mouseEnabled")
+                     getlocal0
+                     jump ofs01de
+                     ifge ofs01de
+            ofs01de:
+                     getproperty QName(PackageNamespace(""),"inv")
+                     getproperty Multiname("level",[PrivateNamespace(null,"86"),PackageNamespace(""),PrivateNamespace(null,"264"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("MenuOtherBox"),StaticProtectedNs("MenuOtherBox"),StaticProtectedNs("flash.display:MovieClip"),StaticProtectedNs("flash.display:Sprite"),StaticProtectedNs("flash.display:DisplayObjectContainer"),StaticProtectedNs("flash.display:InteractiveObject"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                     jump ofs01ee
+                     setlocal0
+                     pushwith
+                     newfunction 48
+                     throw
+                     istypelate
+            ofs01ee:
+                     getlex QName(PackageNamespace(""),"SD")
+                     callproperty QName(PackageNamespace(""),"getSelCass"), 0
+                     getproperty QName(PackageNamespace(""),"level")
+                     ifgt ofs0200
+                     jump ofs0231
+            ofs0200:
+                     getlocal0
+                     pushtrue
+                     initproperty QName(PackageNamespace(""),"lowLevel")
+                     jump ofs020f
+                     popscope
+                     pushwith
+                     newfunction 20
+                     throw
+                     greaterequals
+            ofs020f:
+                     getlocal0
+                     getproperty QName(PackageNamespace(""),"txt_level")
+                     pushint 16724736
+                     setproperty QName(PackageNamespace(""),"textColor")
+                     getlocal0
+                     getproperty QName(PackageNamespace(""),"lock")
+                     pushtrue
+                     setproperty QName(PackageNamespace(""),"visible")
+                     jump ofs0259
+                     throw
+                     setlocal0
+                     jump ofs022b
+            ofs022b:
+                     popscope
+                     constructsuper 100
+                     pushwith
+                     istypelate
+                     setlocal2
+            ofs0231:
+                     getlocal0
+                     pushfalse
+                     initproperty QName(PackageNamespace(""),"lowLevel")
+                     getlocal0
+                     getproperty QName(PackageNamespace(""),"txt_level")
+                     jump ofs0242
+                     ifeq ofs0242
+            ofs0242:
+                     pushint 16763904
+                     setproperty QName(PackageNamespace(""),"textColor")
+                     getlocal0
+                     getproperty QName(PackageNamespace(""),"lock")
+                     jump ofs0255
+                     popscope
+                     nextname
+                     bitor
+                     lessequals
+                     greaterequals
+                     checkfilter
+            ofs0255:
+                     pushfalse
+                     setproperty QName(PackageNamespace(""),"visible")
+            ofs0259:
+                     returnvoid
+                  end ; code
+               end ; body
+            end ; method
+         }
+         
+         public function equip(param1:uint) : void
+         {
+            trait method QName(PackageNamespace(""),"equip")
+               dispid 0
+               method
+                  name null
+                  param QName(PackageNamespace(""),"uint")
+                  returns QName(PackageNamespace(""),"void")
+                  
+                  body
+                     maxstack 5
+                     localcount 2
+                     initscopedepth 10
+                     maxscopedepth 11
+                     
+                     code
+                        getlocal0
+                        pushscope
+                        jump ofs000d
+                        call 6
+                        throw
+                        callmethod 3494, 6
+               ofs000d:
+                        findpropstrict QName(PackageNamespace(""),"gotoAndStop")
+                        getlocal1
+                        callpropvoid QName(PackageNamespace(""),"gotoAndStop"), 1
+                        findproperty QName(PackageNamespace(""),"buttonMode")
+                        pushfalse
+                        jump ofs0021
+                        ifstricteq ofs0021
+               ofs0021:
+                        initproperty QName(PackageNamespace(""),"buttonMode")
+                        getlocal0
+                        jump ofs002e
+                        in
+                        callpropvoid QName(PackageNamespace("Box2D.Collision"),"b2ContactID"), 18
+                        pop
+               ofs002e:
+                        getproperty QName(PackageNamespace(""),"mc_sell")
+                        pushfalse
+                        setproperty QName(PackageNamespace(""),"visible")
+                        getlocal0
+                        getproperty QName(PackageNamespace(""),"inv")
+                        getlex QName(PackageNamespace(""),"Inventory_Attachment")
+                        istypelate
+                        iftrue ofs0044
+                        jump ofs0056
+               ofs0044:
+                        findproperty QName(PackageNamespace(""),"buttonMode")
+                        pushfalse
+                        iffalse ofs0052
+                        returnvoid
+                        multiply
+                        callsuper QName(PackageNamespace("flash.events"),"KeyboardEvent"), 10
+                        pushwith
+               ofs0052:
+                        pushtrue
+                        initproperty QName(PackageNamespace(""),"buttonMode")
+               ofs0056:
+                        returnvoid
+                     end ; code
+                  end ; body
+               end ; method
+            }
+            
+            public function showInfo() : void
+            {
+               trait method QName(PackageNamespace(""),"showInfo")
+                  dispid 0
+                  method
+                     name null
+                     returns QName(PackageNamespace(""),"void")
+                     
+                     body
+                        maxstack 5
+                        localcount 1
+                        initscopedepth 10
+                        maxscopedepth 11
+                        
+                        code
+                           jump ofs000b
+                           call 8
+                           callmethod 3494, 8
+                           throw
+                  ofs000b:
+                           getlocal0
+                           pushscope
+                           getlocal0
+                           getproperty QName(PrivateNamespace(null,"86"),"menu")
+                           getproperty QName(PackageNamespace(""),"misc_info")
+                           jump ofs001c
+                           ifgt ofs001c
+                  ofs001c:
+                           getlex QName(PackageNamespace(""),"x")
+                           setproperty QName(PackageNamespace(""),"x")
+                           pushfalse
+                           iffalse ofs002f
+                           pushtrue
+                           throw
+                           popscope
+                           setlocal0
+                           returnvalue
+                           pushscope
+                           setlocal1
+                           convert_d
+                  ofs002f:
+                           getlocal0
+                           getproperty QName(PrivateNamespace(null,"86"),"menu")
+                           getproperty QName(PackageNamespace(""),"misc_info")
+                           getlex QName(PackageNamespace(""),"y")
+                           setproperty QName(PackageNamespace(""),"y")
+                           getlocal0
+                           getproperty QName(PrivateNamespace(null,"86"),"menu")
+                           jump ofs0049
+                           instanceof
+                           constructprop QName(PackageNamespace("Box2D.Dynamics.Joints"),"b2MouseJointDef"), 30
+                           throw
+                  ofs0049:
+                           getproperty QName(PackageNamespace(""),"misc_info")
+                           getproperty QName(PackageNamespace(""),"y")
+                           pushshort 445
+                           ifgt ofs005a
+                           jump ofs0074
+                  ofs005a:
+                           getlocal0
+                           getproperty QName(PrivateNamespace(null,"86"),"menu")
+                           getproperty QName(PackageNamespace(""),"misc_info")
+                           pushshort 445
+                           pushfalse
+                           iffalse ofs0071
+                           pushtrue
+                           throw
+                           setlocal1
+                           pushwith
+                           newfunction 45
+                           throw
+                           checkfilter
+                  ofs0071:
+                           setproperty QName(PackageNamespace(""),"y")
+                  ofs0074:
+                           getlocal0
+                           getproperty QName(PackageNamespace(""),"inv")
+                           getlex QName(PackageNamespace(""),"Inventory_Attachment")
+                           istypelate
+                           jump ofs0083
+                           ifstrictne ofs0083
+                  ofs0083:
+                           iftrue ofs008b
+                           jump ofs00a2
+                  ofs008b:
+                           getlocal0
+                           callpropvoid QName(PackageNamespace(""),"showAttach"), 0
+                           jump ofs00c0
+                           pushwith
+                           setlocal0
+                           pushfalse
+                           iffalse ofs009b
+                  ofs009b:
+                           returnvoid
+                           popscope
+                           newfunction 49
+                           pushwith
+                           istypelate
+                           returnvoid
+                  ofs00a2:
+                           getlocal0
+                           getproperty QName(PackageNamespace(""),"inv")
+                           getlex QName(PackageNamespace(""),"Inventory_Armor")
+                           istypelate
+                           iftrue ofs00b1
+                           jump ofs00c0
+                  ofs00b1:
+                           getlocal0
+                           callpropvoid QName(PackageNamespace(""),"showArmor"), 0
+                           jump ofs00c0
+                           popscope
+                           callstatic 3576, 16
+                           setlocal0
+                  ofs00c0:
+                           returnvoid
+                        end ; code
+                     end ; body
+                  end ; method
+               }
+               
+               public function showAttach() : void
+               {
+                  trait method QName(PackageNamespace(""),"showAttach")
+                     dispid 0
+                     method
+                        name null
+                        returns QName(PackageNamespace(""),"void")
+                        
+                        body
+                           maxstack 9
+                           localcount 3
+                           initscopedepth 10
+                           maxscopedepth 11
+                           
+                           code
+                              getlocal0
+                              jump ofs000c
+                              callstatic 3490, 8
+                              call 8
+                              throw
+                     ofs000c:
+                              pushscope
+                              getlex QName(PackageNamespace(""),"Stats_Attachments")
+                              getlocal0
+                              getproperty QName(PackageNamespace(""),"item")
+                              callproperty QName(PackageNamespace(""),"getEffectText"), 1
+                              jump ofs001f
+                              ifeq ofs001f
+                     ofs001f:
+                              coerce QName(PackageNamespace(""),"Array")
+                              setlocal1
+                              jump ofs002c
+                              returnvalue
+                              callproplex QName(PackageNamespace(""),"itemAr"), 16
+                              setlocal1
+                     ofs002c:
+                              getlocal1
+                              callproperty QName(Namespace("http://adobe.com/AS3/2006/builtin"),"shift"), 0
+                              coerce_s
+                              setlocal2
+                              getlocal0
+                              getproperty QName(PrivateNamespace(null,"86"),"menu")
+                              getproperty QName(PackageNamespace(""),"misc_info")
+                              getproperty Multiname("txt_extra",[PrivateNamespace(null,"86"),PackageNamespace(""),PrivateNamespace(null,"264"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("MenuOtherBox"),StaticProtectedNs("MenuOtherBox"),StaticProtectedNs("flash.display:MovieClip"),StaticProtectedNs("flash.display:Sprite"),StaticProtectedNs("flash.display:DisplayObjectContainer"),StaticProtectedNs("flash.display:InteractiveObject"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                              jump ofs0047
+                              instanceof
+                              newfunction 89
+                              pushwith
+                              greaterequals
+                              returnvalue
+                     ofs0047:
+                              getlocal1
+                              pushstring "\n"
+                              callproperty QName(Namespace("http://adobe.com/AS3/2006/builtin"),"join"), 1
+                              setproperty Multiname("text",[PrivateNamespace(null,"86"),PackageNamespace(""),PrivateNamespace(null,"264"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("MenuOtherBox"),StaticProtectedNs("MenuOtherBox"),StaticProtectedNs("flash.display:MovieClip"),StaticProtectedNs("flash.display:Sprite"),StaticProtectedNs("flash.display:DisplayObjectContainer"),StaticProtectedNs("flash.display:InteractiveObject"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                              getlocal0
+                              getproperty QName(PrivateNamespace(null,"86"),"menu")
+                              jump ofs0060
+                              popscope
+                              callstatic 3615, 20
+                              setlocal1
+                     ofs0060:
+                              getproperty QName(PackageNamespace(""),"misc_info")
+                              getlocal1
+                              getproperty QName(PackageNamespace(""),"length")
+                              pushbyte 1
+                              lessthan
+                              jump ofs0072
+                              ifge ofs0072
+                     ofs0072:
+                              iftrue ofs007a
+                              jump ofs008d
+                     ofs007a:
+                              pushbyte 1
+                              jump ofs0085
+                              setlocal1
+                              callproplex QName(PackageNamespace("fl.motion"),"AnimatorBase"), 27
+                              throw
+                     ofs0085:
+                              coerce QName(PackageNamespace(""),"Object")
+                              jump ofs0093
+                              pushwith
+                              setlocal3
+                     ofs008d:
+                              getlocal1
+                              getproperty QName(PackageNamespace(""),"length")
+                              coerce QName(PackageNamespace(""),"Object")
+                     ofs0093:
+                              callpropvoid QName(PackageNamespace(""),"gotoAndStop"), 1
+                              getlocal0
+                              jump ofs00a2
+                              newactivation
+                              callstatic 3561, 16
+                              setlocal0
+                     ofs00a2:
+                              getproperty QName(PrivateNamespace(null,"86"),"menu")
+                              getproperty QName(PackageNamespace(""),"misc_info")
+                              getproperty Multiname("txt_name",[PrivateNamespace(null,"86"),PackageNamespace(""),PrivateNamespace(null,"264"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("MenuOtherBox"),StaticProtectedNs("MenuOtherBox"),StaticProtectedNs("flash.display:MovieClip"),StaticProtectedNs("flash.display:Sprite"),StaticProtectedNs("flash.display:DisplayObjectContainer"),StaticProtectedNs("flash.display:InteractiveObject"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                              getlex QName(PackageNamespace(""),"Stats_Misc")
+                              getlocal0
+                              getproperty QName(PackageNamespace(""),"inv")
+                              getproperty Multiname("rarity",[PrivateNamespace(null,"86"),PackageNamespace(""),PrivateNamespace(null,"264"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("MenuOtherBox"),StaticProtectedNs("MenuOtherBox"),StaticProtectedNs("flash.display:MovieClip"),StaticProtectedNs("flash.display:Sprite"),StaticProtectedNs("flash.display:DisplayObjectContainer"),StaticProtectedNs("flash.display:InteractiveObject"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                              jump ofs00be
+                              decrement
+                              callproplex QName(PackageNamespace("Box2D.Dynamics.Joints"),"b2GearJointDef"), 27
+                              throw
+                     ofs00be:
+                              pushtrue
+                              callproperty QName(PackageNamespace(""),"getRarity"), 2
+                              getproperty Multiname("name",[PrivateNamespace(null,"86"),PackageNamespace(""),PrivateNamespace(null,"264"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("MenuOtherBox"),StaticProtectedNs("MenuOtherBox"),StaticProtectedNs("flash.display:MovieClip"),StaticProtectedNs("flash.display:Sprite"),StaticProtectedNs("flash.display:DisplayObjectContainer"),StaticProtectedNs("flash.display:InteractiveObject"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                              getlocal2
+                              add
+                              jump ofs00d0
+                              ifne ofs00d0
+                     ofs00d0:
+                              getlocal0
+                              getproperty QName(PackageNamespace(""),"item")
+                              jump ofs00de
+                              setlocal2
+                              returnvalue
+                              in
+                              setlocal1
+                              returnvoid
+                              pushscope
+                     ofs00de:
+                              getproperty Multiname("name",[PrivateNamespace(null,"86"),PackageNamespace(""),PrivateNamespace(null,"264"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("MenuOtherBox"),StaticProtectedNs("MenuOtherBox"),StaticProtectedNs("flash.display:MovieClip"),StaticProtectedNs("flash.display:Sprite"),StaticProtectedNs("flash.display:DisplayObjectContainer"),StaticProtectedNs("flash.display:InteractiveObject"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                              add
+                              setproperty Multiname("text",[PrivateNamespace(null,"86"),PackageNamespace(""),PrivateNamespace(null,"264"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("MenuOtherBox"),StaticProtectedNs("MenuOtherBox"),StaticProtectedNs("flash.display:MovieClip"),StaticProtectedNs("flash.display:Sprite"),StaticProtectedNs("flash.display:DisplayObjectContainer"),StaticProtectedNs("flash.display:InteractiveObject"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                              getlocal0
+                              getproperty QName(PrivateNamespace(null,"86"),"menu")
+                              getproperty QName(PackageNamespace(""),"misc_info")
+                              getproperty Multiname("txt_name",[PrivateNamespace(null,"86"),PackageNamespace(""),PrivateNamespace(null,"264"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("MenuOtherBox"),StaticProtectedNs("MenuOtherBox"),StaticProtectedNs("flash.display:MovieClip"),StaticProtectedNs("flash.display:Sprite"),StaticProtectedNs("flash.display:DisplayObjectContainer"),StaticProtectedNs("flash.display:InteractiveObject"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                              getlex QName(PackageNamespace(""),"Stats_Misc")
+                              jump ofs00fb
+                              setlocal0
+                              callpropvoid QName(PackageNamespace(""),"PhysWorld"), 7
+                              pushwith
+                     ofs00fb:
+                              getlocal0
+                              getproperty QName(PackageNamespace(""),"inv")
+                              getproperty Multiname("rarity",[PrivateNamespace(null,"86"),PackageNamespace(""),PrivateNamespace(null,"264"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("MenuOtherBox"),StaticProtectedNs("MenuOtherBox"),StaticProtectedNs("flash.display:MovieClip"),StaticProtectedNs("flash.display:Sprite"),StaticProtectedNs("flash.display:DisplayObjectContainer"),StaticProtectedNs("flash.display:InteractiveObject"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                              callproperty QName(PackageNamespace(""),"getRarity"), 1
+                              getproperty Multiname("color",[PrivateNamespace(null,"86"),PackageNamespace(""),PrivateNamespace(null,"264"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("MenuOtherBox"),StaticProtectedNs("MenuOtherBox"),StaticProtectedNs("flash.display:MovieClip"),StaticProtectedNs("flash.display:Sprite"),StaticProtectedNs("flash.display:DisplayObjectContainer"),StaticProtectedNs("flash.display:InteractiveObject"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                              setproperty Multiname("textColor",[PrivateNamespace(null,"86"),PackageNamespace(""),PrivateNamespace(null,"264"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("MenuOtherBox"),StaticProtectedNs("MenuOtherBox"),StaticProtectedNs("flash.display:MovieClip"),StaticProtectedNs("flash.display:Sprite"),StaticProtectedNs("flash.display:DisplayObjectContainer"),StaticProtectedNs("flash.display:InteractiveObject"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                              getlocal0
+                              getproperty QName(PrivateNamespace(null,"86"),"menu")
+                              jump ofs011a
+                              popscope
+                              newfunction 92
+                              pop
+                              dup
+                              nextvalue
+                     ofs011a:
+                              getproperty QName(PackageNamespace(""),"misc_info")
+                              getproperty Multiname("txt_level",[PrivateNamespace(null,"86"),PackageNamespace(""),PrivateNamespace(null,"264"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("MenuOtherBox"),StaticProtectedNs("MenuOtherBox"),StaticProtectedNs("flash.display:MovieClip"),StaticProtectedNs("flash.display:Sprite"),StaticProtectedNs("flash.display:DisplayObjectContainer"),StaticProtectedNs("flash.display:InteractiveObject"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                              pushstring "等级 "
+                              getlocal0
+                              getproperty QName(PackageNamespace(""),"inv")
+                              jump ofs012f
+                              ifgt ofs012f
+                     ofs012f:
+                              getproperty Multiname("level",[PrivateNamespace(null,"86"),PackageNamespace(""),PrivateNamespace(null,"264"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("MenuOtherBox"),StaticProtectedNs("MenuOtherBox"),StaticProtectedNs("flash.display:MovieClip"),StaticProtectedNs("flash.display:Sprite"),StaticProtectedNs("flash.display:DisplayObjectContainer"),StaticProtectedNs("flash.display:InteractiveObject"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                              jump ofs013c
+                              setlocal3
+                              callpropvoid QName(PackageNamespace(""),"getPythagorean"), 16
+                              setlocal0
+                     ofs013c:
+                              add
+                              setproperty Multiname("text",[PrivateNamespace(null,"86"),PackageNamespace(""),PrivateNamespace(null,"264"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("MenuOtherBox"),StaticProtectedNs("MenuOtherBox"),StaticProtectedNs("flash.display:MovieClip"),StaticProtectedNs("flash.display:Sprite"),StaticProtectedNs("flash.display:DisplayObjectContainer"),StaticProtectedNs("flash.display:InteractiveObject"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                              getlocal0
+                              getproperty QName(PackageNamespace(""),"lowLevel")
+                              iftrue ofs014c
+                              jump ofs016f
+                     ofs014c:
+                              getlocal0
+                              getproperty QName(PrivateNamespace(null,"86"),"menu")
+                              getproperty QName(PackageNamespace(""),"misc_info")
+                              pushfalse
+                              iffalse ofs0160
+                              pushfalse
+                              returnvalue
+                              greaterequals
+                              returnvalue
+                              setlocal0
+                              pushnull
+                              setlocal2
+                              nextname
+                     ofs0160:
+                              getproperty Multiname("txt_level",[PrivateNamespace(null,"86"),PackageNamespace(""),PrivateNamespace(null,"264"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("MenuOtherBox"),StaticProtectedNs("MenuOtherBox"),StaticProtectedNs("flash.display:MovieClip"),StaticProtectedNs("flash.display:Sprite"),StaticProtectedNs("flash.display:DisplayObjectContainer"),StaticProtectedNs("flash.display:InteractiveObject"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                              pushint 16724736
+                              setproperty Multiname("textColor",[PrivateNamespace(null,"86"),PackageNamespace(""),PrivateNamespace(null,"264"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("MenuOtherBox"),StaticProtectedNs("MenuOtherBox"),StaticProtectedNs("flash.display:MovieClip"),StaticProtectedNs("flash.display:Sprite"),StaticProtectedNs("flash.display:DisplayObjectContainer"),StaticProtectedNs("flash.display:InteractiveObject"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                              jump ofs0188
+                              pushwith
+                              setlocal1
+                     ofs016f:
+                              getlocal0
+                              getproperty QName(PrivateNamespace(null,"86"),"menu")
+                              getproperty QName(PackageNamespace(""),"misc_info")
+                              jump ofs0180
+                              setlocal0
+                              construct 23
+                              pushwith
+                              bitand
+                              multiply
+                     ofs0180:
+                              getproperty Multiname("txt_level",[PrivateNamespace(null,"86"),PackageNamespace(""),PrivateNamespace(null,"264"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("MenuOtherBox"),StaticProtectedNs("MenuOtherBox"),StaticProtectedNs("flash.display:MovieClip"),StaticProtectedNs("flash.display:Sprite"),StaticProtectedNs("flash.display:DisplayObjectContainer"),StaticProtectedNs("flash.display:InteractiveObject"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                              pushint 13421772
+                              setproperty Multiname("textColor",[PrivateNamespace(null,"86"),PackageNamespace(""),PrivateNamespace(null,"264"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("MenuOtherBox"),StaticProtectedNs("MenuOtherBox"),StaticProtectedNs("flash.display:MovieClip"),StaticProtectedNs("flash.display:Sprite"),StaticProtectedNs("flash.display:DisplayObjectContainer"),StaticProtectedNs("flash.display:InteractiveObject"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                     ofs0188:
+                              getlocal0
+                              getproperty QName(PrivateNamespace(null,"86"),"menu")
+                              jump ofs0194
+                              ifgt ofs0194
+                     ofs0194:
+                              getproperty QName(PackageNamespace(""),"misc_info")
+                              getproperty Multiname("txt_type",[PrivateNamespace(null,"86"),PackageNamespace(""),PrivateNamespace(null,"264"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("MenuOtherBox"),StaticProtectedNs("MenuOtherBox"),StaticProtectedNs("flash.display:MovieClip"),StaticProtectedNs("flash.display:Sprite"),StaticProtectedNs("flash.display:DisplayObjectContainer"),StaticProtectedNs("flash.display:InteractiveObject"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                              getlex QName(PackageNamespace(""),"Stats_Misc")
+                              getlocal0
+                              jump ofs01a7
+                              popscope
+                              callmethod 1, 6
+                              pushwith
+                     ofs01a7:
+                              getproperty QName(PackageNamespace(""),"item")
+                              getproperty Multiname("type",[PrivateNamespace(null,"86"),PackageNamespace(""),PrivateNamespace(null,"264"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("MenuOtherBox"),StaticProtectedNs("MenuOtherBox"),StaticProtectedNs("flash.display:MovieClip"),StaticProtectedNs("flash.display:Sprite"),StaticProtectedNs("flash.display:DisplayObjectContainer"),StaticProtectedNs("flash.display:InteractiveObject"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                              callproperty QName(PackageNamespace(""),"getGunName"), 1
+                              callproperty QName(Namespace("http://adobe.com/AS3/2006/builtin"),"toUpperCase"), 0
+                              setproperty Multiname("text",[PrivateNamespace(null,"86"),PackageNamespace(""),PrivateNamespace(null,"264"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("MenuOtherBox"),StaticProtectedNs("MenuOtherBox"),StaticProtectedNs("flash.display:MovieClip"),StaticProtectedNs("flash.display:Sprite"),StaticProtectedNs("flash.display:DisplayObjectContainer"),StaticProtectedNs("flash.display:InteractiveObject"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                              getlocal0
+                              getproperty QName(PrivateNamespace(null,"86"),"menu")
+                              getproperty QName(PackageNamespace(""),"misc_info")
+                              getproperty Multiname("txt_cost",[PrivateNamespace(null,"86"),PackageNamespace(""),PrivateNamespace(null,"264"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("MenuOtherBox"),StaticProtectedNs("MenuOtherBox"),StaticProtectedNs("flash.display:MovieClip"),StaticProtectedNs("flash.display:Sprite"),StaticProtectedNs("flash.display:DisplayObjectContainer"),StaticProtectedNs("flash.display:InteractiveObject"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                              jump ofs01cb
+                              popscope
+                              callproperty QName(PackageNamespace("Box2D.Dynamics"),"b2FilterData"), 21
+                              throw
+                     ofs01cb:
+                              pushstring "L"
+                              getlex QName(PackageNamespace(""),"UT")
+                              getlocal0
+                              getproperty QName(PrivateNamespace(null,"86"),"menu")
+                              getlocal0
+                              getproperty QName(PackageNamespace(""),"item")
+                              getlocal0
+                              getproperty QName(PrivateNamespace(null,"86"),"fullPrice")
+                              jump ofs01e7
+                              bitor
+                              pushwith
+                              newfunction 40
+                              pop
+                              setlocal0
+                     ofs01e7:
+                              callproperty QName(PackageNamespace(""),"getCost"), 2
+                              callproperty QName(PackageNamespace(""),"addNumCommas"), 1
+                              add
+                              setproperty Multiname("text",[PrivateNamespace(null,"86"),PackageNamespace(""),PrivateNamespace(null,"264"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("MenuOtherBox"),StaticProtectedNs("MenuOtherBox"),StaticProtectedNs("flash.display:MovieClip"),StaticProtectedNs("flash.display:Sprite"),StaticProtectedNs("flash.display:DisplayObjectContainer"),StaticProtectedNs("flash.display:InteractiveObject"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                              getlocal0
+                              jump ofs01fc
+                              ifge ofs01fc
+                     ofs01fc:
+                              getproperty QName(PrivateNamespace(null,"86"),"menu")
+                              getproperty QName(PackageNamespace(""),"misc_info")
+                              getproperty Multiname("mc",[PrivateNamespace(null,"86"),PackageNamespace(""),PrivateNamespace(null,"264"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("MenuOtherBox"),StaticProtectedNs("MenuOtherBox"),StaticProtectedNs("flash.display:MovieClip"),StaticProtectedNs("flash.display:Sprite"),StaticProtectedNs("flash.display:DisplayObjectContainer"),StaticProtectedNs("flash.display:InteractiveObject"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                              pushtrue
+                              jump ofs0210
+                              popscope
+                              setlocal2
+                              setlocal3
+                              lessequals
+                              pushfalse
+                              add
+                     ofs0210:
+                              setproperty Multiname("visible",[PrivateNamespace(null,"86"),PackageNamespace(""),PrivateNamespace(null,"264"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("MenuOtherBox"),StaticProtectedNs("MenuOtherBox"),StaticProtectedNs("flash.display:MovieClip"),StaticProtectedNs("flash.display:Sprite"),StaticProtectedNs("flash.display:DisplayObjectContainer"),StaticProtectedNs("flash.display:InteractiveObject"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                              getlocal0
+                              getproperty QName(PrivateNamespace(null,"86"),"menu")
+                              getproperty QName(PackageNamespace(""),"misc_info")
+                              getproperty Multiname("mc",[PrivateNamespace(null,"86"),PackageNamespace(""),PrivateNamespace(null,"264"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("MenuOtherBox"),StaticProtectedNs("MenuOtherBox"),StaticProtectedNs("flash.display:MovieClip"),StaticProtectedNs("flash.display:Sprite"),StaticProtectedNs("flash.display:DisplayObjectContainer"),StaticProtectedNs("flash.display:InteractiveObject"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                              getlocal0
+                              getproperty QName(PackageNamespace(""),"item")
+                              getproperty Multiname("sprite",[PrivateNamespace(null,"86"),PackageNamespace(""),PrivateNamespace(null,"264"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("MenuOtherBox"),StaticProtectedNs("MenuOtherBox"),StaticProtectedNs("flash.display:MovieClip"),StaticProtectedNs("flash.display:Sprite"),StaticProtectedNs("flash.display:DisplayObjectContainer"),StaticProtectedNs("flash.display:InteractiveObject"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                              jump ofs022d
+                              in
+                              callsuper QName(PackageNamespace("flash.display"),"InteractiveObject"), 21
+                              throw
+                     ofs022d:
+                              callpropvoid Multiname("gotoAndStop",[PrivateNamespace(null,"86"),PackageNamespace(""),PrivateNamespace(null,"264"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("MenuOtherBox"),StaticProtectedNs("MenuOtherBox"),StaticProtectedNs("flash.display:MovieClip"),StaticProtectedNs("flash.display:Sprite"),StaticProtectedNs("flash.display:DisplayObjectContainer"),StaticProtectedNs("flash.display:InteractiveObject"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")]), 1
+                              getlocal0
+                              getproperty QName(PrivateNamespace(null,"86"),"menu")
+                              getproperty QName(PackageNamespace(""),"misc_info")
+                              getproperty Multiname("rarity",[PrivateNamespace(null,"86"),PackageNamespace(""),PrivateNamespace(null,"264"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("MenuOtherBox"),StaticProtectedNs("MenuOtherBox"),StaticProtectedNs("flash.display:MovieClip"),StaticProtectedNs("flash.display:Sprite"),StaticProtectedNs("flash.display:DisplayObjectContainer"),StaticProtectedNs("flash.display:InteractiveObject"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                              pushbyte 5
+                              getlocal0
+                              getproperty QName(PackageNamespace(""),"inv")
+                              jump ofs024b
+                              pushscope
+                              callsupervoid QName(PackageNamespace(""),"getEffectText"), 10
+                              setlocal0
+                     ofs024b:
+                              getproperty Multiname("rarity",[PrivateNamespace(null,"86"),PackageNamespace(""),PrivateNamespace(null,"264"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("MenuOtherBox"),StaticProtectedNs("MenuOtherBox"),StaticProtectedNs("flash.display:MovieClip"),StaticProtectedNs("flash.display:Sprite"),StaticProtectedNs("flash.display:DisplayObjectContainer"),StaticProtectedNs("flash.display:InteractiveObject"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                              add
+                              callpropvoid Multiname("gotoAndStop",[PrivateNamespace(null,"86"),PackageNamespace(""),PrivateNamespace(null,"264"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("MenuOtherBox"),StaticProtectedNs("MenuOtherBox"),StaticProtectedNs("flash.display:MovieClip"),StaticProtectedNs("flash.display:Sprite"),StaticProtectedNs("flash.display:DisplayObjectContainer"),StaticProtectedNs("flash.display:InteractiveObject"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")]), 1
+                              getlocal0
+                              getproperty QName(PrivateNamespace(null,"86"),"menu")
+                              jump ofs025f
+                              ifstrictne ofs025f
+                     ofs025f:
+                              getproperty QName(PackageNamespace(""),"misc_info")
+                              getproperty Multiname("stat_icon",[PrivateNamespace(null,"86"),PackageNamespace(""),PrivateNamespace(null,"264"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("MenuOtherBox"),StaticProtectedNs("MenuOtherBox"),StaticProtectedNs("flash.display:MovieClip"),StaticProtectedNs("flash.display:Sprite"),StaticProtectedNs("flash.display:DisplayObjectContainer"),StaticProtectedNs("flash.display:InteractiveObject"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                              jump ofs026f
+                              returnvalue
+                              pushwith
+                              newfunction 42
+                              pop
+                              returnvalue
+                     ofs026f:
+                              pushfalse
+                              setproperty Multiname("visible",[PrivateNamespace(null,"86"),PackageNamespace(""),PrivateNamespace(null,"264"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("MenuOtherBox"),StaticProtectedNs("MenuOtherBox"),StaticProtectedNs("flash.display:MovieClip"),StaticProtectedNs("flash.display:Sprite"),StaticProtectedNs("flash.display:DisplayObjectContainer"),StaticProtectedNs("flash.display:InteractiveObject"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                              getlocal0
+                              getproperty QName(PrivateNamespace(null,"86"),"menu")
+                              getproperty QName(PackageNamespace(""),"misc_info")
+                              getproperty Multiname("txt_stats",[PrivateNamespace(null,"86"),PackageNamespace(""),PrivateNamespace(null,"264"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("MenuOtherBox"),StaticProtectedNs("MenuOtherBox"),StaticProtectedNs("flash.display:MovieClip"),StaticProtectedNs("flash.display:Sprite"),StaticProtectedNs("flash.display:DisplayObjectContainer"),StaticProtectedNs("flash.display:InteractiveObject"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                              pushstring ""
+                              setproperty Multiname("text",[PrivateNamespace(null,"86"),PackageNamespace(""),PrivateNamespace(null,"264"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("MenuOtherBox"),StaticProtectedNs("MenuOtherBox"),StaticProtectedNs("flash.display:MovieClip"),StaticProtectedNs("flash.display:Sprite"),StaticProtectedNs("flash.display:DisplayObjectContainer"),StaticProtectedNs("flash.display:InteractiveObject"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                              jump ofs028c
+                              popscope
+                              dxns "b2Contact"
+                              pushwith
+                              returnvoid
+                              setlocal2
+                     ofs028c:
+                              getlocal0
+                              getproperty QName(PrivateNamespace(null,"86"),"menu")
+                              getproperty QName(PackageNamespace(""),"misc_info")
+                              getproperty Multiname("arrow0",[PrivateNamespace(null,"86"),PackageNamespace(""),PrivateNamespace(null,"264"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("MenuOtherBox"),StaticProtectedNs("MenuOtherBox"),StaticProtectedNs("flash.display:MovieClip"),StaticProtectedNs("flash.display:Sprite"),StaticProtectedNs("flash.display:DisplayObjectContainer"),StaticProtectedNs("flash.display:InteractiveObject"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                              pushfalse
+                              setproperty Multiname("visible",[PrivateNamespace(null,"86"),PackageNamespace(""),PrivateNamespace(null,"264"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("MenuOtherBox"),StaticProtectedNs("MenuOtherBox"),StaticProtectedNs("flash.display:MovieClip"),StaticProtectedNs("flash.display:Sprite"),StaticProtectedNs("flash.display:DisplayObjectContainer"),StaticProtectedNs("flash.display:InteractiveObject"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                              returnvoid
+                           end ; code
+                        end ; body
+                     end ; method
+                  }
+                  
+                  public function showArmor() : void
+                  {
+                     trait method QName(PackageNamespace(""),"showArmor")
+                        dispid 0
+                        method
+                           name null
+                           returns QName(PackageNamespace(""),"void")
+                           
+                           body
+                              maxstack 9
+                              localcount 4
+                              initscopedepth 10
+                              maxscopedepth 11
+                              
+                              code
+                                 jump ofs000b
+                                 call 10
+                                 throw
+                                 callmethod 3493, 10
+                        ofs000b:
+                                 getlocal0
+                                 pushscope
+                                 getlex QName(PackageNamespace(""),"Stats_Armor")
+                                 getlocal0
+                                 getproperty QName(PackageNamespace(""),"item")
+                                 jump ofs001b
+                                 iflt ofs001b
+                        ofs001b:
+                                 callproperty QName(PackageNamespace(""),"getEffectText"), 1
+                                 coerce QName(PackageNamespace(""),"Array")
+                                 setlocal1
+                                 getlocal1
+                                 callproperty QName(Namespace("http://adobe.com/AS3/2006/builtin"),"shift"), 0
+                                 pushtrue
+                                 iftrue ofs0032
+                                 returnvoid
+                                 popscope
+                                 callpropvoid QName(PackageNamespace("fl.motion"),"MotionBase"), 8
+                                 pushwith
+                        ofs0032:
+                                 coerce_s
+                                 setlocal2
+                                 getlocal0
+                                 getproperty QName(PrivateNamespace(null,"86"),"menu")
+                                 getproperty QName(PackageNamespace(""),"misc_info")
+                                 getproperty Multiname("txt_extra",[PrivateNamespace(null,"86"),PackageNamespace(""),PrivateNamespace(null,"264"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("MenuOtherBox"),StaticProtectedNs("MenuOtherBox"),StaticProtectedNs("flash.display:MovieClip"),StaticProtectedNs("flash.display:Sprite"),StaticProtectedNs("flash.display:DisplayObjectContainer"),StaticProtectedNs("flash.display:InteractiveObject"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                                 getlocal1
+                                 jump ofs0049
+                                 popscope
+                                 dup
+                                 setlocal2
+                                 add
+                                 setlocal1
+                                 multiply
+                        ofs0049:
+                                 pushstring "\n"
+                                 callproperty QName(Namespace("http://adobe.com/AS3/2006/builtin"),"join"), 1
+                                 setproperty Multiname("text",[PrivateNamespace(null,"86"),PackageNamespace(""),PrivateNamespace(null,"264"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("MenuOtherBox"),StaticProtectedNs("MenuOtherBox"),StaticProtectedNs("flash.display:MovieClip"),StaticProtectedNs("flash.display:Sprite"),StaticProtectedNs("flash.display:DisplayObjectContainer"),StaticProtectedNs("flash.display:InteractiveObject"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                                 getlocal0
+                                 getproperty QName(PrivateNamespace(null,"86"),"menu")
+                                 getproperty QName(PackageNamespace(""),"misc_info")
+                                 getlocal1
+                                 getproperty QName(PackageNamespace(""),"length")
+                                 pushbyte 1
+                                 lessthan
+                                 jump ofs006b
+                                 newactivation
+                                 newfunction 14
+                                 pop
+                                 setlocal0
+                                 setlocal1
+                        ofs006b:
+                                 iftrue ofs0073
+                                 jump ofs007f
+                        ofs0073:
+                                 pushbyte 1
+                                 coerce QName(PackageNamespace(""),"Object")
+                                 jump ofs0098
+                                 ifle ofs007f
+                        ofs007f:
+                                 getlocal1
+                                 jump ofs0088
+                                 ifstrictne ofs0088
+                        ofs0088:
+                                 getproperty QName(PackageNamespace(""),"length")
+                                 pushtrue
+                                 iftrue ofs0096
+                                 returnvoid
+                                 pushnull
+                                 callproperty QName(PackageNamespace("flash.display"),"LoaderInfo"), 9
+                                 pushwith
+                        ofs0096:
+                                 coerce QName(PackageNamespace(""),"Object")
+                        ofs0098:
+                                 callpropvoid QName(PackageNamespace(""),"gotoAndStop"), 1
+                                 getlocal0
+                                 getproperty QName(PrivateNamespace(null,"86"),"menu")
+                                 getproperty QName(PackageNamespace(""),"misc_info")
+                                 getproperty Multiname("txt_name",[PrivateNamespace(null,"86"),PackageNamespace(""),PrivateNamespace(null,"264"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("MenuOtherBox"),StaticProtectedNs("MenuOtherBox"),StaticProtectedNs("flash.display:MovieClip"),StaticProtectedNs("flash.display:Sprite"),StaticProtectedNs("flash.display:DisplayObjectContainer"),StaticProtectedNs("flash.display:InteractiveObject"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                                 getlex QName(PackageNamespace(""),"Stats_Misc")
+                                 getlocal0
+                                 getproperty QName(PackageNamespace(""),"inv")
+                                 jump ofs00b7
+                                 popscope
+                                 newclass 10
+                                 pushwith
+                                 equals
+                                 setlocal3
+                        ofs00b7:
+                                 getproperty Multiname("rarity",[PrivateNamespace(null,"86"),PackageNamespace(""),PrivateNamespace(null,"264"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("MenuOtherBox"),StaticProtectedNs("MenuOtherBox"),StaticProtectedNs("flash.display:MovieClip"),StaticProtectedNs("flash.display:Sprite"),StaticProtectedNs("flash.display:DisplayObjectContainer"),StaticProtectedNs("flash.display:InteractiveObject"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                                 pushtrue
+                                 callproperty QName(PackageNamespace(""),"getRarity"), 2
+                                 getproperty Multiname("name",[PrivateNamespace(null,"86"),PackageNamespace(""),PrivateNamespace(null,"264"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("MenuOtherBox"),StaticProtectedNs("MenuOtherBox"),StaticProtectedNs("flash.display:MovieClip"),StaticProtectedNs("flash.display:Sprite"),StaticProtectedNs("flash.display:DisplayObjectContainer"),StaticProtectedNs("flash.display:InteractiveObject"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                                 getlocal2
+                                 add
+                                 getlocal0
+                                 getproperty QName(PackageNamespace(""),"item")
+                                 getproperty Multiname("name",[PrivateNamespace(null,"86"),PackageNamespace(""),PrivateNamespace(null,"264"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("MenuOtherBox"),StaticProtectedNs("MenuOtherBox"),StaticProtectedNs("flash.display:MovieClip"),StaticProtectedNs("flash.display:Sprite"),StaticProtectedNs("flash.display:DisplayObjectContainer"),StaticProtectedNs("flash.display:InteractiveObject"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                                 jump ofs00d5
+                                 popscope
+                                 pushscope
+                                 setlocal0
+                                 newactivation
+                                 setlocal0
+                                 add
+                        ofs00d5:
+                                 add
+                                 setproperty Multiname("text",[PrivateNamespace(null,"86"),PackageNamespace(""),PrivateNamespace(null,"264"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("MenuOtherBox"),StaticProtectedNs("MenuOtherBox"),StaticProtectedNs("flash.display:MovieClip"),StaticProtectedNs("flash.display:Sprite"),StaticProtectedNs("flash.display:DisplayObjectContainer"),StaticProtectedNs("flash.display:InteractiveObject"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                                 getlocal0
+                                 getproperty QName(PrivateNamespace(null,"86"),"menu")
+                                 getproperty QName(PackageNamespace(""),"misc_info")
+                                 jump ofs00e8
+                                 iflt ofs00e8
+                        ofs00e8:
+                                 getproperty Multiname("txt_name",[PrivateNamespace(null,"86"),PackageNamespace(""),PrivateNamespace(null,"264"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("MenuOtherBox"),StaticProtectedNs("MenuOtherBox"),StaticProtectedNs("flash.display:MovieClip"),StaticProtectedNs("flash.display:Sprite"),StaticProtectedNs("flash.display:DisplayObjectContainer"),StaticProtectedNs("flash.display:InteractiveObject"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                                 getlex QName(PackageNamespace(""),"Stats_Misc")
+                                 getlocal0
+                                 getproperty QName(PackageNamespace(""),"inv")
+                                 getproperty Multiname("rarity",[PrivateNamespace(null,"86"),PackageNamespace(""),PrivateNamespace(null,"264"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("MenuOtherBox"),StaticProtectedNs("MenuOtherBox"),StaticProtectedNs("flash.display:MovieClip"),StaticProtectedNs("flash.display:Sprite"),StaticProtectedNs("flash.display:DisplayObjectContainer"),StaticProtectedNs("flash.display:InteractiveObject"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                                 pushtrue
+                                 iftrue ofs0101
+                                 returnvoid
+                                 setlocal1
+                                 callproperty QName(PackageNamespace(""),"irand"), 18
+                                 setlocal0
+                        ofs0101:
+                                 callproperty QName(PackageNamespace(""),"getRarity"), 1
+                                 getproperty Multiname("color",[PrivateNamespace(null,"86"),PackageNamespace(""),PrivateNamespace(null,"264"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("MenuOtherBox"),StaticProtectedNs("MenuOtherBox"),StaticProtectedNs("flash.display:MovieClip"),StaticProtectedNs("flash.display:Sprite"),StaticProtectedNs("flash.display:DisplayObjectContainer"),StaticProtectedNs("flash.display:InteractiveObject"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                                 setproperty Multiname("textColor",[PrivateNamespace(null,"86"),PackageNamespace(""),PrivateNamespace(null,"264"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("MenuOtherBox"),StaticProtectedNs("MenuOtherBox"),StaticProtectedNs("flash.display:MovieClip"),StaticProtectedNs("flash.display:Sprite"),StaticProtectedNs("flash.display:DisplayObjectContainer"),StaticProtectedNs("flash.display:InteractiveObject"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                                 getlocal0
+                                 getproperty QName(PrivateNamespace(null,"86"),"menu")
+                                 getproperty QName(PackageNamespace(""),"misc_info")
+                                 getproperty Multiname("txt_level",[PrivateNamespace(null,"86"),PackageNamespace(""),PrivateNamespace(null,"264"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("MenuOtherBox"),StaticProtectedNs("MenuOtherBox"),StaticProtectedNs("flash.display:MovieClip"),StaticProtectedNs("flash.display:Sprite"),StaticProtectedNs("flash.display:DisplayObjectContainer"),StaticProtectedNs("flash.display:InteractiveObject"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                                 pushstring "等级 "
+                                 getlocal0
+                                 getproperty QName(PackageNamespace(""),"inv")
+                                 pushtrue
+                                 iftrue ofs0128
+                                 returnvoid
+                                 convert_s
+                                 pushwith
+                                 newfunction 92
+                                 throw
+                                 setlocal0
+                        ofs0128:
+                                 getproperty Multiname("level",[PrivateNamespace(null,"86"),PackageNamespace(""),PrivateNamespace(null,"264"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("MenuOtherBox"),StaticProtectedNs("MenuOtherBox"),StaticProtectedNs("flash.display:MovieClip"),StaticProtectedNs("flash.display:Sprite"),StaticProtectedNs("flash.display:DisplayObjectContainer"),StaticProtectedNs("flash.display:InteractiveObject"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                                 add
+                                 setproperty Multiname("text",[PrivateNamespace(null,"86"),PackageNamespace(""),PrivateNamespace(null,"264"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("MenuOtherBox"),StaticProtectedNs("MenuOtherBox"),StaticProtectedNs("flash.display:MovieClip"),StaticProtectedNs("flash.display:Sprite"),StaticProtectedNs("flash.display:DisplayObjectContainer"),StaticProtectedNs("flash.display:InteractiveObject"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                                 getlocal0
+                                 getproperty QName(PackageNamespace(""),"lowLevel")
+                                 iftrue ofs0145
+                                 jump ofs0171
+                                 jump ofs013f
+                        ofs013f:
+                                 popscope
+                                 pushwith
+                                 newfunction 106
+                                 pop
+                                 returnvalue
+                        ofs0145:
+                                 getlocal0
+                                 getproperty QName(PrivateNamespace(null,"86"),"menu")
+                                 getproperty QName(PackageNamespace(""),"misc_info")
+                                 getproperty Multiname("txt_level",[PrivateNamespace(null,"86"),PackageNamespace(""),PrivateNamespace(null,"264"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("MenuOtherBox"),StaticProtectedNs("MenuOtherBox"),StaticProtectedNs("flash.display:MovieClip"),StaticProtectedNs("flash.display:Sprite"),StaticProtectedNs("flash.display:DisplayObjectContainer"),StaticProtectedNs("flash.display:InteractiveObject"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                                 pushint 16724736
+                                 jump ofs015a
+                                 ifeq ofs015a
+                        ofs015a:
+                                 setproperty Multiname("textColor",[PrivateNamespace(null,"86"),PackageNamespace(""),PrivateNamespace(null,"264"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("MenuOtherBox"),StaticProtectedNs("MenuOtherBox"),StaticProtectedNs("flash.display:MovieClip"),StaticProtectedNs("flash.display:Sprite"),StaticProtectedNs("flash.display:DisplayObjectContainer"),StaticProtectedNs("flash.display:InteractiveObject"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                                 pushtrue
+                                 iftrue ofs0169
+                                 returnvoid
+                                 popscope
+                                 callsuper QName(PackageNamespace(""),"newSibling"), 14
+                                 setlocal2
+                        ofs0169:
+                                 jump ofs0180
+                                 iflt ofs0171
+                        ofs0171:
+                                 getlocal0
+                                 getproperty QName(PrivateNamespace(null,"86"),"menu")
+                                 getproperty QName(PackageNamespace(""),"misc_info")
+                                 getproperty Multiname("txt_level",[PrivateNamespace(null,"86"),PackageNamespace(""),PrivateNamespace(null,"264"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("MenuOtherBox"),StaticProtectedNs("MenuOtherBox"),StaticProtectedNs("flash.display:MovieClip"),StaticProtectedNs("flash.display:Sprite"),StaticProtectedNs("flash.display:DisplayObjectContainer"),StaticProtectedNs("flash.display:InteractiveObject"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                                 pushint 13421772
+                                 setproperty Multiname("textColor",[PrivateNamespace(null,"86"),PackageNamespace(""),PrivateNamespace(null,"264"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("MenuOtherBox"),StaticProtectedNs("MenuOtherBox"),StaticProtectedNs("flash.display:MovieClip"),StaticProtectedNs("flash.display:Sprite"),StaticProtectedNs("flash.display:DisplayObjectContainer"),StaticProtectedNs("flash.display:InteractiveObject"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                        ofs0180:
+                                 getlocal0
+                                 jump ofs018a
+                                 in
+                                 callproperty QName(PackageNamespace("flash.display"),"DisplayObject"), 18
+                                 throw
+                        ofs018a:
+                                 getproperty QName(PrivateNamespace(null,"86"),"menu")
+                                 getproperty QName(PackageNamespace(""),"misc_info")
+                                 getproperty Multiname("txt_type",[PrivateNamespace(null,"86"),PackageNamespace(""),PrivateNamespace(null,"264"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("MenuOtherBox"),StaticProtectedNs("MenuOtherBox"),StaticProtectedNs("flash.display:MovieClip"),StaticProtectedNs("flash.display:Sprite"),StaticProtectedNs("flash.display:DisplayObjectContainer"),StaticProtectedNs("flash.display:InteractiveObject"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                                 getlocal0
+                                 getproperty QName(PackageNamespace(""),"shit")
+                                 iffalse ofs019f
+                                 jump ofs01a9
+                        ofs019f:
+                                 pushstring "护甲"
+                                 coerce_a
+                                 jump ofs01b7
+                                 pushwith
+                                 setlocal0
+                        ofs01a9:
+                                 pushstring "收藏品"
+                                 jump ofs01b6
+                                 setlocal1
+                                 dup
+                                 returnvoid
+                                 instanceof
+                                 greaterequals
+                                 returnvalue
+                        ofs01b6:
+                                 coerce_a
+                        ofs01b7:
+                                 setproperty Multiname("text",[PrivateNamespace(null,"86"),PackageNamespace(""),PrivateNamespace(null,"264"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("MenuOtherBox"),StaticProtectedNs("MenuOtherBox"),StaticProtectedNs("flash.display:MovieClip"),StaticProtectedNs("flash.display:Sprite"),StaticProtectedNs("flash.display:DisplayObjectContainer"),StaticProtectedNs("flash.display:InteractiveObject"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                                 getlocal0
+                                 getproperty QName(PrivateNamespace(null,"86"),"menu")
+                                 getproperty QName(PackageNamespace(""),"misc_info")
+                                 jump ofs01c9
+                                 ifstrictne ofs01c9
+                        ofs01c9:
+                                 getproperty Multiname("txt_cost",[PrivateNamespace(null,"86"),PackageNamespace(""),PrivateNamespace(null,"264"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("MenuOtherBox"),StaticProtectedNs("MenuOtherBox"),StaticProtectedNs("flash.display:MovieClip"),StaticProtectedNs("flash.display:Sprite"),StaticProtectedNs("flash.display:DisplayObjectContainer"),StaticProtectedNs("flash.display:InteractiveObject"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                                 pushstring "L"
+                                 jump ofs01d9
+                                 multiply
+                                 callproperty QName(PackageNamespace(""),"replaceString"), 12
+                                 returnvalue
+                        ofs01d9:
+                                 getlex QName(PackageNamespace(""),"UT")
+                                 getlocal0
+                                 getproperty QName(PrivateNamespace(null,"86"),"menu")
+                                 getlocal0
+                                 getproperty QName(PackageNamespace(""),"item")
+                                 getlocal0
+                                 getproperty QName(PrivateNamespace(null,"86"),"fullPrice")
+                                 callproperty QName(PackageNamespace(""),"getCost"), 2
+                                 callproperty QName(PackageNamespace(""),"addNumCommas"), 1
+                                 add
+                                 jump ofs01fb
+                                 nextname
+                                 pushwith
+                                 newfunction 81
+                                 throw
+                                 bitor
+                        ofs01fb:
+                                 setproperty Multiname("text",[PrivateNamespace(null,"86"),PackageNamespace(""),PrivateNamespace(null,"264"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("MenuOtherBox"),StaticProtectedNs("MenuOtherBox"),StaticProtectedNs("flash.display:MovieClip"),StaticProtectedNs("flash.display:Sprite"),StaticProtectedNs("flash.display:DisplayObjectContainer"),StaticProtectedNs("flash.display:InteractiveObject"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                                 getlocal0
+                                 getproperty QName(PrivateNamespace(null,"86"),"menu")
+                                 getproperty QName(PackageNamespace(""),"misc_info")
+                                 getproperty Multiname("mc",[PrivateNamespace(null,"86"),PackageNamespace(""),PrivateNamespace(null,"264"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("MenuOtherBox"),StaticProtectedNs("MenuOtherBox"),StaticProtectedNs("flash.display:MovieClip"),StaticProtectedNs("flash.display:Sprite"),StaticProtectedNs("flash.display:DisplayObjectContainer"),StaticProtectedNs("flash.display:InteractiveObject"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                                 pushtrue
+                                 setproperty Multiname("visible",[PrivateNamespace(null,"86"),PackageNamespace(""),PrivateNamespace(null,"264"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("MenuOtherBox"),StaticProtectedNs("MenuOtherBox"),StaticProtectedNs("flash.display:MovieClip"),StaticProtectedNs("flash.display:Sprite"),StaticProtectedNs("flash.display:DisplayObjectContainer"),StaticProtectedNs("flash.display:InteractiveObject"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                                 jump ofs0216
+                                 popscope
+                                 newfunction 94
+                                 throw
+                                 equals
+                                 decrement
+                        ofs0216:
+                                 getlocal0
+                                 getproperty QName(PrivateNamespace(null,"86"),"menu")
+                                 getproperty QName(PackageNamespace(""),"misc_info")
+                                 getproperty Multiname("mc",[PrivateNamespace(null,"86"),PackageNamespace(""),PrivateNamespace(null,"264"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("MenuOtherBox"),StaticProtectedNs("MenuOtherBox"),StaticProtectedNs("flash.display:MovieClip"),StaticProtectedNs("flash.display:Sprite"),StaticProtectedNs("flash.display:DisplayObjectContainer"),StaticProtectedNs("flash.display:InteractiveObject"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                                 getlocal0
+                                 jump ofs0229
+                                 iflt ofs0229
+                        ofs0229:
+                                 getproperty QName(PackageNamespace(""),"item")
+                                 pushfalse
+                                 iffalse ofs0238
+                                 pushtrue
+                                 throw
+                                 instanceof
+                                 callmethod 55, 7
+                                 pushwith
+                        ofs0238:
+                                 getproperty Multiname("sprite",[PrivateNamespace(null,"86"),PackageNamespace(""),PrivateNamespace(null,"264"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("MenuOtherBox"),StaticProtectedNs("MenuOtherBox"),StaticProtectedNs("flash.display:MovieClip"),StaticProtectedNs("flash.display:Sprite"),StaticProtectedNs("flash.display:DisplayObjectContainer"),StaticProtectedNs("flash.display:InteractiveObject"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                                 callpropvoid Multiname("gotoAndStop",[PrivateNamespace(null,"86"),PackageNamespace(""),PrivateNamespace(null,"264"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("MenuOtherBox"),StaticProtectedNs("MenuOtherBox"),StaticProtectedNs("flash.display:MovieClip"),StaticProtectedNs("flash.display:Sprite"),StaticProtectedNs("flash.display:DisplayObjectContainer"),StaticProtectedNs("flash.display:InteractiveObject"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")]), 1
+                                 getlocal0
+                                 getproperty QName(PrivateNamespace(null,"86"),"menu")
+                                 getproperty QName(PackageNamespace(""),"misc_info")
+                                 getproperty Multiname("rarity",[PrivateNamespace(null,"86"),PackageNamespace(""),PrivateNamespace(null,"264"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("MenuOtherBox"),StaticProtectedNs("MenuOtherBox"),StaticProtectedNs("flash.display:MovieClip"),StaticProtectedNs("flash.display:Sprite"),StaticProtectedNs("flash.display:DisplayObjectContainer"),StaticProtectedNs("flash.display:InteractiveObject"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                                 pushbyte 5
+                                 jump ofs0255
+                                 popscope
+                                 pushwith
+                                 newfunction 55
+                                 pop
+                                 setlocal1
+                        ofs0255:
+                                 getlocal0
+                                 getproperty QName(PackageNamespace(""),"inv")
+                                 getproperty Multiname("rarity",[PrivateNamespace(null,"86"),PackageNamespace(""),PrivateNamespace(null,"264"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("MenuOtherBox"),StaticProtectedNs("MenuOtherBox"),StaticProtectedNs("flash.display:MovieClip"),StaticProtectedNs("flash.display:Sprite"),StaticProtectedNs("flash.display:DisplayObjectContainer"),StaticProtectedNs("flash.display:InteractiveObject"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                                 add
+                                 callpropvoid Multiname("gotoAndStop",[PrivateNamespace(null,"86"),PackageNamespace(""),PrivateNamespace(null,"264"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("MenuOtherBox"),StaticProtectedNs("MenuOtherBox"),StaticProtectedNs("flash.display:MovieClip"),StaticProtectedNs("flash.display:Sprite"),StaticProtectedNs("flash.display:DisplayObjectContainer"),StaticProtectedNs("flash.display:InteractiveObject"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")]), 1
+                                 getlocal0
+                                 jump ofs026c
+                                 popscope
+                                 returnvoid
+                                 pushfalse
+                                 pushnull
+                                 setlocal0
+                                 setlocal3
+                        ofs026c:
+                                 getproperty QName(PrivateNamespace(null,"86"),"menu")
+                                 getproperty QName(PackageNamespace(""),"misc_info")
+                                 getproperty Multiname("stat_icon",[PrivateNamespace(null,"86"),PackageNamespace(""),PrivateNamespace(null,"264"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("MenuOtherBox"),StaticProtectedNs("MenuOtherBox"),StaticProtectedNs("flash.display:MovieClip"),StaticProtectedNs("flash.display:Sprite"),StaticProtectedNs("flash.display:DisplayObjectContainer"),StaticProtectedNs("flash.display:InteractiveObject"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                                 getlocal0
+                                 getproperty QName(PackageNamespace(""),"shit")
+                                 jump ofs0281
+                                 ifstrictne ofs0281
+                        ofs0281:
+                                 not
+                                 setproperty Multiname("visible",[PrivateNamespace(null,"86"),PackageNamespace(""),PrivateNamespace(null,"264"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("MenuOtherBox"),StaticProtectedNs("MenuOtherBox"),StaticProtectedNs("flash.display:MovieClip"),StaticProtectedNs("flash.display:Sprite"),StaticProtectedNs("flash.display:DisplayObjectContainer"),StaticProtectedNs("flash.display:InteractiveObject"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                                 pushtrue
+                                 iftrue ofs0290
+                                 returnvoid
+                                 pushwith
+                                 callsuper QName(PackageNamespace("flash.display"),"BitmapData"), 21
+                                 throw
+                        ofs0290:
+                                 getlocal0
+                                 getproperty QName(PrivateNamespace(null,"86"),"menu")
+                                 getproperty QName(PackageNamespace(""),"misc_info")
+                                 getproperty Multiname("stat_icon",[PrivateNamespace(null,"86"),PackageNamespace(""),PrivateNamespace(null,"264"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("MenuOtherBox"),StaticProtectedNs("MenuOtherBox"),StaticProtectedNs("flash.display:MovieClip"),StaticProtectedNs("flash.display:Sprite"),StaticProtectedNs("flash.display:DisplayObjectContainer"),StaticProtectedNs("flash.display:InteractiveObject"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                                 pushstring "tank"
+                                 callpropvoid Multiname("gotoAndStop",[PrivateNamespace(null,"86"),PackageNamespace(""),PrivateNamespace(null,"264"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("MenuOtherBox"),StaticProtectedNs("MenuOtherBox"),StaticProtectedNs("flash.display:MovieClip"),StaticProtectedNs("flash.display:Sprite"),StaticProtectedNs("flash.display:DisplayObjectContainer"),StaticProtectedNs("flash.display:InteractiveObject"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")]), 1
+                                 getlocal0
+                                 jump ofs02ac
+                                 lshift
+                                 newfunction 65
+                                 throw
+                                 pushscope
+                                 setlocal0
+                        ofs02ac:
+                                 getproperty QName(PrivateNamespace(null,"86"),"menu")
+                                 getproperty QName(PackageNamespace(""),"misc_info")
+                                 getproperty Multiname("txt_stats",[PrivateNamespace(null,"86"),PackageNamespace(""),PrivateNamespace(null,"264"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("MenuOtherBox"),StaticProtectedNs("MenuOtherBox"),StaticProtectedNs("flash.display:MovieClip"),StaticProtectedNs("flash.display:Sprite"),StaticProtectedNs("flash.display:DisplayObjectContainer"),StaticProtectedNs("flash.display:InteractiveObject"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                                 getlocal0
+                                 getproperty QName(PackageNamespace(""),"shit")
+                                 iffalse ofs02c1
+                                 jump ofs02dc
+                        ofs02c1:
+                                 getlocal0
+                                 pushtrue
+                                 iftrue ofs02ce
+                                 pushfalse
+                                 returnvalue
+                                 setlocal2
+                                 callsupervoid QName(PackageNamespace("Box2D.Collision.Shapes"),"b2Shape"), 21
+                                 throw
+                        ofs02ce:
+                                 getproperty QName(PackageNamespace(""),"item")
+                                 getproperty Multiname("armor",[PrivateNamespace(null,"86"),PackageNamespace(""),PrivateNamespace(null,"264"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("MenuOtherBox"),StaticProtectedNs("MenuOtherBox"),StaticProtectedNs("flash.display:MovieClip"),StaticProtectedNs("flash.display:Sprite"),StaticProtectedNs("flash.display:DisplayObjectContainer"),StaticProtectedNs("flash.display:InteractiveObject"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                                 coerce_a
+                                 jump ofs02e7
+                                 popscope
+                                 setlocal2
+                                 getlocal1
+                        ofs02dc:
+                                 pushstring ""
+                                 jump ofs02e6
+                                 ifgt ofs02e6
+                        ofs02e6:
+                                 coerce_a
+                        ofs02e7:
+                                 setproperty Multiname("text",[PrivateNamespace(null,"86"),PackageNamespace(""),PrivateNamespace(null,"264"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("MenuOtherBox"),StaticProtectedNs("MenuOtherBox"),StaticProtectedNs("flash.display:MovieClip"),StaticProtectedNs("flash.display:Sprite"),StaticProtectedNs("flash.display:DisplayObjectContainer"),StaticProtectedNs("flash.display:InteractiveObject"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                                 jump ofs02f4
+                                 setlocal1
+                                 callmethod 3541, 20
+                                 returnvalue
+                        ofs02f4:
+                                 getlocal0
+                                 getproperty QName(PrivateNamespace(null,"86"),"menu")
+                                 getproperty QName(PackageNamespace(""),"misc_info")
+                                 getproperty Multiname("arrow0",[PrivateNamespace(null,"86"),PackageNamespace(""),PrivateNamespace(null,"264"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("MenuOtherBox"),StaticProtectedNs("MenuOtherBox"),StaticProtectedNs("flash.display:MovieClip"),StaticProtectedNs("flash.display:Sprite"),StaticProtectedNs("flash.display:DisplayObjectContainer"),StaticProtectedNs("flash.display:InteractiveObject"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                                 getlocal0
+                                 getproperty QName(PackageNamespace(""),"shit")
+                                 not
+                                 setproperty Multiname("visible",[PrivateNamespace(null,"86"),PackageNamespace(""),PrivateNamespace(null,"264"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("MenuOtherBox"),StaticProtectedNs("MenuOtherBox"),StaticProtectedNs("flash.display:MovieClip"),StaticProtectedNs("flash.display:Sprite"),StaticProtectedNs("flash.display:DisplayObjectContainer"),StaticProtectedNs("flash.display:InteractiveObject"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                                 getlex QName(PackageNamespace(""),"SD")
+                                 callproperty QName(PackageNamespace(""),"getSelCass"), 0
+                                 pushfalse
+                                 iffalse ofs031a
+                                 pushfalse
+                                 returnvalue
+                                 greaterequals
+                                 pushwith
+                                 newfunction 37
+                                 pop
+                                 setlocal3
+                        ofs031a:
+                                 getproperty QName(PackageNamespace(""),"armor")
+                                 callproperty QName(PackageNamespace(""),"createFinalItem"), 0
+                                 coerce QName(PackageNamespace(""),"Stats_Armor")
+                                 setlocal3
+                                 getlocal0
+                                 getproperty QName(PrivateNamespace(null,"86"),"menu")
+                                 getlocal0
+                                 getproperty QName(PrivateNamespace(null,"86"),"menu")
+                                 getproperty QName(PackageNamespace(""),"misc_info")
+                                 jump ofs0339
+                                 popscope
+                                 pushwith
+                                 newfunction 6
+                                 throw
+                                 coerce_s
+                        ofs0339:
+                                 getproperty Multiname("arrow0",[PrivateNamespace(null,"86"),PackageNamespace(""),PrivateNamespace(null,"264"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("MenuOtherBox"),StaticProtectedNs("MenuOtherBox"),StaticProtectedNs("flash.display:MovieClip"),StaticProtectedNs("flash.display:Sprite"),StaticProtectedNs("flash.display:DisplayObjectContainer"),StaticProtectedNs("flash.display:InteractiveObject"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                                 getlocal0
+                                 getproperty QName(PackageNamespace(""),"item")
+                                 getproperty Multiname("armor",[PrivateNamespace(null,"86"),PackageNamespace(""),PrivateNamespace(null,"264"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("MenuOtherBox"),StaticProtectedNs("MenuOtherBox"),StaticProtectedNs("flash.display:MovieClip"),StaticProtectedNs("flash.display:Sprite"),StaticProtectedNs("flash.display:DisplayObjectContainer"),StaticProtectedNs("flash.display:InteractiveObject"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                                 getlocal3
+                                 jump ofs034c
+                                 ifge ofs034c
+                        ofs034c:
+                                 getproperty QName(PackageNamespace(""),"armor")
+                                 callpropvoid QName(PackageNamespace(""),"setCompareArrow"), 3
+                                 returnvoid
+                              end ; code
+                           end ; body
+                        end ; method
+                     }
+                  }
+               }

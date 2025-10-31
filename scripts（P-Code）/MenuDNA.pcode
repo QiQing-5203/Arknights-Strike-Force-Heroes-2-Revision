@@ -1,0 +1,261 @@
+package
+{
+   import flash.display.MovieClip;
+   import flash.events.Event;
+   
+   public class MenuDNA extends MovieClip
+   {
+      
+      {
+         method
+            name null
+            returns null
+            
+            body
+               maxstack 4
+               localcount 1
+               initscopedepth 9
+               maxscopedepth 10
+               
+               code
+                  jump ofs000a
+                  call 7
+                  throw
+                  newclass 174
+         ofs000a:
+                  getlocal0
+                  pushscope
+                  returnvoid
+               end ; code
+            end ; body
+         end ; method
+      }
+      
+      private var spd:Number;
+      
+      private var size:Number;
+      
+      public function MenuDNA()
+      {
+         method
+            name null
+            returns null
+            
+            body
+               maxstack 9
+               localcount 1
+               initscopedepth 10
+               maxscopedepth 11
+               
+               code
+                  getlocal0
+                  jump ofs000b
+                  newclass 175
+                  call 9
+                  throw
+         ofs000b:
+                  pushscope
+                  getlocal0
+                  constructsuper 0
+                  findpropstrict QName(PackageNamespace(""),"addEventListener")
+                  getlex QName(PackageNamespace("flash.events"),"Event")
+                  jump ofs001c
+                  ifge ofs001c
+         ofs001c:
+                  getproperty QName(PackageNamespace(""),"ENTER_FRAME")
+                  getlocal0
+                  pushfalse
+                  iffalse ofs002d
+                  pushfalse
+                  returnvalue
+                  pushwith
+                  pushwith
+                  newfunction 4
+                  pop
+                  setlocal2
+         ofs002d:
+                  getproperty QName(PackageNamespace(""),"EnterFrame")
+                  pushfalse
+                  pushbyte 0
+                  pushtrue
+                  callpropvoid QName(PackageNamespace(""),"addEventListener"), 5
+                  getlocal0
+                  callpropvoid QName(PrivateNamespace(null),"reset"), 0
+                  findproperty QName(PackageNamespace(""),"x")
+                  getlex QName(PackageNamespace(""),"UT")
+                  jump ofs004d
+                  popscope
+                  pushwith
+                  newfunction 45
+                  throw
+                  pushscope
+         ofs004d:
+                  pushbyte 0
+                  pushshort 900
+                  callproperty QName(PackageNamespace(""),"rand"), 2
+                  initproperty QName(PackageNamespace(""),"x")
+                  returnvoid
+               end ; code
+            end ; body
+         end ; method
+      }
+      
+      private function reset() : void
+      {
+         trait method QName(PrivateNamespace(null),"reset")
+            dispid 0
+            method
+               name null
+               returns QName(PackageNamespace(""),"void")
+               
+               body
+                  maxstack 7
+                  localcount 2
+                  initscopedepth 10
+                  maxscopedepth 11
+                  
+                  code
+                     getlocal0
+                     pushscope
+                     jump ofs000d
+                     call 8
+                     callstatic 890, 8
+                     throw
+            ofs000d:
+                     findproperty QName(PackageNamespace(""),"x")
+                     pushshort 1000
+                     initproperty QName(PackageNamespace(""),"x")
+                     findproperty QName(PackageNamespace(""),"y")
+                     getlex QName(PackageNamespace(""),"UT")
+                     jump ofs0024
+                     ifle ofs0024
+            ofs0024:
+                     pushbyte 75
+                     pushshort 550
+                     callproperty QName(PackageNamespace(""),"rand"), 2
+                     initproperty QName(PackageNamespace(""),"y")
+                     pushtrue
+                     iftrue ofs003d
+                     pushfalse
+                     returnvalue
+                     popscope
+                     newfunction 118
+                     throw
+                     bitand
+                     greaterequals
+            ofs003d:
+                     findproperty QName(PackageNamespace(""),"alpha")
+                     getlex QName(PackageNamespace(""),"UT")
+                     pushdouble 0.1
+                     pushdouble 0.25
+                     callproperty QName(PackageNamespace(""),"rand"), 2
+                     initproperty QName(PackageNamespace(""),"alpha")
+                     getlocal0
+                     jump ofs0058
+                     add
+                     constructprop QName(PackageNamespace("MBFZ2_fla"),"Factory_Cloneproductline_252"), 5
+                     pushwith
+            ofs0058:
+                     getlex QName(PackageNamespace(""),"UT")
+                     pushdouble 0.3
+                     pushdouble 0.5
+                     callproperty QName(PackageNamespace(""),"rand"), 2
+                     initproperty QName(PrivateNamespace(null),"spd")
+                     getlocal0
+                     getlex QName(PackageNamespace(""),"UT")
+                     pushdouble 0.5
+                     pushdouble 0.9
+                     callproperty QName(PackageNamespace(""),"rand"), 2
+                     pushfalse
+                     iffalse ofs007f
+                     pushtrue
+                     throw
+                     popscope
+                     negate
+                     decrement
+                     pushscope
+                     setlocal2
+                     nextname
+            ofs007f:
+                     initproperty QName(PrivateNamespace(null),"size")
+                     findproperty QName(PackageNamespace(""),"scaleX")
+                     findproperty QName(PackageNamespace(""),"scaleY")
+                     getlocal0
+                     getproperty QName(PrivateNamespace(null),"size")
+                     jump ofs0094
+                     ifstrictne ofs0094
+            ofs0094:
+                     dup
+                     setlocal1
+                     initproperty QName(PackageNamespace(""),"scaleY")
+                     getlocal1
+                     jump ofs00a4
+                     returnvalue
+                     dxns "lock"
+                     pushwith
+                     multiply
+                     equals
+            ofs00a4:
+                     kill 1
+                     initproperty QName(PackageNamespace(""),"scaleX")
+                     returnvoid
+                  end ; code
+               end ; body
+            end ; method
+         }
+         
+         public function EnterFrame(param1:Event) : void
+         {
+            trait method QName(PackageNamespace(""),"EnterFrame")
+               dispid 0
+               method
+                  name null
+                  param QName(PackageNamespace("flash.events"),"Event")
+                  returns QName(PackageNamespace(""),"void")
+                  
+                  body
+                     maxstack 6
+                     localcount 2
+                     initscopedepth 10
+                     maxscopedepth 11
+                     
+                     code
+                        getlocal0
+                        pushscope
+                        jump ofs000d
+                        call 7
+                        callmethod 888, 7
+                        throw
+               ofs000d:
+                        findproperty QName(PackageNamespace(""),"x")
+                        getlex QName(PackageNamespace(""),"x")
+                        getlocal0
+                        getproperty QName(PrivateNamespace(null),"spd")
+                        subtract
+                        jump ofs0020
+                        ifstricteq ofs0020
+               ofs0020:
+                        initproperty QName(PackageNamespace(""),"x")
+                        pushfalse
+                        iffalse ofs002f
+                        pushfalse
+                        returnvalue
+                        popscope
+                        callpropvoid QName(PackageNamespace("MBFZ2_fla"),"BlackFadeEnd_152"), 5
+                        pushwith
+               ofs002f:
+                        getlex QName(PackageNamespace(""),"x")
+                        pushshort -250
+                        iflt ofs0040
+                        jump ofs0045
+               ofs0040:
+                        getlocal0
+                        callpropvoid QName(PrivateNamespace(null),"reset"), 0
+               ofs0045:
+                        returnvoid
+                     end ; code
+                  end ; body
+               end ; method
+            }
+         }
+      }

@@ -1,0 +1,292 @@
+package
+{
+   import flash.display.Loader;
+   import flash.display.Sprite;
+   import flash.net.URLRequest;
+   import flash.net.URLRequestMethod;
+   import flash.net.URLVariables;
+   import flash.system.Capabilities;
+   import flash.system.Security;
+   
+   public dynamic class MochiBot extends Sprite
+   {
+      
+      {
+         method
+            name null
+            returns null
+            
+            body
+               maxstack 4
+               localcount 1
+               initscopedepth 8
+               maxscopedepth 9
+               
+               code
+                  getlocal0
+                  pushscope
+                  jump ofs000c
+                  call 6
+                  throw
+                  newfunction 3490
+         ofs000c:
+                  returnvoid
+               end ; code
+            end ; body
+         end ; method
+      }
+      
+      public function MochiBot()
+      {
+         method
+            name null
+            returns null
+            
+            body
+               maxstack 4
+               localcount 1
+               initscopedepth 9
+               maxscopedepth 10
+               
+               code
+                  jump ofs000a
+                  call 5
+                  throw
+                  newfunction 3491
+         ofs000a:
+                  getlocal0
+                  pushscope
+                  getlocal0
+                  constructsuper 0
+                  returnvoid
+                  jump ofs0014
+         ofs0014:
+                  iflt ofs0018
+               end ; code
+            end ; body
+         end ; method
+      }
+      
+      public static function track(param1:Sprite, param2:String) : MochiBot
+      {
+         trait method QName(PackageNamespace(""),"track")
+            flag FINAL
+            dispid 3
+            method
+               name null
+               param QName(PackageNamespace("flash.display"),"Sprite")
+               param QName(PackageNamespace(""),"String")
+               returns QName(PackageNamespace(""),"MochiBot")
+               
+               body
+                  maxstack 6
+                  localcount 9
+                  initscopedepth 8
+                  maxscopedepth 9
+                  
+                  code
+                     getlocal0
+                     pushscope
+                     jump ofs000d
+                     call 9
+                     throw
+                     callstatic 3491, 9
+            ofs000d:
+                     getlex QName(PackageNamespace("flash.system"),"Security")
+                     getproperty QName(PackageNamespace(""),"sandboxType")
+                     pushstring "localWithFile"
+                     ifeq ofs001e
+                     jump ofs0028
+            ofs001e:
+                     pushnull
+                     jump ofs0027
+                     ifgt ofs0027
+            ofs0027:
+                     returnvalue
+            ofs0028:
+                     getlocal0
+                     construct 0
+                     jump ofs0034
+                     popscope
+                     callstatic 41, 21
+                     throw
+            ofs0034:
+                     coerce QName(PackageNamespace(""),"MochiBot")
+                     setlocal3
+                     getlocal1
+                     getlocal3
+                     callpropvoid QName(PackageNamespace(""),"addChild"), 1
+                     getlex QName(PackageNamespace("flash.system"),"Security")
+                     pushstring "*"
+                     callpropvoid QName(PackageNamespace(""),"allowDomain"), 1
+                     getlex QName(PackageNamespace("flash.system"),"Security")
+                     pushstring "*"
+                     jump ofs0057
+                     setlocal2
+                     callproplex QName(PackageNamespace("Playtomic"),"PlayerScore"), 18
+                     throw
+            ofs0057:
+                     callpropvoid QName(PackageNamespace(""),"allowInsecureDomain"), 1
+                     pushstring "http://core.mochibot.com/my/core.swf"
+                     setlocal 4
+                     findpropstrict QName(PackageNamespace("flash.net"),"URLVariables")
+                     constructprop QName(PackageNamespace("flash.net"),"URLVariables"), 0
+                     coerce QName(PackageNamespace("flash.net"),"URLVariables")
+                     dup
+                     jump ofs0075
+                     setlocal3
+                     setlocal0
+                     returnvoid
+                     setlocal3
+                     pushnull
+                     newactivation
+            ofs0075:
+                     setlocal 5
+                     pushstring "sb"
+                     getlex QName(PackageNamespace("flash.system"),"Security")
+                     getproperty QName(PackageNamespace(""),"sandboxType")
+                     setproperty MultinameL([PrivateNamespace(null,"254"),PackageNamespace(""),PrivateNamespace(null,"255"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("MochiBot"),StaticProtectedNs("MochiBot"),StaticProtectedNs("flash.display:Sprite"),StaticProtectedNs("flash.display:DisplayObjectContainer"),StaticProtectedNs("flash.display:InteractiveObject"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                     jump ofs008b
+                     ifeq ofs008b
+            ofs008b:
+                     getlocal 5
+                     pushstring "v"
+                     jump ofs009a
+                     multiply
+                     in
+                     multiply
+                     setlocal0
+                     instanceof
+                     returnvalue
+            ofs009a:
+                     getlex QName(PackageNamespace("flash.system"),"Capabilities")
+                     getproperty QName(PackageNamespace(""),"version")
+                     setproperty MultinameL([PrivateNamespace(null,"254"),PackageNamespace(""),PrivateNamespace(null,"255"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("MochiBot"),StaticProtectedNs("MochiBot"),StaticProtectedNs("flash.display:Sprite"),StaticProtectedNs("flash.display:DisplayObjectContainer"),StaticProtectedNs("flash.display:InteractiveObject"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                     getlocal 5
+                     pushstring "swfid"
+                     getlocal2
+                     setproperty MultinameL([PrivateNamespace(null,"254"),PackageNamespace(""),PrivateNamespace(null,"255"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("MochiBot"),StaticProtectedNs("MochiBot"),StaticProtectedNs("flash.display:Sprite"),StaticProtectedNs("flash.display:DisplayObjectContainer"),StaticProtectedNs("flash.display:InteractiveObject"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                     getlocal 5
+                     pushstring "mv"
+                     pushstring "8"
+                     pushtrue
+                     iftrue ofs00c0
+                     returnvoid
+                     setlocal1
+                     newfunction 19
+                     throw
+                     returnvoid
+                     returnvoid
+            ofs00c0:
+                     setproperty MultinameL([PrivateNamespace(null,"254"),PackageNamespace(""),PrivateNamespace(null,"255"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("MochiBot"),StaticProtectedNs("MochiBot"),StaticProtectedNs("flash.display:Sprite"),StaticProtectedNs("flash.display:DisplayObjectContainer"),StaticProtectedNs("flash.display:InteractiveObject"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                     getlocal 5
+                     pushstring "fv"
+                     pushstring "9"
+                     setproperty MultinameL([PrivateNamespace(null,"254"),PackageNamespace(""),PrivateNamespace(null,"255"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("MochiBot"),StaticProtectedNs("MochiBot"),StaticProtectedNs("flash.display:Sprite"),StaticProtectedNs("flash.display:DisplayObjectContainer"),StaticProtectedNs("flash.display:InteractiveObject"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                     getlocal3
+                     jump ofs00d9
+                     setlocal1
+                     constructsuper 98
+                     pushwith
+                     nextvalue
+                     throw
+            ofs00d9:
+                     getproperty QName(PackageNamespace(""),"root")
+                     getproperty QName(PackageNamespace(""),"loaderInfo")
+                     getproperty QName(PackageNamespace(""),"loaderURL")
+                     coerce_s
+                     dup
+                     jump ofs00ec
+                     ifeq ofs00ec
+            ofs00ec:
+                     setlocal 6
+                     pushstring "http"
+                     callproperty QName(Namespace("http://adobe.com/AS3/2006/builtin"),"indexOf"), 1
+                     pushbyte 0
+                     jump ofs0101
+                     popscope
+                     pushwith
+                     newfunction 68
+                     throw
+                     increment
+            ofs0101:
+                     ifeq ofs0109
+                     jump ofs0119
+            ofs0109:
+                     getlocal 5
+                     pushstring "url"
+                     getlocal 6
+                     setproperty MultinameL([PrivateNamespace(null,"254"),PackageNamespace(""),PrivateNamespace(null,"255"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("MochiBot"),StaticProtectedNs("MochiBot"),StaticProtectedNs("flash.display:Sprite"),StaticProtectedNs("flash.display:DisplayObjectContainer"),StaticProtectedNs("flash.display:InteractiveObject"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                     jump ofs012e
+                     pushwith
+                     setlocal1
+            ofs0119:
+                     getlocal 5
+                     jump ofs0125
+                     popscope
+                     constructprop QName(PackageNamespace(""),"randomSec"), 12
+                     setlocal0
+            ofs0125:
+                     pushstring "url"
+                     pushstring "local"
+                     setproperty MultinameL([PrivateNamespace(null,"254"),PackageNamespace(""),PrivateNamespace(null,"255"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("MochiBot"),StaticProtectedNs("MochiBot"),StaticProtectedNs("flash.display:Sprite"),StaticProtectedNs("flash.display:DisplayObjectContainer"),StaticProtectedNs("flash.display:InteractiveObject"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+            ofs012e:
+                     findpropstrict QName(PackageNamespace("flash.net"),"URLRequest")
+                     getlocal 4
+                     constructprop QName(PackageNamespace("flash.net"),"URLRequest"), 1
+                     coerce QName(PackageNamespace("flash.net"),"URLRequest")
+                     dup
+                     setlocal 7
+                     pushfalse
+                     iffalse ofs014a
+                     pushtrue
+                     throw
+                     setlocal2
+                     callsupervoid QName(PackageNamespace(""),"copyData"), 18
+                     setlocal1
+            ofs014a:
+                     pushstring "application/x-www-form-urlencoded"
+                     setproperty QName(PackageNamespace(""),"contentType")
+                     getlocal 7
+                     getlex QName(PackageNamespace("flash.net"),"URLRequestMethod")
+                     getproperty QName(PackageNamespace(""),"POST")
+                     jump ofs0160
+                     ifeq ofs0160
+            ofs0160:
+                     setproperty QName(PackageNamespace(""),"method")
+                     getlocal 7
+                     getlocal 5
+                     setproperty QName(PackageNamespace(""),"data")
+                     findpropstrict QName(PackageNamespace("flash.display"),"Loader")
+                     jump ofs0177
+                     in
+                     callmethod 3559, 12
+                     setlocal1
+            ofs0177:
+                     constructprop QName(PackageNamespace("flash.display"),"Loader"), 0
+                     coerce QName(PackageNamespace("flash.display"),"Loader")
+                     setlocal 8
+                     getlocal3
+                     getlocal 8
+                     callpropvoid QName(PackageNamespace(""),"addChild"), 1
+                     getlocal 8
+                     pushtrue
+                     iftrue ofs0196
+                     pushfalse
+                     returnvalue
+                     returnvalue
+                     pushwith
+                     newfunction 80
+                     pop
+                     bitxor
+            ofs0196:
+                     getlocal 7
+                     callpropvoid QName(PackageNamespace(""),"load"), 1
+                     getlocal3
+                     returnvalue
+                  end ; code
+               end ; body
+            end ; method
+         }
+      }
+   }

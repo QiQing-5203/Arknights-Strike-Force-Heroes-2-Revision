@@ -1,0 +1,4376 @@
+package
+{
+   public class Particle
+   {
+      
+      {
+         method
+            name null
+            returns null
+            
+            body
+               maxstack 4
+               localcount 1
+               initscopedepth 3
+               maxscopedepth 4
+               
+               code
+                  getlocal0
+                  pushscope
+                  jump ofs000c
+                  call 6
+                  throw
+                  newclass 480
+         ofs000c:
+                  returnvoid
+               end ; code
+            end ; body
+         end ; method
+      }
+      
+      private var game:Game;
+      
+      public var remove:Boolean;
+      
+      private var behave:String;
+      
+      private var name:String;
+      
+      private var sub:String;
+      
+      private var x:Number;
+      
+      private var y:Number;
+      
+      private var hitFrame:uint;
+      
+      private var stats:Object;
+      
+      private var frame:uint;
+      
+      private var holdFrame:Boolean;
+      
+      private var xSpd:Number;
+      
+      private var ySpd:Number;
+      
+      private var xVel:Number;
+      
+      private var yVel:Number;
+      
+      private var extra:Object;
+      
+      private var hitCount:uint;
+      
+      private var rotation:Number;
+      
+      private var fc:uint;
+      
+      public function Particle(param1:Game, param2:Number, param3:Number, param4:String, param5:uint, param6:Object, param7:String, param8:String, param9:uint)
+      {
+         method
+            name null
+            param QName(PackageNamespace(""),"Game")
+            param QName(PackageNamespace(""),"Number")
+            param QName(PackageNamespace(""),"Number")
+            param QName(PackageNamespace(""),"String")
+            param QName(PackageNamespace(""),"uint")
+            param QName(PackageNamespace(""),"Object")
+            param QName(PackageNamespace(""),"String")
+            param QName(PackageNamespace(""),"String")
+            param QName(PackageNamespace(""),"uint")
+            returns null
+            
+            body
+               maxstack 9
+               localcount 11
+               initscopedepth 4
+               maxscopedepth 5
+               
+               code
+                  jump ofs000b
+                  call 7
+                  throw
+                  callstatic 3492, 7
+         ofs000b:
+                  getlocal0
+                  pushscope
+                  getlocal0
+                  constructsuper 0
+                  getlocal0
+                  jump ofs0019
+                  ifstricteq ofs0019
+         ofs0019:
+                  getlocal1
+                  initproperty QName(PrivateNamespace(null,"21"),"game")
+                  jump ofs0027
+                  divide
+                  newobject 107
+                  pushwith
+                  greaterequals
+                  setlocal0
+         ofs0027:
+                  getlocal0
+                  getlocal2
+                  initproperty QName(PrivateNamespace(null,"21"),"x")
+                  getlocal0
+                  getlocal3
+                  initproperty QName(PrivateNamespace(null,"21"),"y")
+                  getlocal0
+                  pushtrue
+                  iftrue ofs003e
+                  returnvoid
+                  popscope
+                  setlocal0
+                  setlocal1
+                  pushnull
+                  returnvoid
+                  setlocal3
+         ofs003e:
+                  pushbyte 0
+                  initproperty QName(PrivateNamespace(null,"21"),"fc")
+                  getlocal0
+                  getlocal 4
+                  initproperty QName(PrivateNamespace(null,"21"),"behave")
+                  getlocal0
+                  getlocal 5
+                  initproperty QName(PrivateNamespace(null,"21"),"hitFrame")
+                  getlocal0
+                  getlocal 7
+                  jump ofs005c
+                  setlocal2
+                  constructprop QName(PackageNamespace(""),"getRandSecondary"), 12
+                  setlocal0
+         ofs005c:
+                  initproperty QName(PrivateNamespace(null,"21"),"name")
+                  getlocal0
+                  getlocal 8
+                  initproperty QName(PrivateNamespace(null,"21"),"sub")
+                  getlocal0
+                  jump ofs006e
+                  ifeq ofs006e
+         ofs006e:
+                  getlocal 6
+                  iftrue ofs0078
+                  jump ofs008d
+         ofs0078:
+                  getlocal 6
+                  coerce QName(PackageNamespace(""),"Object")
+                  jump ofs0091
+                  throw
+                  setlocal1
+                  getlocal1
+                  jump ofs0087
+         ofs0087:
+                  increment
+                  dxns "Inventory_Attachment"
+                  pushwith
+                  pop
+                  multiply
+         ofs008d:
+                  newobject 0
+                  coerce QName(PackageNamespace(""),"Object")
+         ofs0091:
+                  initproperty QName(PrivateNamespace(null,"21"),"extra")
+                  getlocal0
+                  getlex QName(PackageNamespace(""),"BH")
+                  getlocal0
+                  jump ofs00a2
+                  popscope
+                  callstatic 84, 9
+                  pushwith
+         ofs00a2:
+                  getproperty QName(PrivateNamespace(null,"21"),"name")
+                  pushbyte 0
+                  add
+                  getlocal0
+                  getproperty QName(PrivateNamespace(null,"21"),"sub")
+                  callproperty QName(PackageNamespace(""),"getBitAniStats"), 2
+                  initproperty QName(PrivateNamespace(null,"21"),"stats")
+                  getlocal0
+                  getlex QName(PackageNamespace(""),"UT")
+                  pushbyte 0
+                  jump ofs00c3
+                  popscope
+                  returnvoid
+                  setlocal2
+                  equals
+                  istypelate
+                  pushnull
+         ofs00c3:
+                  getlocal0
+                  getproperty QName(PrivateNamespace(null,"21"),"stats")
+                  getproperty Multiname("rotAmt",[PrivateNamespace(null,"21"),PackageNamespace(""),PrivateNamespace(null,"182"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Particle"),StaticProtectedNs("Particle")])
+                  decrement
+                  callproperty QName(PackageNamespace(""),"irand"), 2
+                  jump ofs00d7
+                  ifge ofs00d7
+         ofs00d7:
+                  initproperty QName(PrivateNamespace(null,"21"),"rotation")
+                  jump ofs00e4
+                  setlocal1
+                  pushnull
+                  setlocal2
+                  bitand
+                  bitxor
+                  equals
+         ofs00e4:
+                  getlocal 9
+                  iftrue ofs00ee
+                  jump ofs0109
+         ofs00ee:
+                  getlocal0
+                  getlocal 9
+                  initproperty QName(PrivateNamespace(null,"21"),"frame")
+                  getlocal0
+                  pushtrue
+                  initproperty QName(PrivateNamespace(null,"21"),"holdFrame")
+                  jump ofs010f
+                  pushwith
+                  setlocal2
+                  jump ofs0103
+         ofs0103:
+                  greaterequals
+                  constructprop QName(PackageNamespace(""),"useScore"), 10
+                  setlocal3
+         ofs0109:
+                  getlocal0
+                  pushbyte 1
+                  initproperty QName(PrivateNamespace(null,"21"),"frame")
+         ofs010f:
+                  getlocal0
+                  getlocal0
+                  getproperty QName(PrivateNamespace(null,"21"),"name")
+                  getlocal0
+                  pushtrue
+                  iftrue ofs0121
+                  returnvoid
+                  lessequals
+                  construct 113
+                  pushwith
+                  convert_s
+                  greaterequals
+         ofs0121:
+                  getproperty QName(PrivateNamespace(null,"21"),"rotation")
+                  add
+                  initproperty QName(PrivateNamespace(null,"21"),"name")
+                  jump ofs05e5
+                  popscope
+                  setlocal3
+         ofs012e:
+                  label
+                  jump ofs0137
+                  ifge ofs0137
+         ofs0137:
+                  jump ofs07d0
+         ofs013b:
+                  label
+                  getlocal0
+                  getproperty QName(PrivateNamespace(null,"21"),"extra")
+                  jump ofs014a
+                  popscope
+                  setlocal0
+                  returnvoid
+                  nextvalue
+                  pushnull
+                  setlocal0
+         ofs014a:
+                  getlex QName(PackageNamespace(""),"Math")
+                  callproperty QName(PackageNamespace(""),"random"), 0
+                  pushshort 360
+                  multiply
+                  setproperty Multiname("rot1",[PrivateNamespace(null,"21"),PackageNamespace(""),PrivateNamespace(null,"182"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Particle"),StaticProtectedNs("Particle")])
+                  getlocal0
+                  jump ofs0163
+                  setlocal3
+                  coerce_s
+                  setlocal2
+                  setlocal0
+                  in
+                  convert_d
+         ofs0163:
+                  getproperty QName(PrivateNamespace(null,"21"),"extra")
+                  getlex QName(PackageNamespace(""),"Math")
+                  callproperty QName(PackageNamespace(""),"random"), 0
+                  pushshort 360
+                  multiply
+                  setproperty Multiname("rot2",[PrivateNamespace(null,"21"),PackageNamespace(""),PrivateNamespace(null,"182"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Particle"),StaticProtectedNs("Particle")])
+                  jump ofs07d0
+                  pushwith
+                  setlocal3
+                  getlocal2
+         ofs017b:
+                  label
+                  pushfalse
+                  iffalse ofs0187
+                  returnvoid
+                  setlocal1
+                  callproplex QName(PackageNamespace("Box2D.Common.Math"),"b2Transform"), 18
+                  throw
+         ofs0187:
+                  getlocal0
+                  getproperty QName(PrivateNamespace(null,"21"),"extra")
+                  getlex QName(PackageNamespace(""),"Math")
+                  callproperty QName(PackageNamespace(""),"random"), 0
+                  pushshort 360
+                  jump ofs019d
+                  ifstricteq ofs019d
+         ofs019d:
+                  multiply
+                  setproperty Multiname("rot1",[PrivateNamespace(null,"21"),PackageNamespace(""),PrivateNamespace(null,"182"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Particle"),StaticProtectedNs("Particle")])
+                  getlocal0
+                  getproperty QName(PrivateNamespace(null,"21"),"extra")
+                  jump ofs01ae
+                  returnvalue
+                  callsupervoid QName(PackageNamespace("flash.events"),"Event"), 15
+                  throw
+         ofs01ae:
+                  getlex QName(PackageNamespace(""),"Math")
+                  callproperty QName(PackageNamespace(""),"random"), 0
+                  pushshort 360
+                  multiply
+                  setproperty Multiname("rot2",[PrivateNamespace(null,"21"),PackageNamespace(""),PrivateNamespace(null,"182"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Particle"),StaticProtectedNs("Particle")])
+                  jump ofs07d0
+                  ifstricteq ofs01c4
+         ofs01c4:
+                  label
+                  getlocal0
+                  pushtrue
+                  initproperty QName(PrivateNamespace(null,"21"),"holdFrame")
+                  pushfalse
+                  iffalse ofs01d6
+                  pushtrue
+                  throw
+                  setlocal1
+                  callproplex QName(PackageNamespace(""),"Inventory_Gun"), 6
+                  pushwith
+         ofs01d6:
+                  getlocal0
+                  getlex QName(PackageNamespace(""),"UT")
+                  pushbyte -1
+                  pushbyte 1
+                  callproperty QName(PackageNamespace(""),"rand"), 2
+                  initproperty QName(PrivateNamespace(null,"21"),"xSpd")
+                  getlocal0
+                  getlex QName(PackageNamespace(""),"UT")
+                  pushbyte 0
+                  jump ofs01f5
+                  popscope
+                  pushwith
+                  newfunction 125
+                  throw
+                  pushscope
+         ofs01f5:
+                  pushbyte 1
+                  callproperty QName(PackageNamespace(""),"rand"), 2
+                  initproperty QName(PrivateNamespace(null,"21"),"ySpd")
+                  jump ofs07d0
+                  pushwith
+                  setlocal0
+         ofs0204:
+                  label
+                  jump ofs020d
+                  ifge ofs020d
+         ofs020d:
+                  getlocal0
+                  jump ofs0218
+                  popscope
+                  newfunction 121
+                  pop
+                  setlocal2
+                  checkfilter
+         ofs0218:
+                  getlex QName(PackageNamespace(""),"UT")
+                  getlocal0
+                  getproperty QName(PrivateNamespace(null,"21"),"extra")
+                  getproperty Multiname("min",[PrivateNamespace(null,"21"),PackageNamespace(""),PrivateNamespace(null,"182"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Particle"),StaticProtectedNs("Particle")])
+                  getlocal0
+                  getproperty QName(PrivateNamespace(null,"21"),"extra")
+                  getproperty Multiname("max",[PrivateNamespace(null,"21"),PackageNamespace(""),PrivateNamespace(null,"182"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Particle"),StaticProtectedNs("Particle")])
+                  callproperty QName(PackageNamespace(""),"rand"), 2
+                  jump ofs0237
+                  decrement
+                  callsupervoid QName(PackageNamespace(""),"addNumCommas"), 10
+                  setlocal0
+         ofs0237:
+                  initproperty QName(PrivateNamespace(null,"21"),"xSpd")
+                  getlocal0
+                  getlex QName(PackageNamespace(""),"UT")
+                  pushbyte -1
+                  pushbyte 3
+                  callproperty QName(PackageNamespace(""),"rand"), 2
+                  initproperty QName(PrivateNamespace(null,"21"),"ySpd")
+                  jump ofs07d0
+                  pushwith
+                  setlocal2
+         ofs024f:
+                  label
+                  jump ofs025a
+                  setlocal2
+                  callpropvoid QName(PackageNamespace(""),"caScore"), 12
+                  setlocal0
+         ofs025a:
+                  getlocal0
+                  getlex QName(PackageNamespace(""),"UT")
+                  pushbyte 0
+                  pushbyte 1
+                  callproperty QName(PackageNamespace(""),"rand"), 2
+                  jump ofs026e
+                  ifeq ofs026e
+         ofs026e:
+                  initproperty QName(PrivateNamespace(null,"21"),"xSpd")
+                  getlocal0
+                  jump ofs027b
+                  setlocal1
+                  callproplex QName(PackageNamespace(""),"Stats_Armor"), 18
+                  pop
+         ofs027b:
+                  getlex QName(PackageNamespace(""),"UT")
+                  pushbyte 3
+                  pushbyte 5
+                  callproperty QName(PackageNamespace(""),"rand"), 2
+                  initproperty QName(PrivateNamespace(null,"21"),"ySpd")
+                  jump ofs07d0
+                  pushwith
+                  setlocal2
+         ofs028f:
+                  label
+                  getlocal0
+                  getlex QName(PackageNamespace(""),"UT")
+                  getlocal0
+                  pushfalse
+                  iffalse ofs02a0
+                  returnvoid
+                  dup
+                  callmethod 120, 27
+                  pop
+         ofs02a0:
+                  getproperty QName(PrivateNamespace(null,"21"),"extra")
+                  getproperty Multiname("rot",[PrivateNamespace(null,"21"),PackageNamespace(""),PrivateNamespace(null,"182"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Particle"),StaticProtectedNs("Particle")])
+                  pushbyte 110
+                  getlocal0
+                  getproperty QName(PrivateNamespace(null,"21"),"extra")
+                  getproperty Multiname("flip",[PrivateNamespace(null,"21"),PackageNamespace(""),PrivateNamespace(null,"182"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Particle"),StaticProtectedNs("Particle")])
+                  multiply
+                  subtract
+                  getlex QName(PackageNamespace(""),"UT")
+                  jump ofs02be
+                  newactivation
+                  decrement
+                  multiply
+                  setlocal0
+                  setlocal0
+                  setlocal1
+         ofs02be:
+                  pushbyte -15
+                  pushbyte 15
+                  callproperty QName(PackageNamespace(""),"rand"), 2
+                  add
+                  pushbyte 8
+                  jump ofs02d1
+                  ifstricteq ofs02d1
+         ofs02d1:
+                  callproperty QName(PackageNamespace(""),"xMoveToRot"), 2
+                  jump ofs02df
+                  setlocal0
+                  pushwith
+                  newfunction 123
+                  throw
+                  istypelate
+         ofs02df:
+                  initproperty QName(PrivateNamespace(null,"21"),"xSpd")
+                  getlocal0
+                  getlex QName(PackageNamespace(""),"UT")
+                  getlocal0
+                  getproperty QName(PrivateNamespace(null,"21"),"extra")
+                  getproperty Multiname("rot",[PrivateNamespace(null,"21"),PackageNamespace(""),PrivateNamespace(null,"182"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Particle"),StaticProtectedNs("Particle")])
+                  pushbyte 110
+                  getlocal0
+                  getproperty QName(PrivateNamespace(null,"21"),"extra")
+                  jump ofs02fd
+                  popscope
+                  newclass 61
+                  pushwith
+                  returnvalue
+                  setlocal0
+         ofs02fd:
+                  getproperty Multiname("flip",[PrivateNamespace(null,"21"),PackageNamespace(""),PrivateNamespace(null,"182"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Particle"),StaticProtectedNs("Particle")])
+                  multiply
+                  subtract
+                  getlex QName(PackageNamespace(""),"UT")
+                  pushbyte -15
+                  pushbyte 15
+                  callproperty QName(PackageNamespace(""),"rand"), 2
+                  add
+                  pushbyte 8
+                  jump ofs0319
+                  popscope
+                  callmethod 101, 24
+                  throw
+         ofs0319:
+                  callproperty QName(PackageNamespace(""),"yMoveToRot"), 2
+                  initproperty QName(PrivateNamespace(null,"21"),"ySpd")
+                  jump ofs07d0
+                  popscope
+                  setlocal0
+         ofs0326:
+                  label
+                  getlocal0
+                  jump ofs0330
+                  ifeq ofs0330
+         ofs0330:
+                  getlex QName(PackageNamespace(""),"UT")
+                  pushbyte -2
+                  pushbyte 2
+                  callproperty QName(PackageNamespace(""),"rand"), 2
+                  initproperty QName(PrivateNamespace(null,"21"),"xSpd")
+                  jump ofs0348
+                  increment
+                  call 46
+                  pushwith
+                  greaterequals
+                  returnvoid
+         ofs0348:
+                  getlocal0
+                  getlex QName(PackageNamespace(""),"UT")
+                  pushbyte -1
+                  pushbyte 3
+                  callproperty QName(PackageNamespace(""),"rand"), 2
+                  initproperty QName(PrivateNamespace(null,"21"),"ySpd")
+                  getlocal0
+                  getproperty QName(PrivateNamespace(null,"21"),"extra")
+                  getproperty Multiname("xSpd",[PrivateNamespace(null,"21"),PackageNamespace(""),PrivateNamespace(null,"182"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Particle"),StaticProtectedNs("Particle")])
+                  iftrue ofs0370
+                  jump ofs037b
+                  jump ofs036a
+         ofs036a:
+                  popscope
+                  newfunction 32
+                  throw
+                  bitxor
+                  pop
+         ofs0370:
+                  getlocal0
+                  getlocal0
+                  getproperty QName(PrivateNamespace(null,"21"),"extra")
+                  getproperty Multiname("xSpd",[PrivateNamespace(null,"21"),PackageNamespace(""),PrivateNamespace(null,"182"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Particle"),StaticProtectedNs("Particle")])
+                  initproperty QName(PrivateNamespace(null,"21"),"xSpd")
+         ofs037b:
+                  getlocal0
+                  getproperty QName(PrivateNamespace(null,"21"),"extra")
+                  getproperty Multiname("ySpd",[PrivateNamespace(null,"21"),PackageNamespace(""),PrivateNamespace(null,"182"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Particle"),StaticProtectedNs("Particle")])
+                  pushtrue
+                  iftrue ofs038f
+                  pushfalse
+                  returnvalue
+                  instanceof
+                  construct 12
+                  pushwith
+                  setlocal1
+                  setlocal0
+         ofs038f:
+                  iftrue ofs0397
+                  jump ofs03b6
+         ofs0397:
+                  getlocal0
+                  getlocal0
+                  getproperty QName(PrivateNamespace(null,"21"),"extra")
+                  getproperty Multiname("ySpd",[PrivateNamespace(null,"21"),PackageNamespace(""),PrivateNamespace(null,"182"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Particle"),StaticProtectedNs("Particle")])
+                  jump ofs03a7
+                  ifstricteq ofs03a7
+         ofs03a7:
+                  initproperty QName(PrivateNamespace(null,"21"),"ySpd")
+                  pushfalse
+                  iffalse ofs03b6
+                  returnvoid
+                  popscope
+                  newfunction 95
+                  throw
+                  returnvoid
+                  istypelate
+         ofs03b6:
+                  jump ofs07d0
+                  ifgt ofs03be
+         ofs03be:
+                  label
+                  getlocal0
+                  getlex QName(PackageNamespace(""),"UT")
+                  pushbyte -2
+                  pushbyte 2
+                  callproperty QName(PackageNamespace(""),"rand"), 2
+                  initproperty QName(PrivateNamespace(null,"21"),"xSpd")
+                  getlocal0
+                  jump ofs03d9
+                  lshift
+                  newfunction 126
+                  throw
+                  equals
+                  instanceof
+         ofs03d9:
+                  getlex QName(PackageNamespace(""),"UT")
+                  pushbyte -1
+                  pushbyte 0
+                  callproperty QName(PackageNamespace(""),"rand"), 2
+                  initproperty QName(PrivateNamespace(null,"21"),"ySpd")
+                  getlocal0
+                  getproperty QName(PrivateNamespace(null,"21"),"extra")
+                  getproperty Multiname("xSpd",[PrivateNamespace(null,"21"),PackageNamespace(""),PrivateNamespace(null,"182"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Particle"),StaticProtectedNs("Particle")])
+                  iftrue ofs03f6
+                  jump ofs040c
+         ofs03f6:
+                  getlocal0
+                  pushtrue
+                  iftrue ofs0402
+                  returnvoid
+                  pushscope
+                  constructprop QName(PackageNamespace(""),"Unit"), 8
+                  pushwith
+         ofs0402:
+                  getlocal0
+                  getproperty QName(PrivateNamespace(null,"21"),"extra")
+                  getproperty Multiname("xSpd",[PrivateNamespace(null,"21"),PackageNamespace(""),PrivateNamespace(null,"182"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Particle"),StaticProtectedNs("Particle")])
+                  initproperty QName(PrivateNamespace(null,"21"),"xSpd")
+         ofs040c:
+                  getlocal0
+                  jump ofs0415
+                  ifle ofs0415
+         ofs0415:
+                  getproperty QName(PrivateNamespace(null,"21"),"extra")
+                  getproperty Multiname("ySpd",[PrivateNamespace(null,"21"),PackageNamespace(""),PrivateNamespace(null,"182"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Particle"),StaticProtectedNs("Particle")])
+                  iftrue ofs0423
+                  jump ofs0437
+         ofs0423:
+                  getlocal0
+                  getlocal0
+                  jump ofs042e
+                  popscope
+                  callmethod 20, 8
+                  pushwith
+         ofs042e:
+                  getproperty QName(PrivateNamespace(null,"21"),"extra")
+                  getproperty Multiname("ySpd",[PrivateNamespace(null,"21"),PackageNamespace(""),PrivateNamespace(null,"182"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Particle"),StaticProtectedNs("Particle")])
+                  initproperty QName(PrivateNamespace(null,"21"),"ySpd")
+         ofs0437:
+                  jump ofs07d0
+                  pushwith
+                  setlocal2
+         ofs043d:
+                  label
+                  getlocal0
+                  pushbyte 10
+                  initproperty QName(PrivateNamespace(null,"21"),"hitFrame")
+                  getlocal0
+                  getlex QName(PackageNamespace(""),"UT")
+                  jump ofs0452
+                  popscope
+                  callstatic 3608, 20
+                  setlocal0
+         ofs0452:
+                  pushbyte 0
+                  pushbyte 1
+                  callproperty QName(PackageNamespace(""),"rand"), 2
+                  initproperty QName(PrivateNamespace(null,"21"),"xSpd")
+                  getlocal0
+                  getlex QName(PackageNamespace(""),"UT")
+                  pushdouble 0.5
+                  jump ofs046c
+                  greaterequals
+                  callproperty QName(PackageNamespace("flash.display"),"LoaderInfo"), 21
+                  throw
+         ofs046c:
+                  pushbyte 3
+                  callproperty QName(PackageNamespace(""),"rand"), 2
+                  initproperty QName(PrivateNamespace(null,"21"),"ySpd")
+                  getlocal0
+                  getlex QName(PackageNamespace(""),"Math")
+                  jump ofs0481
+                  ifge ofs0481
+         ofs0481:
+                  callproperty QName(PackageNamespace(""),"random"), 0
+                  pushshort 360
+                  multiply
+                  initproperty QName(PrivateNamespace(null,"21"),"rotation")
+                  jump ofs0496
+                  divide
+                  newarray 116
+                  pushwith
+                  instanceof
+                  setlocal1
+         ofs0496:
+                  jump ofs07d0
+                  pushwith
+                  setlocal2
+                  getlocal2
+         ofs049d:
+                  label
+                  getlocal0
+                  getlex QName(PackageNamespace(""),"UT")
+                  pushbyte 1
+                  pushbyte 3
+                  callproperty QName(PackageNamespace(""),"rand"), 2
+                  getlocal 6
+                  getproperty Multiname("ySpd",[PrivateNamespace(null,"21"),PackageNamespace(""),PrivateNamespace(null,"182"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Particle"),StaticProtectedNs("Particle")])
+                  multiply
+                  jump ofs04b9
+                  popscope
+                  callproplex QName(PackageNamespace("Box2D.Collision"),"b2RayCastOutput"), 9
+                  pushwith
+         ofs04b9:
+                  initproperty QName(PrivateNamespace(null,"21"),"ySpd")
+                  getlocal0
+                  getlocal0
+                  getproperty QName(PrivateNamespace(null,"21"),"ySpd")
+                  getlocal0
+                  getproperty QName(PrivateNamespace(null,"21"),"extra")
+                  jump ofs04cf
+                  popscope
+                  pushwith
+                  newfunction 8
+                  throw
+                  pushscope
+         ofs04cf:
+                  getproperty Multiname("xSpd",[PrivateNamespace(null,"21"),PackageNamespace(""),PrivateNamespace(null,"182"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Particle"),StaticProtectedNs("Particle")])
+                  multiply
+                  iftrue ofs04db
+                  jump ofs04ff
+         ofs04db:
+                  getlocal0
+                  getproperty QName(PrivateNamespace(null,"21"),"extra")
+                  jump ofs04e7
+                  ifeq ofs04e7
+         ofs04e7:
+                  getproperty Multiname("xSpd",[PrivateNamespace(null,"21"),PackageNamespace(""),PrivateNamespace(null,"182"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Particle"),StaticProtectedNs("Particle")])
+                  convert_d
+                  jump ofs0502
+                  ifne ofs04f3
+         ofs04f3:
+                  pushfalse
+                  iffalse ofs04f8
+         ofs04f8:
+                  pushtrue
+                  throw
+                  popscope
+                  callproplex QName(PackageNamespace("Playtomic"),"PlayerScore"), 15
+                  pop
+         ofs04ff:
+                  pushbyte 0
+                  convert_d
+         ofs0502:
+                  initproperty QName(PrivateNamespace(null,"21"),"xSpd")
+                  jump ofs07d0
+                  pushwith
+                  setlocal3
+         ofs050b:
+                  label
+                  getlocal0
+                  getlocal0
+                  getproperty QName(PrivateNamespace(null,"21"),"extra")
+                  getproperty Multiname("ySpd",[PrivateNamespace(null,"21"),PackageNamespace(""),PrivateNamespace(null,"182"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Particle"),StaticProtectedNs("Particle")])
+                  jump ofs051e
+                  pushfalse
+                  typeof
+                  lessequals
+                  convert_s
+                  istypelate
+                  returnvalue
+         ofs051e:
+                  initproperty QName(PrivateNamespace(null,"21"),"ySpd")
+                  getlocal0
+                  getlocal0
+                  getproperty QName(PrivateNamespace(null,"21"),"extra")
+                  getproperty Multiname("xSpd",[PrivateNamespace(null,"21"),PackageNamespace(""),PrivateNamespace(null,"182"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Particle"),StaticProtectedNs("Particle")])
+                  initproperty QName(PrivateNamespace(null,"21"),"xSpd")
+                  jump ofs0535
+                  setlocal3
+                  callpropvoid QName(PackageNamespace("Box2D.Dynamics"),"b2World"), 7
+                  pushwith
+         ofs0535:
+                  jump ofs07d0
+                  ifeq ofs053d
+         ofs053d:
+                  label
+                  getlocal0
+                  getproperty QName(PrivateNamespace(null,"21"),"extra")
+                  getlex QName(PackageNamespace(""),"Math")
+                  jump ofs054d
+                  iflt ofs054d
+         ofs054d:
+                  callproperty QName(PackageNamespace(""),"random"), 0
+                  pushshort 360
+                  jump ofs055e
+                  popscope
+                  call 84
+                  pushwith
+                  istypelate
+                  modulo
+         ofs055e:
+                  multiply
+                  setproperty Multiname("rot1",[PrivateNamespace(null,"21"),PackageNamespace(""),PrivateNamespace(null,"182"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Particle"),StaticProtectedNs("Particle")])
+                  getlocal0
+                  getproperty QName(PrivateNamespace(null,"21"),"extra")
+                  getlex QName(PackageNamespace(""),"Math")
+                  callproperty QName(PackageNamespace(""),"random"), 0
+                  pushshort 360
+                  multiply
+                  setproperty Multiname("rot2",[PrivateNamespace(null,"21"),PackageNamespace(""),PrivateNamespace(null,"182"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Particle"),StaticProtectedNs("Particle")])
+                  jump ofs07d0
+                  throw
+                  setlocal0
+                  pushtrue
+                  iftrue ofs057f
+         ofs057f:
+                  pushfalse
+                  returnvalue
+                  popscope
+                  callmethod 94, 15
+                  throw
+         ofs0586:
+                  label
+                  getlocal0
+                  pushbyte -1
+                  initproperty QName(PrivateNamespace(null,"21"),"ySpd")
+                  getlocal0
+                  pushbyte 20
+                  initproperty QName(PrivateNamespace(null,"21"),"yVel")
+                  jump ofs059d
+                  setlocal1
+                  setlocal0
+                  bitor
+                  decrement
+                  in
+                  setlocal1
+         ofs059d:
+                  getlocal0
+                  pushtrue
+                  initproperty QName(PrivateNamespace(null,"21"),"holdFrame")
+                  getlocal0
+                  pushbyte 1
+                  jump ofs05ad
+                  ifge ofs05ad
+         ofs05ad:
+                  initproperty QName(PrivateNamespace(null,"21"),"frame")
+                  jump ofs05ba
+                  bitand
+                  callmethod 3535, 18
+                  setlocal1
+         ofs05ba:
+                  jump ofs07d0
+                  ifle ofs05c2
+         ofs05c2:
+                  label
+                  getlocal0
+                  pushdouble -0.7
+                  initproperty QName(PrivateNamespace(null,"21"),"ySpd")
+                  getlocal0
+                  pushbyte 35
+                  initproperty QName(PrivateNamespace(null,"21"),"yVel")
+                  jump ofs07d0
+         ofs05d3:
+                  label
+                  jump ofs05de
+                  setlocal0
+                  newfunction 80
+                  pop
+                  equals
+                  add
+         ofs05de:
+                  jump ofs07d0
+                  throw
+                  setlocal0
+                  getlocal0
+         ofs05e5:
+                  getlocal0
+                  getproperty QName(PrivateNamespace(null,"21"),"behave")
+                  setlocal 10
+                  pushstring "loop"
+                  getlocal 10
+                  ifstricteq ofs0602
+                  jump ofs060a
+                  jump ofs05fc
+         ofs05fc:
+                  pop
+                  newfunction 72
+                  throw
+                  divide
+                  setlocal1
+         ofs0602:
+                  pushbyte 0
+                  jump ofs0799
+                  pushwith
+                  setlocal1
+         ofs060a:
+                  pushstring "fairy"
+                  getlocal 10
+                  ifstricteq ofs0617
+                  jump ofs0625
+         ofs0617:
+                  pushbyte 1
+                  jump ofs0621
+                  ifge ofs0621
+         ofs0621:
+                  jump ofs0799
+         ofs0625:
+                  pushstring "space"
+                  getlocal 10
+                  jump ofs0634
+                  modulo
+                  setlocal1
+                  setlocal3
+                  pushfalse
+                  setlocal1
+                  equals
+         ofs0634:
+                  ifstricteq ofs063c
+                  jump ofs0644
+         ofs063c:
+                  pushbyte 2
+                  jump ofs0799
+                  pushwith
+                  setlocal2
+         ofs0644:
+                  pushstring "waterdrop"
+                  getlocal 10
+                  ifstrictne ofs0662
+                  pushtrue
+                  iftrue ofs0659
+                  returnvoid
+                  returnvalue
+                  newfunction 56
+                  pushwith
+                  pushwith
+                  dup
+         ofs0659:
+                  pushbyte 3
+                  jump ofs0799
+                  throw
+                  setlocal2
+                  getlocal0
+         ofs0662:
+                  pushstring "water"
+                  getlocal 10
+                  ifstricteq ofs066f
+                  jump ofs067e
+         ofs066f:
+                  pushbyte 4
+                  jump ofs0799
+                  jump ofs0679
+         ofs0679:
+                  popscope
+                  callsupervoid QName(PackageNamespace("Box2D.Collision.Shapes"),"b2PolygonShape"), 24
+                  throw
+         ofs067e:
+                  pushstring "snow"
+                  getlocal 10
+                  ifstricteq ofs068b
+                  jump ofs0694
+         ofs068b:
+                  pushbyte 5
+                  jump ofs0799
+                  popscope
+                  setlocal1
+                  getlocal0
+         ofs0694:
+                  pushstring "shell"
+                  jump ofs06a9
+                  ifge ofs069f
+         ofs069f:
+                  jump ofs06a3
+         ofs06a3:
+                  nextname
+                  pushwith
+                  istypelate
+                  returnvoid
+                  checkfilter
+                  lshift
+         ofs06a9:
+                  getlocal 10
+                  ifstricteq ofs06b3
+                  jump ofs06bb
+         ofs06b3:
+                  pushbyte 6
+                  jump ofs0799
+                  throw
+                  setlocal1
+         ofs06bb:
+                  pushstring "spark"
+                  getlocal 10
+                  ifstrictne ofs06d3
+                  pushbyte 7
+                  jump ofs0799
+                  jump ofs06ce
+         ofs06ce:
+                  setlocal1
+                  callsupervoid QName(PackageNamespace("flash.geom"),"Vector3D"), 27
+                  pop
+         ofs06d3:
+                  pushstring "geiser"
+                  getlocal 10
+                  ifstricteq ofs06e0
+                  jump ofs06e8
+         ofs06e0:
+                  pushbyte 8
+                  jump ofs0799
+                  throw
+                  setlocal2
+         ofs06e8:
+                  pushstring "leaf"
+                  getlocal 10
+                  ifstrictne ofs0701
+                  pushbyte 9
+                  jump ofs0799
+                  jump ofs06fb
+         ofs06fb:
+                  istypelate
+                  newfunction 81
+                  pop
+                  setlocal1
+                  pushnull
+         ofs0701:
+                  pushstring "raise"
+                  getlocal 10
+                  ifstricteq ofs070e
+                  jump ofs0716
+         ofs070e:
+                  pushbyte 10
+                  jump ofs0799
+                  pushwith
+                  setlocal0
+         ofs0716:
+                  pushstring "move"
+                  jump ofs0721
+                  iflt ofs0721
+         ofs0721:
+                  getlocal 10
+                  ifstrictne ofs0738
+                  pushbyte 11
+                  jump ofs0732
+                  pushwith
+                  callproperty QName(PackageNamespace("Box2D.Collision.Shapes"),"b2MassData"), 9
+                  pushwith
+         ofs0732:
+                  jump ofs0799
+                  pushwith
+                  setlocal2
+         ofs0738:
+                  pushstring "fish"
+                  getlocal 10
+                  ifstricteq ofs0745
+                  jump ofs074b
+         ofs0745:
+                  pushbyte 12
+                  jump ofs0799
+         ofs074b:
+                  pushstring "text"
+                  getlocal 10
+                  jump ofs075a
+                  popscope
+                  equals
+                  convert_s
+                  equals
+                  typeof
+                  add
+         ofs075a:
+                  ifstricteq ofs0762
+                  jump ofs076a
+         ofs0762:
+                  pushbyte 13
+                  jump ofs0799
+                  throw
+                  setlocal0
+         ofs076a:
+                  pushstring "slowText"
+                  getlocal 10
+                  ifstrictne ofs0785
+                  pushbyte 14
+                  jump ofs077f
+                  nextvalue
+                  call 64
+                  pushwith
+                  checkfilter
+                  typeof
+         ofs077f:
+                  jump ofs0799
+                  pushwith
+                  setlocal3
+         ofs0785:
+                  jump ofs078f
+                  pushbyte 15
+                  jump ofs078f
+         ofs078f:
+                  pushbyte 15
+                  jump ofs0799
+                  ifstrictne ofs0799
+         ofs0799:
+                  kill 10
+                  lookupswitch ofs05d3, [ofs012e, ofs013b, ofs017b, ofs01c4, ofs0204, ofs024f, ofs028f, ofs0326, ofs03be, ofs043d, ofs049d, ofs050b, ofs053d, ofs0586, ofs05c2, ofs05d3]
+         ofs07d0:
+                  returnvoid
+               end ; code
+            end ; body
+         end ; method
+      }
+      
+      public function EnterFrame() : void
+      {
+         trait method QName(PackageNamespace(""),"EnterFrame")
+            dispid 0
+            method
+               name null
+               returns QName(PackageNamespace(""),"void")
+               
+               body
+                  maxstack 12
+                  localcount 4
+                  initscopedepth 4
+                  maxscopedepth 5
+                  
+                  code
+                     jump ofs000a
+                     call 7
+                     throw
+                     newfunction 3491
+            ofs000a:
+                     getlocal0
+                     pushscope
+                     pushbyte 0
+                     convert_u
+                     setlocal1
+                     jump ofs0018
+                     ifstricteq ofs0018
+            ofs0018:
+                     getlocal0
+                     getproperty QName(PackageNamespace(""),"remove")
+                     iftrue ofs0024
+                     jump ofs0025
+            ofs0024:
+                     returnvoid
+            ofs0025:
+                     getlocal0
+                     pushtrue
+                     iftrue ofs0032
+                     returnvoid
+                     popscope
+                     construct 64
+                     pushwith
+                     greaterequals
+                     instanceof
+            ofs0032:
+                     dup
+                     setlocal2
+                     getproperty QName(PrivateNamespace(null,"21"),"fc")
+                     increment
+                     setlocal3
+                     getlocal2
+                     getlocal3
+                     setproperty QName(PrivateNamespace(null,"21"),"fc")
+                     kill 3
+                     kill 2
+                     jump ofs004c
+                     popscope
+                     constructprop QName(PackageNamespace(""),"caPlayer"), 16
+                     setlocal2
+            ofs004c:
+                     jump ofs1343
+                     pushwith
+                     setlocal3
+            ofs0052:
+                     label
+                     getlocal0
+                     getproperty QName(PrivateNamespace(null,"21"),"extra")
+                     getlocal0
+                     getproperty QName(PrivateNamespace(null,"21"),"extra")
+                     getproperty Multiname("rot1",[PrivateNamespace(null,"21"),PackageNamespace(""),PrivateNamespace(null,"182"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Particle"),StaticProtectedNs("Particle")])
+                     pushbyte 1
+                     add
+                     setproperty Multiname("rot1",[PrivateNamespace(null,"21"),PackageNamespace(""),PrivateNamespace(null,"182"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Particle"),StaticProtectedNs("Particle")])
+                     jump ofs006e
+                     returnvoid
+                     newclass 59
+                     pushwith
+                     returnvoid
+                     pushfalse
+            ofs006e:
+                     getlocal0
+                     getproperty QName(PrivateNamespace(null,"21"),"extra")
+                     getlocal0
+                     getproperty QName(PrivateNamespace(null,"21"),"extra")
+                     getproperty Multiname("rot2",[PrivateNamespace(null,"21"),PackageNamespace(""),PrivateNamespace(null,"182"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Particle"),StaticProtectedNs("Particle")])
+                     jump ofs0081
+                     ifle ofs0081
+            ofs0081:
+                     pushbyte 2
+                     jump ofs008c
+                     popscope
+                     callproperty QName(PackageNamespace("Playtomic"),"PlayerLevel"), 27
+                     throw
+            ofs008c:
+                     add
+                     setproperty Multiname("rot2",[PrivateNamespace(null,"21"),PackageNamespace(""),PrivateNamespace(null,"182"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Particle"),StaticProtectedNs("Particle")])
+                     getlocal0
+                     getlocal0
+                     getproperty QName(PrivateNamespace(null,"21"),"x")
+                     getlex QName(PackageNamespace(""),"UT")
+                     getlocal0
+                     getproperty QName(PrivateNamespace(null,"21"),"extra")
+                     getproperty Multiname("rot1",[PrivateNamespace(null,"21"),PackageNamespace(""),PrivateNamespace(null,"182"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Particle"),StaticProtectedNs("Particle")])
+                     pushbyte 1
+                     jump ofs00ab
+                     returnvoid
+                     newfunction 102
+                     throw
+                     decrement
+                     checkfilter
+            ofs00ab:
+                     callproperty QName(PackageNamespace(""),"xMoveToRot"), 2
+                     add
+                     initproperty QName(PrivateNamespace(null,"21"),"x")
+                     getlocal0
+                     getlocal0
+                     getproperty QName(PrivateNamespace(null,"21"),"y")
+                     getlex QName(PackageNamespace(""),"UT")
+                     getlocal0
+                     jump ofs00c6
+                     bitxor
+                     newfunction 11
+                     throw
+                     lshift
+                     setlocal2
+            ofs00c6:
+                     getproperty QName(PrivateNamespace(null,"21"),"extra")
+                     getproperty Multiname("rot2",[PrivateNamespace(null,"21"),PackageNamespace(""),PrivateNamespace(null,"182"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Particle"),StaticProtectedNs("Particle")])
+                     pushdouble 0.6
+                     callproperty QName(PackageNamespace(""),"yMoveToRot"), 2
+                     add
+                     jump ofs00db
+                     ifgt ofs00db
+            ofs00db:
+                     initproperty QName(PrivateNamespace(null,"21"),"y")
+                     getlocal0
+                     jump ofs00e9
+                     setlocal2
+                     callstatic 3525, 10
+                     setlocal1
+            ofs00e9:
+                     getproperty QName(PrivateNamespace(null,"21"),"game")
+                     getproperty QName(PackageNamespace(""),"bitscreen")
+                     getlocal0
+                     getproperty QName(PrivateNamespace(null,"21"),"x")
+                     getlocal0
+                     getproperty QName(PrivateNamespace(null,"21"),"game")
+                     getproperty QName(PackageNamespace(""),"arena")
+                     getproperty QName(PackageNamespace(""),"x")
+                     add
+                     jump ofs0108
+                     returnvalue
+                     setlocal1
+                     throw
+                     coerce_s
+                     modulo
+                     divide
+            ofs0108:
+                     getlocal0
+                     getproperty QName(PrivateNamespace(null,"21"),"y")
+                     getlocal0
+                     getproperty QName(PrivateNamespace(null,"21"),"game")
+                     getproperty QName(PackageNamespace(""),"arena")
+                     getproperty QName(PackageNamespace(""),"y")
+                     add
+                     pushtrue
+                     jump ofs0121
+                     setlocal2
+                     callpropvoid QName(PackageNamespace("Box2D.Dynamics"),"b2ContactImpulse"), 24
+                     pop
+            ofs0121:
+                     getlocal0
+                     getproperty QName(PrivateNamespace(null,"21"),"name")
+                     getlocal0
+                     getproperty QName(PrivateNamespace(null,"21"),"sub")
+                     getlocal0
+                     jump ofs0132
+                     ifgt ofs0132
+            ofs0132:
+                     getproperty QName(PrivateNamespace(null,"21"),"frame")
+                     callpropvoid QName(PackageNamespace(""),"paint"), 6
+                     jump ofs151d
+                     pushwith
+                     setlocal0
+                     jump ofs0143
+            ofs0143:
+                     setlocal0
+                     nextvalue
+                     setlocal1
+                     setlocal3
+                     pop
+                     greaterequals
+            ofs0149:
+                     label
+                     getlocal0
+                     getproperty QName(PrivateNamespace(null,"21"),"extra")
+                     getlocal0
+                     getproperty QName(PrivateNamespace(null,"21"),"extra")
+                     getproperty Multiname("rot1",[PrivateNamespace(null,"21"),PackageNamespace(""),PrivateNamespace(null,"182"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Particle"),StaticProtectedNs("Particle")])
+                     pushfalse
+                     iffalse ofs0160
+                     returnvoid
+                     returnvalue
+                     callproperty QName(PackageNamespace("flash.display"),"MovieClip"), 15
+                     throw
+            ofs0160:
+                     pushdouble 0.3
+                     add
+                     setproperty Multiname("rot1",[PrivateNamespace(null,"21"),PackageNamespace(""),PrivateNamespace(null,"182"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Particle"),StaticProtectedNs("Particle")])
+                     getlocal0
+                     getproperty QName(PrivateNamespace(null,"21"),"extra")
+                     getlocal0
+                     getproperty QName(PrivateNamespace(null,"21"),"extra")
+                     getproperty Multiname("rot2",[PrivateNamespace(null,"21"),PackageNamespace(""),PrivateNamespace(null,"182"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Particle"),StaticProtectedNs("Particle")])
+                     pushdouble 0.6
+                     jump ofs017d
+                     returnvoid
+                     pushwith
+                     newfunction 103
+                     throw
+                     lshift
+            ofs017d:
+                     add
+                     setproperty Multiname("rot2",[PrivateNamespace(null,"21"),PackageNamespace(""),PrivateNamespace(null,"182"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Particle"),StaticProtectedNs("Particle")])
+                     getlocal0
+                     getlocal0
+                     getproperty QName(PrivateNamespace(null,"21"),"x")
+                     jump ofs018e
+                     ifne ofs018e
+            ofs018e:
+                     getlex QName(PackageNamespace(""),"UT")
+                     getlocal0
+                     getproperty QName(PrivateNamespace(null,"21"),"extra")
+                     getproperty Multiname("rot1",[PrivateNamespace(null,"21"),PackageNamespace(""),PrivateNamespace(null,"182"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Particle"),StaticProtectedNs("Particle")])
+                     pushfalse
+                     iffalse ofs01a5
+                     pushfalse
+                     returnvalue
+                     popscope
+                     callproplex QName(PackageNamespace(""),"useExtra"), 14
+                     setlocal0
+            ofs01a5:
+                     pushbyte 1
+                     callproperty QName(PackageNamespace(""),"xMoveToRot"), 2
+                     add
+                     initproperty QName(PrivateNamespace(null,"21"),"x")
+                     getlocal0
+                     getlocal0
+                     jump ofs01bb
+                     pushnull
+                     callproplex QName(PackageNamespace(""),"useExtra"), 18
+                     setlocal0
+            ofs01bb:
+                     getproperty QName(PrivateNamespace(null,"21"),"y")
+                     getlex QName(PackageNamespace(""),"UT")
+                     getlocal0
+                     getproperty QName(PrivateNamespace(null,"21"),"extra")
+                     getproperty Multiname("rot2",[PrivateNamespace(null,"21"),PackageNamespace(""),PrivateNamespace(null,"182"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Particle"),StaticProtectedNs("Particle")])
+                     pushdouble 0.6
+                     jump ofs01d4
+                     setlocal3
+                     newobject 107
+                     pushwith
+                     setlocal1
+                     nextvalue
+            ofs01d4:
+                     callproperty QName(PackageNamespace(""),"yMoveToRot"), 2
+                     add
+                     initproperty QName(PrivateNamespace(null,"21"),"y")
+                     getlocal0
+                     getproperty QName(PrivateNamespace(null,"21"),"game")
+                     jump ofs01e8
+                     ifle ofs01e8
+            ofs01e8:
+                     getproperty QName(PackageNamespace(""),"bitscreen")
+                     getlocal0
+                     jump ofs01f6
+                     popscope
+                     callstatic 3581, 14
+                     setlocal2
+            ofs01f6:
+                     getproperty QName(PrivateNamespace(null,"21"),"x")
+                     getlocal0
+                     getproperty QName(PrivateNamespace(null,"21"),"game")
+                     getproperty QName(PackageNamespace(""),"arena")
+                     getproperty QName(PackageNamespace(""),"x")
+                     add
+                     getlocal0
+                     getproperty QName(PrivateNamespace(null,"21"),"y")
+                     getlocal0
+                     jump ofs0212
+                     setlocal2
+                     callproplex QName(PackageNamespace("Box2D.Collision.Shapes"),"b2MassData"), 7
+                     pushwith
+            ofs0212:
+                     getproperty QName(PrivateNamespace(null,"21"),"game")
+                     getproperty QName(PackageNamespace(""),"arena")
+                     getproperty QName(PackageNamespace(""),"y")
+                     add
+                     pushtrue
+                     getlocal0
+                     getproperty QName(PrivateNamespace(null,"21"),"name")
+                     getlocal0
+                     jump ofs022c
+                     popscope
+                     multiply
+                     add
+                     setlocal0
+                     modulo
+                     returnvalue
+            ofs022c:
+                     getproperty QName(PrivateNamespace(null,"21"),"sub")
+                     getlocal0
+                     getproperty QName(PrivateNamespace(null,"21"),"frame")
+                     callpropvoid QName(PackageNamespace(""),"paint"), 6
+                     jump ofs151d
+                     pushwith
+                     setlocal2
+                     getlocal3
+            ofs023e:
+                     label
+                     jump ofs0251
+                     ifstricteq ofs0247
+            ofs0247:
+                     jump ofs024b
+            ofs024b:
+                     returnvalue
+                     nextvalue
+                     returnvalue
+                     setlocal2
+                     increment
+                     multiply
+            ofs0251:
+                     getlocal0
+                     getlocal0
+                     getproperty QName(PrivateNamespace(null,"21"),"x")
+                     getlocal0
+                     getproperty QName(PrivateNamespace(null,"21"),"xSpd")
+                     add
+                     initproperty QName(PrivateNamespace(null,"21"),"x")
+                     getlocal0
+                     getlocal0
+                     getproperty QName(PrivateNamespace(null,"21"),"y")
+                     jump ofs026d
+                     negate
+                     setlocal2
+                     bitxor
+                     setlocal2
+                     setlocal2
+                     coerce_s
+            ofs026d:
+                     getlocal0
+                     getproperty QName(PrivateNamespace(null,"21"),"ySpd")
+                     add
+                     initproperty QName(PrivateNamespace(null,"21"),"y")
+                     getlocal0
+                     getlocal0
+                     getproperty QName(PrivateNamespace(null,"21"),"ySpd")
+                     jump ofs0284
+                     coerce_s
+                     pushscope
+                     returnvalue
+                     in
+                     setlocal2
+                     bitand
+            ofs0284:
+                     pushdouble 0.5
+                     add
+                     initproperty QName(PrivateNamespace(null,"21"),"ySpd")
+                     getlocal0
+                     getproperty QName(PrivateNamespace(null,"21"),"hitCount")
+                     jump ofs0296
+                     ifle ofs0296
+            ofs0296:
+                     not
+                     dup
+                     iftrue ofs02a0
+                     jump ofs02cd
+            ofs02a0:
+                     pop
+                     jump ofs02ab
+                     modulo
+                     newfunction 118
+                     throw
+                     returnvoid
+                     lshift
+            ofs02ab:
+                     getlocal0
+                     callproperty QName(PrivateNamespace(null,"21"),"hitTest"), 0
+                     coerce_a
+                     convert_b
+                     dup
+                     iffalse ofs02c5
+                     jump ofs02cd
+                     jump ofs02bf
+            ofs02bf:
+                     setlocal0
+                     pop
+                     setlocal3
+                     checkfilter
+                     setlocal2
+                     instanceof
+            ofs02c5:
+                     pop
+                     getlocal0
+                     callproperty QName(PrivateNamespace(null,"21"),"hitTestPlayer"), 0
+                     coerce_a
+                     convert_b
+            ofs02cd:
+                     iftrue ofs02d5
+                     jump ofs030c
+            ofs02d5:
+                     getlocal0
+                     jump ofs02e0
+                     setlocal3
+                     callsuper QName(PrivateNamespace(null,"9"),"getClassDef"), 18
+                     setlocal0
+            ofs02e0:
+                     getlocal0
+                     getproperty QName(PrivateNamespace(null,"21"),"y")
+                     getlocal0
+                     getproperty QName(PrivateNamespace(null,"21"),"ySpd")
+                     subtract
+                     jump ofs02f1
+                     ifle ofs02f1
+            ofs02f1:
+                     initproperty QName(PrivateNamespace(null,"21"),"y")
+                     getlocal0
+                     pushbyte 0
+                     initproperty QName(PrivateNamespace(null,"21"),"ySpd")
+                     getlocal0
+                     pushtrue
+                     iftrue ofs0307
+                     returnvoid
+                     checkfilter
+                     pushwith
+                     newfunction 71
+                     pop
+                     pop
+            ofs0307:
+                     pushbyte 1
+                     initproperty QName(PrivateNamespace(null,"21"),"hitCount")
+            ofs030c:
+                     getlocal0
+                     getproperty QName(PrivateNamespace(null,"21"),"game")
+                     getproperty QName(PackageNamespace(""),"bitscreen")
+                     getlocal0
+                     getproperty QName(PrivateNamespace(null,"21"),"x")
+                     getlocal0
+                     getproperty QName(PrivateNamespace(null,"21"),"game")
+                     jump ofs0325
+                     popscope
+                     callstatic 3571, 14
+                     setlocal1
+            ofs0325:
+                     getproperty QName(PackageNamespace(""),"arena")
+                     getproperty QName(PackageNamespace(""),"x")
+                     add
+                     getlocal0
+                     getproperty QName(PrivateNamespace(null,"21"),"y")
+                     getlocal0
+                     getproperty QName(PrivateNamespace(null,"21"),"game")
+                     getproperty QName(PackageNamespace(""),"arena")
+                     getproperty QName(PackageNamespace(""),"y")
+                     pushtrue
+                     iftrue ofs0346
+                     returnvoid
+                     convert_d
+                     newclass 28
+                     pushwith
+                     throw
+                     bitor
+            ofs0346:
+                     add
+                     pushtrue
+                     getlocal0
+                     getproperty QName(PrivateNamespace(null,"21"),"name")
+                     getlocal0
+                     jump ofs0355
+                     iflt ofs0355
+            ofs0355:
+                     getproperty QName(PrivateNamespace(null,"21"),"sub")
+                     getlocal0
+                     getproperty QName(PrivateNamespace(null,"21"),"frame")
+                     callpropvoid QName(PackageNamespace(""),"paint"), 6
+                     jump ofs036a
+                     popscope
+                     modulo
+                     returnvalue
+                     nextvalue
+                     setlocal0
+                     returnvoid
+            ofs036a:
+                     getlocal0
+                     getproperty QName(PrivateNamespace(null,"21"),"hitCount")
+                     iftrue ofs0376
+                     jump ofs03c0
+            ofs0376:
+                     getlocal0
+                     dup
+                     setlocal2
+                     getproperty QName(PrivateNamespace(null,"21"),"frame")
+                     increment
+                     setlocal3
+                     getlocal2
+                     pushfalse
+                     iffalse ofs038b
+                     returnvoid
+                     setlocal2
+                     add
+                     in
+                     dup
+                     returnvalue
+                     returnvoid
+            ofs038b:
+                     getlocal3
+                     setproperty QName(PrivateNamespace(null,"21"),"frame")
+                     kill 3
+                     kill 2
+                     getlocal0
+                     getproperty QName(PrivateNamespace(null,"21"),"frame")
+                     getlocal0
+                     pushfalse
+                     iffalse ofs03a5
+                     pushtrue
+                     throw
+                     in
+                     callstatic 3572, 18
+                     setlocal0
+            ofs03a5:
+                     getproperty QName(PrivateNamespace(null,"21"),"stats")
+                     getproperty Multiname("frames",[PrivateNamespace(null,"21"),PackageNamespace(""),PrivateNamespace(null,"182"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Particle"),StaticProtectedNs("Particle")])
+                     ifeq ofs03b3
+                     jump ofs03c0
+            ofs03b3:
+                     getlocal0
+                     pushtrue
+                     jump ofs03bd
+                     ifle ofs03bd
+            ofs03bd:
+                     initproperty QName(PackageNamespace(""),"remove")
+            ofs03c0:
+                     jump ofs151d
+                     pushwith
+                     setlocal1
+                     getlocal1
+                     pushtrue
+                     iftrue ofs03cc
+            ofs03cc:
+                     returnvoid
+                     throw
+                     setlocal1
+                     istypelate
+                     pushnull
+                     typeof
+                     throw
+            ofs03d3:
+                     label
+                     getlocal0
+                     getlocal0
+                     getproperty QName(PrivateNamespace(null,"21"),"x")
+                     getlocal0
+                     getproperty QName(PrivateNamespace(null,"21"),"xSpd")
+                     add
+                     initproperty QName(PrivateNamespace(null,"21"),"x")
+                     getlocal0
+                     jump ofs03ec
+                     returnvoid
+                     setlocal2
+                     convert_s
+                     setlocal3
+                     typeof
+                     nextname
+            ofs03ec:
+                     getlocal0
+                     getproperty QName(PrivateNamespace(null,"21"),"y")
+                     getlocal0
+                     getproperty QName(PrivateNamespace(null,"21"),"ySpd")
+                     add
+                     initproperty QName(PrivateNamespace(null,"21"),"y")
+                     getlocal0
+                     jump ofs0402
+                     pushfalse
+                     callproperty QName(PackageNamespace("Box2D.Collision"),"b2ManifoldPoint"), 8
+                     pushwith
+            ofs0402:
+                     getlocal0
+                     getproperty QName(PrivateNamespace(null,"21"),"ySpd")
+                     pushdouble 0.5
+                     add
+                     initproperty QName(PrivateNamespace(null,"21"),"ySpd")
+                     jump ofs0414
+                     ifgt ofs0414
+            ofs0414:
+                     getlocal0
+                     getproperty QName(PrivateNamespace(null,"21"),"hitCount")
+                     iffalse ofs042b
+                     jump ofs052a
+                     pushtrue
+                     iftrue ofs0425
+            ofs0425:
+                     returnvoid
+                     popscope
+                     callsupervoid QName(PackageNamespace("flash.display"),"Sprite"), 24
+                     throw
+            ofs042b:
+                     getlocal0
+                     getproperty QName(PrivateNamespace(null,"21"),"fc")
+                     getlocal0
+                     getproperty QName(PrivateNamespace(null,"21"),"hitFrame")
+                     greaterequals
+                     dup
+                     iftrue ofs0447
+                     jump ofs044e
+                     jump ofs0441
+            ofs0441:
+                     setlocal2
+                     constructsuper 112
+                     pushwith
+                     bitor
+                     convert_s
+            ofs0447:
+                     pop
+                     getlocal0
+                     callproperty QName(PrivateNamespace(null,"21"),"hitTest"), 0
+                     convert_b
+            ofs044e:
+                     iftrue ofs0456
+                     jump ofs045c
+            ofs0456:
+                     getlocal0
+                     pushbyte 1
+                     initproperty QName(PrivateNamespace(null,"21"),"hitCount")
+            ofs045c:
+                     pushbyte 0
+                     jump ofs0468
+                     popscope
+                     callproplex QName(PackageNamespace(""),"postCutSong"), 12
+                     setlocal1
+            ofs0468:
+                     convert_u
+                     setlocal1
+                     jump ofs0517
+                     pushwith
+                     setlocal3
+            ofs0470:
+                     label
+                     getlocal0
+                     jump ofs047a
+                     ifle ofs047a
+            ofs047a:
+                     getproperty QName(PrivateNamespace(null,"21"),"game")
+                     getproperty QName(PackageNamespace(""),"units")
+                     getlocal1
+                     pushtrue
+                     iftrue ofs048d
+                     returnvoid
+                     divide
+                     newfunction 56
+                     pop
+                     setlocal3
+                     multiply
+            ofs048d:
+                     getproperty MultinameL([PrivateNamespace(null,"21"),PackageNamespace(""),PrivateNamespace(null,"182"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Particle"),StaticProtectedNs("Particle")])
+                     getproperty Multiname("dead",[PrivateNamespace(null,"21"),PackageNamespace(""),PrivateNamespace(null,"182"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Particle"),StaticProtectedNs("Particle")])
+                     iftrue ofs049b
+                     jump ofs04a1
+            ofs049b:
+                     jump ofs0509
+                     popscope
+                     setlocal3
+            ofs04a1:
+                     getlex QName(PackageNamespace(""),"UT")
+                     getlocal0
+                     getproperty QName(PrivateNamespace(null,"21"),"x")
+                     getlocal0
+                     jump ofs04b3
+                     bitor
+                     newfunction 84
+                     throw
+                     setlocal2
+                     add
+            ofs04b3:
+                     getproperty QName(PrivateNamespace(null,"21"),"y")
+                     getlocal0
+                     getproperty QName(PrivateNamespace(null,"21"),"game")
+                     getproperty QName(PackageNamespace(""),"units")
+                     getlocal1
+                     getproperty MultinameL([PrivateNamespace(null,"21"),PackageNamespace(""),PrivateNamespace(null,"182"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Particle"),StaticProtectedNs("Particle")])
+                     getproperty Multiname("x",[PrivateNamespace(null,"21"),PackageNamespace(""),PrivateNamespace(null,"182"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Particle"),StaticProtectedNs("Particle")])
+                     pushbyte 25
+                     subtract
+                     getlocal0
+                     jump ofs04d2
+                     pushwith
+                     negate
+                     setlocal0
+                     pushscope
+                     lessequals
+                     istypelate
+            ofs04d2:
+                     getproperty QName(PrivateNamespace(null,"21"),"game")
+                     getproperty QName(PackageNamespace(""),"units")
+                     getlocal1
+                     getproperty MultinameL([PrivateNamespace(null,"21"),PackageNamespace(""),PrivateNamespace(null,"182"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Particle"),StaticProtectedNs("Particle")])
+                     getproperty Multiname("y",[PrivateNamespace(null,"21"),PackageNamespace(""),PrivateNamespace(null,"182"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Particle"),StaticProtectedNs("Particle")])
+                     jump ofs04e7
+                     ifle ofs04e7
+            ofs04e7:
+                     pushbyte 70
+                     subtract
+                     pushbyte 50
+                     dup
+                     jump ofs04f7
+                     setlocal1
+                     pushwith
+                     newfunction 94
+                     throw
+                     increment
+            ofs04f7:
+                     callproperty QName(PackageNamespace(""),"inBox"), 6
+                     iftrue ofs0503
+                     jump ofs0509
+            ofs0503:
+                     getlocal0
+                     pushbyte 1
+                     initproperty QName(PrivateNamespace(null,"21"),"hitCount")
+            ofs0509:
+                     getlocal1
+                     increment
+                     convert_u
+                     setlocal1
+                     jump ofs0517
+                     popscope
+                     pushwith
+                     newfunction 126
+                     throw
+                     pushnull
+            ofs0517:
+                     getlocal1
+                     getlocal0
+                     getproperty QName(PrivateNamespace(null,"21"),"game")
+                     getproperty QName(PackageNamespace(""),"units")
+                     getproperty QName(PackageNamespace(""),"length")
+                     ifnlt ofs052a
+                     jump ofs0470
+            ofs052a:
+                     getlocal0
+                     getproperty QName(PrivateNamespace(null,"21"),"hitCount")
+                     jump ofs0538
+                     popscope
+                     newfunction 112
+                     throw
+                     increment
+                     pushnull
+            ofs0538:
+                     pushbyte 1
+                     ifeq ofs0542
+                     jump ofs05b2
+            ofs0542:
+                     getlocal0
+                     getlocal0
+                     getproperty QName(PrivateNamespace(null,"21"),"xSpd")
+                     jump ofs054f
+                     ifstricteq ofs054f
+            ofs054f:
+                     pushbyte 3
+                     multiply
+                     initproperty QName(PrivateNamespace(null,"21"),"xSpd")
+                     pushtrue
+                     iftrue ofs0561
+                     returnvoid
+                     bitxor
+                     nextname
+                     setlocal3
+                     newactivation
+                     pushnull
+                     multiply
+            ofs0561:
+                     getlocal0
+                     getlocal0
+                     getproperty QName(PrivateNamespace(null,"21"),"y")
+                     getlocal0
+                     getproperty QName(PrivateNamespace(null,"21"),"ySpd")
+                     subtract
+                     pushfalse
+                     iffalse ofs0577
+                     returnvoid
+                     instanceof
+                     bitxor
+                     returnvalue
+                     in
+                     setlocal2
+                     returnvalue
+            ofs0577:
+                     initproperty QName(PrivateNamespace(null,"21"),"y")
+                     getlocal0
+                     getlocal0
+                     getproperty QName(PrivateNamespace(null,"21"),"ySpd")
+                     getlex QName(PackageNamespace(""),"UT")
+                     pushdouble 0.2
+                     pushfalse
+                     iffalse ofs0590
+                     returnvoid
+                     setlocal2
+                     callproperty QName(PackageNamespace(""),"qmBots1"), 14
+                     setlocal0
+            ofs0590:
+                     pushdouble 0.5
+                     callproperty QName(PackageNamespace(""),"rand"), 2
+                     negate
+                     multiply
+                     initproperty QName(PrivateNamespace(null,"21"),"ySpd")
+                     jump ofs05a3
+                     ifle ofs05a3
+            ofs05a3:
+                     getlocal0
+                     jump ofs05ad
+                     returnvalue
+                     callstatic 81, 15
+                     throw
+            ofs05ad:
+                     pushbyte 1
+                     initproperty QName(PrivateNamespace(null,"21"),"hitCount")
+            ofs05b2:
+                     getlocal0
+                     getproperty QName(PrivateNamespace(null,"21"),"hitCount")
+                     iftrue ofs05be
+                     jump ofs0681
+            ofs05be:
+                     getlocal0
+                     dup
+                     jump ofs05ca
+                     bitand
+                     newfunction 66
+                     throw
+                     returnvalue
+                     convert_d
+            ofs05ca:
+                     setlocal2
+                     getproperty QName(PrivateNamespace(null,"21"),"hitCount")
+                     increment
+                     setlocal3
+                     getlocal2
+                     getlocal3
+                     setproperty QName(PrivateNamespace(null,"21"),"hitCount")
+                     kill 3
+                     jump ofs05e1
+                     bitxor
+                     newfunction 61
+                     pop
+                     setlocal0
+                     multiply
+            ofs05e1:
+                     kill 2
+                     getlocal0
+                     getproperty QName(PrivateNamespace(null,"21"),"hitCount")
+                     pushbyte 20
+                     ifeq ofs05f1
+                     jump ofs0607
+            ofs05f1:
+                     getlocal0
+                     jump ofs05fa
+                     ifle ofs05fa
+            ofs05fa:
+                     pushtrue
+                     jump ofs0604
+                     setlocal3
+                     callsuper QName(PackageNamespace("fl.controls"),"Button"), 27
+                     throw
+            ofs0604:
+                     initproperty QName(PackageNamespace(""),"remove")
+            ofs0607:
+                     getlocal0
+                     getproperty QName(PrivateNamespace(null,"21"),"game")
+                     getproperty QName(PackageNamespace(""),"bitscreen")
+                     getlocal0
+                     getproperty QName(PrivateNamespace(null,"21"),"x")
+                     getlocal0
+                     getproperty QName(PrivateNamespace(null,"21"),"game")
+                     getproperty QName(PackageNamespace(""),"arena")
+                     jump ofs0623
+                     setlocal2
+                     lshift
+                     setlocal0
+                     setlocal3
+                     typeof
+                     convert_s
+            ofs0623:
+                     getproperty QName(PackageNamespace(""),"x")
+                     add
+                     getlocal0
+                     getproperty QName(PrivateNamespace(null,"21"),"y")
+                     getlocal0
+                     getproperty QName(PrivateNamespace(null,"21"),"game")
+                     getproperty QName(PackageNamespace(""),"arena")
+                     getproperty QName(PackageNamespace(""),"y")
+                     add
+                     pushtrue
+                     pushfalse
+                     iffalse ofs0643
+                     returnvoid
+                     coerce_s
+                     callproperty QName(PackageNamespace(""),"getDist"), 18
+                     setlocal0
+            ofs0643:
+                     getlocal0
+                     getproperty QName(PrivateNamespace(null,"21"),"name")
+                     getlocal0
+                     getproperty QName(PrivateNamespace(null,"21"),"sub")
+                     findpropstrict QName(PackageNamespace(""),"uint")
+                     jump ofs0655
+                     iflt ofs0655
+            ofs0655:
+                     getlocal0
+                     getproperty QName(PrivateNamespace(null,"21"),"hitCount")
+                     pushbyte 10
+                     jump ofs0664
+                     increment
+                     callpropvoid QName(PackageNamespace("Box2D.Common.Math"),"b2Sweep"), 30
+                     pop
+            ofs0664:
+                     divide
+                     callproperty QName(PackageNamespace(""),"uint"), 1
+                     pushbyte 2
+                     add
+                     callpropvoid QName(PackageNamespace(""),"paint"), 6
+                     jump ofs06d7
+                     ifgt ofs0677
+            ofs0677:
+                     jump ofs067b
+            ofs067b:
+                     pop
+                     newarray 17
+                     pushwith
+                     setlocal2
+                     bitxor
+            ofs0681:
+                     getlocal0
+                     getproperty QName(PrivateNamespace(null,"21"),"game")
+                     getproperty QName(PackageNamespace(""),"bitscreen")
+                     getlocal0
+                     getproperty QName(PrivateNamespace(null,"21"),"x")
+                     getlocal0
+                     getproperty QName(PrivateNamespace(null,"21"),"game")
+                     getproperty QName(PackageNamespace(""),"arena")
+                     getproperty QName(PackageNamespace(""),"x")
+                     add
+                     pushtrue
+                     iftrue ofs06a4
+                     pushtrue
+                     throw
+                     popscope
+                     returnvalue
+                     lessequals
+                     throw
+                     convert_s
+                     greaterequals
+            ofs06a4:
+                     getlocal0
+                     getproperty QName(PrivateNamespace(null,"21"),"y")
+                     getlocal0
+                     getproperty QName(PrivateNamespace(null,"21"),"game")
+                     getproperty QName(PackageNamespace(""),"arena")
+                     jump ofs06b7
+                     ifeq ofs06b7
+            ofs06b7:
+                     getproperty QName(PackageNamespace(""),"y")
+                     add
+                     pushfalse
+                     iffalse ofs06c8
+                     pushtrue
+                     throw
+                     decrement
+                     pushwith
+                     newfunction 61
+                     throw
+                     increment
+            ofs06c8:
+                     pushtrue
+                     getlocal0
+                     getproperty QName(PrivateNamespace(null,"21"),"name")
+                     getlocal0
+                     getproperty QName(PrivateNamespace(null,"21"),"sub")
+                     pushbyte 1
+                     callpropvoid QName(PackageNamespace(""),"paint"), 6
+            ofs06d7:
+                     jump ofs151d
+                     pushwith
+                     setlocal1
+                     getlocal0
+            ofs06de:
+                     label
+                     jump ofs06e9
+                     popscope
+                     pushnull
+                     equals
+                     returnvalue
+                     returnvalue
+                     modulo
+            ofs06e9:
+                     getlocal0
+                     getlocal0
+                     getproperty QName(PrivateNamespace(null,"21"),"x")
+                     getlocal0
+                     getproperty QName(PrivateNamespace(null,"21"),"xSpd")
+                     add
+                     initproperty QName(PrivateNamespace(null,"21"),"x")
+                     getlocal0
+                     getlocal0
+                     getproperty QName(PrivateNamespace(null,"21"),"y")
+                     pushfalse
+                     iffalse ofs0708
+                     pushfalse
+                     returnvalue
+                     setlocal1
+                     bitor
+                     setlocal0
+                     dup
+                     returnvoid
+                     pushwith
+            ofs0708:
+                     getlocal0
+                     getproperty QName(PrivateNamespace(null,"21"),"ySpd")
+                     add
+                     initproperty QName(PrivateNamespace(null,"21"),"y")
+                     getlocal0
+                     jump ofs0719
+                     iflt ofs0719
+            ofs0719:
+                     getproperty QName(PrivateNamespace(null,"21"),"fc")
+                     pushbyte 3
+                     modulo
+                     pushbyte 0
+                     equals
+                     jump ofs072c
+                     setlocal1
+                     newfunction 103
+                     throw
+                     lshift
+                     setlocal2
+            ofs072c:
+                     dup
+                     iftrue ofs0735
+                     jump ofs073c
+            ofs0735:
+                     pop
+                     getlocal0
+                     callproperty QName(PrivateNamespace(null,"21"),"hitTest"), 0
+                     convert_b
+            ofs073c:
+                     iffalse ofs076c
+                     getlocal0
+                     pushtrue
+                     initproperty QName(PackageNamespace(""),"remove")
+                     jump ofs074f
+                     lessequals
+                     pushwith
+                     newfunction 14
+                     throw
+                     lessequals
+            ofs074f:
+                     getlocal0
+                     getproperty QName(PrivateNamespace(null,"21"),"game")
+                     getlocal0
+                     getproperty QName(PrivateNamespace(null,"21"),"x")
+                     getlocal0
+                     getproperty QName(PrivateNamespace(null,"21"),"y")
+                     pushstring "snowSplash"
+                     callpropvoid QName(PackageNamespace(""),"createEffect"), 3
+                     jump ofs076c
+                     popscope
+                     checkfilter
+                     istypelate
+                     bitor
+                     checkfilter
+                     returnvoid
+            ofs076c:
+                     getlocal0
+                     getproperty QName(PrivateNamespace(null,"21"),"game")
+                     getproperty QName(PackageNamespace(""),"bitscreen")
+                     getlocal0
+                     getproperty QName(PrivateNamespace(null,"21"),"x")
+                     jump ofs077f
+                     ifstrictne ofs077f
+            ofs077f:
+                     getlocal0
+                     getproperty QName(PrivateNamespace(null,"21"),"game")
+                     getproperty QName(PackageNamespace(""),"arena")
+                     jump ofs078f
+                     pushscope
+                     callproperty QName(PackageNamespace("Box2D.Dynamics"),"b2World"), 24
+                     throw
+            ofs078f:
+                     getproperty QName(PackageNamespace(""),"x")
+                     add
+                     getlocal0
+                     getproperty QName(PrivateNamespace(null,"21"),"y")
+                     getlocal0
+                     getproperty QName(PrivateNamespace(null,"21"),"game")
+                     getproperty QName(PackageNamespace(""),"arena")
+                     getproperty QName(PackageNamespace(""),"y")
+                     add
+                     jump ofs07ac
+                     bitand
+                     callproplex QName(PackageNamespace(""),"rotBounceOff"), 20
+                     setlocal2
+            ofs07ac:
+                     pushtrue
+                     getlocal0
+                     getproperty QName(PrivateNamespace(null,"21"),"name")
+                     getlocal0
+                     getproperty QName(PrivateNamespace(null,"21"),"sub")
+                     getlocal0
+                     pushtrue
+                     iftrue ofs07c1
+                     returnvoid
+                     typeof
+                     callmethod 56, 18
+                     throw
+            ofs07c1:
+                     getproperty QName(PrivateNamespace(null,"21"),"frame")
+                     callpropvoid QName(PackageNamespace(""),"paint"), 6
+                     jump ofs151d
+                     pushwith
+                     setlocal3
+            ofs07ce:
+                     label
+                     getlocal0
+                     jump ofs07d8
+                     ifge ofs07d8
+            ofs07d8:
+                     getproperty QName(PrivateNamespace(null,"21"),"hitCount")
+                     iftrue ofs07ef
+                     jump ofs086e
+                     pushtrue
+                     iftrue ofs07e8
+            ofs07e8:
+                     returnvoid
+                     setlocal1
+                     greaterequals
+                     in
+                     returnvoid
+                     bitxor
+                     typeof
+            ofs07ef:
+                     getlocal0
+                     dup
+                     setlocal2
+                     getproperty QName(PrivateNamespace(null,"21"),"hitCount")
+                     increment
+                     setlocal3
+                     getlocal2
+                     getlocal3
+                     setproperty QName(PrivateNamespace(null,"21"),"hitCount")
+                     kill 3
+                     jump ofs0808
+                     returnvalue
+                     newfunction 38
+                     throw
+                     setlocal1
+                     bitand
+            ofs0808:
+                     kill 2
+                     getlocal0
+                     getproperty QName(PrivateNamespace(null,"21"),"hitCount")
+                     pushbyte 60
+                     ifgt ofs0818
+                     jump ofs0867
+            ofs0818:
+                     getlocal0
+                     findpropstrict QName(PackageNamespace(""),"uint")
+                     getlocal0
+                     getproperty QName(PrivateNamespace(null,"21"),"hitCount")
+                     pushbyte 60
+                     jump ofs082b
+                     coerce_s
+                     dxns "b2ContactID"
+                     pushwith
+                     pushnull
+                     convert_d
+            ofs082b:
+                     subtract
+                     pushbyte 10
+                     divide
+                     callproperty QName(PackageNamespace(""),"uint"), 1
+                     pushbyte 4
+                     jump ofs083c
+                     ifle ofs083c
+            ofs083c:
+                     add
+                     jump ofs0847
+                     popscope
+                     bitand
+                     convert_d
+                     returnvalue
+                     setlocal0
+                     coerce_s
+            ofs0847:
+                     initproperty QName(PrivateNamespace(null,"21"),"frame")
+                     getlocal0
+                     getproperty QName(PrivateNamespace(null,"21"),"hitCount")
+                     pushbyte 90
+                     ifge ofs0858
+                     jump ofs0867
+            ofs0858:
+                     getlocal0
+                     jump ofs0863
+                     multiply
+                     checkfilter
+                     setlocal1
+                     setlocal3
+                     lessequals
+                     divide
+            ofs0863:
+                     pushtrue
+                     initproperty QName(PackageNamespace(""),"remove")
+            ofs0867:
+                     jump ofs091d
+                     pushwith
+                     setlocal0
+                     getlocal3
+            ofs086e:
+                     getlocal0
+                     getlocal0
+                     getproperty QName(PrivateNamespace(null,"21"),"rotation")
+                     pushfalse
+                     iffalse ofs087e
+                     returnvoid
+                     nextname
+                     callproplex QName(PackageNamespace("Playtomic"),"PlayerScore"), 7
+                     pushwith
+            ofs087e:
+                     pushbyte 5
+                     add
+                     initproperty QName(PrivateNamespace(null,"21"),"rotation")
+                     getlocal0
+                     getlocal0
+                     jump ofs088e
+                     ifgt ofs088e
+            ofs088e:
+                     getproperty QName(PrivateNamespace(null,"21"),"x")
+                     jump ofs089b
+                     popscope
+                     newfunction 101
+                     throw
+                     convert_d
+                     modulo
+            ofs089b:
+                     getlex QName(PackageNamespace(""),"UT")
+                     getlocal0
+                     getproperty QName(PrivateNamespace(null,"21"),"rotation")
+                     pushbyte 2
+                     callproperty QName(PackageNamespace(""),"xMoveToRot"), 2
+                     add
+                     initproperty QName(PrivateNamespace(null,"21"),"x")
+                     jump ofs08b6
+                     setlocal0
+                     lshift
+                     setlocal1
+                     setlocal2
+                     returnvoid
+                     bitxor
+            ofs08b6:
+                     getlocal0
+                     getlocal0
+                     getproperty QName(PrivateNamespace(null,"21"),"x")
+                     getlocal0
+                     getproperty QName(PrivateNamespace(null,"21"),"xSpd")
+                     add
+                     initproperty QName(PrivateNamespace(null,"21"),"x")
+                     getlocal0
+                     getlocal0
+                     pushtrue
+                     iftrue ofs08d1
+                     returnvoid
+                     lessequals
+                     istypelate
+                     decrement
+                     setlocal1
+                     checkfilter
+                     convert_d
+            ofs08d1:
+                     getproperty QName(PrivateNamespace(null,"21"),"y")
+                     getlocal0
+                     getproperty QName(PrivateNamespace(null,"21"),"ySpd")
+                     add
+                     initproperty QName(PrivateNamespace(null,"21"),"y")
+                     jump ofs08e4
+                     ifgt ofs08e4
+            ofs08e4:
+                     getlocal0
+                     getproperty QName(PrivateNamespace(null,"21"),"fc")
+                     pushbyte 3
+                     jump ofs08f4
+                     pushscope
+                     newobject 13
+                     pushwith
+                     convert_s
+                     setlocal0
+            ofs08f4:
+                     modulo
+                     pushbyte 0
+                     equals
+                     dup
+                     iftrue ofs0901
+                     jump ofs0908
+            ofs0901:
+                     pop
+                     getlocal0
+                     callproperty QName(PrivateNamespace(null,"21"),"hitTest"), 0
+                     convert_b
+            ofs0908:
+                     iffalse ofs091d
+                     pushfalse
+                     iffalse ofs0917
+                     returnvoid
+                     popscope
+                     callpropvoid QName(PackageNamespace(""),"Menu"), 6
+                     pushwith
+            ofs0917:
+                     getlocal0
+                     pushbyte 1
+                     initproperty QName(PrivateNamespace(null,"21"),"hitCount")
+            ofs091d:
+                     getlocal0
+                     getproperty QName(PrivateNamespace(null,"21"),"game")
+                     getproperty QName(PackageNamespace(""),"bitscreen")
+                     getlocal0
+                     getproperty QName(PrivateNamespace(null,"21"),"x")
+                     getlocal0
+                     jump ofs0933
+                     popscope
+                     greaterequals
+                     returnvalue
+                     convert_d
+                     instanceof
+                     convert_s
+            ofs0933:
+                     getproperty QName(PrivateNamespace(null,"21"),"game")
+                     getproperty QName(PackageNamespace(""),"arena")
+                     getproperty QName(PackageNamespace(""),"x")
+                     add
+                     getlocal0
+                     jump ofs0946
+                     iflt ofs0946
+            ofs0946:
+                     getproperty QName(PrivateNamespace(null,"21"),"y")
+                     getlocal0
+                     getproperty QName(PrivateNamespace(null,"21"),"game")
+                     getproperty QName(PackageNamespace(""),"arena")
+                     getproperty QName(PackageNamespace(""),"y")
+                     jump ofs095c
+                     pop
+                     callpropvoid QName(PackageNamespace("Box2D.Dynamics.Joints"),"b2MouseJointDef"), 9
+                     pushwith
+            ofs095c:
+                     add
+                     pushtrue
+                     getlocal0
+                     getproperty QName(PrivateNamespace(null,"21"),"name")
+                     getlocal0
+                     getproperty QName(PrivateNamespace(null,"21"),"sub")
+                     getlocal0
+                     getproperty QName(PrivateNamespace(null,"21"),"frame")
+                     callpropvoid QName(PackageNamespace(""),"paint"), 6
+                     jump ofs151d
+                     throw
+                     setlocal1
+                     getlocal0
+                     pushtrue
+                     iftrue ofs097a
+            ofs097a:
+                     pushtrue
+                     throw
+                     popscope
+                     pushwith
+                     newfunction 91
+                     throw
+                     returnvalue
+            ofs0982:
+                     label
+                     getlocal0
+                     getproperty QName(PrivateNamespace(null,"21"),"game")
+                     getproperty QName(PackageNamespace(""),"bitscreen")
+                     getlocal0
+                     getproperty QName(PrivateNamespace(null,"21"),"x")
+                     pushtrue
+                     iftrue ofs099b
+                     pushtrue
+                     throw
+                     popscope
+                     newarray 22
+                     pushwith
+                     lessequals
+                     instanceof
+            ofs099b:
+                     getlocal0
+                     getproperty QName(PrivateNamespace(null,"21"),"game")
+                     getproperty QName(PackageNamespace(""),"arena")
+                     getproperty QName(PackageNamespace(""),"x")
+                     add
+                     jump ofs09ae
+                     ifstrictne ofs09ae
+            ofs09ae:
+                     getlocal0
+                     getproperty QName(PrivateNamespace(null,"21"),"y")
+                     getlocal0
+                     getproperty QName(PrivateNamespace(null,"21"),"game")
+                     getproperty QName(PackageNamespace(""),"arena")
+                     jump ofs09c3
+                     popscope
+                     newarray 120
+                     pushwith
+                     bitxor
+                     setlocal1
+            ofs09c3:
+                     getproperty QName(PackageNamespace(""),"y")
+                     add
+                     pushtrue
+                     getlocal0
+                     getproperty QName(PrivateNamespace(null,"21"),"name")
+                     getlocal0
+                     getproperty QName(PrivateNamespace(null,"21"),"sub")
+                     getlocal0
+                     jump ofs09db
+                     popscope
+                     callproplex QName(PackageNamespace(""),"classAr"), 12
+                     setlocal2
+            ofs09db:
+                     getproperty QName(PrivateNamespace(null,"21"),"frame")
+                     callpropvoid QName(PackageNamespace(""),"paint"), 6
+                     jump ofs151d
+                     pushwith
+                     setlocal1
+                     getlocal3
+            ofs09e9:
+                     label
+                     getlocal0
+                     getlocal0
+                     getproperty QName(PrivateNamespace(null,"21"),"x")
+                     getlocal0
+                     getproperty QName(PrivateNamespace(null,"21"),"xSpd")
+                     add
+                     pushtrue
+                     iftrue ofs0a00
+                     returnvoid
+                     bitor
+                     newactivation
+                     convert_d
+                     modulo
+                     nextname
+                     instanceof
+            ofs0a00:
+                     initproperty QName(PrivateNamespace(null,"21"),"x")
+                     getlocal0
+                     getlocal0
+                     getproperty QName(PrivateNamespace(null,"21"),"y")
+                     getlocal0
+                     jump ofs0a11
+                     iflt ofs0a11
+            ofs0a11:
+                     getproperty QName(PrivateNamespace(null,"21"),"ySpd")
+                     add
+                     initproperty QName(PrivateNamespace(null,"21"),"y")
+                     getlocal0
+                     getlocal0
+                     jump ofs0a23
+                     pushwith
+                     callproplex QName(PrivateNamespace(null),"Command"), 9
+                     pushwith
+            ofs0a23:
+                     getproperty QName(PrivateNamespace(null,"21"),"ySpd")
+                     pushbyte 1
+                     add
+                     initproperty QName(PrivateNamespace(null,"21"),"ySpd")
+                     getlocal0
+                     getproperty QName(PrivateNamespace(null,"21"),"hitCount")
+                     iffalse ofs0a38
+                     jump ofs0a9f
+            ofs0a38:
+                     getlocal0
+                     callproperty QName(PrivateNamespace(null,"21"),"hitTest"), 0
+                     pushtrue
+                     iftrue ofs0a49
+                     pushtrue
+                     throw
+                     popscope
+                     callmethod 37, 5
+                     pushwith
+            ofs0a49:
+                     iftrue ofs0a51
+                     jump ofs0a97
+            ofs0a51:
+                     getlocal0
+                     pushbyte 1
+                     initproperty QName(PrivateNamespace(null,"21"),"hitCount")
+                     getlocal0
+                     getlocal0
+                     getproperty QName(PrivateNamespace(null,"21"),"xSpd")
+                     pushdouble 0.6
+                     jump ofs0a68
+                     popscope
+                     pushwith
+                     newfunction 32
+                     throw
+                     modulo
+            ofs0a68:
+                     multiply
+                     initproperty QName(PrivateNamespace(null,"21"),"xSpd")
+                     getlocal0
+                     getlocal0
+                     getproperty QName(PrivateNamespace(null,"21"),"ySpd")
+                     jump ofs0a79
+                     iflt ofs0a79
+            ofs0a79:
+                     pushdouble -0.3
+                     multiply
+                     initproperty QName(PrivateNamespace(null,"21"),"ySpd")
+                     pushtrue
+                     iftrue ofs0a8c
+                     pushfalse
+                     returnvalue
+                     popscope
+                     callproplex QName(PackageNamespace(""),"qmBots1"), 10
+                     setlocal0
+            ofs0a8c:
+                     getlocal0
+                     getlocal0
+                     getproperty QName(PrivateNamespace(null,"21"),"ySpd")
+                     pushbyte 5
+                     subtract
+                     initproperty QName(PrivateNamespace(null,"21"),"ySpd")
+            ofs0a97:
+                     jump ofs0b0b
+                     ifgt ofs0a9f
+            ofs0a9f:
+                     getlocal0
+                     callproperty QName(PrivateNamespace(null,"21"),"hitTest"), 0
+                     jump ofs0aad
+                     setlocal3
+                     callproplex QName(PackageNamespace("Box2D.Dynamics"),"b2DestructionListener"), 21
+                     pop
+            ofs0aad:
+                     iftrue ofs0ab5
+                     jump ofs0ac0
+            ofs0ab5:
+                     getlocal0
+                     getlocal0
+                     getproperty QName(PrivateNamespace(null,"21"),"ySpd")
+                     pushdouble -0.6
+                     multiply
+                     initproperty QName(PrivateNamespace(null,"21"),"ySpd")
+            ofs0ac0:
+                     getlocal0
+                     jump ofs0aca
+                     pushscope
+                     callsupervoid QName(PackageNamespace("flash.display"),"Sprite"), 6
+                     pushwith
+            ofs0aca:
+                     dup
+                     setlocal2
+                     getproperty QName(PrivateNamespace(null,"21"),"hitCount")
+                     increment
+                     setlocal3
+                     jump ofs0ad9
+                     ifne ofs0ad9
+            ofs0ad9:
+                     getlocal2
+                     jump ofs0ae4
+                     popscope
+                     dxns "b2WorldManifold"
+                     pushwith
+                     newactivation
+                     returnvalue
+            ofs0ae4:
+                     getlocal3
+                     setproperty QName(PrivateNamespace(null,"21"),"hitCount")
+                     kill 3
+                     kill 2
+                     getlocal0
+                     getproperty QName(PrivateNamespace(null,"21"),"hitCount")
+                     pushbyte 20
+                     ifgt ofs0b06
+                     jump ofs0b0b
+                     pushtrue
+                     iftrue ofs0aff
+            ofs0aff:
+                     returnvoid
+                     popscope
+                     dxns "b2Mat22"
+                     pushwith
+                     setlocal2
+                     in
+            ofs0b06:
+                     getlocal0
+                     pushtrue
+                     initproperty QName(PackageNamespace(""),"remove")
+            ofs0b0b:
+                     getlocal0
+                     getproperty QName(PrivateNamespace(null,"21"),"game")
+                     getproperty QName(PackageNamespace(""),"bitscreen")
+                     getlocal0
+                     getproperty QName(PrivateNamespace(null,"21"),"x")
+                     getlocal0
+                     pushtrue
+                     iftrue ofs0b24
+                     pushfalse
+                     returnvalue
+                     popscope
+                     nextvalue
+                     pushfalse
+                     typeof
+                     setlocal1
+                     lessequals
+            ofs0b24:
+                     getproperty QName(PrivateNamespace(null,"21"),"game")
+                     getproperty QName(PackageNamespace(""),"arena")
+                     getproperty QName(PackageNamespace(""),"x")
+                     add
+                     getlocal0
+                     jump ofs0b37
+                     ifle ofs0b37
+            ofs0b37:
+                     getproperty QName(PrivateNamespace(null,"21"),"y")
+                     getlocal0
+                     jump ofs0b45
+                     returnvoid
+                     newfunction 42
+                     throw
+                     setlocal1
+                     lessequals
+            ofs0b45:
+                     getproperty QName(PrivateNamespace(null,"21"),"game")
+                     getproperty QName(PackageNamespace(""),"arena")
+                     getproperty QName(PackageNamespace(""),"y")
+                     add
+                     pushtrue
+                     getlocal0
+                     getproperty QName(PrivateNamespace(null,"21"),"name")
+                     getlocal0
+                     jump ofs0b5f
+                     greaterequals
+                     setlocal2
+                     negate
+                     typeof
+                     setlocal1
+                     setlocal1
+            ofs0b5f:
+                     getproperty QName(PrivateNamespace(null,"21"),"sub")
+                     getlocal0
+                     getproperty QName(PrivateNamespace(null,"21"),"frame")
+                     callpropvoid QName(PackageNamespace(""),"paint"), 6
+                     jump ofs151d
+                     ifne ofs0b72
+            ofs0b72:
+                     label
+                     getlocal0
+                     getlocal0
+                     jump ofs0b7e
+                     setlocal2
+                     callsuper QName(PackageNamespace(""),"DebugConsole"), 6
+                     pushwith
+            ofs0b7e:
+                     getproperty QName(PrivateNamespace(null,"21"),"x")
+                     getlocal0
+                     getproperty QName(PrivateNamespace(null,"21"),"xSpd")
+                     add
+                     initproperty QName(PrivateNamespace(null,"21"),"x")
+                     jump ofs0b91
+                     ifne ofs0b91
+            ofs0b91:
+                     getlocal0
+                     pushtrue
+                     iftrue ofs0b9e
+                     returnvoid
+                     popscope
+                     setlocal3
+                     returnvalue
+                     lessequals
+                     istypelate
+                     bitxor
+            ofs0b9e:
+                     getlocal0
+                     getproperty QName(PrivateNamespace(null,"21"),"y")
+                     getlocal0
+                     getproperty QName(PrivateNamespace(null,"21"),"ySpd")
+                     add
+                     initproperty QName(PrivateNamespace(null,"21"),"y")
+                     getlocal0
+                     getlocal0
+                     jump ofs0bb5
+                     multiply
+                     callstatic 74, 6
+                     pushwith
+            ofs0bb5:
+                     getproperty QName(PrivateNamespace(null,"21"),"ySpd")
+                     pushdouble 0.5
+                     add
+                     initproperty QName(PrivateNamespace(null,"21"),"ySpd")
+                     getlocal0
+                     getproperty QName(PrivateNamespace(null,"21"),"hitCount")
+                     not
+                     dup
+                     iftrue ofs0bcc
+                     jump ofs0c03
+            ofs0bcc:
+                     pop
+                     pushfalse
+                     iffalse ofs0bd9
+                     returnvoid
+                     popscope
+                     pushwith
+                     newfunction 49
+                     throw
+                     dup
+            ofs0bd9:
+                     getlocal0
+                     callproperty QName(PrivateNamespace(null,"21"),"hitTest"), 0
+                     coerce_a
+                     convert_b
+                     dup
+                     jump ofs0be9
+                     ifeq ofs0be9
+            ofs0be9:
+                     iffalse ofs0bf1
+                     jump ofs0c03
+            ofs0bf1:
+                     pop
+                     jump ofs0bfc
+                     popscope
+                     modulo
+                     pop
+                     convert_d
+                     divide
+                     pushscope
+            ofs0bfc:
+                     getlocal0
+                     callproperty QName(PrivateNamespace(null,"21"),"hitTestPlayer"), 0
+                     coerce_a
+                     convert_b
+            ofs0c03:
+                     iftrue ofs0c0b
+                     jump ofs0c64
+            ofs0c0b:
+                     getlocal0
+                     getlocal0
+                     getproperty QName(PrivateNamespace(null,"21"),"xSpd")
+                     jump ofs0c19
+                     returnvalue
+                     callpropvoid QName(PackageNamespace("Box2D.Dynamics.Contacts"),"b2ContactEdge"), 24
+                     throw
+            ofs0c19:
+                     pushbyte 3
+                     multiply
+                     initproperty QName(PrivateNamespace(null,"21"),"xSpd")
+                     getlocal0
+                     getlocal0
+                     getproperty QName(PrivateNamespace(null,"21"),"y")
+                     getlocal0
+                     getproperty QName(PrivateNamespace(null,"21"),"ySpd")
+                     subtract
+                     pushfalse
+                     iffalse ofs0c35
+                     returnvoid
+                     convert_d
+                     in
+                     pushwith
+                     pushwith
+                     pop
+                     pushscope
+            ofs0c35:
+                     initproperty QName(PrivateNamespace(null,"21"),"y")
+                     getlocal0
+                     getlocal0
+                     getproperty QName(PrivateNamespace(null,"21"),"ySpd")
+                     getlex QName(PackageNamespace(""),"UT")
+                     jump ofs0c48
+                     ifeq ofs0c48
+            ofs0c48:
+                     pushdouble 0.2
+                     pushdouble 0.5
+                     callproperty QName(PackageNamespace(""),"rand"), 2
+                     negate
+                     jump ofs0c5a
+                     setlocal1
+                     callsupervoid QName(PackageNamespace("Playtomic"),"PlayerLevel"), 24
+                     pop
+            ofs0c5a:
+                     multiply
+                     initproperty QName(PrivateNamespace(null,"21"),"ySpd")
+                     getlocal0
+                     pushbyte 1
+                     initproperty QName(PrivateNamespace(null,"21"),"hitCount")
+            ofs0c64:
+                     getlocal0
+                     getproperty QName(PrivateNamespace(null,"21"),"hitCount")
+                     iftrue ofs0c70
+                     jump ofs0d29
+            ofs0c70:
+                     getlocal0
+                     dup
+                     jump ofs0c7c
+                     dup
+                     newfunction 118
+                     throw
+                     setlocal0
+                     convert_d
+            ofs0c7c:
+                     setlocal2
+                     getproperty QName(PrivateNamespace(null,"21"),"hitCount")
+                     increment
+                     setlocal3
+                     getlocal2
+                     getlocal3
+                     setproperty QName(PrivateNamespace(null,"21"),"hitCount")
+                     kill 3
+                     kill 2
+                     jump ofs0c95
+                     setlocal1
+                     construct 112
+                     pushwith
+                     pushfalse
+                     negate
+            ofs0c95:
+                     getlocal0
+                     getproperty QName(PrivateNamespace(null,"21"),"hitCount")
+                     pushbyte 20
+                     ifeq ofs0ca3
+                     jump ofs0cba
+            ofs0ca3:
+                     getlocal0
+                     jump ofs0cac
+                     iflt ofs0cac
+            ofs0cac:
+                     pushtrue
+                     initproperty QName(PackageNamespace(""),"remove")
+                     jump ofs0cba
+                     popscope
+                     setlocal3
+                     add
+                     lshift
+                     lshift
+                     equals
+            ofs0cba:
+                     getlocal0
+                     getproperty QName(PrivateNamespace(null,"21"),"game")
+                     getproperty QName(PackageNamespace(""),"bitscreen")
+                     getlocal0
+                     getproperty QName(PrivateNamespace(null,"21"),"x")
+                     getlocal0
+                     getproperty QName(PrivateNamespace(null,"21"),"game")
+                     getproperty QName(PackageNamespace(""),"arena")
+                     getproperty QName(PackageNamespace(""),"x")
+                     jump ofs0cd9
+                     returnvalue
+                     constructprop QName(PackageNamespace(""),"useClassOnly"), 14
+                     setlocal1
+            ofs0cd9:
+                     add
+                     getlocal0
+                     getproperty QName(PrivateNamespace(null,"21"),"y")
+                     getlocal0
+                     getproperty QName(PrivateNamespace(null,"21"),"game")
+                     getproperty QName(PackageNamespace(""),"arena")
+                     getproperty QName(PackageNamespace(""),"y")
+                     add
+                     pushtrue
+                     getlocal0
+                     jump ofs0cf5
+                     setlocal2
+                     greaterequals
+                     in
+                     pushwith
+                     pushnull
+                     coerce_s
+            ofs0cf5:
+                     getproperty QName(PrivateNamespace(null,"21"),"name")
+                     getlocal0
+                     getproperty QName(PrivateNamespace(null,"21"),"sub")
+                     findpropstrict QName(PackageNamespace(""),"uint")
+                     getlocal0
+                     jump ofs0d07
+                     iflt ofs0d07
+            ofs0d07:
+                     getproperty QName(PrivateNamespace(null,"21"),"hitCount")
+                     pushfalse
+                     iffalse ofs0d16
+                     returnvoid
+                     setlocal3
+                     constructsuper 78
+                     pushwith
+                     setlocal0
+                     istypelate
+            ofs0d16:
+                     pushbyte 10
+                     divide
+                     callproperty QName(PackageNamespace(""),"uint"), 1
+                     pushbyte 2
+                     add
+                     callpropvoid QName(PackageNamespace(""),"paint"), 6
+                     jump ofs0d8a
+                     pushwith
+                     setlocal2
+            ofs0d29:
+                     getlocal0
+                     pushfalse
+                     iffalse ofs0d36
+                     returnvoid
+                     popscope
+                     callmethod 3548, 12
+                     setlocal2
+            ofs0d36:
+                     getproperty QName(PrivateNamespace(null,"21"),"game")
+                     getproperty QName(PackageNamespace(""),"bitscreen")
+                     getlocal0
+                     getproperty QName(PrivateNamespace(null,"21"),"x")
+                     getlocal0
+                     getproperty QName(PrivateNamespace(null,"21"),"game")
+                     getproperty QName(PackageNamespace(""),"arena")
+                     getproperty QName(PackageNamespace(""),"x")
+                     add
+                     pushfalse
+                     iffalse ofs0d57
+                     returnvoid
+                     convert_d
+                     newfunction 85
+                     throw
+                     returnvalue
+                     modulo
+            ofs0d57:
+                     getlocal0
+                     getproperty QName(PrivateNamespace(null,"21"),"y")
+                     getlocal0
+                     getproperty QName(PrivateNamespace(null,"21"),"game")
+                     getproperty QName(PackageNamespace(""),"arena")
+                     jump ofs0d6a
+                     ifeq ofs0d6a
+            ofs0d6a:
+                     getproperty QName(PackageNamespace(""),"y")
+                     pushfalse
+                     iffalse ofs0d7a
+                     pushtrue
+                     throw
+                     setlocal1
+                     setlocal0
+                     setlocal2
+                     pushscope
+                     returnvoid
+                     lessequals
+            ofs0d7a:
+                     add
+                     pushtrue
+                     getlocal0
+                     getproperty QName(PrivateNamespace(null,"21"),"name")
+                     getlocal0
+                     getproperty QName(PrivateNamespace(null,"21"),"sub")
+                     pushbyte 1
+                     callpropvoid QName(PackageNamespace(""),"paint"), 6
+            ofs0d8a:
+                     jump ofs151d
+                     pushwith
+                     setlocal2
+                     pushtrue
+                     iftrue ofs0d95
+            ofs0d95:
+                     returnvoid
+                     modulo
+                     pushwith
+                     newfunction 42
+                     pop
+                     setlocal0
+            ofs0d9c:
+                     label
+                     getlocal0
+                     getlocal0
+                     getproperty QName(PrivateNamespace(null,"21"),"x")
+                     getlocal0
+                     getproperty QName(PrivateNamespace(null,"21"),"xSpd")
+                     add
+                     initproperty QName(PrivateNamespace(null,"21"),"x")
+                     getlocal0
+                     getlocal0
+                     jump ofs0db6
+                     popscope
+                     callmethod 3494, 16
+                     setlocal0
+            ofs0db6:
+                     getproperty QName(PrivateNamespace(null,"21"),"y")
+                     getlocal0
+                     getproperty QName(PrivateNamespace(null,"21"),"ySpd")
+                     add
+                     initproperty QName(PrivateNamespace(null,"21"),"y")
+                     jump ofs0dc9
+                     ifle ofs0dc9
+            ofs0dc9:
+                     getlocal0
+                     getlocal0
+                     getproperty QName(PrivateNamespace(null,"21"),"ySpd")
+                     jump ofs0dd8
+                     setlocal2
+                     callproperty QName(PackageNamespace(""),"useSkills"), 16
+                     setlocal1
+            ofs0dd8:
+                     pushdouble 0.5
+                     add
+                     initproperty QName(PrivateNamespace(null,"21"),"ySpd")
+                     getlocal0
+                     getproperty QName(PrivateNamespace(null,"21"),"hitCount")
+                     not
+                     dup
+                     iftrue ofs0dec
+                     jump ofs0e1c
+            ofs0dec:
+                     pop
+                     getlocal0
+                     jump ofs0df8
+                     decrement
+                     newfunction 97
+                     throw
+                     typeof
+                     setlocal0
+            ofs0df8:
+                     callproperty QName(PrivateNamespace(null,"21"),"hitTest"), 0
+                     coerce_a
+                     convert_b
+                     dup
+                     iffalse ofs0e07
+                     jump ofs0e1c
+            ofs0e07:
+                     pop
+                     getlocal0
+                     pushfalse
+                     iffalse ofs0e16
+                     pushfalse
+                     returnvalue
+                     setlocal3
+                     setlocal0
+                     returnvalue
+                     setlocal2
+                     returnvalue
+                     setlocal1
+            ofs0e16:
+                     callproperty QName(PrivateNamespace(null,"21"),"hitTestPlayer"), 0
+                     coerce_a
+                     convert_b
+            ofs0e1c:
+                     iftrue ofs0e24
+                     jump ofs0e5f
+            ofs0e24:
+                     getlocal0
+                     jump ofs0e2d
+                     ifeq ofs0e2d
+            ofs0e2d:
+                     getlocal0
+                     getproperty QName(PrivateNamespace(null,"21"),"xSpd")
+                     pushbyte 10
+                     multiply
+                     initproperty QName(PrivateNamespace(null,"21"),"xSpd")
+                     jump ofs0e40
+                     dup
+                     callsupervoid QName(PackageNamespace("Box2D.Dynamics.Joints"),"b2DistanceJointDef"), 8
+                     pushwith
+            ofs0e40:
+                     getlocal0
+                     getlex QName(PackageNamespace(""),"UT")
+                     pushbyte -2
+                     pushbyte 2
+                     callproperty QName(PackageNamespace(""),"rand"), 2
+                     initproperty QName(PrivateNamespace(null,"21"),"ySpd")
+                     jump ofs0e59
+                     popscope
+                     newclass 48
+                     pushwith
+                     setlocal2
+                     nextvalue
+            ofs0e59:
+                     getlocal0
+                     pushbyte 1
+                     initproperty QName(PrivateNamespace(null,"21"),"hitCount")
+            ofs0e5f:
+                     getlocal0
+                     getproperty QName(PrivateNamespace(null,"21"),"hitCount")
+                     not
+                     dup
+                     iftrue ofs0e6d
+                     jump ofs0e7e
+            ofs0e6d:
+                     pop
+                     getlocal0
+                     jump ofs0e78
+                     popscope
+                     callsuper QName(PackageNamespace(""),"Menu"), 6
+                     pushwith
+            ofs0e78:
+                     getproperty QName(PrivateNamespace(null,"21"),"ySpd")
+                     pushbyte 0
+                     greaterthan
+            ofs0e7e:
+                     iftrue ofs0e86
+                     jump ofs0e94
+            ofs0e86:
+                     getlocal0
+                     jump ofs0e8f
+                     ifgt ofs0e8f
+            ofs0e8f:
+                     pushbyte 1
+                     initproperty QName(PrivateNamespace(null,"21"),"hitCount")
+            ofs0e94:
+                     getlocal0
+                     jump ofs0e9f
+                     popscope
+                     throw
+                     setlocal0
+                     returnvoid
+                     decrement
+                     returnvalue
+            ofs0e9f:
+                     getproperty QName(PrivateNamespace(null,"21"),"hitCount")
+                     iftrue ofs0eaa
+                     jump ofs0f65
+            ofs0eaa:
+                     getlocal0
+                     dup
+                     setlocal2
+                     getproperty QName(PrivateNamespace(null,"21"),"hitCount")
+                     increment
+                     jump ofs0ebb
+                     setlocal1
+                     setlocal1
+                     greaterequals
+                     setlocal1
+                     divide
+                     pushnull
+            ofs0ebb:
+                     setlocal3
+                     getlocal2
+                     getlocal3
+                     setproperty QName(PrivateNamespace(null,"21"),"hitCount")
+                     kill 3
+                     kill 2
+                     getlocal0
+                     jump ofs0ed0
+                     bitand
+                     pushwith
+                     newfunction 94
+                     pop
+                     equals
+            ofs0ed0:
+                     getproperty QName(PrivateNamespace(null,"21"),"hitCount")
+                     pushbyte 20
+                     ifeq ofs0edd
+                     jump ofs0eea
+            ofs0edd:
+                     getlocal0
+                     pushtrue
+                     jump ofs0ee7
+                     ifeq ofs0ee7
+            ofs0ee7:
+                     initproperty QName(PackageNamespace(""),"remove")
+            ofs0eea:
+                     getlocal0
+                     getproperty QName(PrivateNamespace(null,"21"),"game")
+                     getproperty QName(PackageNamespace(""),"bitscreen")
+                     jump ofs0efb
+                     popscope
+                     pushwith
+                     newfunction 126
+                     pop
+                     setlocal1
+            ofs0efb:
+                     getlocal0
+                     getproperty QName(PrivateNamespace(null,"21"),"x")
+                     getlocal0
+                     getproperty QName(PrivateNamespace(null,"21"),"game")
+                     getproperty QName(PackageNamespace(""),"arena")
+                     getproperty QName(PackageNamespace(""),"x")
+                     add
+                     getlocal0
+                     getproperty QName(PrivateNamespace(null,"21"),"y")
+                     jump ofs0f17
+                     popscope
+                     callmethod 105, 27
+                     throw
+            ofs0f17:
+                     getlocal0
+                     getproperty QName(PrivateNamespace(null,"21"),"game")
+                     getproperty QName(PackageNamespace(""),"arena")
+                     getproperty QName(PackageNamespace(""),"y")
+                     add
+                     pushtrue
+                     getlocal0
+                     getproperty QName(PrivateNamespace(null,"21"),"name")
+                     pushtrue
+                     iftrue ofs0f33
+                     pushtrue
+                     throw
+                     setlocal2
+                     callsupervoid TypeName(QName(PackageNamespace("__AS3__.vec"),"Vector")<QName(PackageNamespace(""),"Number")>), 10
+                     pushwith
+            ofs0f33:
+                     getlocal0
+                     getproperty QName(PrivateNamespace(null,"21"),"sub")
+                     findpropstrict QName(PackageNamespace(""),"uint")
+                     getlocal0
+                     getproperty QName(PrivateNamespace(null,"21"),"hitCount")
+                     jump ofs0f45
+                     iflt ofs0f45
+            ofs0f45:
+                     pushbyte 10
+                     pushfalse
+                     iffalse ofs0f54
+                     pushtrue
+                     throw
+                     popscope
+                     pushwith
+                     newfunction 49
+                     throw
+                     dup
+            ofs0f54:
+                     divide
+                     callproperty QName(PackageNamespace(""),"uint"), 1
+                     pushbyte 2
+                     add
+                     callpropvoid QName(PackageNamespace(""),"paint"), 6
+                     jump ofs0fc1
+                     pushwith
+                     setlocal0
+            ofs0f65:
+                     getlocal0
+                     getproperty QName(PrivateNamespace(null,"21"),"game")
+                     jump ofs0f73
+                     popscope
+                     callproplex QName(PackageNamespace(""),"qmMap"), 10
+                     setlocal0
+            ofs0f73:
+                     getproperty QName(PackageNamespace(""),"bitscreen")
+                     getlocal0
+                     getproperty QName(PrivateNamespace(null,"21"),"x")
+                     getlocal0
+                     getproperty QName(PrivateNamespace(null,"21"),"game")
+                     getproperty QName(PackageNamespace(""),"arena")
+                     getproperty QName(PackageNamespace(""),"x")
+                     add
+                     getlocal0
+                     jump ofs0f90
+                     dup
+                     newfunction 117
+                     throw
+                     pushscope
+                     setlocal2
+            ofs0f90:
+                     getproperty QName(PrivateNamespace(null,"21"),"y")
+                     getlocal0
+                     getproperty QName(PrivateNamespace(null,"21"),"game")
+                     getproperty QName(PackageNamespace(""),"arena")
+                     getproperty QName(PackageNamespace(""),"y")
+                     jump ofs0fa5
+                     ifge ofs0fa5
+            ofs0fa5:
+                     add
+                     pushtrue
+                     getlocal0
+                     pushtrue
+                     iftrue ofs0fb4
+                     returnvoid
+                     pushnull
+                     newclass 61
+                     pushwith
+                     setlocal0
+                     divide
+            ofs0fb4:
+                     getproperty QName(PrivateNamespace(null,"21"),"name")
+                     getlocal0
+                     getproperty QName(PrivateNamespace(null,"21"),"sub")
+                     pushbyte 1
+                     callpropvoid QName(PackageNamespace(""),"paint"), 6
+            ofs0fc1:
+                     jump ofs151d
+                     iflt ofs0fc9
+            ofs0fc9:
+                     pushtrue
+                     iftrue ofs0fce
+            ofs0fce:
+                     returnvoid
+                     popscope
+                     pushwith
+                     newfunction 117
+                     pop
+                     setlocal0
+            ofs0fd5:
+                     label
+                     getlocal0
+                     getlocal0
+                     getproperty QName(PrivateNamespace(null,"21"),"x")
+                     getlocal0
+                     getproperty QName(PrivateNamespace(null,"21"),"xSpd")
+                     add
+                     initproperty QName(PrivateNamespace(null,"21"),"x")
+                     getlocal0
+                     pushtrue
+                     iftrue ofs0ff0
+                     returnvoid
+                     popscope
+                     greaterequals
+                     bitor
+                     pushwith
+                     newactivation
+                     newactivation
+            ofs0ff0:
+                     getlocal0
+                     getproperty QName(PrivateNamespace(null,"21"),"y")
+                     getlocal0
+                     getproperty QName(PrivateNamespace(null,"21"),"ySpd")
+                     subtract
+                     jump ofs1001
+                     ifstrictne ofs1001
+            ofs1001:
+                     initproperty QName(PrivateNamespace(null,"21"),"y")
+                     jump ofs100e
+                     divide
+                     pushwith
+                     newfunction 97
+                     throw
+                     bitor
+            ofs100e:
+                     getlocal0
+                     getproperty QName(PrivateNamespace(null,"21"),"fc")
+                     pushbyte 20
+                     ifeq ofs101c
+                     jump ofs1021
+            ofs101c:
+                     getlocal0
+                     pushtrue
+                     initproperty QName(PackageNamespace(""),"remove")
+            ofs1021:
+                     getlocal0
+                     getproperty QName(PrivateNamespace(null,"21"),"game")
+                     getproperty QName(PackageNamespace(""),"bitscreen")
+                     pushfalse
+                     iffalse ofs1034
+                     returnvoid
+                     popscope
+                     callstatic 3611, 12
+                     setlocal0
+            ofs1034:
+                     getlocal0
+                     getproperty QName(PrivateNamespace(null,"21"),"x")
+                     getlocal0
+                     getproperty QName(PrivateNamespace(null,"21"),"game")
+                     getproperty QName(PackageNamespace(""),"arena")
+                     getproperty QName(PackageNamespace(""),"x")
+                     add
+                     getlocal0
+                     jump ofs104d
+                     returnvalue
+                     callproplex QName(PackageNamespace(""),"Menu"), 21
+                     pop
+            ofs104d:
+                     getproperty QName(PrivateNamespace(null,"21"),"y")
+                     getlocal0
+                     getproperty QName(PrivateNamespace(null,"21"),"game")
+                     getproperty QName(PackageNamespace(""),"arena")
+                     getproperty QName(PackageNamespace(""),"y")
+                     jump ofs1062
+                     ifeq ofs1062
+            ofs1062:
+                     add
+                     pushtrue
+                     getlocal0
+                     jump ofs106f
+                     returnvoid
+                     pushwith
+                     newfunction 6
+                     throw
+                     divide
+            ofs106f:
+                     getproperty QName(PrivateNamespace(null,"21"),"name")
+                     getlocal0
+                     getproperty QName(PrivateNamespace(null,"21"),"sub")
+                     getlocal0
+                     getproperty QName(PrivateNamespace(null,"21"),"frame")
+                     callpropvoid QName(PackageNamespace(""),"paint"), 6
+                     jump ofs1088
+                     popscope
+                     call 112
+                     pushwith
+                     bitxor
+                     bitxor
+            ofs1088:
+                     jump ofs151d
+                     ifstricteq ofs1090
+            ofs1090:
+                     label
+                     getlocal0
+                     getlocal0
+                     getproperty QName(PrivateNamespace(null,"21"),"x")
+                     getlocal0
+                     getproperty QName(PrivateNamespace(null,"21"),"xSpd")
+                     add
+                     jump ofs10a5
+                     popscope
+                     pushfalse
+                     coerce_s
+                     pushscope
+                     newactivation
+                     nextname
+            ofs10a5:
+                     initproperty QName(PrivateNamespace(null,"21"),"x")
+                     getlocal0
+                     getlocal0
+                     getproperty QName(PrivateNamespace(null,"21"),"y")
+                     getlocal0
+                     jump ofs10b6
+                     ifstrictne ofs10b6
+            ofs10b6:
+                     getproperty QName(PrivateNamespace(null,"21"),"ySpd")
+                     add
+                     initproperty QName(PrivateNamespace(null,"21"),"y")
+                     jump ofs10c6
+                     returnvoid
+                     callsupervoid QName(PackageNamespace(""),"Stats_Classes"), 10
+                     pushwith
+            ofs10c6:
+                     getlocal0
+                     getproperty QName(PrivateNamespace(null,"21"),"frame")
+                     getlocal0
+                     getproperty QName(PrivateNamespace(null,"21"),"stats")
+                     getproperty Multiname("frames",[PrivateNamespace(null,"21"),PackageNamespace(""),PrivateNamespace(null,"182"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Particle"),StaticProtectedNs("Particle")])
+                     ifeq ofs10d9
+                     jump ofs10e7
+            ofs10d9:
+                     getlocal0
+                     pushtrue
+                     initproperty QName(PackageNamespace(""),"remove")
+                     jump ofs10e7
+                     popscope
+                     callsupervoid QName(PackageNamespace("Box2D.Collision"),"b2RayCastOutput"), 9
+                     pushwith
+            ofs10e7:
+                     getlocal0
+                     getproperty QName(PrivateNamespace(null,"21"),"game")
+                     getproperty QName(PackageNamespace(""),"bitscreen")
+                     getlocal0
+                     getproperty QName(PrivateNamespace(null,"21"),"x")
+                     getlocal0
+                     getproperty QName(PrivateNamespace(null,"21"),"game")
+                     getproperty QName(PackageNamespace(""),"arena")
+                     jump ofs1103
+                     popscope
+                     newarray 119
+                     pushwith
+                     bitor
+                     setlocal1
+            ofs1103:
+                     getproperty QName(PackageNamespace(""),"x")
+                     add
+                     getlocal0
+                     getproperty QName(PrivateNamespace(null,"21"),"y")
+                     getlocal0
+                     jump ofs1114
+                     ifne ofs1114
+            ofs1114:
+                     getproperty QName(PrivateNamespace(null,"21"),"game")
+                     jump ofs1120
+                     popscope
+                     callsuper QName(PackageNamespace(""),"Inventory_Attachment"), 10
+                     pushwith
+            ofs1120:
+                     getproperty QName(PackageNamespace(""),"arena")
+                     getproperty QName(PackageNamespace(""),"y")
+                     add
+                     pushtrue
+                     getlocal0
+                     getproperty QName(PrivateNamespace(null,"21"),"name")
+                     jump ofs1135
+                     popscope
+                     constructprop QName(PackageNamespace("Box2D.Dynamics"),"b2Fixture"), 27
+                     throw
+            ofs1135:
+                     getlocal0
+                     getproperty QName(PrivateNamespace(null,"21"),"sub")
+                     getlocal0
+                     getproperty QName(PrivateNamespace(null,"21"),"frame")
+                     callpropvoid QName(PackageNamespace(""),"paint"), 6
+                     jump ofs151d
+                     pushwith
+                     setlocal2
+            ofs1147:
+                     label
+                     getlocal0
+                     jump ofs1152
+                     setlocal0
+                     callproplex QName(PackageNamespace("Box2D.Collision"),"b2Manifold"), 24
+                     throw
+            ofs1152:
+                     getproperty QName(PrivateNamespace(null,"21"),"extra")
+                     getlocal0
+                     getproperty QName(PrivateNamespace(null,"21"),"extra")
+                     getproperty Multiname("rot1",[PrivateNamespace(null,"21"),PackageNamespace(""),PrivateNamespace(null,"182"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Particle"),StaticProtectedNs("Particle")])
+                     pushdouble 0.4
+                     jump ofs1166
+                     ifgt ofs1166
+            ofs1166:
+                     add
+                     jump ofs1171
+                     convert_d
+                     callstatic 3615, 10
+                     setlocal1
+            ofs1171:
+                     setproperty Multiname("rot1",[PrivateNamespace(null,"21"),PackageNamespace(""),PrivateNamespace(null,"182"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Particle"),StaticProtectedNs("Particle")])
+                     getlocal0
+                     getproperty QName(PrivateNamespace(null,"21"),"extra")
+                     getlocal0
+                     getproperty QName(PrivateNamespace(null,"21"),"extra")
+                     getproperty Multiname("rot2",[PrivateNamespace(null,"21"),PackageNamespace(""),PrivateNamespace(null,"182"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Particle"),StaticProtectedNs("Particle")])
+                     pushbyte 2
+                     add
+                     pushfalse
+                     iffalse ofs118d
+                     returnvoid
+                     dup
+                     callstatic 41, 15
+                     throw
+            ofs118d:
+                     setproperty Multiname("rot2",[PrivateNamespace(null,"21"),PackageNamespace(""),PrivateNamespace(null,"182"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Particle"),StaticProtectedNs("Particle")])
+                     getlocal0
+                     getlex QName(PackageNamespace(""),"UT")
+                     getlocal0
+                     getproperty QName(PrivateNamespace(null,"21"),"extra")
+                     getproperty Multiname("rot1",[PrivateNamespace(null,"21"),PackageNamespace(""),PrivateNamespace(null,"182"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Particle"),StaticProtectedNs("Particle")])
+                     pushbyte 1
+                     jump ofs11a7
+                     typeof
+                     pushwith
+                     newfunction 5
+                     pop
+                     newactivation
+            ofs11a7:
+                     callproperty QName(PackageNamespace(""),"xMoveToRot"), 2
+                     initproperty QName(PrivateNamespace(null,"21"),"xVel")
+                     getlocal0
+                     getlex QName(PackageNamespace(""),"UT")
+                     getlocal0
+                     jump ofs11bb
+                     iflt ofs11bb
+            ofs11bb:
+                     getproperty QName(PrivateNamespace(null,"21"),"extra")
+                     getproperty Multiname("rot2",[PrivateNamespace(null,"21"),PackageNamespace(""),PrivateNamespace(null,"182"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Particle"),StaticProtectedNs("Particle")])
+                     pushdouble 0.1
+                     callproperty QName(PackageNamespace(""),"yMoveToRot"), 2
+                     pushfalse
+                     iffalse ofs11d3
+                     returnvoid
+                     popscope
+                     modulo
+                     throw
+                     istypelate
+                     setlocal1
+                     setlocal2
+            ofs11d3:
+                     initproperty QName(PrivateNamespace(null,"21"),"yVel")
+                     getlocal0
+                     getlocal0
+                     getproperty QName(PrivateNamespace(null,"21"),"x")
+                     getlocal0
+                     getproperty QName(PrivateNamespace(null,"21"),"xVel")
+                     jump ofs11e9
+                     pushnull
+                     coerce_s
+                     setlocal0
+                     setlocal1
+                     decrement
+                     convert_s
+            ofs11e9:
+                     add
+                     initproperty QName(PrivateNamespace(null,"21"),"x")
+                     getlocal0
+                     getlocal0
+                     getproperty QName(PrivateNamespace(null,"21"),"y")
+                     getlocal0
+                     pushfalse
+                     iffalse ofs1200
+                     pushtrue
+                     throw
+                     divide
+                     pushwith
+                     newfunction 37
+                     pop
+                     pushscope
+            ofs1200:
+                     getproperty QName(PrivateNamespace(null,"21"),"yVel")
+                     add
+                     initproperty QName(PrivateNamespace(null,"21"),"y")
+                     getlocal0
+                     getproperty QName(PrivateNamespace(null,"21"),"game")
+                     jump ofs1213
+                     ifstrictne ofs1213
+            ofs1213:
+                     getproperty QName(PackageNamespace(""),"bitscreen")
+                     getlocal0
+                     getproperty QName(PrivateNamespace(null,"21"),"x")
+                     getlocal0
+                     jump ofs1225
+                     popscope
+                     divide
+                     pop
+                     throw
+                     returnvalue
+                     multiply
+            ofs1225:
+                     getproperty QName(PrivateNamespace(null,"21"),"game")
+                     getproperty QName(PackageNamespace(""),"arena")
+                     getproperty QName(PackageNamespace(""),"x")
+                     add
+                     getlocal0
+                     getproperty QName(PrivateNamespace(null,"21"),"y")
+                     getlocal0
+                     jump ofs123d
+                     lshift
+                     callmethod 54, 27
+                     pop
+            ofs123d:
+                     getproperty QName(PrivateNamespace(null,"21"),"game")
+                     getproperty QName(PackageNamespace(""),"arena")
+                     getproperty QName(PackageNamespace(""),"y")
+                     add
+                     pushtrue
+                     getlocal0
+                     jump ofs1253
+                     bitand
+                     newclass 18
+                     pushwith
+                     setlocal1
+                     returnvalue
+            ofs1253:
+                     getproperty QName(PrivateNamespace(null,"21"),"name")
+                     getlocal0
+                     getproperty QName(PrivateNamespace(null,"21"),"sub")
+                     getlocal0
+                     getproperty QName(PrivateNamespace(null,"21"),"xVel")
+                     jump ofs1266
+                     iflt ofs1266
+            ofs1266:
+                     pushbyte 0
+                     greaterthan
+                     jump ofs1273
+                     popscope
+                     newfunction 17
+                     pop
+                     greaterequals
+                     equals
+            ofs1273:
+                     iftrue ofs127b
+                     jump ofs1285
+            ofs127b:
+                     pushbyte 1
+                     convert_u
+                     jump ofs1288
+                     throw
+                     setlocal1
+                     getlocal2
+            ofs1285:
+                     pushbyte 2
+                     convert_u
+            ofs1288:
+                     callpropvoid QName(PackageNamespace(""),"paint"), 6
+                     jump ofs151d
+            ofs1290:
+                     label
+                     pushfalse
+                     iffalse ofs129c
+                     returnvoid
+                     nextvalue
+                     callstatic 95, 21
+                     pop
+            ofs129c:
+                     getlocal0
+                     getlocal0
+                     getproperty QName(PrivateNamespace(null,"21"),"y")
+                     getlocal0
+                     getproperty QName(PrivateNamespace(null,"21"),"ySpd")
+                     add
+                     initproperty QName(PrivateNamespace(null,"21"),"y")
+                     getlocal0
+                     jump ofs12b4
+                     pushfalse
+                     dxns "int"
+                     pushwith
+                     istypelate
+                     throw
+            ofs12b4:
+                     getproperty QName(PrivateNamespace(null,"21"),"game")
+                     getproperty QName(PackageNamespace(""),"bitscreen")
+                     getlocal0
+                     getproperty QName(PrivateNamespace(null,"21"),"x")
+                     getlocal0
+                     jump ofs12c7
+                     ifeq ofs12c7
+            ofs12c7:
+                     getproperty QName(PrivateNamespace(null,"21"),"game")
+                     getproperty QName(PackageNamespace(""),"arena")
+                     getproperty QName(PackageNamespace(""),"x")
+                     add
+                     jump ofs12da
+                     popscope
+                     callpropvoid QName(PackageNamespace(""),"void"), 7
+                     pushwith
+            ofs12da:
+                     getlocal0
+                     getproperty QName(PrivateNamespace(null,"21"),"y")
+                     getlocal0
+                     getproperty QName(PrivateNamespace(null,"21"),"game")
+                     getproperty QName(PackageNamespace(""),"arena")
+                     getproperty QName(PackageNamespace(""),"y")
+                     add
+                     pushtrue
+                     getlocal0
+                     jump ofs12f4
+                     popscope
+                     callproplex QName(PackageNamespace(""),"DebugConsole"), 24
+                     pop
+            ofs12f4:
+                     getproperty QName(PrivateNamespace(null,"21"),"name")
+                     getlocal0
+                     getproperty QName(PrivateNamespace(null,"21"),"sub")
+                     getlocal0
+                     getproperty QName(PrivateNamespace(null,"21"),"frame")
+                     callpropvoid QName(PackageNamespace(""),"paint"), 6
+                     pushtrue
+                     iftrue ofs130f
+                     returnvoid
+                     returnvalue
+                     constructprop QName(PackageNamespace(""),"caScore"), 12
+                     setlocal3
+            ofs130f:
+                     getlocal0
+                     getproperty QName(PrivateNamespace(null,"21"),"fc")
+                     getlocal0
+                     getproperty QName(PrivateNamespace(null,"21"),"yVel")
+                     ifgt ofs131f
+                     jump ofs1336
+            ofs131f:
+                     getlocal0
+                     jump ofs1328
+                     ifeq ofs1328
+            ofs1328:
+                     pushtrue
+                     jump ofs1333
+                     pushwith
+                     callmethod 3569, 18
+                     setlocal2
+            ofs1333:
+                     initproperty QName(PackageNamespace(""),"remove")
+            ofs1336:
+                     jump ofs151d
+                     ifeq ofs133e
+            ofs133e:
+                     label
+                     jump ofs151d
+            ofs1343:
+                     getlocal0
+                     getproperty QName(PrivateNamespace(null,"21"),"behave")
+                     setlocal2
+                     jump ofs1352
+                     coerce_s
+                     pop
+                     setlocal1
+                     lessequals
+                     setlocal0
+                     pushscope
+            ofs1352:
+                     pushstring "fairy"
+                     getlocal2
+                     ifstricteq ofs135e
+                     jump ofs1368
+            ofs135e:
+                     pushbyte 0
+                     jump ofs14dc
+                     iflt ofs1368
+            ofs1368:
+                     pushstring "space"
+                     getlocal2
+                     ifstrictne ofs1383
+                     pushbyte 1
+                     jump ofs137b
+                     pushwith
+                     callpropvoid QName(PackageNamespace("Playtomic"),"PFObject"), 8
+                     pushwith
+            ofs137b:
+                     jump ofs14dc
+                     ifle ofs1383
+            ofs1383:
+                     pushstring "waterdrop"
+                     getlocal2
+                     ifstricteq ofs138f
+                     jump ofs139d
+            ofs138f:
+                     pushbyte 2
+                     jump ofs1399
+                     iflt ofs1399
+            ofs1399:
+                     jump ofs14dc
+            ofs139d:
+                     pushstring "water"
+                     getlocal2
+                     ifstrictne ofs13b7
+                     jump ofs13af
+                     popscope
+                     pushwith
+                     newfunction 61
+                     throw
+                     dup
+            ofs13af:
+                     pushbyte 3
+                     jump ofs14dc
+                     pushwith
+                     setlocal0
+            ofs13b7:
+                     pushstring "snow"
+                     getlocal2
+                     ifstricteq ofs13c3
+                     jump ofs13c9
+            ofs13c3:
+                     pushbyte 4
+                     jump ofs14dc
+            ofs13c9:
+                     pushstring "leaf"
+                     getlocal2
+                     jump ofs13d7
+                     popscope
+                     call 89
+                     pushwith
+                     greaterequals
+                     returnvalue
+            ofs13d7:
+                     ifstricteq ofs13df
+                     jump ofs13e8
+            ofs13df:
+                     pushbyte 5
+                     jump ofs14dc
+                     throw
+                     setlocal3
+                     getlocal0
+            ofs13e8:
+                     pushstring "loop"
+                     getlocal2
+                     ifstrictne ofs13f6
+                     pushbyte 6
+                     jump ofs14dc
+            ofs13f6:
+                     pushstring "shell"
+                     getlocal2
+                     jump ofs1404
+                     popscope
+                     construct 1
+                     pushwith
+                     increment
+                     instanceof
+            ofs1404:
+                     ifstricteq ofs140c
+                     jump ofs1414
+            ofs140c:
+                     pushbyte 7
+                     jump ofs14dc
+                     pushwith
+                     setlocal3
+            ofs1414:
+                     pushstring "spark"
+                     getlocal2
+                     jump ofs1420
+                     ifle ofs1420
+            ofs1420:
+                     ifstrictne ofs142a
+                     pushbyte 8
+                     jump ofs14dc
+            ofs142a:
+                     pushstring "geiser"
+                     getlocal2
+                     pushfalse
+                     iffalse ofs143b
+                     pushfalse
+                     returnvalue
+                     popscope
+                     pushwith
+                     newfunction 29
+                     throw
+                     instanceof
+            ofs143b:
+                     ifstricteq ofs1443
+                     jump ofs144c
+            ofs1443:
+                     pushbyte 9
+                     jump ofs14dc
+                     pushwith
+                     setlocal3
+                     getlocal1
+            ofs144c:
+                     pushstring "raise"
+                     getlocal2
+                     ifstrictne ofs1468
+                     pushbyte 10
+                     pushtrue
+                     iftrue ofs1462
+                     pushtrue
+                     throw
+                     popscope
+                     callstatic 95, 6
+                     pushwith
+            ofs1462:
+                     jump ofs14dc
+                     pushwith
+                     setlocal2
+            ofs1468:
+                     pushstring "move"
+                     getlocal2
+                     ifstricteq ofs1474
+                     jump ofs147a
+            ofs1474:
+                     pushbyte 11
+                     jump ofs14dc
+            ofs147a:
+                     pushstring "fish"
+                     getlocal2
+                     jump ofs1488
+                     popscope
+                     setlocal1
+                     nextname
+                     pushnull
+                     istypelate
+                     pop
+            ofs1488:
+                     ifstricteq ofs1490
+                     jump ofs1498
+            ofs1490:
+                     pushbyte 12
+                     jump ofs14dc
+                     pushwith
+                     setlocal3
+            ofs1498:
+                     pushstring "text"
+                     getlocal2
+                     jump ofs14a4
+                     ifle ofs14a4
+            ofs14a4:
+                     ifstrictne ofs14ae
+                     pushbyte 13
+                     jump ofs14dc
+            ofs14ae:
+                     pushstring "slowText"
+                     getlocal2
+                     pushtrue
+                     iftrue ofs14be
+                     returnvoid
+                     decrement
+                     newactivation
+                     divide
+                     setlocal1
+                     setlocal3
+                     pushscope
+            ofs14be:
+                     ifstricteq ofs14c6
+                     jump ofs14d0
+            ofs14c6:
+                     pushbyte 14
+                     jump ofs14dc
+                     ifle ofs14d0
+            ofs14d0:
+                     jump ofs14da
+                     pushbyte 15
+                     jump ofs14da
+            ofs14da:
+                     pushbyte 15
+            ofs14dc:
+                     kill 2
+                     jump ofs14e8
+                     multiply
+                     callmethod 3528, 16
+                     returnvalue
+            ofs14e8:
+                     lookupswitch ofs133e, [ofs0052, ofs0149, ofs023e, ofs03d3, ofs06de, ofs07ce, ofs0982, ofs09e9, ofs0b72, ofs0d9c, ofs0fd5, ofs1090, ofs1147, ofs1290, ofs1290, ofs133e]
+            ofs151d:
+                     getlocal0
+                     getproperty QName(PrivateNamespace(null,"21"),"holdFrame")
+                     iffalse ofs1529
+                     jump ofs1579
+            ofs1529:
+                     getlocal0
+                     dup
+                     jump ofs1535
+                     pushnull
+                     equals
+                     pushwith
+                     returnvoid
+                     pushscope
+                     setlocal1
+            ofs1535:
+                     setlocal2
+                     getproperty QName(PrivateNamespace(null,"21"),"frame")
+                     increment
+                     setlocal3
+                     getlocal2
+                     jump ofs1544
+                     ifeq ofs1544
+            ofs1544:
+                     getlocal3
+                     setproperty QName(PrivateNamespace(null,"21"),"frame")
+                     kill 3
+                     kill 2
+                     jump ofs1556
+                     setlocal2
+                     modulo
+                     convert_d
+                     returnvalue
+                     bitxor
+                     dup
+            ofs1556:
+                     getlocal0
+                     getproperty QName(PrivateNamespace(null,"21"),"frame")
+                     getlocal0
+                     getproperty QName(PrivateNamespace(null,"21"),"stats")
+                     getproperty Multiname("frames",[PrivateNamespace(null,"21"),PackageNamespace(""),PrivateNamespace(null,"182"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Particle"),StaticProtectedNs("Particle")])
+                     ifgt ofs1569
+                     jump ofs1579
+            ofs1569:
+                     getlocal0
+                     pushbyte 1
+                     initproperty QName(PrivateNamespace(null,"21"),"frame")
+                     jump ofs1579
+                     returnvalue
+                     newactivation
+                     pushwith
+                     pushnull
+                     istypelate
+                     setlocal1
+            ofs1579:
+                     returnvoid
+                  end ; code
+               end ; body
+            end ; method
+         }
+         
+         private function hitTest(param1:Number = 0, param2:Number = 0) : uint
+         {
+            trait method QName(PrivateNamespace(null,"21"),"hitTest")
+               dispid 0
+               method
+                  name null
+                  flag HAS_OPTIONAL
+                  param QName(PackageNamespace(""),"Number")
+                  param QName(PackageNamespace(""),"Number")
+                  optional Integer(0)
+                  optional Integer(0)
+                  returns QName(PackageNamespace(""),"uint")
+                  
+                  body
+                     maxstack 7
+                     localcount 4
+                     initscopedepth 4
+                     maxscopedepth 5
+                     
+                     code
+                        getlocal0
+                        pushscope
+                        jump ofs000c
+                        newclass 479
+                        call 8
+                        throw
+               ofs000c:
+                        getlocal0
+                        getproperty QName(PrivateNamespace(null,"21"),"fc")
+                        getlocal0
+                        getproperty QName(PrivateNamespace(null,"21"),"hitFrame")
+                        iflt ofs001c
+                        jump ofs0031
+               ofs001c:
+                        pushbyte 0
+                        jump ofs0030
+                        ifge ofs0026
+               ofs0026:
+                        jump ofs002a
+               ofs002a:
+                        setlocal2
+                        pushwith
+                        newfunction 71
+                        throw
+                        istypelate
+               ofs0030:
+                        returnvalue
+               ofs0031:
+                        getlocal0
+                        getproperty QName(PrivateNamespace(null,"21"),"game")
+                        getproperty QName(PackageNamespace(""),"arena")
+                        getproperty QName(PackageNamespace(""),"wall")
+                        getlocal0
+                        getproperty QName(PrivateNamespace(null,"21"),"x")
+                        getlocal1
+                        jump ofs004a
+                        popscope
+                        callsupervoid QName(PackageNamespace(""),"getDamageAtLevel"), 10
+                        returnvalue
+               ofs004a:
+                        add
+                        getlocal0
+                        getproperty QName(PrivateNamespace(null,"21"),"y")
+                        getlocal2
+                        add
+                        callproperty QName(PackageNamespace(""),"getPixel32"), 2
+                        convert_u
+                        setlocal3
+                        getlocal3
+                        iffalse ofs006a
+                        jump ofs006c
+                        jump ofs0064
+               ofs0064:
+                        greaterequals
+                        newfunction 68
+                        pushwith
+                        setlocal1
+                        returnvalue
+               ofs006a:
+                        getlocal3
+                        returnvalue
+               ofs006c:
+                        getlocal3
+                        pushbyte 16
+                        callproperty QName(Namespace("http://adobe.com/AS3/2006/builtin"),"toString"), 1
+                        jump ofs007b
+                        ifge ofs007b
+               ofs007b:
+                        pushbyte 0
+                        pushbyte 2
+                        callproperty QName(Namespace("http://adobe.com/AS3/2006/builtin"),"substring"), 2
+                        jump ofs008d
+                        popscope
+                        constructsuper 100
+                        pushwith
+                        convert_s
+                        greaterequals
+               ofs008d:
+                        pushstring "ff"
+                        ifeq ofs0098
+                        jump ofs00a0
+               ofs0098:
+                        getlocal3
+                        convert_u
+                        jump ofs00a3
+                        pushwith
+                        setlocal1
+               ofs00a0:
+                        pushbyte 0
+                        convert_u
+               ofs00a3:
+                        returnvalue
+                     end ; code
+                  end ; body
+               end ; method
+            }
+            
+            private function hitTestPlayer() : Boolean
+            {
+               trait method QName(PrivateNamespace(null,"21"),"hitTestPlayer")
+                  dispid 0
+                  method
+                     name null
+                     returns QName(PackageNamespace(""),"Boolean")
+                     
+                     body
+                        maxstack 11
+                        localcount 1
+                        initscopedepth 4
+                        maxscopedepth 5
+                        
+                        code
+                           jump ofs000b
+                           call 10
+                           throw
+                           callstatic 3490, 10
+                  ofs000b:
+                           getlocal0
+                           pushscope
+                           getlocal0
+                           getproperty QName(PrivateNamespace(null,"21"),"game")
+                           getproperty QName(PackageNamespace(""),"player")
+                           jump ofs001c
+                           iflt ofs001c
+                  ofs001c:
+                           getproperty QName(PackageNamespace(""),"dead")
+                           iftrue ofs0027
+                           jump ofs0029
+                  ofs0027:
+                           pushfalse
+                           returnvalue
+                  ofs0029:
+                           getlocal0
+                           jump ofs0034
+                           popscope
+                           callproplex QName(PackageNamespace(""),"getTimeString"), 18
+                           setlocal2
+                  ofs0034:
+                           getproperty QName(PrivateNamespace(null,"21"),"fc")
+                           getlocal0
+                           getproperty QName(PrivateNamespace(null,"21"),"hitFrame")
+                           iflt ofs0043
+                           jump ofs0045
+                  ofs0043:
+                           pushfalse
+                           returnvalue
+                  ofs0045:
+                           getlex QName(PackageNamespace(""),"UT")
+                           jump ofs0052
+                           setlocal2
+                           newarray 92
+                           pushwith
+                           typeof
+                           nextvalue
+                  ofs0052:
+                           getlocal0
+                           getproperty QName(PrivateNamespace(null,"21"),"x")
+                           getlocal0
+                           getproperty QName(PrivateNamespace(null,"21"),"y")
+                           getlocal0
+                           getproperty QName(PrivateNamespace(null,"21"),"game")
+                           getproperty QName(PackageNamespace(""),"player")
+                           getproperty QName(PackageNamespace(""),"x")
+                           pushbyte 20
+                           subtract
+                           jump ofs0071
+                           popscope
+                           call 114
+                           pushwith
+                           typeof
+                           divide
+                  ofs0071:
+                           getlocal0
+                           getproperty QName(PrivateNamespace(null,"21"),"game")
+                           getproperty QName(PackageNamespace(""),"player")
+                           getproperty QName(PackageNamespace(""),"y")
+                           getlex QName(PackageNamespace(""),"UT")
+                           jump ofs0086
+                           iflt ofs0086
+                  ofs0086:
+                           pushbyte 55
+                           pushbyte 70
+                           callproperty QName(PackageNamespace(""),"rand"), 2
+                           subtract
+                           pushtrue
+                           iftrue ofs009c
+                           pushfalse
+                           returnvalue
+                           popscope
+                           callsupervoid QName(PackageNamespace(""),"updatePlayer"), 16
+                           setlocal3
+                  ofs009c:
+                           pushbyte 40
+                           pushbyte 50
+                           callproperty QName(PackageNamespace(""),"inBox"), 6
+                           returnvalue
+                        end ; code
+                     end ; body
+                  end ; method
+               }
+            }
+         }

@@ -1,0 +1,1472 @@
+package
+{
+   import Box2D.Collision.Shapes.b2PolygonShape;
+   import Box2D.Common.Math.b2Vec2;
+   import Box2D.Dynamics.b2Body;
+   import Box2D.Dynamics.b2BodyDef;
+   import Box2D.Dynamics.b2DebugDraw;
+   import Box2D.Dynamics.b2FixtureDef;
+   import Box2D.Dynamics.b2World;
+   import flash.display.Sprite;
+   
+   public class PhysWorld extends Sprite
+   {
+      
+      {
+         method
+            name null
+            returns null
+            
+            body
+               maxstack 4
+               localcount 1
+               initscopedepth 8
+               maxscopedepth 9
+               
+               code
+                  jump ofs000b
+                  callstatic 3493, 10
+                  call 10
+                  throw
+         ofs000b:
+                  getlocal0
+                  pushscope
+                  returnvoid
+               end ; code
+            end ; body
+         end ; method
+      }
+      
+      public var game:Game;
+      
+      public var m_world:b2World;
+      
+      public var m_velocityIterations:int = 10;
+      
+      public var m_positionIterations:int = 10;
+      
+      public var m_timeStep:Number = 0.03333333333333333;
+      
+      private var body:b2Body;
+      
+      private var bodyDef:b2BodyDef;
+      
+      private var boxShape:b2PolygonShape;
+      
+      private var fixtureDef:b2FixtureDef;
+      
+      public var actors:Array;
+      
+      public function PhysWorld(param1:Game)
+      {
+         method
+            name null
+            param QName(PackageNamespace(""),"Game")
+            returns null
+            
+            body
+               maxstack 8
+               localcount 3
+               initscopedepth 9
+               maxscopedepth 10
+               
+               code
+                  getlocal0
+                  jump ofs000c
+                  call 10
+                  callstatic 3491, 10
+                  throw
+         ofs000c:
+                  pushscope
+                  getlocal0
+                  constructsuper 0
+                  getlocal0
+                  getlocal1
+                  jump ofs001a
+                  ifstricteq ofs001a
+         ofs001a:
+                  initproperty QName(PackageNamespace(""),"game")
+                  getlocal0
+                  newarray 0
+                  initproperty QName(PackageNamespace(""),"actors")
+                  getlocal0
+                  jump ofs002e
+                  pushfalse
+                  newfunction 101
+                  throw
+                  divide
+                  typeof
+         ofs002e:
+                  findpropstrict QName(PackageNamespace("Box2D.Dynamics"),"b2World")
+                  findpropstrict QName(PackageNamespace("Box2D.Common.Math"),"b2Vec2")
+                  pushdouble 0.0
+                  pushbyte 10
+                  constructprop QName(PackageNamespace("Box2D.Common.Math"),"b2Vec2"), 2
+                  pushtrue
+                  constructprop QName(PackageNamespace("Box2D.Dynamics"),"b2World"), 2
+                  pushfalse
+                  iffalse ofs0049
+                  returnvoid
+                  divide
+                  newfunction 103
+                  throw
+                  add
+                  pushfalse
+         ofs0049:
+                  initproperty QName(PackageNamespace(""),"m_world")
+                  getlex QName(PackageNamespace(""),"MatchSettings")
+                  getproperty QName(PackageNamespace(""),"useMap")
+                  getproperty Multiname("phys",[PrivateNamespace(null,"70"),PackageNamespace(""),PackageNamespace("Box2D.Dynamics"),PackageNamespace("Box2D.Common.Math"),PrivateNamespace(null,"256"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),PackageNamespace("Box2D.Collision"),PackageNamespace("Box2D.Collision.Shapes"),ProtectedNamespace("PhysWorld"),StaticProtectedNs("PhysWorld"),StaticProtectedNs("flash.display:Sprite"),StaticProtectedNs("flash.display:DisplayObjectContainer"),StaticProtectedNs("flash.display:InteractiveObject"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                  pushstring "space"
+                  ifeq ofs006a
+                  jump ofs0083
+                  jump ofs0064
+         ofs0064:
+                  returnvoid
+                  newfunction 115
+                  throw
+                  setlocal1
+                  setlocal0
+         ofs006a:
+                  getlocal0
+                  getproperty QName(PackageNamespace(""),"m_world")
+                  findpropstrict QName(PackageNamespace("Box2D.Common.Math"),"b2Vec2")
+                  pushdouble 0.0
+                  pushdouble 0.0
+                  jump ofs007c
+                  ifge ofs007c
+         ofs007c:
+                  constructprop QName(PackageNamespace("Box2D.Common.Math"),"b2Vec2"), 2
+                  callpropvoid QName(PackageNamespace(""),"SetGravity"), 1
+         ofs0083:
+                  findpropstrict QName(PackageNamespace("Box2D.Dynamics"),"b2DebugDraw")
+                  constructprop QName(PackageNamespace("Box2D.Dynamics"),"b2DebugDraw"), 0
+                  jump ofs0092
+                  convert_s
+                  call 52
+                  pushwith
+                  dup
+                  equals
+         ofs0092:
+                  coerce QName(PackageNamespace("Box2D.Dynamics"),"b2DebugDraw")
+                  setlocal2
+                  getlocal2
+                  getlocal0
+                  callpropvoid QName(PackageNamespace(""),"SetSprite"), 1
+                  getlocal2
+                  pushbyte 30
+                  callpropvoid QName(PackageNamespace(""),"SetDrawScale"), 1
+                  getlocal2
+                  jump ofs00ac
+                  popscope
+                  callproperty QName(PackageNamespace(""),"Object"), 30
+                  throw
+         ofs00ac:
+                  pushdouble 0.3
+                  callpropvoid QName(PackageNamespace(""),"SetFillAlpha"), 1
+                  getlocal2
+                  pushbyte 1
+                  callpropvoid QName(PackageNamespace(""),"SetLineThickness"), 1
+                  getlocal2
+                  jump ofs00c4
+                  setlocal3
+                  setlocal3
+                  setlocal2
+                  bitxor
+                  throw
+                  newactivation
+         ofs00c4:
+                  getlex QName(PackageNamespace("Box2D.Dynamics"),"b2DebugDraw")
+                  getproperty QName(PackageNamespace(""),"e_shapeBit")
+                  getlex QName(PackageNamespace("Box2D.Dynamics"),"b2DebugDraw")
+                  getproperty QName(PackageNamespace(""),"e_jointBit")
+                  bitor
+                  jump ofs00d7
+                  ifle ofs00d7
+         ofs00d7:
+                  callpropvoid QName(PackageNamespace(""),"SetFlags"), 1
+                  getlocal0
+                  getproperty QName(PackageNamespace(""),"m_world")
+                  getlocal2
+                  callpropvoid QName(PackageNamespace(""),"SetDebugDraw"), 1
+                  pushtrue
+                  iftrue ofs00ef
+                  returnvoid
+                  newactivation
+                  callmethod 5, 18
+                  throw
+         ofs00ef:
+                  returnvoid
+               end ; code
+            end ; body
+         end ; method
+      }
+      
+      public function generateWorld(param1:Array) : void
+      {
+         trait method QName(PackageNamespace(""),"generateWorld")
+            dispid 0
+            method
+               name null
+               param QName(PackageNamespace(""),"Array")
+               returns QName(PackageNamespace(""),"void")
+               
+               body
+                  maxstack 7
+                  localcount 4
+                  initscopedepth 9
+                  maxscopedepth 10
+                  
+                  code
+                     jump ofs000a
+                     newclass 477
+                     call 9
+                     throw
+            ofs000a:
+                     getlocal0
+                     pushscope
+                     pushnan
+                     setlocal3
+                     pushbyte 0
+                     jump ofs0018
+                     ifstrictne ofs0018
+            ofs0018:
+                     convert_u
+                     setlocal2
+                     jump ofs0194
+                     throw
+                     setlocal1
+            ofs0020:
+                     label
+                     pushfalse
+                     iffalse ofs002e
+                     pushtrue
+                     throw
+                     setlocal2
+                     newobject 89
+                     pushwith
+                     returnvoid
+                     modulo
+            ofs002e:
+                     getlocal1
+                     getlocal2
+                     getproperty MultinameL([PrivateNamespace(null,"70"),PackageNamespace(""),PackageNamespace("Box2D.Dynamics"),PackageNamespace("Box2D.Common.Math"),PrivateNamespace(null,"256"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),PackageNamespace("Box2D.Collision"),PackageNamespace("Box2D.Collision.Shapes"),ProtectedNamespace("PhysWorld"),StaticProtectedNs("PhysWorld"),StaticProtectedNs("flash.display:Sprite"),StaticProtectedNs("flash.display:DisplayObjectContainer"),StaticProtectedNs("flash.display:InteractiveObject"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                     getproperty Multiname("rotation",[PrivateNamespace(null,"70"),PackageNamespace(""),PackageNamespace("Box2D.Dynamics"),PackageNamespace("Box2D.Common.Math"),PrivateNamespace(null,"256"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),PackageNamespace("Box2D.Collision"),PackageNamespace("Box2D.Collision.Shapes"),ProtectedNamespace("PhysWorld"),StaticProtectedNs("PhysWorld"),StaticProtectedNs("flash.display:Sprite"),StaticProtectedNs("flash.display:DisplayObjectContainer"),StaticProtectedNs("flash.display:InteractiveObject"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                     convert_d
+                     setlocal3
+                     getlocal1
+                     getlocal2
+                     getproperty MultinameL([PrivateNamespace(null,"70"),PackageNamespace(""),PackageNamespace("Box2D.Dynamics"),PackageNamespace("Box2D.Common.Math"),PrivateNamespace(null,"256"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),PackageNamespace("Box2D.Collision"),PackageNamespace("Box2D.Collision.Shapes"),ProtectedNamespace("PhysWorld"),StaticProtectedNs("PhysWorld"),StaticProtectedNs("flash.display:Sprite"),StaticProtectedNs("flash.display:DisplayObjectContainer"),StaticProtectedNs("flash.display:InteractiveObject"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                     pushfalse
+                     iffalse ofs004a
+                     pushtrue
+                     throw
+                     popscope
+                     returnvalue
+                     lshift
+                     negate
+                     checkfilter
+                     dup
+            ofs004a:
+                     pushbyte 0
+                     setproperty Multiname("rotation",[PrivateNamespace(null,"70"),PackageNamespace(""),PackageNamespace("Box2D.Dynamics"),PackageNamespace("Box2D.Common.Math"),PrivateNamespace(null,"256"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),PackageNamespace("Box2D.Collision"),PackageNamespace("Box2D.Collision.Shapes"),ProtectedNamespace("PhysWorld"),StaticProtectedNs("PhysWorld"),StaticProtectedNs("flash.display:Sprite"),StaticProtectedNs("flash.display:DisplayObjectContainer"),StaticProtectedNs("flash.display:InteractiveObject"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                     getlocal0
+                     findpropstrict QName(PackageNamespace("Box2D.Dynamics"),"b2BodyDef")
+                     constructprop QName(PackageNamespace("Box2D.Dynamics"),"b2BodyDef"), 0
+                     initproperty QName(PrivateNamespace(null,"70"),"bodyDef")
+                     getlocal0
+                     getproperty QName(PrivateNamespace(null,"70"),"bodyDef")
+                     jump ofs0065
+                     returnvoid
+                     callmethod 93, 8
+                     pushwith
+            ofs0065:
+                     getproperty QName(PackageNamespace(""),"position")
+                     getlocal1
+                     getlocal2
+                     getproperty MultinameL([PrivateNamespace(null,"70"),PackageNamespace(""),PackageNamespace("Box2D.Dynamics"),PackageNamespace("Box2D.Common.Math"),PrivateNamespace(null,"256"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),PackageNamespace("Box2D.Collision"),PackageNamespace("Box2D.Collision.Shapes"),ProtectedNamespace("PhysWorld"),StaticProtectedNs("PhysWorld"),StaticProtectedNs("flash.display:Sprite"),StaticProtectedNs("flash.display:DisplayObjectContainer"),StaticProtectedNs("flash.display:InteractiveObject"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                     getproperty Multiname("x",[PrivateNamespace(null,"70"),PackageNamespace(""),PackageNamespace("Box2D.Dynamics"),PackageNamespace("Box2D.Common.Math"),PrivateNamespace(null,"256"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),PackageNamespace("Box2D.Collision"),PackageNamespace("Box2D.Collision.Shapes"),ProtectedNamespace("PhysWorld"),StaticProtectedNs("PhysWorld"),StaticProtectedNs("flash.display:Sprite"),StaticProtectedNs("flash.display:DisplayObjectContainer"),StaticProtectedNs("flash.display:InteractiveObject"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                     jump ofs0078
+                     ifstricteq ofs0078
+            ofs0078:
+                     pushbyte 30
+                     jump ofs0083
+                     popscope
+                     callproperty QName(PackageNamespace("flash.geom"),"Matrix"), 30
+                     pop
+            ofs0083:
+                     divide
+                     getlocal1
+                     getlocal2
+                     getproperty MultinameL([PrivateNamespace(null,"70"),PackageNamespace(""),PackageNamespace("Box2D.Dynamics"),PackageNamespace("Box2D.Common.Math"),PrivateNamespace(null,"256"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),PackageNamespace("Box2D.Collision"),PackageNamespace("Box2D.Collision.Shapes"),ProtectedNamespace("PhysWorld"),StaticProtectedNs("PhysWorld"),StaticProtectedNs("flash.display:Sprite"),StaticProtectedNs("flash.display:DisplayObjectContainer"),StaticProtectedNs("flash.display:InteractiveObject"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                     getproperty Multiname("y",[PrivateNamespace(null,"70"),PackageNamespace(""),PackageNamespace("Box2D.Dynamics"),PackageNamespace("Box2D.Common.Math"),PrivateNamespace(null,"256"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),PackageNamespace("Box2D.Collision"),PackageNamespace("Box2D.Collision.Shapes"),ProtectedNamespace("PhysWorld"),StaticProtectedNs("PhysWorld"),StaticProtectedNs("flash.display:Sprite"),StaticProtectedNs("flash.display:DisplayObjectContainer"),StaticProtectedNs("flash.display:InteractiveObject"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                     pushbyte 30
+                     divide
+                     callpropvoid QName(PackageNamespace(""),"Set"), 2
+                     jump ofs009d
+                     bitxor
+                     newfunction 33
+                     throw
+                     setlocal2
+                     istypelate
+            ofs009d:
+                     getlocal0
+                     findpropstrict QName(PackageNamespace("Box2D.Collision.Shapes"),"b2PolygonShape")
+                     constructprop QName(PackageNamespace("Box2D.Collision.Shapes"),"b2PolygonShape"), 0
+                     initproperty QName(PrivateNamespace(null,"70"),"boxShape")
+                     getlocal0
+                     getproperty QName(PrivateNamespace(null,"70"),"boxShape")
+                     getlocal1
+                     getlocal2
+                     getproperty MultinameL([PrivateNamespace(null,"70"),PackageNamespace(""),PackageNamespace("Box2D.Dynamics"),PackageNamespace("Box2D.Common.Math"),PrivateNamespace(null,"256"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),PackageNamespace("Box2D.Collision"),PackageNamespace("Box2D.Collision.Shapes"),ProtectedNamespace("PhysWorld"),StaticProtectedNs("PhysWorld"),StaticProtectedNs("flash.display:Sprite"),StaticProtectedNs("flash.display:DisplayObjectContainer"),StaticProtectedNs("flash.display:InteractiveObject"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                     getproperty Multiname("width",[PrivateNamespace(null,"70"),PackageNamespace(""),PackageNamespace("Box2D.Dynamics"),PackageNamespace("Box2D.Common.Math"),PrivateNamespace(null,"256"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),PackageNamespace("Box2D.Collision"),PackageNamespace("Box2D.Collision.Shapes"),ProtectedNamespace("PhysWorld"),StaticProtectedNs("PhysWorld"),StaticProtectedNs("flash.display:Sprite"),StaticProtectedNs("flash.display:DisplayObjectContainer"),StaticProtectedNs("flash.display:InteractiveObject"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                     pushfalse
+                     iffalse ofs00be
+                     returnvoid
+                     setlocal0
+                     bitxor
+                     decrement
+                     setlocal0
+                     returnvoid
+                     divide
+            ofs00be:
+                     pushbyte 60
+                     divide
+                     getlocal1
+                     getlocal2
+                     getproperty MultinameL([PrivateNamespace(null,"70"),PackageNamespace(""),PackageNamespace("Box2D.Dynamics"),PackageNamespace("Box2D.Common.Math"),PrivateNamespace(null,"256"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),PackageNamespace("Box2D.Collision"),PackageNamespace("Box2D.Collision.Shapes"),ProtectedNamespace("PhysWorld"),StaticProtectedNs("PhysWorld"),StaticProtectedNs("flash.display:Sprite"),StaticProtectedNs("flash.display:DisplayObjectContainer"),StaticProtectedNs("flash.display:InteractiveObject"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                     jump ofs00ce
+                     ifgt ofs00ce
+            ofs00ce:
+                     getproperty Multiname("height",[PrivateNamespace(null,"70"),PackageNamespace(""),PackageNamespace("Box2D.Dynamics"),PackageNamespace("Box2D.Common.Math"),PrivateNamespace(null,"256"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),PackageNamespace("Box2D.Collision"),PackageNamespace("Box2D.Collision.Shapes"),ProtectedNamespace("PhysWorld"),StaticProtectedNs("PhysWorld"),StaticProtectedNs("flash.display:Sprite"),StaticProtectedNs("flash.display:DisplayObjectContainer"),StaticProtectedNs("flash.display:InteractiveObject"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                     pushbyte 60
+                     divide
+                     pushtrue
+                     iftrue ofs00df
+                     returnvoid
+                     dup
+                     callmethod 121, 30
+                     throw
+            ofs00df:
+                     callpropvoid QName(PackageNamespace(""),"SetAsBox"), 2
+                     getlocal0
+                     getproperty QName(PrivateNamespace(null,"70"),"bodyDef")
+                     getlocal3
+                     pushshort 180
+                     getlex QName(PackageNamespace(""),"Math")
+                     pushfalse
+                     iffalse ofs00fa
+                     returnvoid
+                     checkfilter
+                     returnvalue
+                     negate
+                     bitand
+                     pushscope
+                     returnvoid
+            ofs00fa:
+                     getproperty QName(PackageNamespace(""),"PI")
+                     divide
+                     divide
+                     setproperty QName(PackageNamespace(""),"angle")
+                     getlocal0
+                     findpropstrict QName(PackageNamespace("Box2D.Dynamics"),"b2FixtureDef")
+                     constructprop QName(PackageNamespace("Box2D.Dynamics"),"b2FixtureDef"), 0
+                     initproperty QName(PrivateNamespace(null,"70"),"fixtureDef")
+                     getlocal0
+                     jump ofs0115
+                     pop
+                     callsupervoid QName(PackageNamespace("Box2D.Dynamics"),"b2ContactFilter"), 27
+                     throw
+            ofs0115:
+                     getproperty QName(PrivateNamespace(null,"70"),"fixtureDef")
+                     getlocal0
+                     getproperty QName(PrivateNamespace(null,"70"),"boxShape")
+                     setproperty QName(PackageNamespace(""),"shape")
+                     getlocal0
+                     jump ofs0128
+                     ifgt ofs0128
+            ofs0128:
+                     getproperty QName(PrivateNamespace(null,"70"),"fixtureDef")
+                     pushdouble 0.3
+                     setproperty QName(PackageNamespace(""),"friction")
+                     getlocal0
+                     pushtrue
+                     iftrue ofs013e
+                     pushfalse
+                     returnvalue
+                     pushnull
+                     pushfalse
+                     returnvalue
+                     returnvalue
+                     lessequals
+                     setlocal0
+            ofs013e:
+                     getproperty QName(PrivateNamespace(null,"70"),"fixtureDef")
+                     pushbyte 0
+                     setproperty QName(PackageNamespace(""),"density")
+                     getlocal0
+                     getlocal0
+                     getproperty QName(PackageNamespace(""),"m_world")
+                     jump ofs0155
+                     setlocal3
+                     bitxor
+                     multiply
+                     typeof
+                     multiply
+                     add
+            ofs0155:
+                     getlocal0
+                     getproperty QName(PrivateNamespace(null,"70"),"bodyDef")
+                     callproperty QName(PackageNamespace(""),"CreateBody"), 1
+                     initproperty QName(PrivateNamespace(null,"70"),"body")
+                     getlocal0
+                     getproperty QName(PrivateNamespace(null,"70"),"body")
+                     jump ofs016e
+                     bitxor
+                     modulo
+                     setlocal3
+                     typeof
+                     typeof
+                     pushscope
+            ofs016e:
+                     getlocal0
+                     getproperty QName(PrivateNamespace(null,"70"),"fixtureDef")
+                     callpropvoid QName(PackageNamespace(""),"CreateFixture"), 1
+                     getlocal1
+                     getlocal2
+                     jump ofs0180
+                     ifstrictne ofs0180
+            ofs0180:
+                     getproperty MultinameL([PrivateNamespace(null,"70"),PackageNamespace(""),PackageNamespace("Box2D.Dynamics"),PackageNamespace("Box2D.Common.Math"),PrivateNamespace(null,"256"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),PackageNamespace("Box2D.Collision"),PackageNamespace("Box2D.Collision.Shapes"),ProtectedNamespace("PhysWorld"),StaticProtectedNs("PhysWorld"),StaticProtectedNs("flash.display:Sprite"),StaticProtectedNs("flash.display:DisplayObjectContainer"),StaticProtectedNs("flash.display:InteractiveObject"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                     getlocal3
+                     setproperty Multiname("rotation",[PrivateNamespace(null,"70"),PackageNamespace(""),PackageNamespace("Box2D.Dynamics"),PackageNamespace("Box2D.Common.Math"),PrivateNamespace(null,"256"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),PackageNamespace("Box2D.Collision"),PackageNamespace("Box2D.Collision.Shapes"),ProtectedNamespace("PhysWorld"),StaticProtectedNs("PhysWorld"),StaticProtectedNs("flash.display:Sprite"),StaticProtectedNs("flash.display:DisplayObjectContainer"),StaticProtectedNs("flash.display:InteractiveObject"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                     getlocal2
+                     jump ofs0191
+                     returnvoid
+                     callproperty QName(PackageNamespace("flash.display"),"InteractiveObject"), 6
+                     pushwith
+            ofs0191:
+                     increment
+                     convert_u
+                     setlocal2
+            ofs0194:
+                     getlocal2
+                     getlocal1
+                     getproperty QName(PackageNamespace(""),"length")
+                     ifnlt ofs01a1
+                     jump ofs0020
+            ofs01a1:
+                     returnvoid
+                  end ; code
+               end ; body
+            end ; method
+         }
+         
+         public function createCorpse(param1:Unit, param2:Unit, param3:Stats_Guns, param4:*) : PhysActor
+         {
+            trait method QName(PackageNamespace(""),"createCorpse")
+               dispid 0
+               method
+                  name null
+                  param QName(PackageNamespace(""),"Unit")
+                  param QName(PackageNamespace(""),"Unit")
+                  param QName(PackageNamespace(""),"Stats_Guns")
+                  param null
+                  returns QName(PackageNamespace(""),"PhysActor")
+                  
+                  body
+                     maxstack 9
+                     localcount 10
+                     initscopedepth 9
+                     maxscopedepth 10
+                     
+                     code
+                        jump ofs000b
+                        call 6
+                        callmethod 3490, 6
+                        throw
+               ofs000b:
+                        getlocal0
+                        pushscope
+                        pushnan
+                        setlocal 7
+                        findpropstrict QName(PackageNamespace(""),"PhysActor")
+                        jump ofs001b
+                        ifgt ofs001b
+               ofs001b:
+                        getlocal0
+                        getlocal1
+                        getlocal2
+                        getlocal3
+                        pushfalse
+                        iffalse ofs002c
+                        pushtrue
+                        throw
+                        popscope
+                        pushwith
+                        newfunction 60
+                        throw
+                        setlocal1
+               ofs002c:
+                        getlocal 4
+                        constructprop QName(PackageNamespace(""),"PhysActor"), 5
+                        coerce QName(PackageNamespace(""),"PhysActor")
+                        setlocal 5
+                        getlocal0
+                        getproperty QName(PackageNamespace(""),"actors")
+                        getlocal 5
+                        callpropvoid QName(Namespace("http://adobe.com/AS3/2006/builtin"),"push"), 1
+                        getlocal 5
+                        jump ofs004d
+                        popscope
+                        pushwith
+                        newfunction 84
+                        throw
+                        setlocal0
+               ofs004d:
+                        callpropvoid QName(PackageNamespace(""),"impulseAll"), 0
+                        getlocal 5
+                        findpropstrict QName(PackageNamespace("Box2D.Common.Math"),"b2Vec2")
+                        getlocal1
+                        getproperty QName(PackageNamespace(""),"mov")
+                        getproperty QName(PackageNamespace(""),"xVel")
+                        getlocal1
+                        getproperty QName(PackageNamespace(""),"mov")
+                        getproperty QName(PackageNamespace(""),"yVel")
+                        pushfalse
+                        iffalse ofs006e
+                        returnvoid
+                        popscope
+                        callpropvoid QName(PackageNamespace("Box2D.Collision"),"b2DistanceProxy"), 15
+                        throw
+               ofs006e:
+                        constructprop QName(PackageNamespace("Box2D.Common.Math"),"b2Vec2"), 2
+                        callpropvoid QName(PackageNamespace(""),"impulseBody"), 1
+                        getlocal3
+                        getproperty QName(PackageNamespace(""),"force")
+                        convert_d
+                        jump ofs0082
+                        ifstricteq ofs0082
+               ofs0082:
+                        setlocal 6
+                        getlex QName(PackageNamespace(""),"MatchSettings")
+                        getproperty QName(PackageNamespace(""),"useMod")
+                        jump ofs0094
+                        newactivation
+                        pushwith
+                        newfunction 104
+                        pop
+                        setlocal3
+               ofs0094:
+                        pushstring "sky9"
+                        ifeq ofs009f
+                        jump ofs00bc
+               ofs009f:
+                        getlocal 6
+                        pushbyte 40
+                        add
+                        convert_d
+                        dup
+                        setlocal 6
+                        pushbyte 80
+                        ifngt ofs00bc
+                        jump ofs00b7
+                        popscope
+                        callmethod 82, 30
+                        throw
+               ofs00b7:
+                        pushbyte 80
+                        convert_d
+                        setlocal 6
+               ofs00bc:
+                        getlocal 6
+                        iftrue ofs00c6
+                        jump ofs022e
+               ofs00c6:
+                        getlocal3
+                        pushtrue
+                        iftrue ofs00d2
+                        returnvoid
+                        setlocal3
+                        callmethod 9, 18
+                        throw
+               ofs00d2:
+                        getproperty QName(PackageNamespace(""),"splash")
+                        iftrue ofs00dd
+                        jump ofs0170
+               ofs00dd:
+                        getlocal 4
+                        getproperty Multiname("hitX",[PrivateNamespace(null,"70"),PackageNamespace(""),PackageNamespace("Box2D.Dynamics"),PackageNamespace("Box2D.Common.Math"),PrivateNamespace(null,"256"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),PackageNamespace("Box2D.Collision"),PackageNamespace("Box2D.Collision.Shapes"),ProtectedNamespace("PhysWorld"),StaticProtectedNs("PhysWorld"),StaticProtectedNs("flash.display:Sprite"),StaticProtectedNs("flash.display:DisplayObjectContainer"),StaticProtectedNs("flash.display:InteractiveObject"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                        getlocal1
+                        jump ofs00eb
+                        iflt ofs00eb
+               ofs00eb:
+                        getproperty QName(PackageNamespace(""),"x")
+                        equals
+                        dup
+                        iffalse ofs0108
+                        pop
+                        jump ofs00fe
+                        setlocal2
+                        callproplex QName(PackageNamespace("fl.motion"),"Color"), 27
+                        pop
+               ofs00fe:
+                        getlocal 4
+                        getproperty Multiname("hitY",[PrivateNamespace(null,"70"),PackageNamespace(""),PackageNamespace("Box2D.Dynamics"),PackageNamespace("Box2D.Common.Math"),PrivateNamespace(null,"256"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),PackageNamespace("Box2D.Collision"),PackageNamespace("Box2D.Collision.Shapes"),ProtectedNamespace("PhysWorld"),StaticProtectedNs("PhysWorld"),StaticProtectedNs("flash.display:Sprite"),StaticProtectedNs("flash.display:DisplayObjectContainer"),StaticProtectedNs("flash.display:InteractiveObject"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                        getlocal1
+                        getproperty QName(PackageNamespace(""),"y")
+                        equals
+               ofs0108:
+                        iftrue ofs0110
+                        jump ofs0130
+               ofs0110:
+                        getlocal 4
+                        dup
+                        setlocal 8
+                        jump ofs011f
+                        returnvalue
+                        pushwith
+                        newfunction 79
+                        throw
+                        setlocal2
+               ofs011f:
+                        getproperty Multiname("hitY",[PrivateNamespace(null,"70"),PackageNamespace(""),PackageNamespace("Box2D.Dynamics"),PackageNamespace("Box2D.Common.Math"),PrivateNamespace(null,"256"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),PackageNamespace("Box2D.Collision"),PackageNamespace("Box2D.Collision.Shapes"),ProtectedNamespace("PhysWorld"),StaticProtectedNs("PhysWorld"),StaticProtectedNs("flash.display:Sprite"),StaticProtectedNs("flash.display:DisplayObjectContainer"),StaticProtectedNs("flash.display:InteractiveObject"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                        increment
+                        setlocal 9
+                        getlocal 8
+                        getlocal 9
+                        setproperty Multiname("hitY",[PrivateNamespace(null,"70"),PackageNamespace(""),PackageNamespace("Box2D.Dynamics"),PackageNamespace("Box2D.Common.Math"),PrivateNamespace(null,"256"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),PackageNamespace("Box2D.Collision"),PackageNamespace("Box2D.Collision.Shapes"),ProtectedNamespace("PhysWorld"),StaticProtectedNs("PhysWorld"),StaticProtectedNs("flash.display:Sprite"),StaticProtectedNs("flash.display:DisplayObjectContainer"),StaticProtectedNs("flash.display:InteractiveObject"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                        kill 9
+                        kill 8
+               ofs0130:
+                        getlex QName(PackageNamespace(""),"UT")
+                        jump ofs013d
+                        popscope
+                        pop
+                        in
+                        returnvalue
+                        typeof
+                        setlocal2
+               ofs013d:
+                        getlocal 4
+                        getproperty Multiname("hitX",[PrivateNamespace(null,"70"),PackageNamespace(""),PackageNamespace("Box2D.Dynamics"),PackageNamespace("Box2D.Common.Math"),PrivateNamespace(null,"256"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),PackageNamespace("Box2D.Collision"),PackageNamespace("Box2D.Collision.Shapes"),ProtectedNamespace("PhysWorld"),StaticProtectedNs("PhysWorld"),StaticProtectedNs("flash.display:Sprite"),StaticProtectedNs("flash.display:DisplayObjectContainer"),StaticProtectedNs("flash.display:InteractiveObject"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                        getlocal 4
+                        getproperty Multiname("hitY",[PrivateNamespace(null,"70"),PackageNamespace(""),PackageNamespace("Box2D.Dynamics"),PackageNamespace("Box2D.Common.Math"),PrivateNamespace(null,"256"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),PackageNamespace("Box2D.Collision"),PackageNamespace("Box2D.Collision.Shapes"),ProtectedNamespace("PhysWorld"),StaticProtectedNs("PhysWorld"),StaticProtectedNs("flash.display:Sprite"),StaticProtectedNs("flash.display:DisplayObjectContainer"),StaticProtectedNs("flash.display:InteractiveObject"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                        getlocal1
+                        jump ofs0150
+                        ifeq ofs0150
+               ofs0150:
+                        getproperty QName(PackageNamespace(""),"x")
+                        getlocal1
+                        getproperty QName(PackageNamespace(""),"y")
+                        jump ofs0160
+                        lshift
+                        constructprop QName(PackageNamespace(""),"Stats_Attachments"), 7
+                        pushwith
+               ofs0160:
+                        pushbyte 40
+                        subtract
+                        callproperty QName(PackageNamespace(""),"getRotation"), 4
+                        convert_d
+                        setlocal 7
+                        jump ofs01f1
+                        throw
+                        setlocal1
+               ofs0170:
+                        getlocal2
+                        getproperty QName(PackageNamespace(""),"x")
+                        getlocal1
+                        getproperty QName(PackageNamespace(""),"x")
+                        pushtrue
+                        iftrue ofs0185
+                        pushtrue
+                        throw
+                        popscope
+                        setlocal2
+                        decrement
+                        newactivation
+                        typeof
+                        lshift
+               ofs0185:
+                        equals
+                        dup
+                        iftrue ofs018f
+                        jump ofs01a5
+               ofs018f:
+                        pop
+                        getlocal2
+                        getproperty QName(PackageNamespace(""),"y")
+                        getlocal1
+                        getproperty QName(PackageNamespace(""),"y")
+                        pushtrue
+                        iftrue ofs01a4
+                        returnvoid
+                        convert_s
+                        setlocal3
+                        returnvalue
+                        convert_d
+                        throw
+                        setlocal2
+               ofs01a4:
+                        equals
+               ofs01a5:
+                        iftrue ofs01ad
+                        jump ofs01ca
+               ofs01ad:
+                        getlocal1
+                        getlocal1
+                        getproperty QName(PackageNamespace(""),"y")
+                        jump ofs01ba
+                        ifne ofs01ba
+               ofs01ba:
+                        pushbyte 2
+                        subtract
+                        setproperty QName(PackageNamespace(""),"y")
+                        jump ofs01ca
+                        returnvalue
+                        setlocal3
+                        in
+                        instanceof
+                        greaterequals
+                        newactivation
+               ofs01ca:
+                        getlex QName(PackageNamespace(""),"UT")
+                        getlocal2
+                        getproperty QName(PackageNamespace(""),"x")
+                        getlocal2
+                        getproperty QName(PackageNamespace(""),"y")
+                        getlocal1
+                        pushfalse
+                        iffalse ofs01e3
+                        pushtrue
+                        throw
+                        greaterequals
+                        constructprop QName(PackageNamespace(""),"addMods"), 12
+                        setlocal2
+               ofs01e3:
+                        getproperty QName(PackageNamespace(""),"x")
+                        getlocal1
+                        getproperty QName(PackageNamespace(""),"y")
+                        callproperty QName(PackageNamespace(""),"getRotation"), 4
+                        convert_d
+                        setlocal 7
+               ofs01f1:
+                        getlocal 5
+                        findpropstrict QName(PackageNamespace("Box2D.Common.Math"),"b2Vec2")
+                        jump ofs01ff
+                        setlocal2
+                        pushscope
+                        in
+                        greaterequals
+                        convert_d
+                        pushfalse
+               ofs01ff:
+                        getlex QName(PackageNamespace(""),"UT")
+                        getlocal 7
+                        getlocal 6
+                        callproperty QName(PackageNamespace(""),"xMoveToRot"), 2
+                        getlex QName(PackageNamespace(""),"UT")
+                        jump ofs0215
+                        iflt ofs0215
+               ofs0215:
+                        getlocal 7
+                        getlocal 6
+                        callproperty QName(PackageNamespace(""),"yMoveToRot"), 2
+                        constructprop QName(PackageNamespace("Box2D.Common.Math"),"b2Vec2"), 2
+                        callpropvoid QName(PackageNamespace(""),"impulseBody"), 1
+                        jump ofs022e
+                        pop
+                        newobject 11
+                        pushwith
+                        lshift
+                        setlocal1
+               ofs022e:
+                        getlocal 4
+                        getproperty Multiname("headMult",[PrivateNamespace(null,"70"),PackageNamespace(""),PackageNamespace("Box2D.Dynamics"),PackageNamespace("Box2D.Common.Math"),PrivateNamespace(null,"256"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),PackageNamespace("Box2D.Collision"),PackageNamespace("Box2D.Collision.Shapes"),ProtectedNamespace("PhysWorld"),StaticProtectedNs("PhysWorld"),StaticProtectedNs("flash.display:Sprite"),StaticProtectedNs("flash.display:DisplayObjectContainer"),StaticProtectedNs("flash.display:InteractiveObject"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                        iftrue ofs023b
+                        jump ofs030b
+               ofs023b:
+                        getlocal2
+                        getproperty QName(PackageNamespace(""),"x")
+                        getlocal1
+                        getproperty QName(PackageNamespace(""),"x")
+                        equals
+                        dup
+                        jump ofs024f
+                        popscope
+                        pushwith
+                        newfunction 25
+                        throw
+                        returnvoid
+               ofs024f:
+                        iftrue ofs0257
+                        jump ofs026d
+               ofs0257:
+                        pop
+                        getlocal2
+                        getproperty QName(PackageNamespace(""),"y")
+                        getlocal1
+                        getproperty QName(PackageNamespace(""),"y")
+                        pushbyte 10
+                        subtract
+                        equals
+                        jump ofs026d
+                        popscope
+                        constructprop QName(PackageInternalNs("Playtomic"),"LogRequest"), 21
+                        throw
+               ofs026d:
+                        iftrue ofs0275
+                        jump ofs029e
+               ofs0275:
+                        getlocal1
+                        dup
+                        setlocal 8
+                        getproperty QName(PackageNamespace(""),"y")
+                        jump ofs0284
+                        ifeq ofs0284
+               ofs0284:
+                        decrement
+                        setlocal 9
+                        getlocal 8
+                        getlocal 9
+                        pushfalse
+                        iffalse ofs0297
+                        returnvoid
+                        bitor
+                        pushwith
+                        newfunction 8
+                        pop
+                        setlocal1
+               ofs0297:
+                        setproperty QName(PackageNamespace(""),"y")
+                        kill 9
+                        kill 8
+               ofs029e:
+                        getlex QName(PackageNamespace(""),"UT")
+                        getlocal2
+                        getproperty QName(PackageNamespace(""),"x")
+                        getlocal2
+                        pushfalse
+                        iffalse ofs02b1
+                        returnvoid
+                        popscope
+                        callsuper QName(PackageNamespace(""),"XML"), 10
+                        pushwith
+               ofs02b1:
+                        getproperty QName(PackageNamespace(""),"y")
+                        getlocal1
+                        getproperty QName(PackageNamespace(""),"x")
+                        getlocal1
+                        getproperty QName(PackageNamespace(""),"y")
+                        pushbyte 10
+                        jump ofs02c8
+                        popscope
+                        pushwith
+                        newfunction 33
+                        pop
+                        negate
+               ofs02c8:
+                        subtract
+                        callproperty QName(PackageNamespace(""),"getRotation"), 4
+                        convert_d
+                        setlocal 7
+                        getlocal 5
+                        jump ofs02da
+                        ifge ofs02da
+               ofs02da:
+                        findpropstrict QName(PackageNamespace("Box2D.Common.Math"),"b2Vec2")
+                        getlex QName(PackageNamespace(""),"UT")
+                        getlocal 7
+                        jump ofs02ea
+                        popscope
+                        callsupervoid QName(PackageNamespace("fl.controls"),"RadioButtonGroup"), 7
+                        pushwith
+               ofs02ea:
+                        pushbyte 8
+                        callproperty QName(PackageNamespace(""),"xMoveToRot"), 2
+                        getlex QName(PackageNamespace(""),"UT")
+                        getlocal 7
+                        pushbyte 8
+                        callproperty QName(PackageNamespace(""),"yMoveToRot"), 2
+                        constructprop QName(PackageNamespace("Box2D.Common.Math"),"b2Vec2"), 2
+                        callpropvoid QName(PackageNamespace(""),"impulseHead"), 1
+                        jump ofs030b
+                        popscope
+                        callpropvoid QName(PackageNamespace("Box2D.Dynamics"),"b2DebugDraw"), 30
+                        throw
+               ofs030b:
+                        getlocal 5
+                        returnvalue
+                     end ; code
+                  end ; body
+               end ; method
+            }
+            
+            public function hitCorpse(param1:PhysActor, param2:Unit, param3:Stats_Guns, param4:*) : void
+            {
+               trait method QName(PackageNamespace(""),"hitCorpse")
+                  dispid 0
+                  method
+                     name null
+                     param QName(PackageNamespace(""),"PhysActor")
+                     param QName(PackageNamespace(""),"Unit")
+                     param QName(PackageNamespace(""),"Stats_Guns")
+                     param null
+                     returns QName(PackageNamespace(""),"void")
+                     
+                     body
+                        maxstack 9
+                        localcount 9
+                        initscopedepth 9
+                        maxscopedepth 10
+                        
+                        code
+                           getlocal0
+                           pushscope
+                           jump ofs000d
+                           call 8
+                           throw
+                           callmethod 3492, 8
+                  ofs000d:
+                           pushnan
+                           setlocal 6
+                           getlocal1
+                           pushnull
+                           pushdouble -0.5
+                           jump ofs001c
+                           ifstrictne ofs001c
+                  ofs001c:
+                           pushdouble 0.5
+                           jump ofs0028
+                           returnvalue
+                           pushwith
+                           newfunction 75
+                           throw
+                           returnvalue
+                  ofs0028:
+                           callpropvoid QName(PackageNamespace(""),"impulseAll"), 3
+                           getlocal3
+                           getproperty QName(PackageNamespace(""),"force")
+                           convert_d
+                           setlocal 5
+                           getlex QName(PackageNamespace(""),"MatchSettings")
+                           getproperty QName(PackageNamespace(""),"useMod")
+                           pushstring "sky9"
+                           pushfalse
+                           iffalse ofs0048
+                           returnvoid
+                           popscope
+                           pushwith
+                           newfunction 26
+                           throw
+                           nextname
+                  ofs0048:
+                           ifeq ofs0050
+                           jump ofs0062
+                  ofs0050:
+                           getlocal 5
+                           pushdouble 1.5
+                           multiply
+                           convert_d
+                           setlocal 5
+                           jump ofs0062
+                           popscope
+                           call 111
+                           pushwith
+                           negate
+                           decrement
+                  ofs0062:
+                           getlocal 5
+                           iftrue ofs006c
+                           jump ofs025f
+                  ofs006c:
+                           getlocal3
+                           getproperty QName(PackageNamespace(""),"splash")
+                           iffalse ofs014e
+                           getlocal 4
+                           jump ofs007e
+                           ifstricteq ofs007e
+                  ofs007e:
+                           getproperty Multiname("hitX",[PrivateNamespace(null,"70"),PackageNamespace(""),PackageNamespace("Box2D.Dynamics"),PackageNamespace("Box2D.Common.Math"),PrivateNamespace(null,"256"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),PackageNamespace("Box2D.Collision"),PackageNamespace("Box2D.Collision.Shapes"),ProtectedNamespace("PhysWorld"),StaticProtectedNs("PhysWorld"),StaticProtectedNs("flash.display:Sprite"),StaticProtectedNs("flash.display:DisplayObjectContainer"),StaticProtectedNs("flash.display:InteractiveObject"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                           getlocal1
+                           getproperty QName(PackageNamespace(""),"rdBody")
+                           callproperty QName(PackageNamespace(""),"GetDefinition"), 0
+                           pushtrue
+                           iftrue ofs0095
+                           returnvoid
+                           popscope
+                           setlocal1
+                           divide
+                           bitxor
+                           pushfalse
+                           convert_d
+                  ofs0095:
+                           getproperty QName(PackageNamespace(""),"userData")
+                           getproperty Multiname("x",[PrivateNamespace(null,"70"),PackageNamespace(""),PackageNamespace("Box2D.Dynamics"),PackageNamespace("Box2D.Common.Math"),PrivateNamespace(null,"256"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),PackageNamespace("Box2D.Collision"),PackageNamespace("Box2D.Collision.Shapes"),ProtectedNamespace("PhysWorld"),StaticProtectedNs("PhysWorld"),StaticProtectedNs("flash.display:Sprite"),StaticProtectedNs("flash.display:DisplayObjectContainer"),StaticProtectedNs("flash.display:InteractiveObject"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                           equals
+                           dup
+                           iftrue ofs00a5
+                           jump ofs00c4
+                  ofs00a5:
+                           pop
+                           getlocal 4
+                           getproperty Multiname("hitY",[PrivateNamespace(null,"70"),PackageNamespace(""),PackageNamespace("Box2D.Dynamics"),PackageNamespace("Box2D.Common.Math"),PrivateNamespace(null,"256"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),PackageNamespace("Box2D.Collision"),PackageNamespace("Box2D.Collision.Shapes"),ProtectedNamespace("PhysWorld"),StaticProtectedNs("PhysWorld"),StaticProtectedNs("flash.display:Sprite"),StaticProtectedNs("flash.display:DisplayObjectContainer"),StaticProtectedNs("flash.display:InteractiveObject"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                           getlocal1
+                           jump ofs00b6
+                           pushfalse
+                           pushwith
+                           newfunction 99
+                           pop
+                           setlocal3
+                  ofs00b6:
+                           getproperty QName(PackageNamespace(""),"rdBody")
+                           callproperty QName(PackageNamespace(""),"GetDefinition"), 0
+                           getproperty QName(PackageNamespace(""),"userData")
+                           getproperty Multiname("y",[PrivateNamespace(null,"70"),PackageNamespace(""),PackageNamespace("Box2D.Dynamics"),PackageNamespace("Box2D.Common.Math"),PrivateNamespace(null,"256"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),PackageNamespace("Box2D.Collision"),PackageNamespace("Box2D.Collision.Shapes"),ProtectedNamespace("PhysWorld"),StaticProtectedNs("PhysWorld"),StaticProtectedNs("flash.display:Sprite"),StaticProtectedNs("flash.display:DisplayObjectContainer"),StaticProtectedNs("flash.display:InteractiveObject"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                           equals
+                  ofs00c4:
+                           iftrue ofs00cc
+                           jump ofs00f4
+                  ofs00cc:
+                           getlocal 4
+                           dup
+                           setlocal 7
+                           jump ofs00db
+                           popscope
+                           newfunction 51
+                           throw
+                           coerce_s
+                           greaterequals
+                  ofs00db:
+                           getproperty Multiname("hitY",[PrivateNamespace(null,"70"),PackageNamespace(""),PackageNamespace("Box2D.Dynamics"),PackageNamespace("Box2D.Common.Math"),PrivateNamespace(null,"256"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),PackageNamespace("Box2D.Collision"),PackageNamespace("Box2D.Collision.Shapes"),ProtectedNamespace("PhysWorld"),StaticProtectedNs("PhysWorld"),StaticProtectedNs("flash.display:Sprite"),StaticProtectedNs("flash.display:DisplayObjectContainer"),StaticProtectedNs("flash.display:InteractiveObject"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                           increment
+                           setlocal 8
+                           getlocal 7
+                           getlocal 8
+                           jump ofs00ed
+                           ifne ofs00ed
+                  ofs00ed:
+                           setproperty Multiname("hitY",[PrivateNamespace(null,"70"),PackageNamespace(""),PackageNamespace("Box2D.Dynamics"),PackageNamespace("Box2D.Common.Math"),PrivateNamespace(null,"256"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),PackageNamespace("Box2D.Collision"),PackageNamespace("Box2D.Collision.Shapes"),ProtectedNamespace("PhysWorld"),StaticProtectedNs("PhysWorld"),StaticProtectedNs("flash.display:Sprite"),StaticProtectedNs("flash.display:DisplayObjectContainer"),StaticProtectedNs("flash.display:InteractiveObject"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                           kill 8
+                           kill 7
+                  ofs00f4:
+                           getlex QName(PackageNamespace(""),"UT")
+                           jump ofs0101
+                           returnvalue
+                           returnvoid
+                           pushwith
+                           dup
+                           multiply
+                           setlocal1
+                  ofs0101:
+                           getlocal 4
+                           getproperty Multiname("hitX",[PrivateNamespace(null,"70"),PackageNamespace(""),PackageNamespace("Box2D.Dynamics"),PackageNamespace("Box2D.Common.Math"),PrivateNamespace(null,"256"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),PackageNamespace("Box2D.Collision"),PackageNamespace("Box2D.Collision.Shapes"),ProtectedNamespace("PhysWorld"),StaticProtectedNs("PhysWorld"),StaticProtectedNs("flash.display:Sprite"),StaticProtectedNs("flash.display:DisplayObjectContainer"),StaticProtectedNs("flash.display:InteractiveObject"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                           getlocal 4
+                           getproperty Multiname("hitY",[PrivateNamespace(null,"70"),PackageNamespace(""),PackageNamespace("Box2D.Dynamics"),PackageNamespace("Box2D.Common.Math"),PrivateNamespace(null,"256"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),PackageNamespace("Box2D.Collision"),PackageNamespace("Box2D.Collision.Shapes"),ProtectedNamespace("PhysWorld"),StaticProtectedNs("PhysWorld"),StaticProtectedNs("flash.display:Sprite"),StaticProtectedNs("flash.display:DisplayObjectContainer"),StaticProtectedNs("flash.display:InteractiveObject"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                           getlocal1
+                           getproperty QName(PackageNamespace(""),"rdBody")
+                           callproperty QName(PackageNamespace(""),"GetDefinition"), 0
+                           getproperty QName(PackageNamespace(""),"userData")
+                           jump ofs0120
+                           setlocal1
+                           newfunction 97
+                           pop
+                           multiply
+                           nextname
+                  ofs0120:
+                           getproperty Multiname("x",[PrivateNamespace(null,"70"),PackageNamespace(""),PackageNamespace("Box2D.Dynamics"),PackageNamespace("Box2D.Common.Math"),PrivateNamespace(null,"256"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),PackageNamespace("Box2D.Collision"),PackageNamespace("Box2D.Collision.Shapes"),ProtectedNamespace("PhysWorld"),StaticProtectedNs("PhysWorld"),StaticProtectedNs("flash.display:Sprite"),StaticProtectedNs("flash.display:DisplayObjectContainer"),StaticProtectedNs("flash.display:InteractiveObject"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                           getlocal1
+                           getproperty QName(PackageNamespace(""),"rdBody")
+                           callproperty QName(PackageNamespace(""),"GetDefinition"), 0
+                           getproperty QName(PackageNamespace(""),"userData")
+                           getproperty Multiname("y",[PrivateNamespace(null,"70"),PackageNamespace(""),PackageNamespace("Box2D.Dynamics"),PackageNamespace("Box2D.Common.Math"),PrivateNamespace(null,"256"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),PackageNamespace("Box2D.Collision"),PackageNamespace("Box2D.Collision.Shapes"),ProtectedNamespace("PhysWorld"),StaticProtectedNs("PhysWorld"),StaticProtectedNs("flash.display:Sprite"),StaticProtectedNs("flash.display:DisplayObjectContainer"),StaticProtectedNs("flash.display:InteractiveObject"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                           pushbyte 40
+                           subtract
+                           pushfalse
+                           iffalse ofs013f
+                           returnvoid
+                           pushscope
+                           callmethod 103, 30
+                           pop
+                  ofs013f:
+                           callproperty QName(PackageNamespace(""),"getRotation"), 4
+                           convert_d
+                           setlocal 6
+                           jump ofs022a
+                           ifge ofs014e
+                  ofs014e:
+                           getlocal2
+                           jump ofs0157
+                           ifgt ofs0157
+                  ofs0157:
+                           getproperty QName(PackageNamespace(""),"x")
+                           getlocal1
+                           getproperty QName(PackageNamespace(""),"rdBody")
+                           jump ofs0168
+                           setlocal2
+                           returnvalue
+                           pushfalse
+                           bitxor
+                           pushnull
+                           returnvoid
+                  ofs0168:
+                           callproperty QName(PackageNamespace(""),"GetDefinition"), 0
+                           getproperty QName(PackageNamespace(""),"userData")
+                           getproperty Multiname("x",[PrivateNamespace(null,"70"),PackageNamespace(""),PackageNamespace("Box2D.Dynamics"),PackageNamespace("Box2D.Common.Math"),PrivateNamespace(null,"256"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),PackageNamespace("Box2D.Collision"),PackageNamespace("Box2D.Collision.Shapes"),ProtectedNamespace("PhysWorld"),StaticProtectedNs("PhysWorld"),StaticProtectedNs("flash.display:Sprite"),StaticProtectedNs("flash.display:DisplayObjectContainer"),StaticProtectedNs("flash.display:InteractiveObject"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                           equals
+                           dup
+                           iftrue ofs017c
+                           jump ofs019a
+                  ofs017c:
+                           pop
+                           getlocal2
+                           jump ofs0188
+                           equals
+                           call 26
+                           pushwith
+                           setlocal1
+                           setlocal1
+                  ofs0188:
+                           getproperty QName(PackageNamespace(""),"y")
+                           getlocal1
+                           getproperty QName(PackageNamespace(""),"rdBody")
+                           callproperty QName(PackageNamespace(""),"GetDefinition"), 0
+                           getproperty QName(PackageNamespace(""),"userData")
+                           getproperty Multiname("y",[PrivateNamespace(null,"70"),PackageNamespace(""),PackageNamespace("Box2D.Dynamics"),PackageNamespace("Box2D.Common.Math"),PrivateNamespace(null,"256"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),PackageNamespace("Box2D.Collision"),PackageNamespace("Box2D.Collision.Shapes"),ProtectedNamespace("PhysWorld"),StaticProtectedNs("PhysWorld"),StaticProtectedNs("flash.display:Sprite"),StaticProtectedNs("flash.display:DisplayObjectContainer"),StaticProtectedNs("flash.display:InteractiveObject"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                           equals
+                  ofs019a:
+                           iftrue ofs01ae
+                           jump ofs01df
+                           pushfalse
+                           iffalse ofs01a7
+                  ofs01a7:
+                           returnvoid
+                           popscope
+                           returnvalue
+                           bitand
+                           nextname
+                           pop
+                           convert_s
+                  ofs01ae:
+                           getlocal1
+                           getproperty QName(PackageNamespace(""),"rdBody")
+                           callproperty QName(PackageNamespace(""),"GetDefinition"), 0
+                           getproperty QName(PackageNamespace(""),"userData")
+                           dup
+                           jump ofs01c2
+                           ifne ofs01c2
+                  ofs01c2:
+                           setlocal 7
+                           getproperty Multiname("y",[PrivateNamespace(null,"70"),PackageNamespace(""),PackageNamespace("Box2D.Dynamics"),PackageNamespace("Box2D.Common.Math"),PrivateNamespace(null,"256"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),PackageNamespace("Box2D.Collision"),PackageNamespace("Box2D.Collision.Shapes"),ProtectedNamespace("PhysWorld"),StaticProtectedNs("PhysWorld"),StaticProtectedNs("flash.display:Sprite"),StaticProtectedNs("flash.display:DisplayObjectContainer"),StaticProtectedNs("flash.display:InteractiveObject"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                           decrement
+                           jump ofs01d2
+                           bitand
+                           callpropvoid QName(PackageNamespace(""),"startCampaign"), 18
+                           returnvalue
+                  ofs01d2:
+                           setlocal 8
+                           getlocal 7
+                           getlocal 8
+                           setproperty Multiname("y",[PrivateNamespace(null,"70"),PackageNamespace(""),PackageNamespace("Box2D.Dynamics"),PackageNamespace("Box2D.Common.Math"),PrivateNamespace(null,"256"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),PackageNamespace("Box2D.Collision"),PackageNamespace("Box2D.Collision.Shapes"),ProtectedNamespace("PhysWorld"),StaticProtectedNs("PhysWorld"),StaticProtectedNs("flash.display:Sprite"),StaticProtectedNs("flash.display:DisplayObjectContainer"),StaticProtectedNs("flash.display:InteractiveObject"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                           kill 8
+                           kill 7
+                  ofs01df:
+                           getlex QName(PackageNamespace(""),"UT")
+                           getlocal2
+                           getproperty QName(PackageNamespace(""),"x")
+                           getlocal2
+                           jump ofs01f1
+                           setlocal2
+                           pushnull
+                           setlocal1
+                           newactivation
+                           setlocal1
+                           setlocal1
+                  ofs01f1:
+                           getproperty QName(PackageNamespace(""),"y")
+                           getlocal1
+                           getproperty QName(PackageNamespace(""),"rdBody")
+                           callproperty QName(PackageNamespace(""),"GetDefinition"), 0
+                           getproperty QName(PackageNamespace(""),"userData")
+                           getproperty Multiname("x",[PrivateNamespace(null,"70"),PackageNamespace(""),PackageNamespace("Box2D.Dynamics"),PackageNamespace("Box2D.Common.Math"),PrivateNamespace(null,"256"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),PackageNamespace("Box2D.Collision"),PackageNamespace("Box2D.Collision.Shapes"),ProtectedNamespace("PhysWorld"),StaticProtectedNs("PhysWorld"),StaticProtectedNs("flash.display:Sprite"),StaticProtectedNs("flash.display:DisplayObjectContainer"),StaticProtectedNs("flash.display:InteractiveObject"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                           getlocal1
+                           pushfalse
+                           iffalse ofs020e
+                           returnvoid
+                           equals
+                           callproplex QName(PackageNamespace("fl.motion"),"AnimatorBase"), 24
+                           throw
+                  ofs020e:
+                           getproperty QName(PackageNamespace(""),"rdBody")
+                           callproperty QName(PackageNamespace(""),"GetDefinition"), 0
+                           getproperty QName(PackageNamespace(""),"userData")
+                           getproperty Multiname("y",[PrivateNamespace(null,"70"),PackageNamespace(""),PackageNamespace("Box2D.Dynamics"),PackageNamespace("Box2D.Common.Math"),PrivateNamespace(null,"256"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),PackageNamespace("Box2D.Collision"),PackageNamespace("Box2D.Collision.Shapes"),ProtectedNamespace("PhysWorld"),StaticProtectedNs("PhysWorld"),StaticProtectedNs("flash.display:Sprite"),StaticProtectedNs("flash.display:DisplayObjectContainer"),StaticProtectedNs("flash.display:InteractiveObject"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                           callproperty QName(PackageNamespace(""),"getRotation"), 4
+                           jump ofs0227
+                           ifgt ofs0227
+                  ofs0227:
+                           convert_d
+                           setlocal 6
+                  ofs022a:
+                           getlocal1
+                           findpropstrict QName(PackageNamespace("Box2D.Common.Math"),"b2Vec2")
+                           jump ofs0236
+                           throw
+                           callstatic 90, 18
+                           pop
+                  ofs0236:
+                           getlex QName(PackageNamespace(""),"UT")
+                           getlocal 6
+                           getlocal 5
+                           callproperty QName(PackageNamespace(""),"xMoveToRot"), 2
+                           getlex QName(PackageNamespace(""),"UT")
+                           getlocal 6
+                           getlocal 5
+                           pushfalse
+                           iffalse ofs0254
+                           returnvoid
+                           setlocal1
+                           pushwith
+                           newfunction 31
+                           throw
+                           returnvoid
+                  ofs0254:
+                           callproperty QName(PackageNamespace(""),"yMoveToRot"), 2
+                           constructprop QName(PackageNamespace("Box2D.Common.Math"),"b2Vec2"), 2
+                           callpropvoid QName(PackageNamespace(""),"impulseBody"), 1
+                  ofs025f:
+                           returnvoid
+                        end ; code
+                     end ; body
+                  end ; method
+               }
+               
+               public function EnterFrame() : void
+               {
+                  trait method QName(PackageNamespace(""),"EnterFrame")
+                     dispid 0
+                     method
+                        name null
+                        returns QName(PackageNamespace(""),"void")
+                        
+                        body
+                           maxstack 7
+                           localcount 4
+                           initscopedepth 9
+                           maxscopedepth 10
+                           
+                           code
+                              getlocal0
+                              jump ofs000b
+                              call 9
+                              throw
+                              newclass 480
+                     ofs000b:
+                              pushscope
+                              pushnull
+                              coerce QName(PackageNamespace("flash.display"),"Sprite")
+                              setlocal3
+                              getlocal0
+                              jump ofs0019
+                              ifstricteq ofs0019
+                     ofs0019:
+                              getproperty QName(PackageNamespace(""),"m_world")
+                              getlocal0
+                              getproperty QName(PackageNamespace(""),"m_timeStep")
+                              getlocal0
+                              getproperty QName(PackageNamespace(""),"m_velocityIterations")
+                              jump ofs002e
+                              popscope
+                              instanceof
+                              lshift
+                              instanceof
+                              decrement
+                              returnvalue
+                     ofs002e:
+                              getlocal0
+                              getproperty QName(PackageNamespace(""),"m_positionIterations")
+                              callpropvoid QName(PackageNamespace(""),"Step"), 3
+                              getlocal0
+                              getproperty QName(PackageNamespace(""),"m_world")
+                              callproperty QName(PackageNamespace(""),"GetBodyList"), 0
+                              coerce QName(PackageNamespace("Box2D.Dynamics"),"b2Body")
+                              setlocal1
+                              jump ofs00e2
+                              pushwith
+                              setlocal0
+                              jump ofs004b
+                     ofs004b:
+                              setlocal1
+                              returnvoid
+                              returnvalue
+                              bitand
+                              returnvalue
+                              increment
+                     ofs0051:
+                              label
+                              getlocal1
+                              callproperty QName(PackageNamespace(""),"GetUserData"), 0
+                              getlex QName(PackageNamespace("flash.display"),"Sprite")
+                              istypelate
+                              iftrue ofs0062
+                              jump ofs00d2
+                     ofs0062:
+                              getlocal1
+                              callproperty QName(PackageNamespace(""),"GetUserData"), 0
+                              getlex QName(PackageNamespace("flash.display"),"Sprite")
+                              astypelate
+                              jump ofs0074
+                              returnvalue
+                              callproperty QName(PackageNamespace(""),"caScore"), 14
+                              setlocal2
+                     ofs0074:
+                              coerce QName(PackageNamespace("flash.display"),"Sprite")
+                              setlocal3
+                              getlocal3
+                              getlocal1
+                              callproperty QName(PackageNamespace(""),"GetPosition"), 0
+                              jump ofs0085
+                              ifstrictne ofs0085
+                     ofs0085:
+                              getproperty QName(PackageNamespace(""),"x")
+                              pushbyte 30
+                              multiply
+                              pushfalse
+                              iffalse ofs0098
+                              pushtrue
+                              throw
+                              setlocal3
+                              newfunction 109
+                              pop
+                              pushscope
+                              setlocal3
+                     ofs0098:
+                              setproperty QName(PackageNamespace(""),"x")
+                              getlocal3
+                              getlocal1
+                              callproperty QName(PackageNamespace(""),"GetPosition"), 0
+                              getproperty QName(PackageNamespace(""),"y")
+                              pushbyte 30
+                              multiply
+                              setproperty QName(PackageNamespace(""),"y")
+                              jump ofs00b4
+                              returnvalue
+                              returnvoid
+                              divide
+                              setlocal0
+                              instanceof
+                              setlocal2
+                     ofs00b4:
+                              getlocal3
+                              getlocal1
+                              callproperty QName(PackageNamespace(""),"GetAngle"), 0
+                              pushshort 180
+                              getlex QName(PackageNamespace(""),"Math")
+                              getproperty QName(PackageNamespace(""),"PI")
+                              divide
+                              multiply
+                              jump ofs00cf
+                              convert_d
+                              bitand
+                              pushnull
+                              setlocal0
+                              pushfalse
+                              convert_d
+                     ofs00cf:
+                              setproperty QName(PackageNamespace(""),"rotation")
+                     ofs00d2:
+                              getlocal1
+                              callproperty QName(PackageNamespace(""),"GetNext"), 0
+                              coerce QName(PackageNamespace("Box2D.Dynamics"),"b2Body")
+                              setlocal1
+                              jump ofs00e2
+                              ifstricteq ofs00e2
+                     ofs00e2:
+                              getlocal1
+                              iffalse ofs00f6
+                              jump ofs0051
+                              pushfalse
+                              iffalse ofs00f0
+                     ofs00f0:
+                              returnvoid
+                              setlocal3
+                              constructprop QName(PackageNamespace("Box2D.Dynamics.Joints"),"b2PulleyJointDef"), 15
+                              throw
+                     ofs00f6:
+                              pushbyte 0
+                              convert_u
+                              setlocal2
+                              jump ofs011e
+                              popscope
+                              setlocal1
+                              getlocal0
+                     ofs0101:
+                              label
+                              getlocal0
+                              getproperty QName(PackageNamespace(""),"actors")
+                              getlocal2
+                              getproperty MultinameL([PrivateNamespace(null,"70"),PackageNamespace(""),PackageNamespace("Box2D.Dynamics"),PackageNamespace("Box2D.Common.Math"),PrivateNamespace(null,"256"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),PackageNamespace("Box2D.Collision"),PackageNamespace("Box2D.Collision.Shapes"),ProtectedNamespace("PhysWorld"),StaticProtectedNs("PhysWorld"),StaticProtectedNs("flash.display:Sprite"),StaticProtectedNs("flash.display:DisplayObjectContainer"),StaticProtectedNs("flash.display:InteractiveObject"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                              callpropvoid Multiname("EnterFrame",[PrivateNamespace(null,"70"),PackageNamespace(""),PackageNamespace("Box2D.Dynamics"),PackageNamespace("Box2D.Common.Math"),PrivateNamespace(null,"256"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),PackageNamespace("Box2D.Collision"),PackageNamespace("Box2D.Collision.Shapes"),ProtectedNamespace("PhysWorld"),StaticProtectedNs("PhysWorld"),StaticProtectedNs("flash.display:Sprite"),StaticProtectedNs("flash.display:DisplayObjectContainer"),StaticProtectedNs("flash.display:InteractiveObject"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")]), 0
+                              pushtrue
+                              iftrue ofs011a
+                              returnvoid
+                              setlocal2
+                              dxns "b2AABB"
+                              pushwith
+                              coerce_s
+                              divide
+                     ofs011a:
+                              getlocal2
+                              increment
+                              convert_u
+                              setlocal2
+                     ofs011e:
+                              getlocal2
+                              getlocal0
+                              getproperty QName(PackageNamespace(""),"actors")
+                              getproperty QName(PackageNamespace(""),"length")
+                              jump ofs0130
+                              popscope
+                              newfunction 125
+                              pushwith
+                              newactivation
+                              pop
+                     ofs0130:
+                              ifnlt ofs0138
+                              jump ofs0101
+                     ofs0138:
+                              returnvoid
+                           end ; code
+                        end ; body
+                     end ; method
+                  }
+                  
+                  public function destroy() : void
+                  {
+                     trait method QName(PackageNamespace(""),"destroy")
+                        dispid 0
+                        method
+                           name null
+                           returns QName(PackageNamespace(""),"void")
+                           
+                           body
+                              maxstack 4
+                              localcount 1
+                              initscopedepth 9
+                              maxscopedepth 10
+                              
+                              code
+                                 getlocal0
+                                 jump ofs000b
+                                 call 9
+                                 throw
+                                 newclass 480
+                        ofs000b:
+                                 pushscope
+                                 returnvoid
+                              end ; code
+                           end ; body
+                        end ; method
+                     }
+                  }
+               }
