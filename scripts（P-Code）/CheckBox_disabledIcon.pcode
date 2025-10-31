@@ -1,0 +1,61 @@
+package
+{
+   import flash.display.MovieClip;
+   
+   public dynamic class CheckBox_disabledIcon extends MovieClip
+   {
+      
+      {
+         method
+            name null
+            returns null
+            
+            body
+               maxstack 4
+               localcount 1
+               initscopedepth 9
+               maxscopedepth 10
+               
+               code
+                  jump ofs000b
+                  call 9
+                  throw
+                  callmethod 889, 9
+         ofs000b:
+                  getlocal0
+                  pushscope
+                  returnvoid
+               end ; code
+            end ; body
+         end ; method
+      }
+      
+      public function CheckBox_disabledIcon()
+      {
+         method
+            name null
+            returns null
+            
+            body
+               maxstack 4
+               localcount 1
+               initscopedepth 10
+               maxscopedepth 11
+               
+               code
+                  getlocal0
+                  pushscope
+                  jump ofs000d
+                  call 7
+                  throw
+                  callstatic 891, 7
+         ofs000d:
+                  getlocal0
+                  constructsuper 0
+                  returnvoid
+               end ; code
+            end ; body
+         end ; method
+      }
+   }
+}

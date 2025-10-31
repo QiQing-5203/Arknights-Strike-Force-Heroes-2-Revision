@@ -1,0 +1,1097 @@
+package
+{
+   import flash.display.Loader;
+   import flash.events.Event;
+   import flash.net.URLRequest;
+   import flash.system.Security;
+   
+   public class AGI
+   {
+      
+      public static var agi;
+      
+      public static var questAgi;
+      
+      public static var AGI_URL:String = "http://agi.armorgames.com/assets/agi/AGI.swf";
+      
+      public static var AGI_QUEST_URL:String = "http://agi.armorgames.com/assets/agi/AchievementsAPI.swf";
+      
+      public static var userData:Object;
+      
+      public static var container;
+      
+      public static var gotQuests;
+      
+      {
+         method
+            name null
+            returns null
+            
+            body
+               maxstack 5
+               localcount 1
+               initscopedepth 3
+               maxscopedepth 4
+               
+               code
+                  getlocal0
+                  pushscope
+                  jump ofs000c
+                  call 6
+                  throw
+                  newfunction 3492
+         ofs000c:
+                  findproperty QName(PackageNamespace(""),"AGI_URL")
+                  pushstring "http://agi.armorgames.com/assets/agi/AGI.swf"
+                  setproperty QName(PackageNamespace(""),"AGI_URL")
+                  findproperty QName(PackageNamespace(""),"AGI_QUEST_URL")
+                  pushstring "http://agi.armorgames.com/assets/agi/AchievementsAPI.swf"
+                  jump ofs0023
+                  ifgt ofs0023
+         ofs0023:
+                  setproperty QName(PackageNamespace(""),"AGI_QUEST_URL")
+                  returnvoid
+               end ; code
+            end ; body
+         end ; method
+      }
+      
+      public function AGI()
+      {
+         method
+            name null
+            returns null
+            
+            body
+               maxstack 4
+               localcount 1
+               initscopedepth 4
+               maxscopedepth 5
+               
+               code
+                  getlocal0
+                  pushscope
+                  jump ofs000c
+                  call 7
+                  throw
+                  newclass 480
+         ofs000c:
+                  getlocal0
+                  constructsuper 0
+                  returnvoid
+               end ; code
+            end ; body
+         end ; method
+      }
+      
+      public static function Init(param1:*) : void
+      {
+         trait method QName(PackageNamespace(""),"Init")
+            flag FINAL
+            dispid 3
+            method
+               name null
+               flag NEED_ACTIVATION
+               param null
+               returns QName(PackageNamespace(""),"void")
+               
+               body
+                  maxstack 6
+                  localcount 3
+                  initscopedepth 4
+                  maxscopedepth 6
+                  trait slot QName(PackageInternalNs(""),"_container")
+                     slotid 1
+                     type null
+                  end ; trait
+                  trait slot QName(PackageInternalNs(""),"loader")
+                     slotid 2
+                     type QName(PackageNamespace("flash.display"),"Loader")
+                  end ; trait
+                  trait slot QName(PackageInternalNs(""),"loadComplete")
+                     slotid 3
+                     type QName(PackageNamespace(""),"Function")
+                  end ; trait
+                  trait slot QName(PackageInternalNs(""),"onError")
+                     slotid 4
+                     type QName(PackageNamespace(""),"Function")
+                  end ; trait
+                  trait slot QName(PackageInternalNs(""),"questLoader")
+                     slotid 5
+                     type QName(PackageNamespace("flash.display"),"Loader")
+                  end ; trait
+                  trait slot QName(PackageInternalNs(""),"QuestLoadComplete")
+                     slotid 6
+                     type QName(PackageNamespace(""),"Function")
+                  end ; trait
+                  
+                  code
+                     getlocal0
+                     pushscope
+                     jump ofs000c
+                     call 9
+                     throw
+                     newclass 478
+            ofs000c:
+                     newactivation
+                     dup
+                     setlocal2
+                     pushscope
+                     getscopeobject 1
+                     jump ofs001a
+                     ifeq ofs001a
+            ofs001a:
+                     pushnull
+                     jump ofs0025
+                     popscope
+                     callsupervoid QName(PackageNamespace(""),"applyAttachStats"), 16
+                     returnvalue
+            ofs0025:
+                     coerce QName(PackageNamespace(""),"Function")
+                     setslot 3
+                     getscopeobject 1
+                     pushnull
+                     coerce QName(PackageNamespace(""),"Function")
+                     setslot 6
+                     getscopeobject 1
+                     pushfalse
+                     iffalse ofs003e
+                     returnvoid
+                     nextvalue
+                     divide
+                     setlocal1
+                     divide
+                     setlocal1
+                     returnvoid
+            ofs003e:
+                     getlocal1
+                     setslot 1
+                     getscopeobject 1
+                     newfunction 324
+                     coerce QName(PackageNamespace(""),"Function")
+                     setslot 3
+                     getscopeobject 1
+                     newfunction 325
+                     pushfalse
+                     iffalse ofs005a
+                     returnvoid
+                     returnvoid
+                     callsuper QName(PackageNamespace("Box2D.Collision"),"b2DynamicTreePair"), 5
+                     pushwith
+            ofs005a:
+                     coerce QName(PackageNamespace(""),"Function")
+                     setslot 4
+                     getscopeobject 1
+                     newfunction 326
+                     coerce QName(PackageNamespace(""),"Function")
+                     jump ofs006d
+                     ifeq ofs006d
+            ofs006d:
+                     setslot 6
+                     jump ofs0079
+                     popscope
+                     construct 72
+                     pushwith
+                     returnvalue
+                     add
+            ofs0079:
+                     findproperty QName(PackageNamespace(""),"container")
+                     getscopeobject 1
+                     getslot 1
+                     setproperty QName(PackageNamespace(""),"container")
+                     findpropstrict QName(PackageNamespace(""),"agiTrace")
+                     pushstring "AGI Init"
+                     callpropvoid QName(PackageNamespace(""),"agiTrace"), 1
+                     getlex QName(PackageNamespace("flash.system"),"Security")
+                     jump ofs009a
+                     popscope
+                     callstatic 3609, 10
+                     setlocal3
+            ofs009a:
+                     getlex QName(PackageNamespace(""),"AGI_URL")
+                     callpropvoid QName(PackageNamespace(""),"allowDomain"), 1
+                     getscopeobject 1
+                     findpropstrict QName(PackageNamespace("flash.display"),"Loader")
+                     constructprop QName(PackageNamespace("flash.display"),"Loader"), 0
+                     coerce QName(PackageNamespace("flash.display"),"Loader")
+                     setslot 2
+                     getscopeobject 1
+                     pushtrue
+                     iftrue ofs00be
+                     pushfalse
+                     returnvalue
+                     convert_s
+                     callsupervoid QName(PackageNamespace(""),"useExtra"), 16
+                     setlocal1
+            ofs00be:
+                     getslot 2
+                     getproperty QName(PackageNamespace(""),"contentLoaderInfo")
+                     getlex QName(PackageNamespace("flash.events"),"Event")
+                     getproperty QName(PackageNamespace(""),"COMPLETE")
+                     getscopeobject 1
+                     jump ofs00d2
+                     ifge ofs00d2
+            ofs00d2:
+                     getslot 3
+                     callpropvoid QName(PackageNamespace(""),"addEventListener"), 2
+                     getscopeobject 1
+                     getslot 2
+                     jump ofs00e6
+                     in
+                     callproperty QName(PackageNamespace(""),"mergeObject"), 20
+                     setlocal2
+            ofs00e6:
+                     findpropstrict QName(PackageNamespace("flash.net"),"URLRequest")
+                     getlex QName(PackageNamespace(""),"AGI_URL")
+                     constructprop QName(PackageNamespace("flash.net"),"URLRequest"), 1
+                     callpropvoid QName(PackageNamespace(""),"load"), 1
+                     getlex QName(PackageNamespace("flash.system"),"Security")
+                     getlex QName(PackageNamespace(""),"AGI_QUEST_URL")
+                     callpropvoid QName(PackageNamespace(""),"allowDomain"), 1
+                     jump ofs0107
+                     pushnull
+                     constructprop QName(PackageNamespace("Box2D.Dynamics.Controllers"),"b2Controller"), 7
+                     pushwith
+            ofs0107:
+                     getscopeobject 1
+                     findpropstrict QName(PackageNamespace("flash.display"),"Loader")
+                     constructprop QName(PackageNamespace("flash.display"),"Loader"), 0
+                     coerce QName(PackageNamespace("flash.display"),"Loader")
+                     setslot 5
+                     getscopeobject 1
+                     getslot 5
+                     getproperty QName(PackageNamespace(""),"contentLoaderInfo")
+                     jump ofs0125
+                     popscope
+                     callmethod 95, 5
+                     pushwith
+            ofs0125:
+                     getlex QName(PackageNamespace("flash.events"),"Event")
+                     getproperty QName(PackageNamespace(""),"COMPLETE")
+                     getscopeobject 1
+                     getslot 6
+                     callpropvoid QName(PackageNamespace(""),"addEventListener"), 2
+                     jump ofs013a
+                     ifstrictne ofs013a
+            ofs013a:
+                     getscopeobject 1
+                     getslot 5
+                     findpropstrict QName(PackageNamespace("flash.net"),"URLRequest")
+                     jump ofs014b
+                     popscope
+                     pushnull
+                     negate
+                     setlocal1
+                     bitor
+                     setlocal3
+            ofs014b:
+                     getlex QName(PackageNamespace(""),"AGI_QUEST_URL")
+                     constructprop QName(PackageNamespace("flash.net"),"URLRequest"), 1
+                     callpropvoid QName(PackageNamespace(""),"load"), 1
+                     findproperty QName(PackageNamespace(""),"gotQuests")
+                     newobject 0
+                     setproperty QName(PackageNamespace(""),"gotQuests")
+                     pushtrue
+                     iftrue ofs016a
+                     returnvoid
+                     returnvalue
+                     newfunction 42
+                     throw
+                     modulo
+                     setlocal1
+            ofs016a:
+                     returnvoid
+                  end ; code
+               end ; body
+            end ; method
+         }
+         
+         public static function isLoggedIn() : Boolean
+         {
+            trait method QName(PackageNamespace(""),"isLoggedIn")
+               flag FINAL
+               dispid 4
+               method
+                  name null
+                  returns QName(PackageNamespace(""),"Boolean")
+                  
+                  body
+                     maxstack 6
+                     localcount 1
+                     initscopedepth 3
+                     maxscopedepth 4
+                     
+                     code
+                        getlocal0
+                        jump ofs000c
+                        call 6
+                        callstatic 3494, 6
+                        throw
+               ofs000c:
+                        pushscope
+                        getlex QName(PackageNamespace(""),"agi")
+                        iffalse ofs0018
+                        jump ofs0035
+               ofs0018:
+                        findpropstrict QName(PackageNamespace(""),"agiTrace")
+                        pushstring "AGI.isLoggedIn Not Loaded"
+                        jump ofs0026
+                        ifne ofs0026
+               ofs0026:
+                        callpropvoid QName(PackageNamespace(""),"agiTrace"), 1
+                        pushfalse
+                        jump ofs0034
+                        setlocal1
+                        callstatic 34, 6
+                        pushwith
+               ofs0034:
+                        returnvalue
+               ofs0035:
+                        findpropstrict QName(PackageNamespace(""),"agiTrace")
+                        pushstring "AGI.isLoggedIn "
+                        getlex QName(PackageNamespace(""),"agi")
+                        callproperty Multiname("isLoggedIn",[PrivateNamespace(null,"153"),PackageNamespace(""),PrivateNamespace(null,"154"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("AGI"),StaticProtectedNs("AGI")]), 0
+                        add
+                        callpropvoid QName(PackageNamespace(""),"agiTrace"), 1
+                        getlex QName(PackageNamespace(""),"agi")
+                        callproperty Multiname("isLoggedIn",[PrivateNamespace(null,"153"),PackageNamespace(""),PrivateNamespace(null,"154"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("AGI"),StaticProtectedNs("AGI")]), 0
+                        jump ofs0057
+                        popscope
+                        constructprop QName(PackageNamespace("Box2D.Collision.Shapes"),"b2MassData"), 24
+                        throw
+               ofs0057:
+                        iftrue ofs005f
+                        jump ofs0072
+               ofs005f:
+                        findproperty QName(PackageNamespace(""),"userData")
+                        getlex QName(PackageNamespace(""),"agi")
+                        callproperty Multiname("getUserData",[PrivateNamespace(null,"153"),PackageNamespace(""),PrivateNamespace(null,"154"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("AGI"),StaticProtectedNs("AGI")]), 0
+                        setproperty QName(PackageNamespace(""),"userData")
+                        jump ofs0085
+                        pushwith
+                        setlocal0
+               ofs0072:
+                        findproperty QName(PackageNamespace(""),"userData")
+                        pushfalse
+                        iffalse ofs0081
+                        returnvoid
+                        nextname
+                        newobject 39
+                        pushwith
+                        dup
+                        nextname
+               ofs0081:
+                        pushnull
+                        setproperty QName(PackageNamespace(""),"userData")
+               ofs0085:
+                        getlex QName(PackageNamespace(""),"agi")
+                        callproperty Multiname("isLoggedIn",[PrivateNamespace(null,"153"),PackageNamespace(""),PrivateNamespace(null,"154"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("AGI"),StaticProtectedNs("AGI")]), 0
+                        returnvalue
+                        jump ofs0091
+               ofs0091:
+                        iflt ofs0095
+                     end ; code
+                  end ; body
+               end ; method
+            }
+            
+            public static function loadUserImage(param1:*) : void
+            {
+               trait method QName(PackageNamespace(""),"loadUserImage")
+                  flag FINAL
+                  dispid 5
+                  method
+                     name null
+                     param null
+                     returns QName(PackageNamespace(""),"void")
+                     
+                     body
+                        maxstack 6
+                        localcount 4
+                        initscopedepth 3
+                        maxscopedepth 4
+                        
+                        code
+                           getlocal0
+                           pushscope
+                           jump ofs000d
+                           call 7
+                           throw
+                           callmethod 3494, 7
+                  ofs000d:
+                           findpropstrict QName(PackageNamespace(""),"agiTrace")
+                           pushstring "Load user image "
+                           getlex QName(PackageNamespace(""),"userData")
+                           getproperty Multiname("avatar_url",[PrivateNamespace(null,"153"),PackageNamespace(""),PrivateNamespace(null,"154"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("AGI"),StaticProtectedNs("AGI")])
+                           add
+                           jump ofs0022
+                           ifstrictne ofs0022
+                  ofs0022:
+                           callpropvoid QName(PackageNamespace(""),"agiTrace"), 1
+                           findpropstrict QName(PackageNamespace("flash.display"),"Loader")
+                           constructprop QName(PackageNamespace("flash.display"),"Loader"), 0
+                           coerce QName(PackageNamespace("flash.display"),"Loader")
+                           setlocal2
+                           jump ofs003b
+                           popscope
+                           newclass 101
+                           pushwith
+                           setlocal2
+                           setlocal1
+                  ofs003b:
+                           findpropstrict QName(PackageNamespace("flash.net"),"URLRequest")
+                           getlex QName(PackageNamespace(""),"userData")
+                           getproperty Multiname("avatar_url",[PrivateNamespace(null,"153"),PackageNamespace(""),PrivateNamespace(null,"154"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("AGI"),StaticProtectedNs("AGI")])
+                           constructprop QName(PackageNamespace("flash.net"),"URLRequest"), 1
+                           coerce QName(PackageNamespace("flash.net"),"URLRequest")
+                           setlocal3
+                           getlocal2
+                           getlocal3
+                           callpropvoid QName(PackageNamespace(""),"load"), 1
+                           getlocal1
+                           pushtrue
+                           iftrue ofs005f
+                           returnvoid
+                           popscope
+                           newfunction 78
+                           throw
+                           bitor
+                           modulo
+                  ofs005f:
+                           getlocal2
+                           callpropvoid Multiname("addChild",[PrivateNamespace(null,"153"),PackageNamespace(""),PrivateNamespace(null,"154"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("AGI"),StaticProtectedNs("AGI")]), 1
+                           returnvoid
+                        end ; code
+                     end ; body
+                  end ; method
+               }
+               
+               public static function getUserName() : String
+               {
+                  trait method QName(PackageNamespace(""),"getUserName")
+                     flag FINAL
+                     dispid 6
+                     method
+                        name null
+                        returns QName(PackageNamespace(""),"String")
+                        
+                        body
+                           maxstack 4
+                           localcount 1
+                           initscopedepth 3
+                           maxscopedepth 4
+                           
+                           code
+                              getlocal0
+                              jump ofs000c
+                              callmethod 3490, 6
+                              call 6
+                              throw
+                     ofs000c:
+                              pushscope
+                              getlex QName(PackageNamespace(""),"agi")
+                              callproperty Multiname("getUserName",[PrivateNamespace(null,"153"),PackageNamespace(""),PrivateNamespace(null,"154"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("AGI"),StaticProtectedNs("AGI")]), 0
+                              returnvalue
+                           end ; code
+                        end ; body
+                     end ; method
+                  }
+                  
+                  public static function showLogin() : void
+                  {
+                     trait method QName(PackageNamespace(""),"showLogin")
+                        flag FINAL
+                        dispid 7
+                        method
+                           name null
+                           flag NEED_ACTIVATION
+                           returns QName(PackageNamespace(""),"void")
+                           
+                           body
+                              maxstack 5
+                              localcount 2
+                              initscopedepth 4
+                              maxscopedepth 6
+                              trait slot QName(PackageInternalNs(""),"callback")
+                                 slotid 1
+                                 type QName(PackageNamespace(""),"Function")
+                              end ; trait
+                              
+                              code
+                                 getlocal0
+                                 pushscope
+                                 jump ofs000d
+                                 callmethod 3491, 5
+                                 call 5
+                                 throw
+                        ofs000d:
+                                 newactivation
+                                 dup
+                                 setlocal1
+                                 pushscope
+                                 getscopeobject 1
+                                 jump ofs001b
+                                 ifgt ofs001b
+                        ofs001b:
+                                 pushnull
+                                 coerce QName(PackageNamespace(""),"Function")
+                                 setslot 1
+                                 getscopeobject 1
+                                 jump ofs002b
+                                 instanceof
+                                 callsuper QName(PackageNamespace("Box2D.Collision"),"b2DistanceProxy"), 9
+                                 pushwith
+                        ofs002b:
+                                 newfunction 331
+                                 coerce QName(PackageNamespace(""),"Function")
+                                 setslot 1
+                                 getlex QName(PackageNamespace(""),"agi")
+                                 getscopeobject 1
+                                 getslot 1
+                                 callpropvoid Multiname("showLogin",[PrivateNamespace(null,"153"),PackageNamespace(""),PrivateNamespace(null,"154"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("AGI"),StaticProtectedNs("AGI")]), 1
+                                 returnvoid
+                              end ; code
+                           end ; body
+                        end ; method
+                     }
+                     
+                     public static function isVisible() : Boolean
+                     {
+                        trait method QName(PackageNamespace(""),"isVisible")
+                           flag FINAL
+                           dispid 8
+                           method
+                              name null
+                              returns QName(PackageNamespace(""),"Boolean")
+                              
+                              body
+                                 maxstack 6
+                                 localcount 1
+                                 initscopedepth 3
+                                 maxscopedepth 4
+                                 
+                                 code
+                                    getlocal0
+                                    jump ofs000c
+                                    callstatic 3490, 7
+                                    call 7
+                                    throw
+                           ofs000c:
+                                    pushscope
+                                    getlex QName(PackageNamespace(""),"agi")
+                                    iffalse ofs0018
+                                    jump ofs002c
+                           ofs0018:
+                                    findpropstrict QName(PackageNamespace(""),"agiTrace")
+                                    pushstring "AGI.isVisible Not Loaded"
+                                    jump ofs0026
+                                    ifstricteq ofs0026
+                           ofs0026:
+                                    callpropvoid QName(PackageNamespace(""),"agiTrace"), 1
+                                    pushfalse
+                                    returnvalue
+                           ofs002c:
+                                    findpropstrict QName(PackageNamespace(""),"agiTrace")
+                                    jump ofs0038
+                                    popscope
+                                    constructprop QName(PackageNamespace("Box2D.Common.Math"),"b2Transform"), 9
+                                    pushwith
+                           ofs0038:
+                                    pushstring "AGI.isVisible "
+                                    getlex QName(PackageNamespace(""),"agi")
+                                    callproperty Multiname("isAGUIVisible",[PrivateNamespace(null,"153"),PackageNamespace(""),PrivateNamespace(null,"154"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("AGI"),StaticProtectedNs("AGI")]), 0
+                                    add
+                                    callpropvoid QName(PackageNamespace(""),"agiTrace"), 1
+                                    getlex QName(PackageNamespace(""),"agi")
+                                    callproperty Multiname("isAGUIVisible",[PrivateNamespace(null,"153"),PackageNamespace(""),PrivateNamespace(null,"154"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("AGI"),StaticProtectedNs("AGI")]), 0
+                                    returnvalue
+                                 end ; code
+                              end ; body
+                           end ; method
+                        }
+                        
+                        public static function agiClosed(param1:Boolean = true) : void
+                        {
+                           trait method QName(PackageNamespace(""),"agiClosed")
+                              flag FINAL
+                              dispid 9
+                              method
+                                 name null
+                                 flag HAS_OPTIONAL
+                                 param QName(PackageNamespace(""),"Boolean")
+                                 optional True()
+                                 returns QName(PackageNamespace(""),"void")
+                                 
+                                 body
+                                    maxstack 4
+                                    localcount 2
+                                    initscopedepth 3
+                                    maxscopedepth 4
+                                    
+                                    code
+                                       jump ofs000b
+                                       callmethod 3490, 6
+                                       call 6
+                                       throw
+                              ofs000b:
+                                       getlocal0
+                                       pushscope
+                                       findpropstrict QName(PackageNamespace(""),"isLoggedIn")
+                                       callpropvoid QName(PackageNamespace(""),"isLoggedIn"), 0
+                                       getlex QName(PackageNamespace(""),"Main")
+                                       jump ofs001f
+                                       ifeq ofs001f
+                              ofs001f:
+                                       getproperty QName(PackageNamespace(""),"curClass")
+                                       jump ofs002c
+                                       popscope
+                                       convert_s
+                                       checkfilter
+                                       dup
+                                       setlocal2
+                                       convert_s
+                              ofs002c:
+                                       callpropvoid Multiname("Init",[PrivateNamespace(null,"153"),PackageNamespace(""),PrivateNamespace(null,"154"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("AGI"),StaticProtectedNs("AGI")]), 0
+                                       returnvoid
+                                    end ; code
+                                 end ; body
+                              end ; method
+                           }
+                           
+                           public static function loadData() : void
+                           {
+                              trait method QName(PackageNamespace(""),"loadData")
+                                 flag FINAL
+                                 dispid 10
+                                 method
+                                    name null
+                                    flag NEED_ACTIVATION
+                                    returns QName(PackageNamespace(""),"void")
+                                    
+                                    body
+                                       maxstack 5
+                                       localcount 2
+                                       initscopedepth 4
+                                       maxscopedepth 6
+                                       trait slot QName(PackageInternalNs(""),"callback")
+                                          slotid 1
+                                          type QName(PackageNamespace(""),"Function")
+                                       end ; trait
+                                       
+                                       code
+                                          jump ofs000b
+                                          call 7
+                                          throw
+                                          callmethod 3493, 7
+                                 ofs000b:
+                                          getlocal0
+                                          pushscope
+                                          newactivation
+                                          dup
+                                          setlocal1
+                                          jump ofs0018
+                                          ifstrictne ofs0018
+                                 ofs0018:
+                                          pushscope
+                                          getscopeobject 1
+                                          pushnull
+                                          jump ofs0026
+                                          setlocal1
+                                          newarray 7
+                                          pushwith
+                                          divide
+                                          equals
+                                 ofs0026:
+                                          coerce QName(PackageNamespace(""),"Function")
+                                          setslot 1
+                                          getscopeobject 1
+                                          newfunction 335
+                                          coerce QName(PackageNamespace(""),"Function")
+                                          setslot 1
+                                          getlex QName(PackageNamespace(""),"agi")
+                                          jump ofs0040
+                                          popscope
+                                          dup
+                                          dup
+                                          setlocal0
+                                          dup
+                                          returnvalue
+                                 ofs0040:
+                                          getscopeobject 1
+                                          getslot 1
+                                          callpropvoid Multiname("retrieveUserData",[PrivateNamespace(null,"153"),PackageNamespace(""),PrivateNamespace(null,"154"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("AGI"),StaticProtectedNs("AGI")]), 1
+                                          returnvoid
+                                       end ; code
+                                    end ; body
+                                 end ; method
+                              }
+                              
+                              public static function saveData(param1:Object) : void
+                              {
+                                 trait method QName(PackageNamespace(""),"saveData")
+                                    flag FINAL
+                                    dispid 11
+                                    method
+                                       name null
+                                       flag NEED_ACTIVATION
+                                       param QName(PackageNamespace(""),"Object")
+                                       returns QName(PackageNamespace(""),"void")
+                                       
+                                       body
+                                          maxstack 7
+                                          localcount 3
+                                          initscopedepth 4
+                                          maxscopedepth 6
+                                          trait slot QName(PackageInternalNs(""),"_ob")
+                                             slotid 1
+                                             type QName(PackageNamespace(""),"Object")
+                                          end ; trait
+                                          trait slot QName(PackageInternalNs(""),"callback")
+                                             slotid 2
+                                             type QName(PackageNamespace(""),"Function")
+                                          end ; trait
+                                          
+                                          code
+                                             getlocal0
+                                             jump ofs000c
+                                             call 10
+                                             callstatic 3492, 10
+                                             throw
+                                    ofs000c:
+                                             pushscope
+                                             newactivation
+                                             dup
+                                             setlocal2
+                                             pushscope
+                                             jump ofs0019
+                                             ifstricteq ofs0019
+                                    ofs0019:
+                                             getscopeobject 1
+                                             pushnull
+                                             coerce QName(PackageNamespace(""),"Function")
+                                             setslot 2
+                                             jump ofs002a
+                                             popscope
+                                             setlocal1
+                                             returnvalue
+                                             pushwith
+                                             setlocal1
+                                             throw
+                                    ofs002a:
+                                             getscopeobject 1
+                                             getlocal1
+                                             setslot 1
+                                             getscopeobject 1
+                                             newfunction 337
+                                             coerce QName(PackageNamespace(""),"Function")
+                                             setslot 2
+                                             getlex QName(PackageNamespace(""),"agi")
+                                             pushstring "savedata1"
+                                             getscopeobject 1
+                                             jump ofs004a
+                                             setlocal1
+                                             returnvalue
+                                             in
+                                             checkfilter
+                                             setlocal1
+                                             typeof
+                                    ofs004a:
+                                             getslot 1
+                                             getscopeobject 1
+                                             getslot 2
+                                             callpropvoid Multiname("submitUserData",[PrivateNamespace(null,"153"),PackageNamespace(""),PrivateNamespace(null,"154"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("AGI"),StaticProtectedNs("AGI")]), 3
+                                             returnvoid
+                                          end ; code
+                                       end ; body
+                                    end ; method
+                                 }
+                                 
+                                 public static function deleteData() : void
+                                 {
+                                    trait method QName(PackageNamespace(""),"deleteData")
+                                       flag FINAL
+                                       dispid 12
+                                       method
+                                          name null
+                                          flag NEED_ACTIVATION
+                                          returns QName(PackageNamespace(""),"void")
+                                          
+                                          body
+                                             maxstack 7
+                                             localcount 2
+                                             initscopedepth 4
+                                             maxscopedepth 6
+                                             trait slot QName(PackageInternalNs(""),"callback")
+                                                slotid 1
+                                                type QName(PackageNamespace(""),"Function")
+                                             end ; trait
+                                             trait slot QName(PackageInternalNs(""),"callbackOld")
+                                                slotid 2
+                                                type QName(PackageNamespace(""),"Function")
+                                             end ; trait
+                                             
+                                             code
+                                                getlocal0
+                                                jump ofs000c
+                                                call 9
+                                                throw
+                                                callmethod 3490, 9
+                                       ofs000c:
+                                                pushscope
+                                                newactivation
+                                                dup
+                                                setlocal1
+                                                pushscope
+                                                jump ofs0019
+                                                ifgt ofs0019
+                                       ofs0019:
+                                                getscopeobject 1
+                                                jump ofs0025
+                                                setlocal2
+                                                pushwith
+                                                newfunction 26
+                                                throw
+                                                setlocal0
+                                       ofs0025:
+                                                pushnull
+                                                coerce QName(PackageNamespace(""),"Function")
+                                                setslot 1
+                                                getscopeobject 1
+                                                pushnull
+                                                coerce QName(PackageNamespace(""),"Function")
+                                                setslot 2
+                                                getscopeobject 1
+                                                newfunction 339
+                                                coerce QName(PackageNamespace(""),"Function")
+                                                pushfalse
+                                                iffalse ofs0044
+                                                returnvoid
+                                                popscope
+                                                coerce_s
+                                                modulo
+                                                pushwith
+                                                pushwith
+                                                bitand
+                                       ofs0044:
+                                                setslot 1
+                                                getscopeobject 1
+                                                newfunction 340
+                                                coerce QName(PackageNamespace(""),"Function")
+                                                setslot 2
+                                                getlex QName(PackageNamespace(""),"agi")
+                                                jump ofs005b
+                                                istypelate
+                                                callproperty QName(PackageNamespace("Box2D.Dynamics"),"b2BodyDef"), 21
+                                                throw
+                                       ofs005b:
+                                                pushstring "savedata1"
+                                                pushstring "savedBefore"
+                                                pushfalse
+                                                newobject 1
+                                                getscopeobject 1
+                                                jump ofs006e
+                                                ifne ofs006e
+                                       ofs006e:
+                                                getslot 1
+                                                callpropvoid Multiname("submitUserData",[PrivateNamespace(null,"153"),PackageNamespace(""),PrivateNamespace(null,"154"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("AGI"),StaticProtectedNs("AGI")]), 3
+                                                jump ofs007e
+                                                newactivation
+                                                newarray 89
+                                                pushwith
+                                                nextvalue
+                                                greaterequals
+                                       ofs007e:
+                                                getlex QName(PackageNamespace(""),"agi")
+                                                pushstring "savedBefore"
+                                                pushfalse
+                                                newobject 1
+                                                getscopeobject 1
+                                                getslot 2
+                                                jump ofs0095
+                                                popscope
+                                                bitor
+                                                bitor
+                                                setlocal0
+                                                checkfilter
+                                                typeof
+                                       ofs0095:
+                                                callpropvoid Multiname("submitUserDataObject",[PrivateNamespace(null,"153"),PackageNamespace(""),PrivateNamespace(null,"154"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("AGI"),StaticProtectedNs("AGI")]), 2
+                                                returnvoid
+                                             end ; code
+                                          end ; body
+                                       end ; method
+                                    }
+                                    
+                                    public static function submitQuest(param1:String) : void
+                                    {
+                                       trait method QName(PackageNamespace(""),"submitQuest")
+                                          flag FINAL
+                                          dispid 13
+                                          method
+                                             name null
+                                             param QName(PackageNamespace(""),"String")
+                                             returns QName(PackageNamespace(""),"void")
+                                             
+                                             body
+                                                maxstack 6
+                                                localcount 2
+                                                initscopedepth 3
+                                                maxscopedepth 4
+                                                
+                                                code
+                                                   getlocal0
+                                                   jump ofs000b
+                                                   newfunction 3493
+                                                   call 6
+                                                   throw
+                                          ofs000b:
+                                                   pushscope
+                                                   findpropstrict QName(PackageNamespace(""),"agiTrace")
+                                                   pushstring "AGI.attemptQuest "
+                                                   getlocal1
+                                                   add
+                                                   jump ofs001c
+                                                   ifgt ofs001c
+                                          ofs001c:
+                                                   callpropvoid QName(PackageNamespace(""),"agiTrace"), 1
+                                                   getlex QName(PackageNamespace(""),"agi")
+                                                   not
+                                                   dup
+                                                   iffalse ofs0037
+                                                   jump ofs003c
+                                                   jump ofs0031
+                                          ofs0031:
+                                                   divide
+                                                   callproperty QName(PackageNamespace(""),"randEl"), 14
+                                                   setlocal0
+                                          ofs0037:
+                                                   pop
+                                                   getlex QName(PackageNamespace(""),"questAgi")
+                                                   not
+                                          ofs003c:
+                                                   dup
+                                                   iffalse ofs0045
+                                                   jump ofs005a
+                                          ofs0045:
+                                                   pop
+                                                   findpropstrict QName(PackageNamespace(""),"isLoggedIn")
+                                                   callproperty QName(PackageNamespace(""),"isLoggedIn"), 0
+                                                   not
+                                                   pushtrue
+                                                   iftrue ofs005a
+                                                   returnvoid
+                                                   setlocal2
+                                                   newfunction 126
+                                                   pushwith
+                                                   returnvalue
+                                                   setlocal2
+                                          ofs005a:
+                                                   dup
+                                                   iffalse ofs0063
+                                                   jump ofs0078
+                                          ofs0063:
+                                                   pop
+                                                   getlex QName(PackageNamespace(""),"gotQuests")
+                                                   getlocal1
+                                                   getproperty MultinameL([PrivateNamespace(null,"153"),PackageNamespace(""),PrivateNamespace(null,"154"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("AGI"),StaticProtectedNs("AGI")])
+                                                   convert_b
+                                                   pushfalse
+                                                   iffalse ofs0078
+                                                   pushfalse
+                                                   returnvalue
+                                                   popscope
+                                                   callmethod 12, 27
+                                                   throw
+                                          ofs0078:
+                                                   iftrue ofs0080
+                                                   jump ofs0081
+                                          ofs0080:
+                                                   returnvoid
+                                          ofs0081:
+                                                   findpropstrict QName(PackageNamespace(""),"agiTrace")
+                                                   pushstring "AGI.submitQuest "
+                                                   getlocal1
+                                                   jump ofs0090
+                                                   ifeq ofs0090
+                                          ofs0090:
+                                                   add
+                                                   callpropvoid QName(PackageNamespace(""),"agiTrace"), 1
+                                                   getlex QName(PackageNamespace(""),"gotQuests")
+                                                   getlocal1
+                                                   jump ofs00a3
+                                                   nextvalue
+                                                   dxns "Command"
+                                                   pushwith
+                                                   setlocal0
+                                                   greaterequals
+                                          ofs00a3:
+                                                   pushtrue
+                                                   setproperty MultinameL([PrivateNamespace(null,"153"),PackageNamespace(""),PrivateNamespace(null,"154"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("AGI"),StaticProtectedNs("AGI")])
+                                                   getlex QName(PackageNamespace(""),"questAgi")
+                                                   getproperty Multiname("achievements",[PrivateNamespace(null,"153"),PackageNamespace(""),PrivateNamespace(null,"154"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("AGI"),StaticProtectedNs("AGI")])
+                                                   pushstring "key"
+                                                   getlocal1
+                                                   jump ofs00bb
+                                                   popscope
+                                                   newfunction 107
+                                                   throw
+                                                   nextname
+                                                   nextvalue
+                                          ofs00bb:
+                                                   newobject 1
+                                                   callpropvoid Multiname("submit",[PrivateNamespace(null,"153"),PackageNamespace(""),PrivateNamespace(null,"154"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("AGI"),StaticProtectedNs("AGI")]), 1
+                                                   returnvoid
+                                                end ; code
+                                             end ; body
+                                          end ; method
+                                       }
+                                       
+                                       public static function agiTrace(param1:*) : void
+                                       {
+                                          trait method QName(PackageNamespace(""),"agiTrace")
+                                             flag FINAL
+                                             dispid 14
+                                             method
+                                                name null
+                                                param null
+                                                returns QName(PackageNamespace(""),"void")
+                                                
+                                                body
+                                                   maxstack 5
+                                                   localcount 2
+                                                   initscopedepth 3
+                                                   maxscopedepth 4
+                                                   
+                                                   code
+                                                      jump ofs000b
+                                                      callmethod 3490, 10
+                                                      call 10
+                                                      throw
+                                             ofs000b:
+                                                      getlocal0
+                                                      pushscope
+                                                      findpropstrict QName(PackageNamespace(""),"trace")
+                                                      getlocal1
+                                                      callpropvoid QName(PackageNamespace(""),"trace"), 1
+                                                      jump ofs001d
+                                                      ifeq ofs001d
+                                             ofs001d:
+                                                      getlex QName(PackageNamespace(""),"Debug")
+                                                      getlocal1
+                                                      callpropvoid QName(PackageNamespace(""),"out"), 1
+                                                      pushtrue
+                                                      iftrue ofs0031
+                                                      returnvoid
+                                                      pushfalse
+                                                      construct 77
+                                                      pushwith
+                                                      increment
+                                                      convert_d
+                                             ofs0031:
+                                                      returnvoid
+                                                   end ; code
+                                                end ; body
+                                             end ; method
+                                          }
+                                       }
+                                    }

@@ -1,0 +1,197 @@
+package
+{
+   public class Bullet_Melee_Basic extends Bullet
+   {
+      
+      {
+         method
+            name null
+            returns null
+            
+            body
+               maxstack 4
+               localcount 1
+               initscopedepth 4
+               maxscopedepth 5
+               
+               code
+                  getlocal0
+                  jump ofs000c
+                  call 7
+                  throw
+                  callmethod 3494, 7
+         ofs000c:
+                  pushscope
+                  returnvoid
+               end ; code
+            end ; body
+         end ; method
+      }
+      
+      public function Bullet_Melee_Basic(param1:Game, param2:Unit, param3:Number, param4:Number, param5:Number, param6:Number, param7:Stats_Guns, param8:Object = null)
+      {
+         method
+            name null
+            flag HAS_OPTIONAL
+            param QName(PackageNamespace(""),"Game")
+            param QName(PackageNamespace(""),"Unit")
+            param QName(PackageNamespace(""),"Number")
+            param QName(PackageNamespace(""),"Number")
+            param QName(PackageNamespace(""),"Number")
+            param QName(PackageNamespace(""),"Number")
+            param QName(PackageNamespace(""),"Stats_Guns")
+            param QName(PackageNamespace(""),"Object")
+            optional Null()
+            returns null
+            
+            body
+               maxstack 13
+               localcount 11
+               initscopedepth 5
+               maxscopedepth 6
+               
+               code
+                  getlocal0
+                  jump ofs000c
+                  call 5
+                  throw
+                  callmethod 3491, 5
+         ofs000c:
+                  pushscope
+                  getlocal0
+                  getlocal1
+                  getlocal2
+                  getlocal3
+                  jump ofs0019
+                  ifgt ofs0019
+         ofs0019:
+                  getlocal 4
+                  getlocal 5
+                  getlocal 6
+                  getlocal 7
+                  pushtrue
+                  jump ofs002c
+                  setlocal1
+                  pushwith
+                  newfunction 48
+                  throw
+                  pushscope
+         ofs002c:
+                  getlocal 8
+                  constructsuper 9
+                  pushbyte 0
+                  convert_u
+                  setlocal 9
+                  jump ofs00a6
+                  pushwith
+                  setlocal3
+         ofs003b:
+                  label
+                  findproperty QName(ProtectedNamespace("Bullet"),"x")
+                  jump ofs0049
+                  popscope
+                  call 120
+                  pushwith
+                  setlocal3
+                  convert_d
+         ofs0049:
+                  getlex QName(ProtectedNamespace("Bullet"),"x")
+                  getlex QName(ProtectedNamespace("Bullet"),"xVel")
+                  add
+                  initproperty QName(ProtectedNamespace("Bullet"),"x")
+                  findproperty QName(ProtectedNamespace("Bullet"),"y")
+                  getlex QName(ProtectedNamespace("Bullet"),"y")
+                  getlex QName(ProtectedNamespace("Bullet"),"yVel")
+                  add
+                  initproperty QName(ProtectedNamespace("Bullet"),"y")
+                  findproperty QName(ProtectedNamespace("Bullet"),"hitObject")
+                  jump ofs006d
+                  popscope
+                  greaterequals
+                  returnvoid
+                  returnvoid
+                  pushfalse
+                  setlocal2
+         ofs006d:
+                  findpropstrict QName(ProtectedNamespace("Bullet"),"hitTestAll")
+                  callproperty QName(ProtectedNamespace("Bullet"),"hitTestAll"), 0
+                  dup
+                  setlocal 10
+                  initproperty QName(ProtectedNamespace("Bullet"),"hitObject")
+                  jump ofs0082
+                  ifgt ofs0082
+         ofs0082:
+                  getlocal 10
+                  kill 10
+                  iftrue ofs008e
+                  jump ofs00a0
+         ofs008e:
+                  jump ofs00c5
+                  ifgt ofs0096
+         ofs0096:
+                  jump ofs009a
+         ofs009a:
+                  bitxor
+                  callproplex QName(PackageNamespace(""),"rand"), 12
+                  setlocal1
+         ofs00a0:
+                  getlocal 9
+                  increment
+                  convert_u
+                  setlocal 9
+         ofs00a6:
+                  getlocal 9
+                  findpropstrict QName(PackageNamespace(""),"uint")
+                  getlex QName(ProtectedNamespace("Bullet"),"maxDist")
+                  jump ofs00b7
+                  setlocal1
+                  newfunction 3
+                  pop
+                  bitxor
+                  dup
+         ofs00b7:
+                  pushbyte 10
+                  divide
+                  callproperty QName(PackageNamespace(""),"uint"), 1
+                  ifnlt ofs00c5
+                  jump ofs003b
+         ofs00c5:
+                  findpropstrict QName(ProtectedNamespace("Bullet"),"doHitEffect")
+                  callpropvoid QName(ProtectedNamespace("Bullet"),"doHitEffect"), 0
+                  findpropstrict QName(ProtectedNamespace("Bullet"),"removeMe")
+                  callpropvoid QName(ProtectedNamespace("Bullet"),"removeMe"), 0
+                  returnvoid
+               end ; code
+            end ; body
+         end ; method
+      }
+      
+      public function EnterFrame() : void
+      {
+         trait method QName(PackageNamespace(""),"EnterFrame")
+            dispid 0
+            method
+               name null
+               returns QName(PackageNamespace(""),"void")
+               
+               body
+                  maxstack 4
+                  localcount 1
+                  initscopedepth 5
+                  maxscopedepth 6
+                  
+                  code
+                     jump ofs000a
+                     call 9
+                     throw
+                     newfunction 3492
+            ofs000a:
+                     getlocal0
+                     pushscope
+                     returnvoid
+                  end ; code
+               end ; body
+            end ; method
+         }
+      }
+   }

@@ -1,0 +1,109 @@
+package
+{
+   import flash.display.MovieClip;
+   
+   public dynamic class BgSky extends MovieClip
+   {
+      
+      {
+         method
+            name null
+            returns null
+            
+            body
+               maxstack 4
+               localcount 1
+               initscopedepth 9
+               maxscopedepth 10
+               
+               code
+                  getlocal0
+                  jump ofs000b
+                  call 7
+                  throw
+                  newclass 479
+         ofs000b:
+                  pushscope
+                  returnvoid
+               end ; code
+            end ; body
+         end ; method
+      }
+      
+      public function BgSky()
+      {
+         method
+            name null
+            returns null
+            
+            body
+               maxstack 6
+               localcount 1
+               initscopedepth 10
+               maxscopedepth 11
+               
+               code
+                  getlocal0
+                  jump ofs000c
+                  callmethod 3490, 8
+                  call 8
+                  throw
+         ofs000c:
+                  pushscope
+                  getlocal0
+                  constructsuper 0
+                  findpropstrict QName(PackageNamespace(""),"addFrameScript")
+                  pushbyte 0
+                  jump ofs001d
+                  ifstricteq ofs001d
+         ofs001d:
+                  getlocal0
+                  pushfalse
+                  iffalse ofs002a
+                  returnvoid
+                  popscope
+                  returnvalue
+                  setlocal1
+                  checkfilter
+                  divide
+                  modulo
+         ofs002a:
+                  getproperty QName(PackageInternalNs(""),"frame1")
+                  callpropvoid QName(PackageNamespace(""),"addFrameScript"), 2
+                  returnvoid
+               end ; code
+            end ; body
+         end ; method
+      }
+      
+      function frame1() : *
+      {
+         trait method QName(PackageInternalNs(""),"frame1")
+            dispid 0
+            method
+               name null
+               returns null
+               
+               body
+                  maxstack 4
+                  localcount 1
+                  initscopedepth 10
+                  maxscopedepth 11
+                  
+                  code
+                     getlocal0
+                     pushscope
+                     jump ofs000d
+                     call 6
+                     throw
+                     callstatic 3491, 6
+            ofs000d:
+                     findpropstrict QName(PackageNamespace(""),"stop")
+                     callpropvoid QName(PackageNamespace(""),"stop"), 0
+                     returnvoid
+                  end ; code
+               end ; body
+            end ; method
+         }
+      }
+   }

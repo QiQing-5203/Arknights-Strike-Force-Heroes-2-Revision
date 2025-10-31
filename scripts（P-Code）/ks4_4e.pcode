@@ -1,0 +1,61 @@
+package
+{
+   import flash.media.Sound;
+   
+   public dynamic class ks4_4e extends Sound
+   {
+      
+      {
+         method
+            name null
+            returns null
+            
+            body
+               maxstack 4
+               localcount 1
+               initscopedepth 5
+               maxscopedepth 6
+               
+               code
+                  jump ofs000b
+                  callstatic 3492, 10
+                  call 10
+                  throw
+         ofs000b:
+                  getlocal0
+                  pushscope
+                  returnvoid
+               end ; code
+            end ; body
+         end ; method
+      }
+      
+      public function ks4_4e()
+      {
+         method
+            name null
+            returns null
+            
+            body
+               maxstack 4
+               localcount 1
+               initscopedepth 6
+               maxscopedepth 7
+               
+               code
+                  getlocal0
+                  jump ofs000c
+                  call 6
+                  callstatic 3492, 6
+                  throw
+         ofs000c:
+                  pushscope
+                  getlocal0
+                  constructsuper 0
+                  returnvoid
+               end ; code
+            end ; body
+         end ; method
+      }
+   }
+}

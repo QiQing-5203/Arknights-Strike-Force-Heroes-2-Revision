@@ -1,0 +1,178 @@
+package
+{
+   public class Bullet_Splash extends Bullet
+   {
+      
+      {
+         method
+            name null
+            returns null
+            
+            body
+               maxstack 4
+               localcount 1
+               initscopedepth 4
+               maxscopedepth 5
+               
+               code
+                  getlocal0
+                  jump ofs000c
+                  call 10
+                  callmethod 3492, 10
+                  throw
+         ofs000c:
+                  pushscope
+                  returnvoid
+               end ; code
+            end ; body
+         end ; method
+      }
+      
+      var countDistX:Number;
+      
+      var countDistY:Number;
+      
+      public function Bullet_Splash(param1:Game, param2:Unit, param3:Number, param4:Number, param5:Number, param6:Number, param7:Stats_Guns, param8:Object = null)
+      {
+         method
+            name null
+            flag HAS_OPTIONAL
+            param QName(PackageNamespace(""),"Game")
+            param QName(PackageNamespace(""),"Unit")
+            param QName(PackageNamespace(""),"Number")
+            param QName(PackageNamespace(""),"Number")
+            param QName(PackageNamespace(""),"Number")
+            param QName(PackageNamespace(""),"Number")
+            param QName(PackageNamespace(""),"Stats_Guns")
+            param QName(PackageNamespace(""),"Object")
+            optional Null()
+            returns null
+            
+            body
+               maxstack 13
+               localcount 9
+               initscopedepth 5
+               maxscopedepth 6
+               
+               code
+                  jump ofs000a
+                  newclass 480
+                  call 8
+                  throw
+         ofs000a:
+                  getlocal0
+                  pushscope
+                  getlocal0
+                  getlocal1
+                  getlocal2
+                  jump ofs0017
+                  ifge ofs0017
+         ofs0017:
+                  getlocal3
+                  getlocal 4
+                  getlocal 5
+                  getlocal 6
+                  getlocal 7
+                  jump ofs002a
+                  popscope
+                  multiply
+                  lessequals
+                  modulo
+                  nextname
+                  setlocal1
+         ofs002a:
+                  pushtrue
+                  getlocal 8
+                  constructsuper 9
+                  getlex QName(ProtectedNamespace("Bullet"),"stats")
+                  getproperty QName(PackageNamespace(""),"params")
+                  pushbyte 0
+                  getproperty MultinameL([PrivateNamespace(null,"232"),PackageNamespace(""),PrivateNamespace(null,"233"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Bullet_Splash"),StaticProtectedNs("Bullet_Splash"),StaticProtectedNs("Bullet")])
+                  iffalse ofs0042
+                  jump ofs005e
+         ofs0042:
+                  findproperty QName(ProtectedNamespace("Bullet"),"hitType")
+                  jump ofs004f
+                  setlocal3
+                  newfunction 78
+                  pop
+                  istypelate
+                  returnvalue
+         ofs004f:
+                  pushstring "unit"
+                  initproperty QName(ProtectedNamespace("Bullet"),"hitType")
+                  findproperty QName(ProtectedNamespace("Bullet"),"hitObject")
+                  getlex QName(ProtectedNamespace("Bullet"),"unit")
+                  initproperty QName(ProtectedNamespace("Bullet"),"hitObject")
+         ofs005e:
+                  getlex QName(ProtectedNamespace("Bullet"),"stats")
+                  getproperty QName(PackageNamespace(""),"effHit")
+                  jump ofs006e
+                  dup
+                  nextvalue
+                  setlocal3
+                  convert_d
+                  returnvoid
+                  convert_d
+         ofs006e:
+                  iftrue ofs0076
+                  jump ofs0091
+         ofs0076:
+                  getlex QName(ProtectedNamespace("Bullet"),"game")
+                  getlex QName(ProtectedNamespace("Bullet"),"x")
+                  getlex QName(ProtectedNamespace("Bullet"),"y")
+                  getlex QName(ProtectedNamespace("Bullet"),"stats")
+                  jump ofs008a
+                  ifstrictne ofs008a
+         ofs008a:
+                  getproperty QName(PackageNamespace(""),"effHit")
+                  callpropvoid QName(PackageNamespace(""),"createEffect"), 3
+         ofs0091:
+                  findpropstrict QName(ProtectedNamespace("Bullet"),"checkSplash")
+                  callpropvoid QName(ProtectedNamespace("Bullet"),"checkSplash"), 0
+                  pushtrue
+                  iftrue ofs00a4
+                  returnvoid
+                  setlocal3
+                  pushwith
+                  newfunction 101
+                  pop
+                  divide
+         ofs00a4:
+                  findpropstrict QName(ProtectedNamespace("Bullet"),"removeMe")
+                  callpropvoid QName(ProtectedNamespace("Bullet"),"removeMe"), 0
+                  returnvoid
+               end ; code
+            end ; body
+         end ; method
+      }
+      
+      public function EnterFrame() : void
+      {
+         trait method QName(PackageNamespace(""),"EnterFrame")
+            dispid 0
+            method
+               name null
+               returns QName(PackageNamespace(""),"void")
+               
+               body
+                  maxstack 4
+                  localcount 1
+                  initscopedepth 5
+                  maxscopedepth 6
+                  
+                  code
+                     getlocal0
+                     jump ofs000b
+                     call 10
+                     throw
+                     newclass 480
+            ofs000b:
+                     pushscope
+                     returnvoid
+                  end ; code
+               end ; body
+            end ; method
+         }
+      }
+   }

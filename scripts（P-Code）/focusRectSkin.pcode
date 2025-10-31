@@ -1,0 +1,61 @@
+package
+{
+   import flash.display.MovieClip;
+   
+   public dynamic class focusRectSkin extends MovieClip
+   {
+      
+      {
+         method
+            name null
+            returns null
+            
+            body
+               maxstack 4
+               localcount 1
+               initscopedepth 9
+               maxscopedepth 10
+               
+               code
+                  getlocal0
+                  pushscope
+                  jump ofs000d
+                  callmethod 889, 6
+                  call 6
+                  throw
+         ofs000d:
+                  returnvoid
+               end ; code
+            end ; body
+         end ; method
+      }
+      
+      public function focusRectSkin()
+      {
+         method
+            name null
+            returns null
+            
+            body
+               maxstack 4
+               localcount 1
+               initscopedepth 10
+               maxscopedepth 11
+               
+               code
+                  getlocal0
+                  jump ofs000c
+                  callstatic 888, 10
+                  call 10
+                  throw
+         ofs000c:
+                  pushscope
+                  getlocal0
+                  constructsuper 0
+                  returnvoid
+               end ; code
+            end ; body
+         end ; method
+      }
+   }
+}

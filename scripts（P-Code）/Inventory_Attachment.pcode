@@ -1,0 +1,441 @@
+package
+{
+   public class Inventory_Attachment
+   {
+      
+      {
+         method
+            name null
+            returns null
+            
+            body
+               maxstack 4
+               localcount 1
+               initscopedepth 3
+               maxscopedepth 4
+               
+               code
+                  getlocal0
+                  jump ofs000b
+                  call 7
+                  throw
+                  newfunction 3493
+         ofs000b:
+                  pushscope
+                  returnvoid
+               end ; code
+            end ; body
+         end ; method
+      }
+      
+      public var invalidName:String;
+      
+      public var id:String;
+      
+      public var level:uint;
+      
+      public var rarity:int;
+      
+      public var modValue1:Number;
+      
+      public var modValue2:Number;
+      
+      public var modValue3:Number;
+      
+      public var modValue4:Number;
+      
+      public var modCost:Number;
+      
+      private var effects:Array;
+      
+      public function Inventory_Attachment(param1:String = "", param2:uint = 1, param3:int = 0)
+      {
+         method
+            name null
+            flag HAS_OPTIONAL
+            param QName(PackageNamespace(""),"String")
+            param QName(PackageNamespace(""),"uint")
+            param QName(PackageNamespace(""),"int")
+            optional Utf8("")
+            optional Integer(1)
+            optional Integer(0)
+            returns null
+            
+            body
+               maxstack 5
+               localcount 4
+               initscopedepth 4
+               maxscopedepth 5
+               
+               code
+                  jump ofs000a
+                  newfunction 3490
+                  call 9
+                  throw
+         ofs000a:
+                  getlocal0
+                  pushscope
+                  getlocal0
+                  constructsuper 0
+                  getlocal1
+                  jump ofs0018
+                  ifge ofs0018
+         ofs0018:
+                  iffalse ofs0020
+                  jump ofs0021
+         ofs0020:
+                  returnvoid
+         ofs0021:
+                  getlocal0
+                  getlocal1
+                  initproperty QName(PackageNamespace(""),"id")
+                  pushfalse
+                  iffalse ofs0033
+                  pushtrue
+                  throw
+                  pushwith
+                  modulo
+                  checkfilter
+                  setlocal0
+                  bitor
+                  bitxor
+         ofs0033:
+                  getlocal0
+                  getlocal2
+                  initproperty QName(PackageNamespace(""),"level")
+                  getlocal0
+                  getlocal3
+                  initproperty QName(PackageNamespace(""),"rarity")
+                  pushtrue
+                  iftrue ofs0048
+                  returnvoid
+                  add
+                  callproperty QName(PackageNamespace(""),"Stats_Skills"), 9
+                  pushwith
+         ofs0048:
+                  getlex QName(PackageNamespace(""),"Stats_Attachments")
+                  getproperty QName(PackageNamespace(""),"itemOb")
+                  getlocal0
+                  getproperty QName(PackageNamespace(""),"id")
+                  getproperty MultinameL([PrivateNamespace(null,"7"),PackageNamespace(""),PrivateNamespace(null,"139"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Inventory_Attachment"),StaticProtectedNs("Inventory_Attachment")])
+                  iffalse ofs005c
+                  jump ofs007d
+         ofs005c:
+                  getlocal0
+                  getlocal0
+                  jump ofs0068
+                  popscope
+                  setlocal2
+                  negate
+                  pop
+                  typeof
+                  throw
+         ofs0068:
+                  getproperty QName(PackageNamespace(""),"id")
+                  initproperty QName(PackageNamespace(""),"invalidName")
+                  getlocal0
+                  pushstring "Invalid"
+                  initproperty QName(PackageNamespace(""),"id")
+                  jump ofs007d
+                  ifstricteq ofs007d
+         ofs007d:
+                  getlex QName(PackageNamespace(""),"Stats_Attachments")
+                  getlocal0
+                  callpropvoid QName(PackageNamespace(""),"addMods"), 1
+                  jump ofs008e
+                  pushfalse
+                  pushscope
+                  modulo
+                  lshift
+                  setlocal1
+                  pushfalse
+         ofs008e:
+                  returnvoid
+               end ; code
+            end ; body
+         end ; method
+      }
+      
+      public static function createInventoryItem(param1:String, param2:uint, param3:int) : Inventory_Attachment
+      {
+         trait method QName(PackageNamespace(""),"createInventoryItem")
+            flag FINAL
+            dispid 3
+            method
+               name null
+               param QName(PackageNamespace(""),"String")
+               param QName(PackageNamespace(""),"uint")
+               param QName(PackageNamespace(""),"int")
+               returns QName(PackageNamespace(""),"Inventory_Attachment")
+               
+               body
+                  maxstack 7
+                  localcount 4
+                  initscopedepth 3
+                  maxscopedepth 4
+                  
+                  code
+                     getlocal0
+                     pushscope
+                     jump ofs000d
+                     call 5
+                     throw
+                     callmethod 3492, 5
+            ofs000d:
+                     getlocal0
+                     getlocal1
+                     getlocal2
+                     getlocal3
+                     construct 3
+                     jump ofs001b
+                     iflt ofs001b
+            ofs001b:
+                     returnvalue
+                  end ; code
+               end ; body
+            end ; method
+         }
+         
+         public function createFinalItem() : Stats_Attachments
+         {
+            trait method QName(PackageNamespace(""),"createFinalItem")
+               dispid 0
+               method
+                  name null
+                  returns QName(PackageNamespace(""),"Stats_Attachments")
+                  
+                  body
+                     maxstack 5
+                     localcount 1
+                     initscopedepth 4
+                     maxscopedepth 5
+                     
+                     code
+                        jump ofs000b
+                        call 9
+                        callmethod 3490, 9
+                        throw
+               ofs000b:
+                        getlocal0
+                        pushscope
+                        getlex QName(PackageNamespace(""),"Stats_Attachments")
+                        getlocal0
+                        callproperty QName(PackageNamespace(""),"createFinalItem"), 1
+                        jump ofs001c
+                        ifstrictne ofs001c
+               ofs001c:
+                        returnvalue
+                     end ; code
+                  end ; body
+               end ; method
+            }
+            
+            public function saveObject() : Object
+            {
+               trait method QName(PackageNamespace(""),"saveObject")
+                  dispid 0
+                  method
+                     name null
+                     returns QName(PackageNamespace(""),"Object")
+                     
+                     body
+                        maxstack 5
+                        localcount 2
+                        initscopedepth 4
+                        maxscopedepth 5
+                        
+                        code
+                           jump ofs000b
+                           call 9
+                           throw
+                           callstatic 3494, 9
+                  ofs000b:
+                           getlocal0
+                           pushscope
+                           newobject 0
+                           coerce QName(PackageNamespace(""),"Object")
+                           setlocal1
+                           jump ofs001a
+                           ifstricteq ofs001a
+                  ofs001a:
+                           getlocal1
+                           pushtrue
+                           iftrue ofs0027
+                           returnvoid
+                           equals
+                           callsupervoid QName(PackageNamespace(""),"rotateDistance"), 10
+                           setlocal1
+                  ofs0027:
+                           pushstring "attach"
+                           setproperty Multiname("type",[PrivateNamespace(null,"7"),PackageNamespace(""),PrivateNamespace(null,"139"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Inventory_Attachment"),StaticProtectedNs("Inventory_Attachment")])
+                           getlocal1
+                           getlocal0
+                           getproperty QName(PackageNamespace(""),"id")
+                           setproperty Multiname("id",[PrivateNamespace(null,"7"),PackageNamespace(""),PrivateNamespace(null,"139"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Inventory_Attachment"),StaticProtectedNs("Inventory_Attachment")])
+                           pushtrue
+                           iftrue ofs0042
+                           pushtrue
+                           throw
+                           setlocal1
+                           bitor
+                           multiply
+                           returnvoid
+                           negate
+                           pushnull
+                  ofs0042:
+                           getlocal1
+                           getlocal0
+                           getproperty QName(PackageNamespace(""),"level")
+                           setproperty Multiname("level",[PrivateNamespace(null,"7"),PackageNamespace(""),PrivateNamespace(null,"139"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Inventory_Attachment"),StaticProtectedNs("Inventory_Attachment")])
+                           getlocal1
+                           getlocal0
+                           getproperty QName(PackageNamespace(""),"rarity")
+                           setproperty Multiname("rarity",[PrivateNamespace(null,"7"),PackageNamespace(""),PrivateNamespace(null,"139"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Inventory_Attachment"),StaticProtectedNs("Inventory_Attachment")])
+                           jump ofs005b
+                           equals
+                           callmethod 102, 8
+                           pushwith
+                  ofs005b:
+                           getlocal1
+                           getlocal0
+                           getproperty QName(PackageNamespace(""),"modValue1")
+                           setproperty Multiname("modValue1",[PrivateNamespace(null,"7"),PackageNamespace(""),PrivateNamespace(null,"139"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Inventory_Attachment"),StaticProtectedNs("Inventory_Attachment")])
+                           getlocal1
+                           jump ofs006c
+                           ifge ofs006c
+                  ofs006c:
+                           getlocal0
+                           getproperty QName(PackageNamespace(""),"modValue2")
+                           jump ofs007a
+                           popscope
+                           construct 97
+                           pushwith
+                           bitxor
+                           pushnull
+                  ofs007a:
+                           setproperty Multiname("modValue2",[PrivateNamespace(null,"7"),PackageNamespace(""),PrivateNamespace(null,"139"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Inventory_Attachment"),StaticProtectedNs("Inventory_Attachment")])
+                           getlocal1
+                           getlocal0
+                           getproperty QName(PackageNamespace(""),"modValue3")
+                           setproperty Multiname("modValue3",[PrivateNamespace(null,"7"),PackageNamespace(""),PrivateNamespace(null,"139"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Inventory_Attachment"),StaticProtectedNs("Inventory_Attachment")])
+                           getlocal1
+                           getlocal0
+                           getproperty QName(PackageNamespace(""),"modValue4")
+                           setproperty Multiname("modValue4",[PrivateNamespace(null,"7"),PackageNamespace(""),PrivateNamespace(null,"139"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Inventory_Attachment"),StaticProtectedNs("Inventory_Attachment")])
+                           getlocal1
+                           getlocal0
+                           getproperty QName(PackageNamespace(""),"modCost")
+                           setproperty Multiname("modCost",[PrivateNamespace(null,"7"),PackageNamespace(""),PrivateNamespace(null,"139"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Inventory_Attachment"),StaticProtectedNs("Inventory_Attachment")])
+                           jump ofs009f
+                           popscope
+                           newfunction 102
+                           throw
+                           setlocal1
+                           bitand
+                  ofs009f:
+                           getlocal1
+                           getlocal0
+                           getproperty QName(PrivateNamespace(null,"7"),"effects")
+                           setproperty Multiname("effects",[PrivateNamespace(null,"7"),PackageNamespace(""),PrivateNamespace(null,"139"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Inventory_Attachment"),StaticProtectedNs("Inventory_Attachment")])
+                           getlocal1
+                           returnvalue
+                        end ; code
+                     end ; body
+                  end ; method
+               }
+               
+               public function loadObject(param1:Object) : void
+               {
+                  trait method QName(PackageNamespace(""),"loadObject")
+                     dispid 0
+                     method
+                        name null
+                        param QName(PackageNamespace(""),"Object")
+                        returns QName(PackageNamespace(""),"void")
+                        
+                        body
+                           maxstack 5
+                           localcount 2
+                           initscopedepth 4
+                           maxscopedepth 5
+                           
+                           code
+                              getlocal0
+                              jump ofs000b
+                              newclass 479
+                              call 10
+                              throw
+                     ofs000b:
+                              pushscope
+                              getlocal0
+                              getlocal1
+                              getproperty Multiname("id",[PrivateNamespace(null,"7"),PackageNamespace(""),PrivateNamespace(null,"139"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Inventory_Attachment"),StaticProtectedNs("Inventory_Attachment")])
+                              initproperty QName(PackageNamespace(""),"id")
+                              jump ofs001c
+                              iflt ofs001c
+                     ofs001c:
+                              getlocal0
+                              getlocal1
+                              getproperty Multiname("level",[PrivateNamespace(null,"7"),PackageNamespace(""),PrivateNamespace(null,"139"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Inventory_Attachment"),StaticProtectedNs("Inventory_Attachment")])
+                              initproperty QName(PackageNamespace(""),"level")
+                              pushfalse
+                              iffalse ofs0031
+                              pushtrue
+                              throw
+                              setlocal1
+                              newfunction 79
+                              throw
+                              equals
+                              setlocal2
+                     ofs0031:
+                              getlocal0
+                              getlocal1
+                              getproperty Multiname("rarity",[PrivateNamespace(null,"7"),PackageNamespace(""),PrivateNamespace(null,"139"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Inventory_Attachment"),StaticProtectedNs("Inventory_Attachment")])
+                              initproperty QName(PackageNamespace(""),"rarity")
+                              getlocal0
+                              getlocal1
+                              getproperty Multiname("modValue1",[PrivateNamespace(null,"7"),PackageNamespace(""),PrivateNamespace(null,"139"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Inventory_Attachment"),StaticProtectedNs("Inventory_Attachment")])
+                              initproperty QName(PackageNamespace(""),"modValue1")
+                              getlocal0
+                              getlocal1
+                              jump ofs004d
+                              setlocal2
+                              setlocal0
+                              istypelate
+                              setlocal0
+                              throw
+                              checkfilter
+                     ofs004d:
+                              getproperty Multiname("modValue2",[PrivateNamespace(null,"7"),PackageNamespace(""),PrivateNamespace(null,"139"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Inventory_Attachment"),StaticProtectedNs("Inventory_Attachment")])
+                              initproperty QName(PackageNamespace(""),"modValue2")
+                              getlocal0
+                              getlocal1
+                              getproperty Multiname("modValue3",[PrivateNamespace(null,"7"),PackageNamespace(""),PrivateNamespace(null,"139"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Inventory_Attachment"),StaticProtectedNs("Inventory_Attachment")])
+                              initproperty QName(PackageNamespace(""),"modValue3")
+                              getlocal0
+                              getlocal1
+                              getproperty Multiname("modValue4",[PrivateNamespace(null,"7"),PackageNamespace(""),PrivateNamespace(null,"139"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Inventory_Attachment"),StaticProtectedNs("Inventory_Attachment")])
+                              initproperty QName(PackageNamespace(""),"modValue4")
+                              getlocal0
+                              getlocal1
+                              getproperty Multiname("modCost",[PrivateNamespace(null,"7"),PackageNamespace(""),PrivateNamespace(null,"139"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Inventory_Attachment"),StaticProtectedNs("Inventory_Attachment")])
+                              jump ofs0071
+                              coerce_s
+                              constructprop QName(PackageNamespace("Box2D.Collision"),"b2RayCastOutput"), 27
+                              pop
+                     ofs0071:
+                              initproperty QName(PackageNamespace(""),"modCost")
+                              getlocal0
+                              getlocal1
+                              getproperty Multiname("effects",[PrivateNamespace(null,"7"),PackageNamespace(""),PrivateNamespace(null,"139"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Inventory_Attachment"),StaticProtectedNs("Inventory_Attachment")])
+                              initproperty QName(PrivateNamespace(null,"7"),"effects")
+                              jump ofs0084
+                              ifne ofs0084
+                     ofs0084:
+                              returnvoid
+                           end ; code
+                        end ; body
+                     end ; method
+                  }
+               }
+            }

@@ -1,0 +1,791 @@
+package
+{
+   public class Killstreak_Tesla extends Killstreak
+   {
+      
+      {
+         method
+            name null
+            returns null
+            
+            body
+               maxstack 4
+               localcount 1
+               initscopedepth 4
+               maxscopedepth 5
+               
+               code
+                  getlocal0
+                  pushscope
+                  jump ofs000d
+                  callmethod 3490, 8
+                  call 8
+                  throw
+         ofs000d:
+                  returnvoid
+               end ; code
+            end ; body
+         end ; method
+      }
+      
+      private var sub:String;
+      
+      private var followSpd:Number;
+      
+      private var rot:Number;
+      
+      private var yVel:Number = 0;
+      
+      public var mov:Movement;
+      
+      public var active:Boolean;
+      
+      public function Killstreak_Tesla(param1:Game, param2:*, param3:uint)
+      {
+         method
+            name null
+            param QName(PackageNamespace(""),"Game")
+            param null
+            param QName(PackageNamespace(""),"uint")
+            returns null
+            
+            body
+               maxstack 9
+               localcount 5
+               initscopedepth 5
+               maxscopedepth 6
+               
+               code
+                  getlocal0
+                  jump ofs000c
+                  callmethod 3494, 9
+                  call 9
+                  throw
+         ofs000c:
+                  pushscope
+                  getlocal0
+                  getlocal1
+                  getlocal2
+                  getlocal3
+                  jump ofs0019
+                  ifstrictne ofs0019
+         ofs0019:
+                  pushstring "tesla"
+                  pushtrue
+                  constructsuper 5
+                  getlex QName(PackageNamespace(""),"unit")
+                  getproperty Multiname("unitInfo",[PrivateNamespace(null,"37"),PackageNamespace(""),PrivateNamespace(null,"221"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Killstreak_Tesla"),StaticProtectedNs("Killstreak_Tesla"),StaticProtectedNs("Killstreak")])
+                  jump ofs002f
+                  setlocal3
+                  newfunction 4
+                  throw
+                  newactivation
+                  istypelate
+         ofs002f:
+                  getproperty Multiname("extra",[PrivateNamespace(null,"37"),PackageNamespace(""),PrivateNamespace(null,"221"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Killstreak_Tesla"),StaticProtectedNs("Killstreak_Tesla"),StaticProtectedNs("Killstreak")])
+                  getproperty Multiname("permaStreak",[PrivateNamespace(null,"37"),PackageNamespace(""),PrivateNamespace(null,"221"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Killstreak_Tesla"),StaticProtectedNs("Killstreak_Tesla"),StaticProtectedNs("Killstreak")])
+                  iftrue ofs003d
+                  jump ofs0046
+         ofs003d:
+                  findproperty QName(ProtectedNamespace("Killstreak"),"timer")
+                  pushint 9999999
+                  initproperty QName(ProtectedNamespace("Killstreak"),"timer")
+         ofs0046:
+                  findproperty QName(ProtectedNamespace("Killstreak"),"MC")
+                  jump ofs0053
+                  returnvoid
+                  equals
+                  increment
+                  returnvoid
+                  returnvalue
+                  decrement
+         ofs0053:
+                  findpropstrict QName(PackageNamespace(""),"Tesla")
+                  constructprop QName(PackageNamespace(""),"Tesla"), 0
+                  initproperty QName(ProtectedNamespace("Killstreak"),"MC")
+                  getlex QName(ProtectedNamespace("Killstreak"),"game")
+                  getproperty QName(PackageNamespace(""),"unitCont")
+                  getlex QName(ProtectedNamespace("Killstreak"),"MC")
+                  callpropvoid QName(PackageNamespace(""),"addChild"), 1
+                  getlex QName(ProtectedNamespace("Killstreak"),"MC")
+                  findproperty QName(PackageNamespace(""),"x")
+                  getlex QName(PackageNamespace(""),"unit")
+                  pushtrue
+                  iftrue ofs0080
+                  pushtrue
+                  throw
+                  divide
+                  lessequals
+                  divide
+                  setlocal1
+                  setlocal2
+                  setlocal1
+         ofs0080:
+                  getproperty Multiname("x",[PrivateNamespace(null,"37"),PackageNamespace(""),PrivateNamespace(null,"221"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Killstreak_Tesla"),StaticProtectedNs("Killstreak_Tesla"),StaticProtectedNs("Killstreak")])
+                  dup
+                  setlocal 4
+                  initproperty QName(PackageNamespace(""),"x")
+                  getlocal 4
+                  jump ofs0093
+                  ifle ofs0093
+         ofs0093:
+                  kill 4
+                  setproperty Multiname("x",[PrivateNamespace(null,"37"),PackageNamespace(""),PrivateNamespace(null,"221"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Killstreak_Tesla"),StaticProtectedNs("Killstreak_Tesla"),StaticProtectedNs("Killstreak")])
+                  getlex QName(ProtectedNamespace("Killstreak"),"MC")
+                  findproperty QName(PackageNamespace(""),"y")
+                  getlex QName(PackageNamespace(""),"unit")
+                  jump ofs00aa
+                  negate
+                  callmethod 49, 30
+                  throw
+         ofs00aa:
+                  getproperty Multiname("y",[PrivateNamespace(null,"37"),PackageNamespace(""),PrivateNamespace(null,"221"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Killstreak_Tesla"),StaticProtectedNs("Killstreak_Tesla"),StaticProtectedNs("Killstreak")])
+                  dup
+                  setlocal 4
+                  initproperty QName(PackageNamespace(""),"y")
+                  getlocal 4
+                  kill 4
+                  pushfalse
+                  iffalse ofs00c4
+                  pushtrue
+                  throw
+                  setlocal3
+                  callsuper QName(PackageNamespace(""),"getNextExp"), 12
+                  setlocal0
+         ofs00c4:
+                  setproperty Multiname("y",[PrivateNamespace(null,"37"),PackageNamespace(""),PrivateNamespace(null,"221"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Killstreak_Tesla"),StaticProtectedNs("Killstreak_Tesla"),StaticProtectedNs("Killstreak")])
+                  findpropstrict QName(PackageNamespace(""),"setText")
+                  getlex QName(ProtectedNamespace("Killstreak"),"MC")
+                  callpropvoid QName(PackageNamespace(""),"setText"), 1
+                  getlocal0
+                  getlex QName(PackageNamespace(""),"UT")
+                  pushdouble 0.2
+                  pushdouble 0.4
+                  jump ofs00e3
+                  checkfilter
+                  throw
+                  increment
+                  setlocal3
+                  setlocal3
+                  setlocal0
+         ofs00e3:
+                  callproperty QName(PackageNamespace(""),"rand"), 2
+                  initproperty QName(PrivateNamespace(null,"37"),"followSpd")
+                  findproperty QName(ProtectedNamespace("Killstreak"),"shootTimer")
+                  getlex QName(PackageNamespace(""),"UT")
+                  pushbyte 0
+                  jump ofs00fa
+                  iflt ofs00fa
+         ofs00fa:
+                  pushbyte 25
+                  jump ofs0106
+                  nextvalue
+                  newfunction 106
+                  throw
+                  greaterequals
+                  coerce_s
+         ofs0106:
+                  callproperty QName(PackageNamespace(""),"irand"), 2
+                  initproperty QName(ProtectedNamespace("Killstreak"),"shootTimer")
+                  getlocal0
+                  pushbyte 90
+                  initproperty QName(PrivateNamespace(null,"37"),"rot")
+                  getlocal0
+                  jump ofs011d
+                  returnvoid
+                  callsupervoid QName(PackageNamespace("flash.display"),"Stage"), 8
+                  pushwith
+         ofs011d:
+                  findpropstrict QName(PackageNamespace(""),"Movement")
+                  pushnull
+                  constructprop QName(PackageNamespace(""),"Movement"), 1
+                  initproperty QName(PackageNamespace(""),"mov")
+                  getlocal0
+                  pushfalse
+                  jump ofs0133
+                  popscope
+                  callproperty QName(PackageNamespace(""),"Game"), 8
+                  pushwith
+         ofs0133:
+                  initproperty QName(PackageNamespace(""),"active")
+                  returnvoid
+               end ; code
+            end ; body
+         end ; method
+      }
+      
+      public function EnterFrame() : void
+      {
+         trait method QName(PackageNamespace(""),"EnterFrame")
+            dispid 0
+            method
+               name null
+               returns QName(PackageNamespace(""),"void")
+               
+               body
+                  maxstack 9
+                  localcount 4
+                  initscopedepth 5
+                  maxscopedepth 6
+                  
+                  code
+                     getlocal0
+                     pushscope
+                     jump ofs000d
+                     callstatic 3490, 7
+                     call 7
+                     throw
+            ofs000d:
+                     pushbyte 0
+                     convert_u
+                     setlocal1
+                     getlocal0
+                     getproperty QName(PackageNamespace(""),"active")
+                     jump ofs001d
+                     ifge ofs001d
+            ofs001d:
+                     iffalse ofs0025
+                     jump ofs00f7
+            ofs0025:
+                     getlocal0
+                     pushfalse
+                     iffalse ofs0032
+                     returnvoid
+                     popscope
+                     newfunction 25
+                     throw
+                     add
+                     typeof
+            ofs0032:
+                     getlocal0
+                     getproperty QName(PrivateNamespace(null,"37"),"yVel")
+                     pushbyte 1
+                     add
+                     initproperty QName(PrivateNamespace(null,"37"),"yVel")
+                     getlocal0
+                     getproperty QName(PrivateNamespace(null,"37"),"yVel")
+                     pushbyte 25
+                     ifgt ofs004a
+                     jump ofs005d
+            ofs004a:
+                     getlocal0
+                     pushtrue
+                     iftrue ofs0058
+                     pushfalse
+                     returnvalue
+                     bitor
+                     returnvoid
+                     equals
+                     greaterequals
+                     setlocal0
+                     checkfilter
+            ofs0058:
+                     pushbyte 25
+                     initproperty QName(PrivateNamespace(null,"37"),"yVel")
+            ofs005d:
+                     findproperty QName(PackageNamespace(""),"y")
+                     getlex QName(PackageNamespace(""),"y")
+                     getlocal0
+                     getproperty QName(PrivateNamespace(null,"37"),"yVel")
+                     add
+                     initproperty QName(PackageNamespace(""),"y")
+                     findpropstrict QName(ProtectedNamespace("Killstreak"),"hitTestWall")
+                     jump ofs0078
+                     convert_s
+                     pushwith
+                     newfunction 77
+                     throw
+                     setlocal2
+            ofs0078:
+                     pushbyte 0
+                     pushbyte 2
+                     callproperty QName(ProtectedNamespace("Killstreak"),"hitTestWall"), 2
+                     iftrue ofs0088
+                     jump ofs00ed
+            ofs0088:
+                     jump ofs00ab
+                     pushwith
+                     setlocal3
+            ofs008e:
+                     label
+                     jump ofs0097
+                     ifeq ofs0097
+            ofs0097:
+                     findproperty QName(PackageNamespace(""),"y")
+                     getlex QName(PackageNamespace(""),"y")
+                     decrement
+                     jump ofs00a8
+                     popscope
+                     throw
+                     typeof
+                     setlocal3
+                     setlocal0
+                     convert_s
+            ofs00a8:
+                     initproperty QName(PackageNamespace(""),"y")
+            ofs00ab:
+                     findpropstrict QName(ProtectedNamespace("Killstreak"),"hitTestWall")
+                     pushbyte 0
+                     pushbyte 2
+                     callproperty QName(ProtectedNamespace("Killstreak"),"hitTestWall"), 2
+                     iffalse ofs00c8
+                     jump ofs008e
+                     jump ofs00c2
+            ofs00c2:
+                     modulo
+                     newfunction 92
+                     throw
+                     setlocal0
+                     checkfilter
+            ofs00c8:
+                     getlocal0
+                     pushtrue
+                     initproperty QName(PackageNamespace(""),"active")
+                     getlex QName(ProtectedNamespace("Killstreak"),"MC")
+                     callpropvoid Multiname("play",[PrivateNamespace(null,"37"),PackageNamespace(""),PrivateNamespace(null,"221"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Killstreak_Tesla"),StaticProtectedNs("Killstreak_Tesla"),StaticProtectedNs("Killstreak")]), 0
+                     getlex QName(ProtectedNamespace("Killstreak"),"game")
+                     getlex QName(PackageNamespace(""),"S_Deploy")
+                     getlex QName(PackageNamespace(""),"x")
+                     getlex QName(PackageNamespace(""),"y")
+                     callpropvoid QName(PackageNamespace(""),"playScreenSound"), 3
+                     jump ofs00ed
+                     returnvalue
+                     callsuper QName(PackageNamespace(""),"int"), 6
+                     pushwith
+            ofs00ed:
+                     getlex QName(ProtectedNamespace("Killstreak"),"MC")
+                     getlex QName(PackageNamespace(""),"y")
+                     setproperty Multiname("y",[PrivateNamespace(null,"37"),PackageNamespace(""),PrivateNamespace(null,"221"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Killstreak_Tesla"),StaticProtectedNs("Killstreak_Tesla"),StaticProtectedNs("Killstreak")])
+                     returnvoid
+            ofs00f7:
+                     findpropstrict QName(PackageNamespace(""),"fc")
+                     jump ofs0102
+                     ifle ofs0102
+            ofs0102:
+                     dup
+                     setlocal2
+                     jump ofs010e
+                     popscope
+                     modulo
+                     setlocal2
+                     setlocal2
+                     pushscope
+                     returnvalue
+            ofs010e:
+                     getproperty QName(PackageNamespace(""),"fc")
+                     increment
+                     setlocal3
+                     getlocal2
+                     getlocal3
+                     setproperty QName(PackageNamespace(""),"fc")
+                     kill 3
+                     kill 2
+                     jump ofs0125
+                     setlocal0
+                     constructprop QName(PackageNamespace("Box2D.Dynamics.Joints"),"b2JointDef"), 15
+                     throw
+            ofs0125:
+                     getlex QName(PackageNamespace(""),"fc")
+                     pushbyte 35
+                     iflt ofs0132
+                     jump ofs0133
+            ofs0132:
+                     returnvoid
+            ofs0133:
+                     findpropstrict QName(ProtectedNamespace("Killstreak"),"shootTimer")
+                     dup
+                     jump ofs0141
+                     greaterequals
+                     convert_d
+                     setlocal2
+                     pop
+                     setlocal1
+                     returnvalue
+            ofs0141:
+                     setlocal2
+                     getproperty QName(ProtectedNamespace("Killstreak"),"shootTimer")
+                     increment
+                     setlocal3
+                     getlocal2
+                     jump ofs0150
+                     ifgt ofs0150
+            ofs0150:
+                     getlocal3
+                     setproperty QName(ProtectedNamespace("Killstreak"),"shootTimer")
+                     kill 3
+                     kill 2
+                     getlex QName(PackageNamespace(""),"fc")
+                     jump ofs0165
+                     increment
+                     pushwith
+                     newfunction 99
+                     throw
+                     negate
+            ofs0165:
+                     getlex QName(ProtectedNamespace("Killstreak"),"gun")
+                     getproperty QName(PackageNamespace(""),"soundFrames")
+                     modulo
+                     pushbyte 0
+                     ifeq ofs0176
+                     jump ofs0193
+            ofs0176:
+                     getlex QName(ProtectedNamespace("Killstreak"),"game")
+                     getlex QName(ProtectedNamespace("Killstreak"),"gun")
+                     getproperty QName(PackageNamespace(""),"shotSound")
+                     getlex QName(PackageNamespace(""),"x")
+                     jump ofs018c
+                     popscope
+                     nextvalue
+                     setlocal0
+                     setlocal3
+                     setlocal1
+                     increment
+            ofs018c:
+                     getlex QName(PackageNamespace(""),"y")
+                     callpropvoid QName(PackageNamespace(""),"playScreenSound"), 3
+            ofs0193:
+                     getlex QName(ProtectedNamespace("Killstreak"),"shootTimer")
+                     getlex QName(ProtectedNamespace("Killstreak"),"gun")
+                     getproperty QName(PackageNamespace(""),"shootDelay")
+                     pushbyte 30
+                     multiply
+                     ifgt ofs01a7
+                     jump ofs032c
+            ofs01a7:
+                     findproperty QName(ProtectedNamespace("Killstreak"),"shootTimer")
+                     jump ofs01b3
+                     returnvalue
+                     callsupervoid QName(PackageNamespace("Playtomic"),"PlayerLevel"), 21
+                     throw
+            ofs01b3:
+                     pushbyte 0
+                     initproperty QName(ProtectedNamespace("Killstreak"),"shootTimer")
+                     getlex QName(ProtectedNamespace("Killstreak"),"MC")
+                     getproperty Multiname("lightning",[PrivateNamespace(null,"37"),PackageNamespace(""),PrivateNamespace(null,"221"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Killstreak_Tesla"),StaticProtectedNs("Killstreak_Tesla"),StaticProtectedNs("Killstreak")])
+                     pushbyte 1
+                     jump ofs01c8
+                     ifeq ofs01c8
+            ofs01c8:
+                     callpropvoid Multiname("gotoAndPlay",[PrivateNamespace(null,"37"),PackageNamespace(""),PrivateNamespace(null,"221"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Killstreak_Tesla"),StaticProtectedNs("Killstreak_Tesla"),StaticProtectedNs("Killstreak")]), 1
+                     pushfalse
+                     iffalse ofs01d8
+                     returnvoid
+                     negate
+                     pushwith
+                     newfunction 67
+                     pop
+                     dup
+            ofs01d8:
+                     pushbyte 0
+                     convert_u
+                     setlocal1
+                     jump ofs030e
+                     pushwith
+                     setlocal2
+            ofs01e2:
+                     label
+                     getlex QName(ProtectedNamespace("Killstreak"),"game")
+                     getproperty QName(PackageNamespace(""),"units")
+                     getlocal1
+                     getproperty MultinameL([PrivateNamespace(null,"37"),PackageNamespace(""),PrivateNamespace(null,"221"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Killstreak_Tesla"),StaticProtectedNs("Killstreak_Tesla"),StaticProtectedNs("Killstreak")])
+                     getlex QName(PackageNamespace(""),"unit")
+                     pushfalse
+                     iffalse ofs01fc
+                     returnvoid
+                     popscope
+                     convert_d
+                     in
+                     typeof
+                     setlocal2
+                     setlocal1
+            ofs01fc:
+                     ifeq ofs0204
+                     jump ofs020c
+            ofs0204:
+                     jump ofs0302
+                     ifgt ofs020c
+            ofs020c:
+                     getlex QName(ProtectedNamespace("Killstreak"),"game")
+                     getproperty QName(PackageNamespace(""),"units")
+                     getlocal1
+                     getproperty MultinameL([PrivateNamespace(null,"37"),PackageNamespace(""),PrivateNamespace(null,"221"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Killstreak_Tesla"),StaticProtectedNs("Killstreak_Tesla"),StaticProtectedNs("Killstreak")])
+                     getproperty Multiname("dead",[PrivateNamespace(null,"37"),PackageNamespace(""),PrivateNamespace(null,"221"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Killstreak_Tesla"),StaticProtectedNs("Killstreak_Tesla"),StaticProtectedNs("Killstreak")])
+                     pushtrue
+                     iftrue ofs0224
+                     returnvoid
+                     checkfilter
+                     callsuper QName(PackageNamespace("flash.geom"),"Matrix"), 7
+                     pushwith
+            ofs0224:
+                     iftrue ofs022c
+                     jump ofs0232
+            ofs022c:
+                     jump ofs0302
+                     pushwith
+                     setlocal1
+            ofs0232:
+                     getlex QName(PackageNamespace(""),"unit")
+                     getproperty Multiname("team",[PrivateNamespace(null,"37"),PackageNamespace(""),PrivateNamespace(null,"221"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Killstreak_Tesla"),StaticProtectedNs("Killstreak_Tesla"),StaticProtectedNs("Killstreak")])
+                     convert_b
+                     jump ofs0241
+                     ifstricteq ofs0241
+            ofs0241:
+                     dup
+                     iffalse ofs026d
+                     pop
+                     jump ofs0250
+                     popscope
+                     constructprop QName(PackageNamespace("Box2D.Dynamics"),"b2ContactFilter"), 7
+                     pushwith
+            ofs0250:
+                     getlex QName(ProtectedNamespace("Killstreak"),"game")
+                     getproperty QName(PackageNamespace(""),"units")
+                     getlocal1
+                     getproperty MultinameL([PrivateNamespace(null,"37"),PackageNamespace(""),PrivateNamespace(null,"221"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Killstreak_Tesla"),StaticProtectedNs("Killstreak_Tesla"),StaticProtectedNs("Killstreak")])
+                     getproperty Multiname("team",[PrivateNamespace(null,"37"),PackageNamespace(""),PrivateNamespace(null,"221"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Killstreak_Tesla"),StaticProtectedNs("Killstreak_Tesla"),StaticProtectedNs("Killstreak")])
+                     getlex QName(PackageNamespace(""),"unit")
+                     getproperty Multiname("team",[PrivateNamespace(null,"37"),PackageNamespace(""),PrivateNamespace(null,"221"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Killstreak_Tesla"),StaticProtectedNs("Killstreak_Tesla"),StaticProtectedNs("Killstreak")])
+                     equals
+                     jump ofs026d
+                     popscope
+                     callsuper QName(PackageNamespace("Box2D.Dynamics.Joints"),"b2JointDef"), 21
+                     throw
+            ofs026d:
+                     iftrue ofs0275
+                     jump ofs027b
+            ofs0275:
+                     jump ofs0302
+                     throw
+                     setlocal2
+            ofs027b:
+                     getlex QName(PackageNamespace(""),"UT")
+                     getlex QName(PackageNamespace(""),"x")
+                     getlex QName(PackageNamespace(""),"y")
+                     getlex QName(ProtectedNamespace("Killstreak"),"game")
+                     getproperty QName(PackageNamespace(""),"units")
+                     getlocal1
+                     pushfalse
+                     iffalse ofs0298
+                     pushfalse
+                     returnvalue
+                     pop
+                     callsupervoid QName(PackageNamespace(""),"getNextExp"), 12
+                     setlocal3
+            ofs0298:
+                     getproperty MultinameL([PrivateNamespace(null,"37"),PackageNamespace(""),PrivateNamespace(null,"221"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Killstreak_Tesla"),StaticProtectedNs("Killstreak_Tesla"),StaticProtectedNs("Killstreak")])
+                     getproperty Multiname("x",[PrivateNamespace(null,"37"),PackageNamespace(""),PrivateNamespace(null,"221"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Killstreak_Tesla"),StaticProtectedNs("Killstreak_Tesla"),StaticProtectedNs("Killstreak")])
+                     getlex QName(ProtectedNamespace("Killstreak"),"game")
+                     getproperty QName(PackageNamespace(""),"units")
+                     getlocal1
+                     jump ofs02ad
+                     ifstricteq ofs02ad
+            ofs02ad:
+                     getproperty MultinameL([PrivateNamespace(null,"37"),PackageNamespace(""),PrivateNamespace(null,"221"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Killstreak_Tesla"),StaticProtectedNs("Killstreak_Tesla"),StaticProtectedNs("Killstreak")])
+                     getproperty Multiname("y",[PrivateNamespace(null,"37"),PackageNamespace(""),PrivateNamespace(null,"221"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Killstreak_Tesla"),StaticProtectedNs("Killstreak_Tesla"),StaticProtectedNs("Killstreak")])
+                     pushtrue
+                     iftrue ofs02bf
+                     returnvoid
+                     returnvalue
+                     bitand
+                     convert_s
+                     returnvalue
+                     dup
+                     pop
+            ofs02bf:
+                     callproperty QName(PackageNamespace(""),"getDist"), 4
+                     pushshort 200
+                     iflt ofs02ce
+                     jump ofs0302
+            ofs02ce:
+                     getlex QName(ProtectedNamespace("Killstreak"),"game")
+                     getproperty QName(PackageNamespace(""),"units")
+                     getlocal1
+                     getproperty MultinameL([PrivateNamespace(null,"37"),PackageNamespace(""),PrivateNamespace(null,"221"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Killstreak_Tesla"),StaticProtectedNs("Killstreak_Tesla"),StaticProtectedNs("Killstreak")])
+                     pushfalse
+                     iffalse ofs02e4
+                     pushfalse
+                     returnvalue
+                     setlocal2
+                     callproperty QName(PackageNamespace("flash.geom"),"Matrix"), 10
+                     pushwith
+            ofs02e4:
+                     getproperty Multiname("status",[PrivateNamespace(null,"37"),PackageNamespace(""),PrivateNamespace(null,"221"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Killstreak_Tesla"),StaticProtectedNs("Killstreak_Tesla"),StaticProtectedNs("Killstreak")])
+                     getlex QName(ProtectedNamespace("Killstreak"),"gun")
+                     getproperty QName(PackageNamespace(""),"dmg")
+                     getlex QName(PackageNamespace(""),"unit")
+                     getlex QName(ProtectedNamespace("Killstreak"),"gun")
+                     newobject 0
+                     jump ofs02fe
+                     popscope
+                     callmethod 60, 21
+                     pop
+            ofs02fe:
+                     callpropvoid Multiname("damage",[PrivateNamespace(null,"37"),PackageNamespace(""),PrivateNamespace(null,"221"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Killstreak_Tesla"),StaticProtectedNs("Killstreak_Tesla"),StaticProtectedNs("Killstreak")]), 4
+            ofs0302:
+                     getlocal1
+                     increment
+                     convert_u
+                     setlocal1
+                     jump ofs030e
+                     iflt ofs030e
+            ofs030e:
+                     getlocal1
+                     getlex QName(ProtectedNamespace("Killstreak"),"game")
+                     getproperty QName(PackageNamespace(""),"units")
+                     getproperty QName(PackageNamespace(""),"length")
+                     pushtrue
+                     iftrue ofs0324
+                     returnvoid
+                     nextvalue
+                     callsuper QName(PackageNamespace(""),"qmDiff"), 18
+                     setlocal0
+            ofs0324:
+                     ifnlt ofs032c
+                     jump ofs01e2
+            ofs032c:
+                     getlex QName(PackageNamespace(""),"unit")
+                     getproperty Multiname("dead",[PrivateNamespace(null,"37"),PackageNamespace(""),PrivateNamespace(null,"221"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Killstreak_Tesla"),StaticProtectedNs("Killstreak_Tesla"),StaticProtectedNs("Killstreak")])
+                     convert_b
+                     dup
+                     iftrue ofs034d
+                     pop
+                     pushfalse
+                     iffalse ofs0346
+                     pushtrue
+                     throw
+                     returnvoid
+                     pushwith
+                     setlocal1
+                     lshift
+                     multiply
+                     nextname
+            ofs0346:
+                     getlex QName(PackageNamespace(""),"fc")
+                     getlex QName(ProtectedNamespace("Killstreak"),"timer")
+                     greaterequals
+            ofs034d:
+                     iftrue ofs0355
+                     jump ofs0364
+            ofs0355:
+                     getlocal0
+                     callpropvoid QName(PackageNamespace(""),"end"), 0
+                     jump ofs0364
+                     negate
+                     decrement
+                     bitand
+                     increment
+                     convert_d
+                     lshift
+            ofs0364:
+                     returnvoid
+                  end ; code
+               end ; body
+            end ; method
+         }
+         
+         override public function end(param1:Boolean = true) : void
+         {
+            trait method QName(PackageNamespace(""),"end")
+               flag OVERRIDE
+               dispid 0
+               method
+                  name null
+                  flag HAS_OPTIONAL
+                  param QName(PackageNamespace(""),"Boolean")
+                  optional True()
+                  returns QName(PackageNamespace(""),"void")
+                  
+                  body
+                     maxstack 7
+                     localcount 2
+                     initscopedepth 5
+                     maxscopedepth 6
+                     
+                     code
+                        jump ofs000a
+                        newfunction 3490
+                        call 8
+                        throw
+               ofs000a:
+                        getlocal0
+                        pushscope
+                        getlocal1
+                        iftrue ofs0015
+                        jump ofs0024
+               ofs0015:
+                        getlex QName(PackageNamespace(""),"unit")
+                        jump ofs0020
+                        ifeq ofs0020
+               ofs0020:
+                        callpropvoid Multiname("endKillstreak",[PrivateNamespace(null,"37"),PackageNamespace(""),PrivateNamespace(null,"221"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Killstreak_Tesla"),StaticProtectedNs("Killstreak_Tesla"),StaticProtectedNs("Killstreak")]), 0
+               ofs0024:
+                        getlex QName(ProtectedNamespace("Killstreak"),"MC")
+                        iffalse ofs0044
+                        getlex QName(ProtectedNamespace("Killstreak"),"game")
+                        getproperty QName(PackageNamespace(""),"unitCont")
+                        pushtrue
+                        iftrue ofs003d
+                        returnvoid
+                        checkfilter
+                        newfunction 77
+                        pop
+                        convert_s
+                        pushwith
+               ofs003d:
+                        getlex QName(ProtectedNamespace("Killstreak"),"MC")
+                        callpropvoid QName(PackageNamespace(""),"removeChild"), 1
+               ofs0044:
+                        getlex QName(ProtectedNamespace("Killstreak"),"game")
+                        getproperty QName(PackageNamespace(""),"killstreaks")
+                        getlex QName(ProtectedNamespace("Killstreak"),"game")
+                        getproperty QName(PackageNamespace(""),"killstreaks")
+                        getlocal0
+                        pushfalse
+                        iffalse ofs005e
+                        pushfalse
+                        returnvalue
+                        lessequals
+                        pushwith
+                        newfunction 79
+                        throw
+                        convert_s
+               ofs005e:
+                        callproperty QName(Namespace("http://adobe.com/AS3/2006/builtin"),"indexOf"), 1
+                        pushbyte 1
+                        callpropvoid QName(Namespace("http://adobe.com/AS3/2006/builtin"),"splice"), 2
+                        getlex QName(ProtectedNamespace("Killstreak"),"game")
+                        getlex QName(PackageNamespace(""),"x")
+                        getlex QName(PackageNamespace(""),"y")
+                        pushbyte 20
+                        subtract
+                        pushstring "explosionSmall"
+                        jump ofs0081
+                        popscope
+                        pushwith
+                        newfunction 64
+                        pop
+                        in
+               ofs0081:
+                        callpropvoid QName(PackageNamespace(""),"createEffect"), 3
+                        getlex QName(ProtectedNamespace("Killstreak"),"game")
+                        getlex QName(PackageNamespace(""),"S_rocketExplode")
+                        getlex QName(PackageNamespace(""),"x")
+                        getlex QName(PackageNamespace(""),"y")
+                        jump ofs0099
+                        ifle ofs0099
+               ofs0099:
+                        callpropvoid QName(PackageNamespace(""),"playScreenSound"), 3
+                        jump ofs00a7
+                        popscope
+                        newfunction 113
+                        throw
+                        pushfalse
+                        setlocal1
+               ofs00a7:
+                        returnvoid
+                     end ; code
+                  end ; body
+               end ; method
+            }
+         }
+      }

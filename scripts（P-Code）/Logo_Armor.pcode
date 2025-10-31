@@ -1,0 +1,462 @@
+package
+{
+   import flash.display.MovieClip;
+   import flash.display.SimpleButton;
+   import flash.events.KeyboardEvent;
+   
+   public class Logo_Armor extends MovieClip
+   {
+      
+      {
+         method
+            name null
+            returns null
+            
+            body
+               maxstack 4
+               localcount 1
+               initscopedepth 9
+               maxscopedepth 10
+               
+               code
+                  jump ofs000a
+                  call 6
+                  throw
+                  newfunction 3491
+         ofs000a:
+                  getlocal0
+                  pushscope
+                  returnvoid
+               end ; code
+            end ; body
+         end ; method
+      }
+      
+      public var skip:SimpleButton;
+      
+      private var main:Main;
+      
+      public function Logo_Armor(param1:Main, param2:Object = null)
+      {
+         method
+            name null
+            flag HAS_OPTIONAL
+            param QName(PackageNamespace(""),"Main")
+            param QName(PackageNamespace(""),"Object")
+            optional Null()
+            returns null
+            
+            body
+               maxstack 6
+               localcount 3
+               initscopedepth 10
+               maxscopedepth 11
+               
+               code
+                  getlocal0
+                  jump ofs000c
+                  call 9
+                  throw
+                  callstatic 3493, 9
+         ofs000c:
+                  pushscope
+                  getlocal0
+                  constructsuper 0
+                  findpropstrict QName(PackageNamespace(""),"addFrameScript")
+                  pushshort 206
+                  jump ofs001e
+                  ifne ofs001e
+         ofs001e:
+                  getlocal0
+                  getproperty QName(PackageInternalNs(""),"frame207")
+                  jump ofs002c
+                  returnvalue
+                  greaterequals
+                  dup
+                  setlocal3
+                  modulo
+                  coerce_s
+         ofs002c:
+                  callpropvoid QName(PackageNamespace(""),"addFrameScript"), 2
+                  getlocal0
+                  getlocal1
+                  initproperty QName(PrivateNamespace(null,"76"),"main")
+                  getlocal0
+                  getproperty QName(PackageNamespace(""),"skip")
+                  getlex QName(PackageNamespace(""),"Main")
+                  pushtrue
+                  setproperty QName(PackageNamespace(""),"visible")
+                  jump ofs004a
+                  istypelate
+                  newfunction 14
+                  pop
+                  pushnull
+                  nextname
+         ofs004a:
+                  findproperty QName(PackageNamespace(""),"buttonMode")
+                  getlocal0
+                  callproperty QName(PackageNamespace(""),"clickable"), 0
+                  initproperty QName(PackageNamespace(""),"buttonMode")
+                  returnvoid
+               end ; code
+            end ; body
+         end ; method
+      }
+      
+      public function logoDone() : void
+      {
+         trait method QName(PackageNamespace(""),"logoDone")
+            dispid 0
+            method
+               name null
+               returns QName(PackageNamespace(""),"void")
+               
+               body
+                  maxstack 4
+                  localcount 1
+                  initscopedepth 10
+                  maxscopedepth 11
+                  
+                  code
+                     jump ofs000b
+                     callmethod 3490, 10
+                     call 10
+                     throw
+            ofs000b:
+                     getlocal0
+                     pushscope
+                     getlocal0
+                     getproperty QName(PrivateNamespace(null,"76"),"main")
+                     callpropvoid QName(PackageNamespace(""),"logoArmorDone"), 0
+                     jump ofs001d
+                     ifstricteq ofs001d
+            ofs001d:
+                     findpropstrict QName(PackageNamespace(""),"stop")
+                     callpropvoid QName(PackageNamespace(""),"stop"), 0
+                     returnvoid
+                  end ; code
+               end ; body
+            end ; method
+         }
+         
+         public function MouseDown() : void
+         {
+            trait method QName(PackageNamespace(""),"MouseDown")
+               dispid 0
+               method
+                  name null
+                  returns QName(PackageNamespace(""),"void")
+                  
+                  body
+                     maxstack 7
+                     localcount 1
+                     initscopedepth 10
+                     maxscopedepth 11
+                     
+                     code
+                        getlocal0
+                        pushscope
+                        jump ofs000c
+                        newfunction 3491
+                        call 6
+                        throw
+               ofs000c:
+                        getlocal0
+                        getproperty QName(PackageNamespace(""),"skip")
+                        getproperty QName(PackageNamespace(""),"visible")
+                        convert_b
+                        dup
+                        jump ofs001d
+                        ifle ofs001d
+               ofs001d:
+                        iftrue ofs0025
+                        jump ofs0040
+               ofs0025:
+                        pop
+                        getlocal0
+                        getproperty QName(PackageNamespace(""),"skip")
+                        jump ofs0034
+                        in
+                        equals
+                        checkfilter
+                        setlocal2
+                        greaterequals
+                        pop
+               ofs0034:
+                        getlex QName(PackageNamespace(""),"mouseX")
+                        getlex QName(PackageNamespace(""),"mouseY")
+                        pushfalse
+                        callproperty QName(PackageNamespace(""),"hitTestPoint"), 3
+                        convert_b
+               ofs0040:
+                        iftrue ofs0048
+                        jump ofs005f
+               ofs0048:
+                        getlocal0
+                        callpropvoid QName(PackageNamespace(""),"logoDone"), 0
+                        jump ofs0074
+                        throw
+                        setlocal0
+                        pushtrue
+                        iftrue ofs0058
+               ofs0058:
+                        returnvoid
+                        setlocal3
+                        newfunction 63
+                        throw
+                        setlocal1
+                        divide
+               ofs005f:
+                        getlocal0
+                        callproperty QName(PackageNamespace(""),"clickable"), 0
+                        iftrue ofs006c
+                        jump ofs0074
+               ofs006c:
+                        getlex QName(PackageNamespace(""),"SD")
+                        pushtrue
+                        callpropvoid QName(PackageNamespace(""),"urlArmor"), 1
+               ofs0074:
+                        returnvoid
+                     end ; code
+                  end ; body
+               end ; method
+            }
+            
+            public function clickable() : Boolean
+            {
+               trait method QName(PackageNamespace(""),"clickable")
+                  dispid 0
+                  method
+                     name null
+                     returns QName(PackageNamespace(""),"Boolean")
+                     
+                     body
+                        maxstack 4
+                        localcount 1
+                        initscopedepth 10
+                        maxscopedepth 11
+                        
+                        code
+                           getlocal0
+                           jump ofs000c
+                           callmethod 3492, 5
+                           call 5
+                           throw
+                  ofs000c:
+                           pushscope
+                           getlex QName(PackageNamespace(""),"Main")
+                           getproperty QName(PackageNamespace(""),"SPONSORSITE")
+                           not
+                           returnvalue
+                           jump ofs0019
+                  ofs0019:
+                           ifstricteq ofs001d
+                        end ; code
+                     end ; body
+                  end ; method
+               }
+               
+               public function MouseUp() : void
+               {
+                  trait method QName(PackageNamespace(""),"MouseUp")
+                     dispid 0
+                     method
+                        name null
+                        returns QName(PackageNamespace(""),"void")
+                        
+                        body
+                           maxstack 4
+                           localcount 1
+                           initscopedepth 10
+                           maxscopedepth 11
+                           
+                           code
+                              jump ofs000b
+                              call 6
+                              callstatic 3492, 6
+                              throw
+                     ofs000b:
+                              getlocal0
+                              pushscope
+                              returnvoid
+                           end ; code
+                        end ; body
+                     end ; method
+                  }
+                  
+                  public function KeyDown(param1:KeyboardEvent) : void
+                  {
+                     trait method QName(PackageNamespace(""),"KeyDown")
+                        dispid 0
+                        method
+                           name null
+                           param QName(PackageNamespace("flash.events"),"KeyboardEvent")
+                           returns QName(PackageNamespace(""),"void")
+                           
+                           body
+                              maxstack 4
+                              localcount 2
+                              initscopedepth 10
+                              maxscopedepth 11
+                              
+                              code
+                                 jump ofs000b
+                                 call 8
+                                 throw
+                                 callmethod 3493, 8
+                        ofs000b:
+                                 getlocal0
+                                 pushscope
+                                 returnvoid
+                              end ; code
+                           end ; body
+                        end ; method
+                     }
+                     
+                     public function KeyUp(param1:KeyboardEvent) : void
+                     {
+                        trait method QName(PackageNamespace(""),"KeyUp")
+                           dispid 0
+                           method
+                              name null
+                              param QName(PackageNamespace("flash.events"),"KeyboardEvent")
+                              returns QName(PackageNamespace(""),"void")
+                              
+                              body
+                                 maxstack 4
+                                 localcount 2
+                                 initscopedepth 10
+                                 maxscopedepth 11
+                                 
+                                 code
+                                    getlocal0
+                                    pushscope
+                                    jump ofs000d
+                                    callmethod 3492, 10
+                                    call 10
+                                    throw
+                           ofs000d:
+                                    returnvoid
+                                 end ; code
+                              end ; body
+                           end ; method
+                        }
+                        
+                        public function flashActivate() : void
+                        {
+                           trait method QName(PackageNamespace(""),"flashActivate")
+                              dispid 0
+                              method
+                                 name null
+                                 returns QName(PackageNamespace(""),"void")
+                                 
+                                 body
+                                    maxstack 4
+                                    localcount 1
+                                    initscopedepth 10
+                                    maxscopedepth 11
+                                    
+                                    code
+                                       getlocal0
+                                       jump ofs000c
+                                       call 9
+                                       callstatic 3493, 9
+                                       throw
+                              ofs000c:
+                                       pushscope
+                                       returnvoid
+                                    end ; code
+                                 end ; body
+                              end ; method
+                           }
+                           
+                           public function flashDeactivate() : void
+                           {
+                              trait method QName(PackageNamespace(""),"flashDeactivate")
+                                 dispid 0
+                                 method
+                                    name null
+                                    returns QName(PackageNamespace(""),"void")
+                                    
+                                    body
+                                       maxstack 4
+                                       localcount 1
+                                       initscopedepth 10
+                                       maxscopedepth 11
+                                       
+                                       code
+                                          jump ofs000b
+                                          call 9
+                                          throw
+                                          callmethod 3492, 9
+                                 ofs000b:
+                                          getlocal0
+                                          pushscope
+                                          returnvoid
+                                       end ; code
+                                    end ; body
+                                 end ; method
+                              }
+                              
+                              public function EnterFrame() : void
+                              {
+                                 trait method QName(PackageNamespace(""),"EnterFrame")
+                                    dispid 0
+                                    method
+                                       name null
+                                       returns QName(PackageNamespace(""),"void")
+                                       
+                                       body
+                                          maxstack 4
+                                          localcount 1
+                                          initscopedepth 10
+                                          maxscopedepth 11
+                                          
+                                          code
+                                             getlocal0
+                                             pushscope
+                                             jump ofs000d
+                                             call 8
+                                             throw
+                                             callstatic 3493, 8
+                                    ofs000d:
+                                             returnvoid
+                                          end ; code
+                                       end ; body
+                                    end ; method
+                                 }
+                                 
+                                 function frame207() : *
+                                 {
+                                    trait method QName(PackageInternalNs(""),"frame207")
+                                       dispid 0
+                                       method
+                                          name null
+                                          returns null
+                                          
+                                          body
+                                             maxstack 4
+                                             localcount 1
+                                             initscopedepth 10
+                                             maxscopedepth 11
+                                             
+                                             code
+                                                jump ofs000a
+                                                call 9
+                                                throw
+                                                newfunction 3492
+                                       ofs000a:
+                                                getlocal0
+                                                pushscope
+                                                getlocal0
+                                                callpropvoid QName(PackageNamespace(""),"logoDone"), 0
+                                                returnvoid
+                                                jump ofs0016
+                                       ofs0016:
+                                                ifeq ofs001a
+                                             end ; code
+                                          end ; body
+                                       end ; method
+                                    }
+                                 }
+                              }

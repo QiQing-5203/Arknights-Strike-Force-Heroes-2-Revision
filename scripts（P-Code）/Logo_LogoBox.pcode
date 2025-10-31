@@ -1,0 +1,399 @@
+package
+{
+   import flash.display.MovieClip;
+   import flash.display.SimpleButton;
+   import flash.events.Event;
+   import flash.events.MouseEvent;
+   
+   public class Logo_LogoBox extends MovieClip
+   {
+      
+      {
+         method
+            name null
+            returns null
+            
+            body
+               maxstack 4
+               localcount 1
+               initscopedepth 9
+               maxscopedepth 10
+               
+               code
+                  getlocal0
+                  jump ofs000b
+                  call 9
+                  throw
+                  newclass 477
+         ofs000b:
+                  pushscope
+                  returnvoid
+               end ; code
+            end ; body
+         end ; method
+      }
+      
+      public var btn:SimpleButton;
+      
+      private var armorButton:Boolean;
+      
+      private var alwaysEnable:Boolean;
+      
+      public function Logo_LogoBox()
+      {
+         method
+            name null
+            returns null
+            
+            body
+               maxstack 9
+               localcount 1
+               initscopedepth 10
+               maxscopedepth 11
+               
+               code
+                  getlocal0
+                  jump ofs000c
+                  call 6
+                  callmethod 3494, 6
+                  throw
+         ofs000c:
+                  pushscope
+                  getlocal0
+                  constructsuper 0
+                  getlex QName(PackageNamespace(""),"name")
+                  pushstring "logo1"
+                  jump ofs001e
+                  ifne ofs001e
+         ofs001e:
+                  ifeq ofs0026
+                  jump ofs0040
+         ofs0026:
+                  getlocal0
+                  getlex QName(PackageNamespace(""),"Main")
+                  getproperty QName(PackageNamespace(""),"ARMORFIRST")
+                  initproperty QName(PrivateNamespace(null,"77"),"armorButton")
+                  jump ofs003a
+                  multiply
+                  pushwith
+                  newfunction 115
+                  throw
+                  in
+         ofs003a:
+                  jump ofs0059
+                  pushwith
+                  setlocal2
+         ofs0040:
+                  getlex QName(PackageNamespace(""),"name")
+                  pushstring "logo2"
+                  ifeq ofs004e
+                  jump ofs0059
+         ofs004e:
+                  getlocal0
+                  getlex QName(PackageNamespace(""),"Main")
+                  getproperty QName(PackageNamespace(""),"ARMORFIRST")
+                  not
+                  initproperty QName(PrivateNamespace(null,"77"),"armorButton")
+         ofs0059:
+                  getlex QName(PackageNamespace(""),"name")
+                  jump ofs0065
+                  popscope
+                  callmethod 92, 15
+                  pop
+         ofs0065:
+                  pushstring "logo1b"
+                  ifeq ofs0070
+                  jump ofs008f
+         ofs0070:
+                  getlocal0
+                  pushtrue
+                  initproperty QName(PrivateNamespace(null,"77"),"alwaysEnable")
+                  getlocal0
+                  getlex QName(PackageNamespace(""),"Main")
+                  getproperty QName(PackageNamespace(""),"ARMORFIRST")
+                  initproperty QName(PrivateNamespace(null,"77"),"armorButton")
+                  jump ofs0089
+                  coerce_s
+                  callproperty QName(PackageNamespace(""),"useClassOnly"), 20
+                  setlocal2
+         ofs0089:
+                  jump ofs00bf
+                  throw
+                  setlocal0
+         ofs008f:
+                  getlex QName(PackageNamespace(""),"name")
+                  pushstring "logo2b"
+                  ifeq ofs009d
+                  jump ofs00bf
+         ofs009d:
+                  getlocal0
+                  jump ofs00a6
+                  ifstrictne ofs00a6
+         ofs00a6:
+                  pushtrue
+                  initproperty QName(PrivateNamespace(null,"77"),"alwaysEnable")
+                  getlocal0
+                  jump ofs00b5
+                  add
+                  newfunction 126
+                  pushwith
+                  setlocal0
+                  returnvalue
+         ofs00b5:
+                  getlex QName(PackageNamespace(""),"Main")
+                  getproperty QName(PackageNamespace(""),"ARMORFIRST")
+                  not
+                  initproperty QName(PrivateNamespace(null,"77"),"armorButton")
+         ofs00bf:
+                  getlocal0
+                  getproperty QName(PrivateNamespace(null,"77"),"armorButton")
+                  iftrue ofs00cb
+                  jump ofs00e5
+         ofs00cb:
+                  findpropstrict QName(PackageNamespace(""),"gotoAndStop")
+                  pushbyte 1
+                  pushtrue
+                  iftrue ofs00db
+                  returnvoid
+                  popscope
+                  callpropvoid QName(PackageNamespace("Box2D.Dynamics.Joints"),"b2GearJointDef"), 8
+                  pushwith
+         ofs00db:
+                  callpropvoid QName(PackageNamespace(""),"gotoAndStop"), 1
+                  jump ofs00ee
+                  pushwith
+                  setlocal3
+         ofs00e5:
+                  findpropstrict QName(PackageNamespace(""),"gotoAndStop")
+                  pushbyte 2
+                  callpropvoid QName(PackageNamespace(""),"gotoAndStop"), 1
+         ofs00ee:
+                  getlocal0
+                  getproperty QName(PrivateNamespace(null,"77"),"alwaysEnable")
+                  iftrue ofs0106
+                  jump ofs0136
+                  pushtrue
+                  iftrue ofs00ff
+         ofs00ff:
+                  returnvoid
+                  popscope
+                  newfunction 49
+                  throw
+                  setlocal0
+                  bitor
+         ofs0106:
+                  getlocal0
+                  getproperty QName(PackageNamespace(""),"btn")
+                  getlex QName(PackageNamespace("flash.events"),"MouseEvent")
+                  getproperty QName(PackageNamespace(""),"CLICK")
+                  getlocal0
+                  jump ofs0118
+                  ifstrictne ofs0118
+         ofs0118:
+                  getproperty QName(PrivateNamespace(null,"77"),"MouseClick")
+                  pushfalse
+                  iffalse ofs0126
+                  returnvoid
+                  lessequals
+                  callstatic 75, 7
+                  pushwith
+         ofs0126:
+                  pushfalse
+                  pushbyte 0
+                  pushtrue
+                  callpropvoid QName(PackageNamespace(""),"addEventListener"), 5
+                  jump ofs0221
+                  ifstrictne ofs0136
+         ofs0136:
+                  getlocal0
+                  getproperty QName(PrivateNamespace(null,"77"),"armorButton")
+                  not
+                  dup
+                  jump ofs0145
+                  popscope
+                  callproplex QName(PackageNamespace(""),"Inventory_Armor"), 5
+                  pushwith
+         ofs0145:
+                  iftrue ofs014d
+                  jump ofs0155
+         ofs014d:
+                  pop
+                  getlex QName(PackageNamespace(""),"Main")
+                  getproperty QName(PackageNamespace(""),"SPONSORSITE")
+                  convert_b
+         ofs0155:
+                  dup
+                  pushtrue
+                  iftrue ofs0161
+                  returnvoid
+                  popscope
+                  callproplex QName(PackageNamespace("Box2D.Dynamics"),"b2ContactFilter"), 30
+                  pop
+         ofs0161:
+                  iftrue ofs0169
+                  jump ofs0179
+         ofs0169:
+                  pop
+                  getlex QName(PackageNamespace(""),"Main")
+                  getproperty QName(PackageNamespace(""),"ARMORFIRST")
+                  convert_b
+                  jump ofs0179
+                  ifstrictne ofs0179
+         ofs0179:
+                  iffalse ofs0197
+                  jump ofs0187
+                  istypelate
+                  newfunction 11
+                  pop
+                  setlocal2
+                  lshift
+         ofs0187:
+                  getlocal0
+                  getproperty QName(PackageNamespace(""),"btn")
+                  pushfalse
+                  setproperty QName(PackageNamespace(""),"enabled")
+                  jump ofs0221
+                  ifne ofs0197
+         ofs0197:
+                  getlocal0
+                  jump ofs01a2
+                  pushfalse
+                  coerce_s
+                  increment
+                  modulo
+                  greaterequals
+                  modulo
+         ofs01a2:
+                  getproperty QName(PrivateNamespace(null,"77"),"armorButton")
+                  convert_b
+                  dup
+                  iftrue ofs01af
+                  jump ofs01b7
+         ofs01af:
+                  pop
+                  getlex QName(PackageNamespace(""),"Main")
+                  getproperty QName(PackageNamespace(""),"SPONSORSITE")
+                  convert_b
+         ofs01b7:
+                  dup
+                  jump ofs01c2
+                  typeof
+                  pushwith
+                  newfunction 26
+                  throw
+                  returnvalue
+         ofs01c2:
+                  iftrue ofs01ca
+                  jump ofs01da
+         ofs01ca:
+                  pop
+                  getlex QName(PackageNamespace(""),"Main")
+                  getproperty QName(PackageNamespace(""),"ARMORFIRST")
+                  not
+                  jump ofs01da
+                  iflt ofs01da
+         ofs01da:
+                  iffalse ofs01f8
+                  getlocal0
+                  jump ofs01e9
+                  popscope
+                  nextname
+                  dup
+                  convert_s
+                  bitxor
+                  returnvoid
+         ofs01e9:
+                  getproperty QName(PackageNamespace(""),"btn")
+                  pushfalse
+                  setproperty QName(PackageNamespace(""),"enabled")
+                  jump ofs0221
+                  ifstricteq ofs01f8
+         ofs01f8:
+                  getlocal0
+                  getproperty QName(PackageNamespace(""),"btn")
+                  getlex QName(PackageNamespace("flash.events"),"MouseEvent")
+                  jump ofs0208
+                  pop
+                  setlocal3
+                  bitor
+                  bitand
+                  bitor
+                  returnvoid
+         ofs0208:
+                  getproperty QName(PackageNamespace(""),"CLICK")
+                  getlocal0
+                  getproperty QName(PrivateNamespace(null,"77"),"MouseClick")
+                  pushfalse
+                  pushbyte 0
+                  pushtrue
+                  jump ofs021d
+                  bitxor
+                  newfunction 88
+                  throw
+                  in
+                  decrement
+         ofs021d:
+                  callpropvoid QName(PackageNamespace(""),"addEventListener"), 5
+         ofs0221:
+                  returnvoid
+               end ; code
+            end ; body
+         end ; method
+      }
+      
+      private function MouseClick(param1:Event) : void
+      {
+         trait method QName(PrivateNamespace(null,"77"),"MouseClick")
+            dispid 0
+            method
+               name null
+               param QName(PackageNamespace("flash.events"),"Event")
+               returns QName(PackageNamespace(""),"void")
+               
+               body
+                  maxstack 4
+                  localcount 2
+                  initscopedepth 10
+                  maxscopedepth 11
+                  
+                  code
+                     getlocal0
+                     pushscope
+                     jump ofs000d
+                     call 8
+                     throw
+                     callstatic 3491, 8
+            ofs000d:
+                     getlocal0
+                     getproperty QName(PrivateNamespace(null,"77"),"armorButton")
+                     iftrue ofs0019
+                     jump ofs002e
+            ofs0019:
+                     getlex QName(PackageNamespace(""),"SD")
+                     callpropvoid QName(PackageNamespace(""),"urlArmor"), 0
+                     jump ofs0028
+                     iflt ofs0028
+            ofs0028:
+                     jump ofs0041
+                     pushwith
+                     setlocal2
+            ofs002e:
+                     getlex QName(PackageNamespace(""),"SD")
+                     pushfalse
+                     iffalse ofs003d
+                     returnvoid
+                     nextname
+                     dxns "PlayerLevel"
+                     pushwith
+                     typeof
+                     dup
+            ofs003d:
+                     callpropvoid QName(PackageNamespace(""),"urlNotDoppler"), 0
+            ofs0041:
+                     returnvoid
+                  end ; code
+               end ; body
+            end ; method
+         }
+      }
+   }

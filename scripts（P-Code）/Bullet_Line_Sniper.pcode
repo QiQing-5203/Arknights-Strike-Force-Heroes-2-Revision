@@ -1,0 +1,928 @@
+package
+{
+   public class Bullet_Line_Sniper extends Bullet
+   {
+      
+      {
+         method
+            name null
+            returns null
+            
+            body
+               maxstack 4
+               localcount 1
+               initscopedepth 4
+               maxscopedepth 5
+               
+               code
+                  getlocal0
+                  jump ofs000c
+                  call 7
+                  throw
+                  callmethod 3491, 7
+         ofs000c:
+                  pushscope
+                  returnvoid
+               end ; code
+            end ; body
+         end ; method
+      }
+      
+      private var linePath:Array;
+      
+      private var alpha:Number = 1;
+      
+      public function Bullet_Line_Sniper(param1:Game, param2:Unit, param3:Number, param4:Number, param5:Number, param6:Number, param7:Stats_Guns, param8:Object = null)
+      {
+         method
+            name null
+            flag HAS_OPTIONAL
+            param QName(PackageNamespace(""),"Game")
+            param QName(PackageNamespace(""),"Unit")
+            param QName(PackageNamespace(""),"Number")
+            param QName(PackageNamespace(""),"Number")
+            param QName(PackageNamespace(""),"Number")
+            param QName(PackageNamespace(""),"Number")
+            param QName(PackageNamespace(""),"Stats_Guns")
+            param QName(PackageNamespace(""),"Object")
+            optional Null()
+            returns null
+            
+            body
+               maxstack 13
+               localcount 14
+               initscopedepth 5
+               maxscopedepth 6
+               
+               code
+                  jump ofs000a
+                  newfunction 3490
+                  call 6
+                  throw
+         ofs000a:
+                  getlocal0
+                  pushscope
+                  pushbyte 0
+                  convert_u
+                  setlocal 9
+                  jump ofs0019
+                  ifeq ofs0019
+         ofs0019:
+                  getlocal0
+                  getlocal1
+                  getlocal2
+                  getlocal3
+                  getlocal 4
+                  jump ofs0029
+                  returnvoid
+                  throw
+                  divide
+                  coerce_s
+                  pushwith
+                  returnvoid
+         ofs0029:
+                  getlocal 5
+                  getlocal 6
+                  getlocal 7
+                  pushfalse
+                  getlocal 8
+                  constructsuper 9
+                  pushbyte 0
+                  convert_u
+                  jump ofs0041
+                  typeof
+                  pushwith
+                  newfunction 116
+                  throw
+                  nextname
+         ofs0041:
+                  setlocal 9
+                  jump ofs00b4
+                  pushwith
+                  setlocal0
+         ofs0049:
+                  label
+                  findproperty QName(ProtectedNamespace("Bullet"),"x")
+                  getlex QName(ProtectedNamespace("Bullet"),"x")
+                  getlex QName(ProtectedNamespace("Bullet"),"xVel")
+                  pushfalse
+                  iffalse ofs005e
+                  returnvoid
+                  popscope
+                  callmethod 40, 30
+                  throw
+         ofs005e:
+                  add
+                  initproperty QName(ProtectedNamespace("Bullet"),"x")
+                  findproperty QName(ProtectedNamespace("Bullet"),"y")
+                  getlex QName(ProtectedNamespace("Bullet"),"y")
+                  getlex QName(ProtectedNamespace("Bullet"),"yVel")
+                  jump ofs0073
+                  ifge ofs0073
+         ofs0073:
+                  add
+                  initproperty QName(ProtectedNamespace("Bullet"),"y")
+                  findproperty QName(ProtectedNamespace("Bullet"),"hitObject")
+                  findpropstrict QName(ProtectedNamespace("Bullet"),"hitTestAll")
+                  jump ofs0087
+                  pushwith
+                  callmethod 3566, 12
+                  setlocal3
+         ofs0087:
+                  callproperty QName(ProtectedNamespace("Bullet"),"hitTestAll"), 0
+                  dup
+                  setlocal 13
+                  initproperty QName(ProtectedNamespace("Bullet"),"hitObject")
+                  getlocal 13
+                  kill 13
+                  iftrue ofs009d
+                  jump ofs00a4
+         ofs009d:
+                  jump ofs00d2
+                  pushwith
+                  setlocal1
+                  getlocal1
+         ofs00a4:
+                  getlocal 9
+                  increment
+                  jump ofs00b1
+                  setlocal1
+                  pushnull
+                  multiply
+                  setlocal2
+                  increment
+                  setlocal2
+         ofs00b1:
+                  convert_u
+                  setlocal 9
+         ofs00b4:
+                  getlocal 9
+                  findpropstrict QName(PackageNamespace(""),"uint")
+                  getlex QName(ProtectedNamespace("Bullet"),"maxDist")
+                  pushbyte 10
+                  divide
+                  callproperty QName(PackageNamespace(""),"uint"), 1
+                  ifnlt ofs00d2
+                  jump ofs0049
+                  jump ofs00cd
+         ofs00cd:
+                  in
+                  callproperty QName(PackageNamespace(""),"PhysWorld"), 5
+                  pushwith
+         ofs00d2:
+                  findpropstrict QName(ProtectedNamespace("Bullet"),"doHitEffect")
+                  callpropvoid QName(ProtectedNamespace("Bullet"),"doHitEffect"), 0
+                  findproperty QName(ProtectedNamespace("Bullet"),"curDist")
+                  getlex QName(PackageNamespace(""),"Math")
+                  getlex QName(PackageNamespace(""),"UT")
+                  jump ofs00ea
+                  iflt ofs00ea
+         ofs00ea:
+                  getlex QName(ProtectedNamespace("Bullet"),"ox")
+                  jump ofs00f7
+                  popscope
+                  pushwith
+                  newfunction 15
+                  throw
+                  lessequals
+         ofs00f7:
+                  getlex QName(ProtectedNamespace("Bullet"),"oy")
+                  getlex QName(ProtectedNamespace("Bullet"),"x")
+                  getlex QName(ProtectedNamespace("Bullet"),"y")
+                  callproperty QName(PackageNamespace(""),"getDist"), 4
+                  callproperty QName(PackageNamespace(""),"round"), 1
+                  initproperty QName(ProtectedNamespace("Bullet"),"curDist")
+                  getlex QName(ProtectedNamespace("Bullet"),"stats")
+                  getproperty QName(PackageNamespace(""),"params")
+                  pushbyte 0
+                  getproperty MultinameL([PrivateNamespace(null,"43"),PackageNamespace(""),PrivateNamespace(null,"226"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Bullet_Line_Sniper"),StaticProtectedNs("Bullet_Line_Sniper"),StaticProtectedNs("Bullet")])
+                  jump ofs0120
+                  popscope
+                  add
+                  setlocal2
+                  throw
+                  decrement
+                  multiply
+         ofs0120:
+                  iftrue ofs0128
+                  jump ofs0131
+         ofs0128:
+                  pushdouble 0.2
+                  convert_d
+                  jump ofs0134
+                  pushwith
+                  setlocal3
+         ofs0131:
+                  pushdouble -0.2
+                  convert_d
+         ofs0134:
+                  convert_d
+                  setlocal 10
+                  getlex QName(ProtectedNamespace("Bullet"),"stats")
+                  getproperty QName(PackageNamespace(""),"params")
+                  jump ofs0147
+                  pushscope
+                  call 39
+                  pushwith
+                  negate
+                  lessequals
+         ofs0147:
+                  pushbyte 0
+                  getproperty MultinameL([PrivateNamespace(null,"43"),PackageNamespace(""),PrivateNamespace(null,"226"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Bullet_Line_Sniper"),StaticProtectedNs("Bullet_Line_Sniper"),StaticProtectedNs("Bullet")])
+                  iftrue ofs0154
+                  jump ofs0167
+         ofs0154:
+                  pushdouble 0.5
+                  convert_d
+                  jump ofs015f
+                  ifle ofs015f
+         ofs015f:
+                  jump ofs016a
+                  iflt ofs0167
+         ofs0167:
+                  pushdouble 0.2
+                  convert_d
+         ofs016a:
+                  convert_d
+                  setlocal 11
+                  jump ofs0176
+                  popscope
+                  callsuper QName(PackageNamespace("Box2D.Collision"),"b2Manifold"), 27
+                  throw
+         ofs0176:
+                  getlocal0
+                  findpropstrict QName(PackageNamespace(""),"Array")
+                  constructprop QName(PackageNamespace(""),"Array"), 0
+                  initproperty QName(PrivateNamespace(null,"43"),"linePath")
+                  getlocal0
+                  getproperty QName(PrivateNamespace(null,"43"),"linePath")
+                  pushstring "x"
+                  getlex QName(ProtectedNamespace("Bullet"),"ox")
+                  pushstring "y"
+                  jump ofs0196
+                  throw
+                  setlocal1
+                  increment
+                  returnvoid
+                  setlocal1
+                  setlocal3
+         ofs0196:
+                  getlex QName(ProtectedNamespace("Bullet"),"oy")
+                  pushstring "lift"
+                  getlex QName(PackageNamespace(""),"UT")
+                  getlocal 10
+                  getlocal 11
+                  callproperty QName(PackageNamespace(""),"rand"), 2
+                  newobject 3
+                  jump ofs01b3
+                  decrement
+                  pushwith
+                  instanceof
+                  setlocal2
+                  greaterequals
+                  checkfilter
+         ofs01b3:
+                  callpropvoid QName(Namespace("http://adobe.com/AS3/2006/builtin"),"push"), 1
+                  pushbyte 0
+                  convert_u
+                  setlocal 9
+                  jump ofs023d
+                  pushwith
+                  setlocal2
+         ofs01c2:
+                  label
+                  jump ofs01cb
+                  ifeq ofs01cb
+         ofs01cb:
+                  getlocal0
+                  getproperty QName(PrivateNamespace(null,"43"),"linePath")
+                  pushfalse
+                  iffalse ofs01dc
+                  pushfalse
+                  returnvalue
+                  pushscope
+                  pushwith
+                  newfunction 1
+                  throw
+                  returnvoid
+         ofs01dc:
+                  pushstring "x"
+                  getlex QName(ProtectedNamespace("Bullet"),"ox")
+                  getlex QName(PackageNamespace(""),"UT")
+                  getlex QName(ProtectedNamespace("Bullet"),"rotation")
+                  getlocal 9
+                  callproperty QName(PackageNamespace(""),"xMoveToRot"), 2
+                  add
+                  pushstring "y"
+                  getlex QName(ProtectedNamespace("Bullet"),"oy")
+                  pushtrue
+                  iftrue ofs0200
+                  returnvoid
+                  popscope
+                  callpropvoid QName(PackageNamespace(""),"Inventory_Gun"), 10
+                  pushwith
+         ofs0200:
+                  getlex QName(PackageNamespace(""),"UT")
+                  getlex QName(ProtectedNamespace("Bullet"),"rotation")
+                  getlocal 9
+                  callproperty QName(PackageNamespace(""),"yMoveToRot"), 2
+                  add
+                  pushstring "lift"
+                  getlex QName(PackageNamespace(""),"UT")
+                  getlocal 10
+                  getlocal 11
+                  pushfalse
+                  iffalse ofs0223
+                  returnvoid
+                  popscope
+                  pushwith
+                  newfunction 46
+                  throw
+                  increment
+         ofs0223:
+                  callproperty QName(PackageNamespace(""),"rand"), 2
+                  newobject 3
+                  callpropvoid QName(Namespace("http://adobe.com/AS3/2006/builtin"),"push"), 1
+                  getlocal 9
+                  pushbyte 30
+                  jump ofs0239
+                  ifge ofs0239
+         ofs0239:
+                  add
+                  convert_u
+                  setlocal 9
+         ofs023d:
+                  getlocal 9
+                  getlex QName(ProtectedNamespace("Bullet"),"curDist")
+                  pushtrue
+                  iftrue ofs024e
+                  returnvoid
+                  popscope
+                  callproplex QName(PackageNamespace(""),"getReccLevel"), 14
+                  setlocal2
+         ofs024e:
+                  ifnlt ofs0256
+                  jump ofs01c2
+         ofs0256:
+                  getlocal0
+                  getproperty QName(PrivateNamespace(null,"43"),"linePath")
+                  pushstring "x"
+                  getlex QName(ProtectedNamespace("Bullet"),"x")
+                  pushstring "y"
+                  jump ofs026d
+                  returnvoid
+                  newfunction 64
+                  pop
+                  convert_d
+                  greaterequals
+         ofs026d:
+                  getlex QName(ProtectedNamespace("Bullet"),"y")
+                  pushstring "lift"
+                  getlex QName(PackageNamespace(""),"UT")
+                  getlocal 10
+                  getlocal 11
+                  callproperty QName(PackageNamespace(""),"rand"), 2
+                  jump ofs0288
+                  setlocal2
+                  dup
+                  in
+                  in
+                  add
+                  in
+         ofs0288:
+                  newobject 3
+                  callpropvoid QName(Namespace("http://adobe.com/AS3/2006/builtin"),"push"), 1
+                  pushbyte 0
+                  convert_u
+                  setlocal 12
+                  jump ofs029b
+                  ifle ofs029b
+         ofs029b:
+                  jump ofs03fd
+                  iflt ofs02a3
+         ofs02a3:
+                  label
+                  pushtrue
+                  iftrue ofs02b0
+                  returnvoid
+                  in
+                  pushwith
+                  newfunction 59
+                  pop
+                  setlocal1
+         ofs02b0:
+                  getlex QName(ProtectedNamespace("Bullet"),"game")
+                  getproperty QName(PackageNamespace(""),"lineCont")
+                  getproperty QName(PackageNamespace(""),"graphics")
+                  getlex QName(ProtectedNamespace("Bullet"),"stats")
+                  getproperty QName(PackageNamespace(""),"params")
+                  getlocal 12
+                  pushbyte 3
+                  multiply
+                  jump ofs02ce
+                  popscope
+                  dup
+                  typeof
+                  returnvalue
+                  nextname
+                  returnvalue
+         ofs02ce:
+                  pushbyte 1
+                  add
+                  getproperty MultinameL([PrivateNamespace(null,"43"),PackageNamespace(""),PrivateNamespace(null,"226"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Bullet_Line_Sniper"),StaticProtectedNs("Bullet_Line_Sniper"),StaticProtectedNs("Bullet")])
+                  getlex QName(ProtectedNamespace("Bullet"),"stats")
+                  getproperty QName(PackageNamespace(""),"params")
+                  getlocal 12
+                  pushbyte 3
+                  jump ofs02e7
+                  throw
+                  constructprop QName(PackageNamespace("Box2D.Collision.Shapes"),"b2PolygonShape"), 7
+                  pushwith
+         ofs02e7:
+                  multiply
+                  pushbyte 2
+                  add
+                  getproperty MultinameL([PrivateNamespace(null,"43"),PackageNamespace(""),PrivateNamespace(null,"226"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Bullet_Line_Sniper"),StaticProtectedNs("Bullet_Line_Sniper"),StaticProtectedNs("Bullet")])
+                  getlex QName(ProtectedNamespace("Bullet"),"stats")
+                  jump ofs02f9
+                  ifgt ofs02f9
+         ofs02f9:
+                  getproperty QName(PackageNamespace(""),"params")
+                  jump ofs0305
+                  popscope
+                  callpropvoid QName(PackageNamespace("Box2D.Common.Math"),"b2Mat33"), 15
+                  throw
+         ofs0305:
+                  getlocal 12
+                  pushbyte 3
+                  multiply
+                  pushbyte 3
+                  add
+                  getproperty MultinameL([PrivateNamespace(null,"43"),PackageNamespace(""),PrivateNamespace(null,"226"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Bullet_Line_Sniper"),StaticProtectedNs("Bullet_Line_Sniper"),StaticProtectedNs("Bullet")])
+                  pushtrue
+                  iftrue ofs031c
+                  returnvoid
+                  istypelate
+                  convert_s
+                  throw
+                  dup
+                  bitxor
+                  returnvalue
+         ofs031c:
+                  callpropvoid QName(PackageNamespace(""),"lineStyle"), 3
+                  pushbyte 0
+                  convert_u
+                  setlocal 9
+                  jump ofs03dc
+                  ifne ofs032d
+         ofs032d:
+                  label
+                  pushtrue
+                  iftrue ofs033a
+                  returnvoid
+                  modulo
+                  pushwith
+                  newfunction 16
+                  pop
+                  setlocal0
+         ofs033a:
+                  getlocal 9
+                  pushbyte 0
+                  ifeq ofs0346
+                  jump ofs038d
+         ofs0346:
+                  getlex QName(ProtectedNamespace("Bullet"),"game")
+                  getproperty QName(PackageNamespace(""),"lineCont")
+                  jump ofs0354
+                  ifne ofs0354
+         ofs0354:
+                  getproperty QName(PackageNamespace(""),"graphics")
+                  getlocal0
+                  getproperty QName(PrivateNamespace(null,"43"),"linePath")
+                  jump ofs0364
+                  popscope
+                  callproperty QName(PackageNamespace(""),"Stats_Skills"), 15
+                  throw
+         ofs0364:
+                  getlocal 9
+                  getproperty MultinameL([PrivateNamespace(null,"43"),PackageNamespace(""),PrivateNamespace(null,"226"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Bullet_Line_Sniper"),StaticProtectedNs("Bullet_Line_Sniper"),StaticProtectedNs("Bullet")])
+                  getproperty Multiname("x",[PrivateNamespace(null,"43"),PackageNamespace(""),PrivateNamespace(null,"226"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Bullet_Line_Sniper"),StaticProtectedNs("Bullet_Line_Sniper"),StaticProtectedNs("Bullet")])
+                  getlocal0
+                  getproperty QName(PrivateNamespace(null,"43"),"linePath")
+                  getlocal 9
+                  jump ofs037b
+                  negate
+                  callmethod 123, 15
+                  pop
+         ofs037b:
+                  getproperty MultinameL([PrivateNamespace(null,"43"),PackageNamespace(""),PrivateNamespace(null,"226"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Bullet_Line_Sniper"),StaticProtectedNs("Bullet_Line_Sniper"),StaticProtectedNs("Bullet")])
+                  getproperty Multiname("y",[PrivateNamespace(null,"43"),PackageNamespace(""),PrivateNamespace(null,"226"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Bullet_Line_Sniper"),StaticProtectedNs("Bullet_Line_Sniper"),StaticProtectedNs("Bullet")])
+                  callpropvoid QName(PackageNamespace(""),"moveTo"), 2
+                  jump ofs03cd
+                  ifstrictne ofs038d
+         ofs038d:
+                  getlex QName(ProtectedNamespace("Bullet"),"game")
+                  getproperty QName(PackageNamespace(""),"lineCont")
+                  getproperty QName(PackageNamespace(""),"graphics")
+                  jump ofs03a0
+                  setlocal1
+                  pushwith
+                  newfunction 44
+                  throw
+                  pop
+         ofs03a0:
+                  getlocal0
+                  getproperty QName(PrivateNamespace(null,"43"),"linePath")
+                  getlocal 9
+                  getproperty MultinameL([PrivateNamespace(null,"43"),PackageNamespace(""),PrivateNamespace(null,"226"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Bullet_Line_Sniper"),StaticProtectedNs("Bullet_Line_Sniper"),StaticProtectedNs("Bullet")])
+                  getproperty Multiname("x",[PrivateNamespace(null,"43"),PackageNamespace(""),PrivateNamespace(null,"226"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Bullet_Line_Sniper"),StaticProtectedNs("Bullet_Line_Sniper"),StaticProtectedNs("Bullet")])
+                  jump ofs03b4
+                  ifgt ofs03b4
+         ofs03b4:
+                  getlocal0
+                  getproperty QName(PrivateNamespace(null,"43"),"linePath")
+                  jump ofs03c1
+                  popscope
+                  callstatic 11, 21
+                  throw
+         ofs03c1:
+                  getlocal 9
+                  getproperty MultinameL([PrivateNamespace(null,"43"),PackageNamespace(""),PrivateNamespace(null,"226"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Bullet_Line_Sniper"),StaticProtectedNs("Bullet_Line_Sniper"),StaticProtectedNs("Bullet")])
+                  getproperty Multiname("y",[PrivateNamespace(null,"43"),PackageNamespace(""),PrivateNamespace(null,"226"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Bullet_Line_Sniper"),StaticProtectedNs("Bullet_Line_Sniper"),StaticProtectedNs("Bullet")])
+                  callpropvoid QName(PackageNamespace(""),"lineTo"), 2
+         ofs03cd:
+                  getlocal 9
+                  increment
+                  jump ofs03d9
+                  bitand
+                  constructprop QName(PackageNamespace(""),"PhysWorld"), 9
+                  pushwith
+         ofs03d9:
+                  convert_u
+                  setlocal 9
+         ofs03dc:
+                  getlocal 9
+                  getlocal0
+                  getproperty QName(PrivateNamespace(null,"43"),"linePath")
+                  getproperty QName(PackageNamespace(""),"length")
+                  ifnlt ofs03ed
+                  jump ofs032d
+         ofs03ed:
+                  getlocal 12
+                  increment
+                  convert_u
+                  jump ofs03fb
+                  popscope
+                  newfunction 51
+                  throw
+                  greaterequals
+                  typeof
+         ofs03fb:
+                  setlocal 12
+         ofs03fd:
+                  getlocal 12
+                  getlex QName(ProtectedNamespace("Bullet"),"stats")
+                  getproperty QName(PackageNamespace(""),"params")
+                  getproperty QName(PackageNamespace(""),"length")
+                  jump ofs0410
+                  ifstricteq ofs0410
+         ofs0410:
+                  decrement
+                  pushbyte 3
+                  divide
+                  ifnlt ofs0426
+                  jump ofs02a3
+                  jump ofs0420
+         ofs0420:
+                  setlocal0
+                  decrement
+                  returnvalue
+                  pushscope
+                  returnvalue
+                  convert_s
+         ofs0426:
+                  returnvoid
+               end ; code
+            end ; body
+         end ; method
+      }
+      
+      public function EnterFrame() : void
+      {
+         trait method QName(PackageNamespace(""),"EnterFrame")
+            dispid 0
+            method
+               name null
+               returns QName(PackageNamespace(""),"void")
+               
+               body
+                  maxstack 9
+                  localcount 3
+                  initscopedepth 5
+                  maxscopedepth 6
+                  
+                  code
+                     getlocal0
+                     pushscope
+                     jump ofs000c
+                     newclass 478
+                     call 6
+                     throw
+            ofs000c:
+                     pushbyte 0
+                     convert_u
+                     setlocal1
+                     getlocal0
+                     getlocal0
+                     jump ofs001a
+                     ifstrictne ofs001a
+            ofs001a:
+                     getproperty QName(PrivateNamespace(null,"43"),"alpha")
+                     pushdouble 0.03
+                     subtract
+                     jump ofs002a
+                     bitxor
+                     pushwith
+                     newfunction 19
+                     throw
+                     convert_s
+            ofs002a:
+                     initproperty QName(PrivateNamespace(null,"43"),"alpha")
+                     pushbyte 0
+                     convert_u
+                     setlocal1
+                     jump ofs007c
+                     ifne ofs0039
+            ofs0039:
+                     label
+                     getlocal0
+                     getproperty QName(PrivateNamespace(null,"43"),"linePath")
+                     getlocal1
+                     jump ofs0049
+                     popscope
+                     constructprop QName(PackageNamespace(""),"caStage"), 14
+                     setlocal3
+            ofs0049:
+                     getproperty MultinameL([PrivateNamespace(null,"43"),PackageNamespace(""),PrivateNamespace(null,"226"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Bullet_Line_Sniper"),StaticProtectedNs("Bullet_Line_Sniper"),StaticProtectedNs("Bullet")])
+                     getlocal0
+                     getproperty QName(PrivateNamespace(null,"43"),"linePath")
+                     getlocal1
+                     getproperty MultinameL([PrivateNamespace(null,"43"),PackageNamespace(""),PrivateNamespace(null,"226"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Bullet_Line_Sniper"),StaticProtectedNs("Bullet_Line_Sniper"),StaticProtectedNs("Bullet")])
+                     getproperty Multiname("y",[PrivateNamespace(null,"43"),PackageNamespace(""),PrivateNamespace(null,"226"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Bullet_Line_Sniper"),StaticProtectedNs("Bullet_Line_Sniper"),StaticProtectedNs("Bullet")])
+                     getlocal0
+                     getproperty QName(PrivateNamespace(null,"43"),"linePath")
+                     getlocal1
+                     getproperty MultinameL([PrivateNamespace(null,"43"),PackageNamespace(""),PrivateNamespace(null,"226"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Bullet_Line_Sniper"),StaticProtectedNs("Bullet_Line_Sniper"),StaticProtectedNs("Bullet")])
+                     jump ofs0069
+                     setlocal0
+                     newfunction 96
+                     throw
+                     returnvalue
+                     setlocal1
+            ofs0069:
+                     getproperty Multiname("lift",[PrivateNamespace(null,"43"),PackageNamespace(""),PrivateNamespace(null,"226"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Bullet_Line_Sniper"),StaticProtectedNs("Bullet_Line_Sniper"),StaticProtectedNs("Bullet")])
+                     subtract
+                     setproperty Multiname("y",[PrivateNamespace(null,"43"),PackageNamespace(""),PrivateNamespace(null,"226"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Bullet_Line_Sniper"),StaticProtectedNs("Bullet_Line_Sniper"),StaticProtectedNs("Bullet")])
+                     getlocal1
+                     increment
+                     jump ofs007a
+                     ifstricteq ofs007a
+            ofs007a:
+                     convert_u
+                     setlocal1
+            ofs007c:
+                     getlocal1
+                     getlocal0
+                     pushtrue
+                     iftrue ofs008a
+                     returnvoid
+                     returnvalue
+                     pushwith
+                     newfunction 66
+                     throw
+                     pop
+            ofs008a:
+                     getproperty QName(PrivateNamespace(null,"43"),"linePath")
+                     getproperty QName(PackageNamespace(""),"length")
+                     ifnlt ofs0098
+                     jump ofs0039
+            ofs0098:
+                     pushbyte 0
+                     convert_u
+                     setlocal2
+                     jump ofs01e3
+                     pushwith
+                     setlocal1
+                     pushtrue
+                     iftrue ofs00a7
+            ofs00a7:
+                     returnvoid
+                     popscope
+                     pushwith
+                     newfunction 115
+                     pop
+                     setlocal0
+            ofs00ae:
+                     label
+                     getlex QName(ProtectedNamespace("Bullet"),"game")
+                     getproperty QName(PackageNamespace(""),"lineCont")
+                     getproperty QName(PackageNamespace(""),"graphics")
+                     getlex QName(ProtectedNamespace("Bullet"),"stats")
+                     getproperty QName(PackageNamespace(""),"params")
+                     getlocal2
+                     jump ofs00c9
+                     popscope
+                     decrement
+                     nextname
+                     setlocal2
+                     setlocal2
+                     instanceof
+            ofs00c9:
+                     pushbyte 3
+                     multiply
+                     pushbyte 1
+                     add
+                     getproperty MultinameL([PrivateNamespace(null,"43"),PackageNamespace(""),PrivateNamespace(null,"226"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Bullet_Line_Sniper"),StaticProtectedNs("Bullet_Line_Sniper"),StaticProtectedNs("Bullet")])
+                     jump ofs00da
+                     ifeq ofs00da
+            ofs00da:
+                     getlex QName(ProtectedNamespace("Bullet"),"stats")
+                     getproperty QName(PackageNamespace(""),"params")
+                     pushfalse
+                     iffalse ofs00eb
+                     returnvoid
+                     throw
+                     constructprop QName(PackageNamespace("fl.core"),"UIComponent"), 27
+                     throw
+            ofs00eb:
+                     getlocal2
+                     pushbyte 3
+                     multiply
+                     pushbyte 2
+                     add
+                     getproperty MultinameL([PrivateNamespace(null,"43"),PackageNamespace(""),PrivateNamespace(null,"226"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Bullet_Line_Sniper"),StaticProtectedNs("Bullet_Line_Sniper"),StaticProtectedNs("Bullet")])
+                     getlex QName(ProtectedNamespace("Bullet"),"stats")
+                     getproperty QName(PackageNamespace(""),"params")
+                     getlocal2
+                     pushbyte 3
+                     jump ofs0108
+                     pushwith
+                     newfunction 21
+                     pushwith
+                     istypelate
+                     setlocal1
+            ofs0108:
+                     multiply
+                     pushbyte 3
+                     add
+                     getproperty MultinameL([PrivateNamespace(null,"43"),PackageNamespace(""),PrivateNamespace(null,"226"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Bullet_Line_Sniper"),StaticProtectedNs("Bullet_Line_Sniper"),StaticProtectedNs("Bullet")])
+                     getlocal0
+                     getproperty QName(PrivateNamespace(null,"43"),"alpha")
+                     multiply
+                     callpropvoid QName(PackageNamespace(""),"lineStyle"), 3
+                     pushbyte 0
+                     jump ofs0124
+                     popscope
+                     newfunction 9
+                     pushwith
+                     setlocal1
+                     multiply
+            ofs0124:
+                     convert_u
+                     setlocal1
+                     jump ofs01c5
+                     iflt ofs012e
+            ofs012e:
+                     label
+                     getlocal1
+                     jump ofs0138
+                     ifstrictne ofs0138
+            ofs0138:
+                     pushbyte 0
+                     ifeq ofs0142
+                     jump ofs0181
+            ofs0142:
+                     getlex QName(ProtectedNamespace("Bullet"),"game")
+                     getproperty QName(PackageNamespace(""),"lineCont")
+                     getproperty QName(PackageNamespace(""),"graphics")
+                     jump ofs0155
+                     popscope
+                     callsupervoid QName(PackageNamespace(""),"qmStreaks"), 16
+                     setlocal3
+            ofs0155:
+                     getlocal0
+                     getproperty QName(PrivateNamespace(null,"43"),"linePath")
+                     getlocal1
+                     getproperty MultinameL([PrivateNamespace(null,"43"),PackageNamespace(""),PrivateNamespace(null,"226"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Bullet_Line_Sniper"),StaticProtectedNs("Bullet_Line_Sniper"),StaticProtectedNs("Bullet")])
+                     getproperty Multiname("x",[PrivateNamespace(null,"43"),PackageNamespace(""),PrivateNamespace(null,"226"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Bullet_Line_Sniper"),StaticProtectedNs("Bullet_Line_Sniper"),StaticProtectedNs("Bullet")])
+                     getlocal0
+                     getproperty QName(PrivateNamespace(null,"43"),"linePath")
+                     getlocal1
+                     getproperty MultinameL([PrivateNamespace(null,"43"),PackageNamespace(""),PrivateNamespace(null,"226"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Bullet_Line_Sniper"),StaticProtectedNs("Bullet_Line_Sniper"),StaticProtectedNs("Bullet")])
+                     jump ofs0172
+                     coerce_s
+                     callstatic 3534, 18
+                     setlocal3
+            ofs0172:
+                     getproperty Multiname("y",[PrivateNamespace(null,"43"),PackageNamespace(""),PrivateNamespace(null,"226"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Bullet_Line_Sniper"),StaticProtectedNs("Bullet_Line_Sniper"),StaticProtectedNs("Bullet")])
+                     callpropvoid QName(PackageNamespace(""),"moveTo"), 2
+                     jump ofs01c1
+                     ifne ofs0181
+            ofs0181:
+                     getlex QName(ProtectedNamespace("Bullet"),"game")
+                     getproperty QName(PackageNamespace(""),"lineCont")
+                     getproperty QName(PackageNamespace(""),"graphics")
+                     getlocal0
+                     pushtrue
+                     iftrue ofs0196
+                     returnvoid
+                     setlocal1
+                     callpropvoid QName(PackageNamespace("Box2D.Collision"),"b2RayCastInput"), 27
+                     pop
+            ofs0196:
+                     getproperty QName(PrivateNamespace(null,"43"),"linePath")
+                     getlocal1
+                     getproperty MultinameL([PrivateNamespace(null,"43"),PackageNamespace(""),PrivateNamespace(null,"226"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Bullet_Line_Sniper"),StaticProtectedNs("Bullet_Line_Sniper"),StaticProtectedNs("Bullet")])
+                     getproperty Multiname("x",[PrivateNamespace(null,"43"),PackageNamespace(""),PrivateNamespace(null,"226"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Bullet_Line_Sniper"),StaticProtectedNs("Bullet_Line_Sniper"),StaticProtectedNs("Bullet")])
+                     getlocal0
+                     jump ofs01a9
+                     ifle ofs01a9
+            ofs01a9:
+                     getproperty QName(PrivateNamespace(null,"43"),"linePath")
+                     getlocal1
+                     getproperty MultinameL([PrivateNamespace(null,"43"),PackageNamespace(""),PrivateNamespace(null,"226"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Bullet_Line_Sniper"),StaticProtectedNs("Bullet_Line_Sniper"),StaticProtectedNs("Bullet")])
+                     getproperty Multiname("y",[PrivateNamespace(null,"43"),PackageNamespace(""),PrivateNamespace(null,"226"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Bullet_Line_Sniper"),StaticProtectedNs("Bullet_Line_Sniper"),StaticProtectedNs("Bullet")])
+                     callpropvoid QName(PackageNamespace(""),"lineTo"), 2
+                     jump ofs01c1
+                     typeof
+                     nextname
+                     istypelate
+                     bitxor
+                     instanceof
+                     checkfilter
+            ofs01c1:
+                     getlocal1
+                     increment
+                     convert_u
+                     setlocal1
+            ofs01c5:
+                     getlocal1
+                     getlocal0
+                     getproperty QName(PrivateNamespace(null,"43"),"linePath")
+                     jump ofs01d4
+                     nextname
+                     pushwith
+                     newfunction 24
+                     throw
+                     increment
+            ofs01d4:
+                     getproperty QName(PackageNamespace(""),"length")
+                     ifnlt ofs01df
+                     jump ofs012e
+            ofs01df:
+                     getlocal2
+                     increment
+                     convert_u
+                     setlocal2
+            ofs01e3:
+                     getlocal2
+                     jump ofs01ed
+                     popscope
+                     callpropvoid QName(PackageNamespace("Box2D.Collision"),"b2Manifold"), 18
+                     pop
+            ofs01ed:
+                     getlex QName(ProtectedNamespace("Bullet"),"stats")
+                     getproperty QName(PackageNamespace(""),"params")
+                     getproperty QName(PackageNamespace(""),"length")
+                     decrement
+                     pushbyte 3
+                     jump ofs0201
+                     ifeq ofs0201
+            ofs0201:
+                     divide
+                     ifnlt ofs020a
+                     jump ofs00ae
+            ofs020a:
+                     getlocal0
+                     getproperty QName(PrivateNamespace(null,"43"),"alpha")
+                     jump ofs0218
+                     convert_s
+                     newfunction 75
+                     throw
+                     setlocal2
+                     equals
+            ofs0218:
+                     pushbyte 0
+                     ifle ofs0222
+                     jump ofs0229
+            ofs0222:
+                     findpropstrict QName(ProtectedNamespace("Bullet"),"removeMe")
+                     callpropvoid QName(ProtectedNamespace("Bullet"),"removeMe"), 0
+            ofs0229:
+                     returnvoid
+                  end ; code
+               end ; body
+            end ; method
+         }
+      }
+   }

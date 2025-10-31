@@ -1,0 +1,344 @@
+package
+{
+   public class Inventory_Armor
+   {
+      
+      {
+         method
+            name null
+            returns null
+            
+            body
+               maxstack 4
+               localcount 1
+               initscopedepth 3
+               maxscopedepth 4
+               
+               code
+                  getlocal0
+                  pushscope
+                  jump ofs000d
+                  callstatic 3490, 9
+                  call 9
+                  throw
+         ofs000d:
+                  returnvoid
+               end ; code
+            end ; body
+         end ; method
+      }
+      
+      public var id:String;
+      
+      public var level:uint;
+      
+      public var rarity:int;
+      
+      public var modArmor:Number;
+      
+      public var modCost:Number;
+      
+      public var effects:Array;
+      
+      public function Inventory_Armor(param1:String = "", param2:uint = 1, param3:int = 0)
+      {
+         method
+            name null
+            flag HAS_OPTIONAL
+            param QName(PackageNamespace(""),"String")
+            param QName(PackageNamespace(""),"uint")
+            param QName(PackageNamespace(""),"int")
+            optional Utf8("")
+            optional Integer(1)
+            optional Integer(0)
+            returns null
+            
+            body
+               maxstack 5
+               localcount 4
+               initscopedepth 4
+               maxscopedepth 5
+               
+               code
+                  getlocal0
+                  jump ofs000b
+                  call 6
+                  throw
+                  newfunction 3494
+         ofs000b:
+                  pushscope
+                  getlocal0
+                  constructsuper 0
+                  getlocal1
+                  iffalse ofs0018
+                  jump ofs0021
+         ofs0018:
+                  returnvoid
+                  jump ofs001d
+         ofs001d:
+                  ifgt ofs0021
+         ofs0021:
+                  getlocal0
+                  getlocal1
+                  initproperty QName(PackageNamespace(""),"id")
+                  getlocal0
+                  jump ofs0030
+                  typeof
+                  callsuper QName(PackageNamespace(""),"Function"), 27
+                  throw
+         ofs0030:
+                  getlocal2
+                  initproperty QName(PackageNamespace(""),"level")
+                  getlocal0
+                  getlocal3
+                  initproperty QName(PackageNamespace(""),"rarity")
+                  getlex QName(PackageNamespace(""),"Stats_Armor")
+                  getlocal0
+                  callpropvoid QName(PackageNamespace(""),"addMods"), 1
+                  returnvoid
+               end ; code
+            end ; body
+         end ; method
+      }
+      
+      public static function createInventoryItem(param1:String, param2:uint, param3:int) : Inventory_Armor
+      {
+         trait method QName(PackageNamespace(""),"createInventoryItem")
+            flag FINAL
+            dispid 3
+            method
+               name null
+               param QName(PackageNamespace(""),"String")
+               param QName(PackageNamespace(""),"uint")
+               param QName(PackageNamespace(""),"int")
+               returns QName(PackageNamespace(""),"Inventory_Armor")
+               
+               body
+                  maxstack 7
+                  localcount 4
+                  initscopedepth 3
+                  maxscopedepth 4
+                  
+                  code
+                     getlocal0
+                     jump ofs000c
+                     call 8
+                     callmethod 3492, 8
+                     throw
+            ofs000c:
+                     pushscope
+                     getlocal0
+                     getlocal1
+                     getlocal2
+                     getlocal3
+                     jump ofs0019
+                     ifle ofs0019
+            ofs0019:
+                     construct 3
+                     returnvalue
+                  end ; code
+               end ; body
+            end ; method
+         }
+         
+         public function createFinalItem() : Stats_Armor
+         {
+            trait method QName(PackageNamespace(""),"createFinalItem")
+               dispid 0
+               method
+                  name null
+                  returns QName(PackageNamespace(""),"Stats_Armor")
+                  
+                  body
+                     maxstack 5
+                     localcount 1
+                     initscopedepth 4
+                     maxscopedepth 5
+                     
+                     code
+                        jump ofs000b
+                        call 10
+                        callmethod 3490, 10
+                        throw
+               ofs000b:
+                        getlocal0
+                        pushscope
+                        getlex QName(PackageNamespace(""),"Stats_Armor")
+                        getlocal0
+                        callproperty QName(PackageNamespace(""),"createFinalItem"), 1
+                        jump ofs001c
+                        ifstricteq ofs001c
+               ofs001c:
+                        returnvalue
+                     end ; code
+                  end ; body
+               end ; method
+            }
+            
+            public function saveObject() : Object
+            {
+               trait method QName(PackageNamespace(""),"saveObject")
+                  dispid 0
+                  method
+                     name null
+                     returns QName(PackageNamespace(""),"Object")
+                     
+                     body
+                        maxstack 5
+                        localcount 2
+                        initscopedepth 4
+                        maxscopedepth 5
+                        
+                        code
+                           jump ofs000b
+                           call 8
+                           callstatic 3491, 8
+                           throw
+                  ofs000b:
+                           getlocal0
+                           pushscope
+                           newobject 0
+                           coerce QName(PackageNamespace(""),"Object")
+                           setlocal1
+                           jump ofs001a
+                           ifge ofs001a
+                  ofs001a:
+                           getlocal1
+                           pushstring "armor"
+                           setproperty Multiname("type",[PrivateNamespace(null,"140"),PackageNamespace(""),PrivateNamespace(null,"141"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Inventory_Armor"),StaticProtectedNs("Inventory_Armor")])
+                           getlocal1
+                           jump ofs002b
+                           increment
+                           callpropvoid QName(PackageNamespace("flash.geom"),"Matrix"), 27
+                           throw
+                  ofs002b:
+                           getlocal0
+                           getproperty QName(PackageNamespace(""),"id")
+                           setproperty Multiname("id",[PrivateNamespace(null,"140"),PackageNamespace(""),PrivateNamespace(null,"141"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Inventory_Armor"),StaticProtectedNs("Inventory_Armor")])
+                           getlocal1
+                           getlocal0
+                           getproperty QName(PackageNamespace(""),"level")
+                           setproperty Multiname("level",[PrivateNamespace(null,"140"),PackageNamespace(""),PrivateNamespace(null,"141"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Inventory_Armor"),StaticProtectedNs("Inventory_Armor")])
+                           getlocal1
+                           getlocal0
+                           pushtrue
+                           iftrue ofs0048
+                           returnvoid
+                           bitor
+                           instanceof
+                           returnvoid
+                           in
+                           istypelate
+                           returnvoid
+                  ofs0048:
+                           getproperty QName(PackageNamespace(""),"rarity")
+                           setproperty Multiname("rarity",[PrivateNamespace(null,"140"),PackageNamespace(""),PrivateNamespace(null,"141"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Inventory_Armor"),StaticProtectedNs("Inventory_Armor")])
+                           getlocal1
+                           getlocal0
+                           getproperty QName(PackageNamespace(""),"modArmor")
+                           setproperty Multiname("modArmor",[PrivateNamespace(null,"140"),PackageNamespace(""),PrivateNamespace(null,"141"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Inventory_Armor"),StaticProtectedNs("Inventory_Armor")])
+                           getlocal1
+                           getlocal0
+                           getproperty QName(PackageNamespace(""),"modCost")
+                           setproperty Multiname("modCost",[PrivateNamespace(null,"140"),PackageNamespace(""),PrivateNamespace(null,"141"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Inventory_Armor"),StaticProtectedNs("Inventory_Armor")])
+                           jump ofs0068
+                           setlocal3
+                           dup
+                           istypelate
+                           setlocal0
+                           bitxor
+                           coerce_s
+                  ofs0068:
+                           getlocal1
+                           getlocal0
+                           getproperty QName(PackageNamespace(""),"effects")
+                           setproperty Multiname("effects",[PrivateNamespace(null,"140"),PackageNamespace(""),PrivateNamespace(null,"141"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Inventory_Armor"),StaticProtectedNs("Inventory_Armor")])
+                           getlocal1
+                           jump ofs0079
+                           ifge ofs0079
+                  ofs0079:
+                           returnvalue
+                        end ; code
+                     end ; body
+                  end ; method
+               }
+               
+               public function loadObject(param1:Object) : void
+               {
+                  trait method QName(PackageNamespace(""),"loadObject")
+                     dispid 0
+                     method
+                        name null
+                        param QName(PackageNamespace(""),"Object")
+                        returns QName(PackageNamespace(""),"void")
+                        
+                        body
+                           maxstack 5
+                           localcount 2
+                           initscopedepth 4
+                           maxscopedepth 5
+                           
+                           code
+                              getlocal0
+                              jump ofs000c
+                              callmethod 3490, 6
+                              call 6
+                              throw
+                     ofs000c:
+                              pushscope
+                              getlocal0
+                              getlocal1
+                              getproperty Multiname("id",[PrivateNamespace(null,"140"),PackageNamespace(""),PrivateNamespace(null,"141"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Inventory_Armor"),StaticProtectedNs("Inventory_Armor")])
+                              initproperty QName(PackageNamespace(""),"id")
+                              jump ofs001d
+                              ifstrictne ofs001d
+                     ofs001d:
+                              getlocal0
+                              getlocal1
+                              getproperty Multiname("level",[PrivateNamespace(null,"140"),PackageNamespace(""),PrivateNamespace(null,"141"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Inventory_Armor"),StaticProtectedNs("Inventory_Armor")])
+                              jump ofs002c
+                              setlocal2
+                              call 96
+                              pushwith
+                              convert_s
+                              in
+                     ofs002c:
+                              initproperty QName(PackageNamespace(""),"level")
+                              getlocal0
+                              getlocal1
+                              getproperty Multiname("rarity",[PrivateNamespace(null,"140"),PackageNamespace(""),PrivateNamespace(null,"141"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Inventory_Armor"),StaticProtectedNs("Inventory_Armor")])
+                              initproperty QName(PackageNamespace(""),"rarity")
+                              getlocal0
+                              getlocal1
+                              getproperty Multiname("modArmor",[PrivateNamespace(null,"140"),PackageNamespace(""),PrivateNamespace(null,"141"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Inventory_Armor"),StaticProtectedNs("Inventory_Armor")])
+                              initproperty QName(PackageNamespace(""),"modArmor")
+                              pushtrue
+                              iftrue ofs004b
+                              returnvoid
+                              popscope
+                              increment
+                              add
+                              bitor
+                              pushnull
+                              lessequals
+                     ofs004b:
+                              getlocal0
+                              getlocal1
+                              getproperty Multiname("modCost",[PrivateNamespace(null,"140"),PackageNamespace(""),PrivateNamespace(null,"141"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Inventory_Armor"),StaticProtectedNs("Inventory_Armor")])
+                              initproperty QName(PackageNamespace(""),"modCost")
+                              getlocal0
+                              getlocal1
+                              jump ofs005f
+                              instanceof
+                              callpropvoid QName(PackageNamespace(""),"addMods"), 14
+                              setlocal3
+                     ofs005f:
+                              getproperty Multiname("effects",[PrivateNamespace(null,"140"),PackageNamespace(""),PrivateNamespace(null,"141"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Inventory_Armor"),StaticProtectedNs("Inventory_Armor")])
+                              initproperty QName(PackageNamespace(""),"effects")
+                              returnvoid
+                           end ; code
+                        end ; body
+                     end ; method
+                  }
+               }
+            }
