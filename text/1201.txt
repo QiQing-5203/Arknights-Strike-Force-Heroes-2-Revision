@@ -1,0 +1,23 @@
+薪火相传：在全程不切换职业的情况下，只使用初始武器完成剧情模式
+--- RECORDSEPARATOR ---
+细雨无声：使用近战武器击杀30次携带【焓熵法杖】的敌人
+--- RECORDSEPARATOR ---
+斩火断钢：在突袭及以上难度的“荒野 无名庇护所”中击杀一次【“复仇者”，雷德】
+--- RECORDSEPARATOR ---
+“战士的一生”：在“H7-4 星火行动”中击杀一次【爱国者，“毁灭姿态”】
+--- RECORDSEPARATOR ---
+裂镜摧甲：在“H9-6 暴风行动”中击杀一次【深池伙友卫队精英】
+--- RECORDSEPARATOR ---
+- Fixed MANY spelling errors
+--- RECORDSEPARATOR ---
+- Doubled the chance of getting Super Rare weapons in the Slot Machine
+--- RECORDSEPARATOR ---
+- Fixed Skills/Killstreaks/Armor toggles in custom game not working
+--- RECORDSEPARATOR ---
+- Melee weapons now display as "Melee" in their descriptions
+--- RECORDSEPARATOR ---
+- Throwing weapons now display as "Throwing" in their descriptions
+--- RECORDSEPARATOR ---
+- Few extra names added as bots
+--- RECORDSEPARATOR ---
+Thanks to everyone that helped find all these bugs!

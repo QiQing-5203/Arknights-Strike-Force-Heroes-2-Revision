@@ -1,0 +1,5 @@
+PRTS检测到您尚未完成教程
+--- RECORDSEPARATOR ---
+贸然行动可能遭遇不测
+--- RECORDSEPARATOR ---
+您确定要进行 自定义模式 吗？

@@ -1,0 +1,57 @@
+汉  化
+--- RECORDSEPARATOR ---
+      - 在v1.8汉化重制版的基础上，汉化了更多内容
+--- RECORDSEPARATOR ---
+修  改
+--- RECORDSEPARATOR ---
+（1）音乐和音效
+--- RECORDSEPARATOR ---
+      - 定稿使用《明日方舟》中最出色的音乐作为背景音乐，并将其进行了重制（来源：《明日方舟》原声带）
+--- RECORDSEPARATOR ---
+      - 修改了几乎全部的音效，带来更为新颖动听的听觉体验（来源：《明日方舟》、《PVZ - Arknights v3.1.4》、《红色警戒》）
+--- RECORDSEPARATOR ---
+（2）武器
+--- RECORDSEPARATOR ---
+      - 新增武器：垃圾铲、冰系/火系施术单元、“搅碎利刃”、“复仇烈焰”、“火与钢”
+--- RECORDSEPARATOR ---
+      - 优化了部分武器的属性及效果，使之更加真实且平衡性与可玩性更高
+--- RECORDSEPARATOR ---
+（3）护甲
+--- RECORDSEPARATOR ---
+      - 新增护甲：莱茵充能护服
+--- RECORDSEPARATOR ---
+（4）角色及技能
+--- RECORDSEPARATOR ---
+      - 重写了各个职业的简介文案
+--- RECORDSEPARATOR ---
+      - 加强了部分被动技能的效果，降低了部分御敌指令的连杀需求
+--- RECORDSEPARATOR ---
+（5）战备采办部
+--- RECORDSEPARATOR ---
+      - 抽出收藏品的价值大幅提升
+--- RECORDSEPARATOR ---
+      - 中奖文案重写
+--- RECORDSEPARATOR ---
+（6）BUG修复
+--- RECORDSEPARATOR ---
+      - 修复了敌方重甲兵使用连杀奖励“绝对零度重甲”时语音提示错误的问题
+--- RECORDSEPARATOR ---
+      - 修复了所有武器和头部贴图在某些角度下无法正常显示的问题
+--- RECORDSEPARATOR ---
+（7）其他杂项
+--- RECORDSEPARATOR ---
+      - 关卡文案、设定、阵容重写，显著提高了可玩性及游戏体验
+--- RECORDSEPARATOR ---
+我制作Arknights：SFH2的一切都是为了博士们能有一款优秀的同人改版游戏。欲了解更多详细内容，请见压缩包内的“更新日志”。
+--- RECORDSEPARATOR ---
+当然，直接前往游戏中体验和发现或许会更加具有吸引力。
+--- RECORDSEPARATOR ---
+在此，我诚挚感谢开发者为我们的童年带来这样一款如此经典的Flash游戏。
+--- RECORDSEPARATOR ---
+同时，也感谢每一位支持鼓励着我的群友，让我有幸得以完成了全部的二创修改内容。
+--- RECORDSEPARATOR ---
+最后，衷心祝愿博士们游戏愉快，快乐常在！
+--- RECORDSEPARATOR ---
+琪卿
+--- RECORDSEPARATOR ---
+2023年8月22日

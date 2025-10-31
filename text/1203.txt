@@ -1,0 +1,5 @@
+Bug Fixes
+--- RECORDSEPARATOR ---
+- Killstreak: Bots with no killstreak will no longer spam "none"
+--- RECORDSEPARATOR ---
+- Killstreak: Combat Drones no longer erase your current streak when they expire
