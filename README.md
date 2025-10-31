@@ -1,7 +1,7 @@
 # Arknights-Strike-Force-Heroes-2-Revision
 # 《明日方舟：战火英雄 2》改版
 
-> **铳响纷鸣，弹火涤薪**
+> **铳响涤薪，弹火纷鸣**
 
 [![GitHub release (latest by date)](https://img.shields.io/github/v/release/您的用户名/您的仓库名)](https://github.com/QiQing-5203/Arknights-Strike-Force-Heroes-2-Revision/releases)
 [![GitHub issues](https://img.shields.io/github/issues/您的用户名/您的仓库名)](https://github.com/QiQing-5203/Arknights-Strike-Force-Heroes-2-Revision/issues)
