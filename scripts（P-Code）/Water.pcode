@@ -1,0 +1,1851 @@
+package
+{
+   import flash.display.MovieClip;
+   import flash.display.Shape;
+   
+   public class Water extends Shape
+   {
+      
+      {
+         method
+            name null
+            returns null
+            
+            body
+               maxstack 4
+               localcount 1
+               initscopedepth 6
+               maxscopedepth 7
+               
+               code
+                  jump ofs000a
+                  call 8
+                  throw
+                  newfunction 3490
+         ofs000a:
+                  getlocal0
+                  pushscope
+                  returnvoid
+               end ; code
+            end ; body
+         end ; method
+      }
+      
+      private var game:Game;
+      
+      private var dots:Array;
+      
+      private var waterSet:Boolean;
+      
+      private var MC:MovieClip;
+      
+      private var fc:uint;
+      
+      public function Water(param1:Game)
+      {
+         method
+            name null
+            param QName(PackageNamespace(""),"Game")
+            returns null
+            
+            body
+               maxstack 5
+               localcount 2
+               initscopedepth 7
+               maxscopedepth 8
+               
+               code
+                  jump ofs000b
+                  callstatic 3491, 7
+                  call 7
+                  throw
+         ofs000b:
+                  getlocal0
+                  pushscope
+                  getlocal0
+                  constructsuper 0
+                  getlocal0
+                  jump ofs0019
+                  ifne ofs0019
+         ofs0019:
+                  getlocal1
+                  initproperty QName(PrivateNamespace(null,"66"),"game")
+                  getlocal0
+                  pushbyte 0
+                  jump ofs002a
+                  nextvalue
+                  pushwith
+                  newfunction 11
+                  throw
+                  pop
+         ofs002a:
+                  initproperty QName(PrivateNamespace(null,"66"),"fc")
+                  findproperty QName(PackageNamespace(""),"blendMode")
+                  pushstring "hardlight"
+                  initproperty QName(PackageNamespace(""),"blendMode")
+                  returnvoid
+               end ; code
+            end ; body
+         end ; method
+      }
+      
+      public function setWater(param1:MovieClip) : void
+      {
+         trait method QName(PackageNamespace(""),"setWater")
+            dispid 0
+            method
+               name null
+               param QName(PackageNamespace("flash.display"),"MovieClip")
+               returns QName(PackageNamespace(""),"void")
+               
+               body
+                  maxstack 8
+                  localcount 5
+                  initscopedepth 7
+                  maxscopedepth 8
+                  
+                  code
+                     jump ofs000b
+                     call 8
+                     callmethod 3493, 8
+                     throw
+            ofs000b:
+                     getlocal0
+                     pushscope
+                     pushnull
+                     coerce QName(PackageNamespace(""),"Object")
+                     setlocal3
+                     jump ofs0019
+                     ifle ofs0019
+            ofs0019:
+                     getlocal0
+                     getlocal1
+                     initproperty QName(PrivateNamespace(null,"66"),"MC")
+                     getlocal0
+                     getproperty QName(PrivateNamespace(null,"66"),"MC")
+                     jump ofs002b
+                     popscope
+                     callsupervoid QName(PackageNamespace("Box2D.Common.Math"),"b2Mat22"), 8
+                     pushwith
+            ofs002b:
+                     pushfalse
+                     setproperty QName(PackageNamespace(""),"visible")
+                     getlocal0
+                     newarray 0
+                     initproperty QName(PrivateNamespace(null,"66"),"dots")
+                     pushbyte 0
+                     convert_u
+                     setlocal2
+                     jump ofs0043
+                     popscope
+                     pushwith
+                     newfunction 37
+                     throw
+                     increment
+            ofs0043:
+                     jump ofs00e5
+                     ifle ofs004b
+            ofs004b:
+                     label
+                     newobject 0
+                     coerce QName(PackageNamespace(""),"Object")
+                     setlocal3
+                     getlocal3
+                     getlocal2
+                     pushbyte 20
+                     jump ofs005f
+                     popscope
+                     newfunction 41
+                     throw
+                     decrement
+                     multiply
+            ofs005f:
+                     multiply
+                     getlocal0
+                     getproperty QName(PrivateNamespace(null,"66"),"MC")
+                     getproperty QName(PackageNamespace(""),"x")
+                     add
+                     jump ofs0070
+                     ifeq ofs0070
+            ofs0070:
+                     setproperty Multiname("x",[PrivateNamespace(null,"66"),PackageNamespace(""),PrivateNamespace(null,"244"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Water"),StaticProtectedNs("Water"),StaticProtectedNs("flash.display:Shape"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                     getlocal3
+                     getlocal3
+                     getlocal3
+                     getlocal0
+                     jump ofs0081
+                     istypelate
+                     newobject 100
+                     pushwith
+                     istypelate
+                     add
+            ofs0081:
+                     getproperty QName(PrivateNamespace(null,"66"),"MC")
+                     getproperty QName(PackageNamespace(""),"y")
+                     dup
+                     setlocal 4
+                     setproperty Multiname("toY",[PrivateNamespace(null,"66"),PackageNamespace(""),PrivateNamespace(null,"244"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Water"),StaticProtectedNs("Water"),StaticProtectedNs("flash.display:Shape"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                     getlocal 4
+                     kill 4
+                     dup
+                     jump ofs009c
+                     popscope
+                     pushwith
+                     newfunction 75
+                     pop
+                     add
+            ofs009c:
+                     setlocal 4
+                     setproperty Multiname("oy",[PrivateNamespace(null,"66"),PackageNamespace(""),PrivateNamespace(null,"244"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Water"),StaticProtectedNs("Water"),StaticProtectedNs("flash.display:Shape"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                     getlocal 4
+                     kill 4
+                     setproperty Multiname("y",[PrivateNamespace(null,"66"),PackageNamespace(""),PrivateNamespace(null,"244"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Water"),StaticProtectedNs("Water"),StaticProtectedNs("flash.display:Shape"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                     getlocal3
+                     pushbyte 0
+                     setproperty Multiname("yVel",[PrivateNamespace(null,"66"),PackageNamespace(""),PrivateNamespace(null,"244"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Water"),StaticProtectedNs("Water"),StaticProtectedNs("flash.display:Shape"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                     getlocal3
+                     pushbyte 0
+                     pushfalse
+                     iffalse ofs00bd
+                     returnvoid
+                     popscope
+                     returnvalue
+                     throw
+                     convert_d
+                     negate
+                     multiply
+            ofs00bd:
+                     setproperty Multiname("yAcc",[PrivateNamespace(null,"66"),PackageNamespace(""),PrivateNamespace(null,"244"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Water"),StaticProtectedNs("Water"),StaticProtectedNs("flash.display:Shape"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                     getlocal3
+                     pushbyte 10
+                     setproperty Multiname("mass",[PrivateNamespace(null,"66"),PackageNamespace(""),PrivateNamespace(null,"244"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Water"),StaticProtectedNs("Water"),StaticProtectedNs("flash.display:Shape"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                     getlocal0
+                     jump ofs00cf
+                     ifgt ofs00cf
+            ofs00cf:
+                     getproperty QName(PrivateNamespace(null,"66"),"dots")
+                     getlocal3
+                     callpropvoid QName(Namespace("http://adobe.com/AS3/2006/builtin"),"push"), 1
+                     jump ofs00e1
+                     lessequals
+                     lessequals
+                     lessequals
+                     setlocal1
+                     lessequals
+                     typeof
+            ofs00e1:
+                     getlocal2
+                     increment
+                     convert_u
+                     setlocal2
+            ofs00e5:
+                     getlocal2
+                     getlocal0
+                     getproperty QName(PrivateNamespace(null,"66"),"MC")
+                     getproperty QName(PackageNamespace(""),"width")
+                     jump ofs00f7
+                     typeof
+                     callmethod 3595, 20
+                     setlocal3
+            ofs00f7:
+                     pushbyte 20
+                     divide
+                     ifnlt ofs0102
+                     jump ofs004b
+            ofs0102:
+                     getlocal0
+                     pushtrue
+                     initproperty QName(PrivateNamespace(null,"66"),"waterSet")
+                     jump ofs0111
+                     returnvalue
+                     setlocal3
+                     bitxor
+                     nextname
+                     greaterequals
+                     nextname
+            ofs0111:
+                     returnvoid
+                  end ; code
+               end ; body
+            end ; method
+         }
+         
+         public function disableWater(param1:MovieClip) : void
+         {
+            trait method QName(PackageNamespace(""),"disableWater")
+               dispid 0
+               method
+                  name null
+                  param QName(PackageNamespace("flash.display"),"MovieClip")
+                  returns QName(PackageNamespace(""),"void")
+                  
+                  body
+                     maxstack 5
+                     localcount 2
+                     initscopedepth 7
+                     maxscopedepth 8
+                     
+                     code
+                        jump ofs000a
+                        call 8
+                        throw
+                        newfunction 3493
+               ofs000a:
+                        getlocal0
+                        pushscope
+                        getlocal0
+                        getlocal1
+                        initproperty QName(PrivateNamespace(null,"66"),"MC")
+                        jump ofs0019
+                        ifne ofs0019
+               ofs0019:
+                        getlocal0
+                        getproperty QName(PrivateNamespace(null,"66"),"MC")
+                        pushfalse
+                        setproperty QName(PackageNamespace(""),"visible")
+                        jump ofs002b
+                        setlocal0
+                        callsupervoid QName(PrivateNamespace(null,"9"),"_instance"), 10
+                        setlocal1
+               ofs002b:
+                        getlocal0
+                        newarray 0
+                        initproperty QName(PrivateNamespace(null,"66"),"dots")
+                        getlocal0
+                        pushfalse
+                        initproperty QName(PrivateNamespace(null,"66"),"waterSet")
+                        returnvoid
+                     end ; code
+                  end ; body
+               end ; method
+            }
+            
+            public function inWater(param1:Number, param2:Number) : Boolean
+            {
+               trait method QName(PackageNamespace(""),"inWater")
+                  dispid 0
+                  method
+                     name null
+                     param QName(PackageNamespace(""),"Number")
+                     param QName(PackageNamespace(""),"Number")
+                     returns QName(PackageNamespace(""),"Boolean")
+                     
+                     body
+                        maxstack 10
+                        localcount 3
+                        initscopedepth 7
+                        maxscopedepth 8
+                        
+                        code
+                           jump ofs000a
+                           call 9
+                           throw
+                           newfunction 3494
+                  ofs000a:
+                           getlocal0
+                           pushscope
+                           getlocal0
+                           getproperty QName(PrivateNamespace(null,"66"),"waterSet")
+                           iffalse ofs0018
+                           jump ofs002c
+                  ofs0018:
+                           pushfalse
+                           jump ofs002b
+                           ifeq ofs0021
+                  ofs0021:
+                           jump ofs0025
+                  ofs0025:
+                           bitor
+                           dup
+                           setlocal0
+                           setlocal1
+                           pushfalse
+                           setlocal2
+                  ofs002b:
+                           returnvalue
+                  ofs002c:
+                           getlex QName(PackageNamespace(""),"UT")
+                           getlocal1
+                           getlocal2
+                           getlocal0
+                           getproperty QName(PrivateNamespace(null,"66"),"MC")
+                           getproperty QName(PackageNamespace(""),"x")
+                           getlocal0
+                           getproperty QName(PrivateNamespace(null,"66"),"MC")
+                           getproperty QName(PackageNamespace(""),"y")
+                           jump ofs0049
+                           pushfalse
+                           pushwith
+                           newfunction 16
+                           pop
+                           returnvalue
+                  ofs0049:
+                           getlocal0
+                           getproperty QName(PrivateNamespace(null,"66"),"MC")
+                           getproperty QName(PackageNamespace(""),"width")
+                           getlocal0
+                           getproperty QName(PrivateNamespace(null,"66"),"MC")
+                           getproperty QName(PackageNamespace(""),"height")
+                           callproperty QName(PackageNamespace(""),"inBox"), 6
+                           returnvalue
+                        end ; code
+                     end ; body
+                  end ; method
+               }
+               
+               public function startWave(param1:int, param2:Number) : void
+               {
+                  trait method QName(PackageNamespace(""),"startWave")
+                     dispid 0
+                     method
+                        name null
+                        param QName(PackageNamespace(""),"int")
+                        param QName(PackageNamespace(""),"Number")
+                        returns QName(PackageNamespace(""),"void")
+                        
+                        body
+                           maxstack 5
+                           localcount 3
+                           initscopedepth 7
+                           maxscopedepth 8
+                           
+                           code
+                              getlocal0
+                              jump ofs000c
+                              call 7
+                              throw
+                              callmethod 3492, 7
+                     ofs000c:
+                              pushscope
+                              getlocal0
+                              getproperty QName(PrivateNamespace(null,"66"),"waterSet")
+                              iffalse ofs0019
+                              jump ofs0022
+                     ofs0019:
+                              returnvoid
+                              jump ofs001e
+                     ofs001e:
+                              iflt ofs0022
+                     ofs0022:
+                              getlocal1
+                              pushbyte 0
+                              lessthan
+                              jump ofs0030
+                              popscope
+                              newfunction 12
+                              throw
+                              decrement
+                              lessequals
+                     ofs0030:
+                              dup
+                              iffalse ofs0039
+                              jump ofs0043
+                     ofs0039:
+                              pop
+                              getlocal1
+                              getlocal0
+                              getproperty QName(PrivateNamespace(null,"66"),"dots")
+                              getproperty QName(PackageNamespace(""),"length")
+                              greaterequals
+                     ofs0043:
+                              iffalse ofs0054
+                              returnvoid
+                              pushtrue
+                              iftrue ofs004d
+                     ofs004d:
+                              returnvoid
+                              setlocal2
+                              dxns "b2TOIInput"
+                              pushwith
+                              returnvalue
+                              throw
+                     ofs0054:
+                              getlocal0
+                              getproperty QName(PrivateNamespace(null,"66"),"dots")
+                              getlocal1
+                              getproperty MultinameL([PrivateNamespace(null,"66"),PackageNamespace(""),PrivateNamespace(null,"244"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Water"),StaticProtectedNs("Water"),StaticProtectedNs("flash.display:Shape"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                              getlocal2
+                              setproperty Multiname("yVel",[PrivateNamespace(null,"66"),PackageNamespace(""),PrivateNamespace(null,"244"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Water"),StaticProtectedNs("Water"),StaticProtectedNs("flash.display:Shape"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                              returnvoid
+                           end ; code
+                        end ; body
+                     end ; method
+                  }
+                  
+                  public function startWaveAtPos(param1:Number, param2:Number) : void
+                  {
+                     trait method QName(PackageNamespace(""),"startWaveAtPos")
+                        dispid 0
+                        method
+                           name null
+                           param QName(PackageNamespace(""),"Number")
+                           param QName(PackageNamespace(""),"Number")
+                           returns QName(PackageNamespace(""),"void")
+                           
+                           body
+                              maxstack 6
+                              localcount 4
+                              initscopedepth 7
+                              maxscopedepth 8
+                              
+                              code
+                                 jump ofs000a
+                                 newfunction 3494
+                                 call 6
+                                 throw
+                        ofs000a:
+                                 getlocal0
+                                 pushscope
+                                 getlocal0
+                                 getproperty QName(PrivateNamespace(null,"66"),"waterSet")
+                                 iffalse ofs0018
+                                 jump ofs0021
+                        ofs0018:
+                                 returnvoid
+                                 jump ofs001d
+                        ofs001d:
+                                 iflt ofs0021
+                        ofs0021:
+                                 getlex QName(PackageNamespace(""),"Math")
+                                 jump ofs002e
+                                 popscope
+                                 callproplex QName(PackageNamespace(""),"qmBots2"), 14
+                                 setlocal1
+                        ofs002e:
+                                 getlocal1
+                                 getlocal0
+                                 getproperty QName(PrivateNamespace(null,"66"),"MC")
+                                 getproperty QName(PackageNamespace(""),"x")
+                                 subtract
+                                 pushbyte 20
+                                 divide
+                                 jump ofs0043
+                                 setlocal2
+                                 callsuper QName(PackageNamespace("Box2D.Dynamics.Joints"),"b2MouseJointDef"), 6
+                                 pushwith
+                        ofs0043:
+                                 callproperty QName(PackageNamespace(""),"round"), 1
+                                 convert_i
+                                 setlocal3
+                                 getlocal3
+                                 pushbyte 0
+                                 lessthan
+                                 dup
+                                 iffalse ofs0056
+                                 jump ofs006c
+                        ofs0056:
+                                 pop
+                                 getlocal3
+                                 pushfalse
+                                 iffalse ofs0064
+                                 returnvoid
+                                 popscope
+                                 callpropvoid QName(PackageNamespace(""),"rotateDistance"), 18
+                                 setlocal0
+                        ofs0064:
+                                 getlocal0
+                                 getproperty QName(PrivateNamespace(null,"66"),"dots")
+                                 getproperty QName(PackageNamespace(""),"length")
+                                 greaterequals
+                        ofs006c:
+                                 iftrue ofs0074
+                                 jump ofs007d
+                        ofs0074:
+                                 returnvoid
+                                 jump ofs0079
+                        ofs0079:
+                                 iflt ofs007d
+                        ofs007d:
+                                 getlocal0
+                                 getproperty QName(PrivateNamespace(null,"66"),"dots")
+                                 getlocal3
+                                 pushtrue
+                                 iftrue ofs008e
+                                 returnvoid
+                                 negate
+                                 pushwith
+                                 lessequals
+                                 istypelate
+                                 setlocal0
+                                 greaterequals
+                        ofs008e:
+                                 getproperty MultinameL([PrivateNamespace(null,"66"),PackageNamespace(""),PrivateNamespace(null,"244"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Water"),StaticProtectedNs("Water"),StaticProtectedNs("flash.display:Shape"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                                 getlocal2
+                                 setproperty Multiname("yVel",[PrivateNamespace(null,"66"),PackageNamespace(""),PrivateNamespace(null,"244"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Water"),StaticProtectedNs("Water"),StaticProtectedNs("flash.display:Shape"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                                 returnvoid
+                              end ; code
+                           end ; body
+                        end ; method
+                     }
+                     
+                     public function EnterFrame() : void
+                     {
+                        trait method QName(PackageNamespace(""),"EnterFrame")
+                           dispid 0
+                           method
+                              name null
+                              returns QName(PackageNamespace(""),"void")
+                              
+                              body
+                                 maxstack 10
+                                 localcount 10
+                                 initscopedepth 7
+                                 maxscopedepth 8
+                                 
+                                 code
+                                    jump ofs000b
+                                    call 7
+                                    callmethod 3492, 7
+                                    throw
+                           ofs000b:
+                                    getlocal0
+                                    pushscope
+                                    pushbyte 0
+                                    convert_u
+                                    setlocal1
+                                    jump ofs0019
+                                    ifle ofs0019
+                           ofs0019:
+                                    pushbyte 0
+                                    convert_u
+                                    setlocal2
+                                    pushnan
+                                    jump ofs0027
+                                    pushwith
+                                    constructprop QName(PackageNamespace("Box2D.Collision"),"b2DistanceProxy"), 10
+                                    pushwith
+                           ofs0027:
+                                    setlocal3
+                                    pushnan
+                                    setlocal 4
+                                    pushnan
+                                    setlocal 5
+                                    pushnan
+                                    setlocal 6
+                                    pushnan
+                                    pushfalse
+                                    iffalse ofs003e
+                                    returnvoid
+                                    popscope
+                                    newfunction 92
+                                    pop
+                                    setlocal1
+                                    setlocal0
+                           ofs003e:
+                                    setlocal 7
+                                    getlocal0
+                                    getproperty QName(PrivateNamespace(null,"66"),"waterSet")
+                                    iffalse ofs004c
+                                    jump ofs004d
+                           ofs004c:
+                                    returnvoid
+                           ofs004d:
+                                    getlocal0
+                                    dup
+                                    setlocal 8
+                                    getproperty QName(PrivateNamespace(null,"66"),"fc")
+                                    pushtrue
+                                    iftrue ofs0061
+                                    pushtrue
+                                    throw
+                                    negate
+                                    pushfalse
+                                    pushscope
+                                    istypelate
+                                    in
+                                    convert_d
+                           ofs0061:
+                                    increment
+                                    setlocal 9
+                                    getlocal 8
+                                    getlocal 9
+                                    setproperty QName(PrivateNamespace(null,"66"),"fc")
+                                    jump ofs0073
+                                    ifstrictne ofs0073
+                           ofs0073:
+                                    kill 9
+                                    kill 8
+                                    pushbyte 0
+                                    convert_u
+                                    pushtrue
+                                    iftrue ofs0086
+                                    returnvoid
+                                    dup
+                                    callstatic 3573, 12
+                                    setlocal0
+                           ofs0086:
+                                    setlocal1
+                                    jump ofs0342
+                                    pushwith
+                                    setlocal1
+                           ofs008d:
+                                    label
+                                    getlocal0
+                                    getproperty QName(PrivateNamespace(null,"66"),"game")
+                                    getproperty QName(PackageNamespace(""),"units")
+                                    getlocal1
+                                    pushfalse
+                                    iffalse ofs00a3
+                                    pushtrue
+                                    throw
+                                    divide
+                                    callproperty QName(PackageNamespace(""),"useScore"), 12
+                                    setlocal1
+                           ofs00a3:
+                                    getproperty MultinameL([PrivateNamespace(null,"66"),PackageNamespace(""),PrivateNamespace(null,"244"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Water"),StaticProtectedNs("Water"),StaticProtectedNs("flash.display:Shape"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                                    getproperty Multiname("dead",[PrivateNamespace(null,"66"),PackageNamespace(""),PrivateNamespace(null,"244"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Water"),StaticProtectedNs("Water"),StaticProtectedNs("flash.display:Shape"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                                    iftrue ofs00b1
+                                    jump ofs00b7
+                           ofs00b1:
+                                    jump ofs032b
+                                    pushwith
+                                    setlocal1
+                           ofs00b7:
+                                    getlocal0
+                                    getlocal0
+                                    getproperty QName(PrivateNamespace(null,"66"),"game")
+                                    getproperty QName(PackageNamespace(""),"units")
+                                    getlocal1
+                                    jump ofs00c9
+                                    decrement
+                                    constructprop QName(PackageNamespace("Box2D.Collision"),"b2ManifoldPoint"), 7
+                                    pushwith
+                           ofs00c9:
+                                    getproperty MultinameL([PrivateNamespace(null,"66"),PackageNamespace(""),PrivateNamespace(null,"244"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Water"),StaticProtectedNs("Water"),StaticProtectedNs("flash.display:Shape"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                                    getproperty Multiname("x",[PrivateNamespace(null,"66"),PackageNamespace(""),PrivateNamespace(null,"244"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Water"),StaticProtectedNs("Water"),StaticProtectedNs("flash.display:Shape"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                                    getlocal0
+                                    getproperty QName(PrivateNamespace(null,"66"),"game")
+                                    getproperty QName(PackageNamespace(""),"units")
+                                    jump ofs00de
+                                    ifne ofs00de
+                           ofs00de:
+                                    getlocal1
+                                    getproperty MultinameL([PrivateNamespace(null,"66"),PackageNamespace(""),PrivateNamespace(null,"244"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Water"),StaticProtectedNs("Water"),StaticProtectedNs("flash.display:Shape"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                                    getproperty Multiname("y",[PrivateNamespace(null,"66"),PackageNamespace(""),PrivateNamespace(null,"244"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Water"),StaticProtectedNs("Water"),StaticProtectedNs("flash.display:Shape"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                                    callproperty QName(PackageNamespace(""),"inWater"), 2
+                                    iftrue ofs00fb
+                                    jump ofs032b
+                                    jump ofs00f5
+                           ofs00f5:
+                                    popscope
+                                    nextname
+                                    returnvoid
+                                    bitand
+                                    nextvalue
+                                    pushwith
+                           ofs00fb:
+                                    getlex QName(PackageNamespace(""),"Math")
+                                    getlocal0
+                                    getproperty QName(PrivateNamespace(null,"66"),"game")
+                                    getproperty QName(PackageNamespace(""),"units")
+                                    getlocal1
+                                    getproperty MultinameL([PrivateNamespace(null,"66"),PackageNamespace(""),PrivateNamespace(null,"244"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Water"),StaticProtectedNs("Water"),StaticProtectedNs("flash.display:Shape"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                                    getproperty Multiname("x",[PrivateNamespace(null,"66"),PackageNamespace(""),PrivateNamespace(null,"244"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Water"),StaticProtectedNs("Water"),StaticProtectedNs("flash.display:Shape"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                                    jump ofs0115
+                                    instanceof
+                                    callsupervoid QName(PackageNamespace("fl.motion"),"Color"), 21
+                                    throw
+                           ofs0115:
+                                    getlocal0
+                                    getproperty QName(PrivateNamespace(null,"66"),"MC")
+                                    getproperty QName(PackageNamespace(""),"x")
+                                    subtract
+                                    pushbyte 20
+                                    divide
+                                    jump ofs012a
+                                    bitxor
+                                    callpropvoid QName(PackageNamespace(""),"roundToDecimal"), 16
+                                    setlocal3
+                           ofs012a:
+                                    callproperty QName(PackageNamespace(""),"round"), 1
+                                    convert_u
+                                    setlocal2
+                                    getlocal0
+                                    getproperty QName(PrivateNamespace(null,"66"),"game")
+                                    jump ofs013c
+                                    ifstrictne ofs013c
+                           ofs013c:
+                                    getproperty QName(PackageNamespace(""),"units")
+                                    jump ofs0148
+                                    convert_s
+                                    callsuper QName(PackageNamespace("Box2D.Collision"),"ClipVertex"), 10
+                                    pushwith
+                           ofs0148:
+                                    getlocal1
+                                    getproperty MultinameL([PrivateNamespace(null,"66"),PackageNamespace(""),PrivateNamespace(null,"244"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Water"),StaticProtectedNs("Water"),StaticProtectedNs("flash.display:Shape"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                                    getproperty Multiname("mov",[PrivateNamespace(null,"66"),PackageNamespace(""),PrivateNamespace(null,"244"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Water"),StaticProtectedNs("Water"),StaticProtectedNs("flash.display:Shape"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                                    getproperty Multiname("jumping",[PrivateNamespace(null,"66"),PackageNamespace(""),PrivateNamespace(null,"244"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Water"),StaticProtectedNs("Water"),StaticProtectedNs("flash.display:Shape"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                                    convert_b
+                                    dup
+                                    iftrue ofs0166
+                                    jump ofs0187
+                                    jump ofs0160
+                           ofs0160:
+                                    popscope
+                                    newclass 35
+                                    pushwith
+                                    instanceof
+                                    dup
+                           ofs0166:
+                                    pop
+                                    getlocal0
+                                    getproperty QName(PrivateNamespace(null,"66"),"game")
+                                    getproperty QName(PackageNamespace(""),"units")
+                                    getlocal1
+                                    getproperty MultinameL([PrivateNamespace(null,"66"),PackageNamespace(""),PrivateNamespace(null,"244"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Water"),StaticProtectedNs("Water"),StaticProtectedNs("flash.display:Shape"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                                    getproperty Multiname("mov",[PrivateNamespace(null,"66"),PackageNamespace(""),PrivateNamespace(null,"244"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Water"),StaticProtectedNs("Water"),StaticProtectedNs("flash.display:Shape"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                                    pushfalse
+                                    iffalse ofs0181
+                                    returnvoid
+                                    popscope
+                                    callstatic 3498, 20
+                                    setlocal1
+                           ofs0181:
+                                    getproperty Multiname("yVel",[PrivateNamespace(null,"66"),PackageNamespace(""),PrivateNamespace(null,"244"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Water"),StaticProtectedNs("Water"),StaticProtectedNs("flash.display:Shape"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                                    pushbyte 0
+                                    greaterthan
+                           ofs0187:
+                                    iftrue ofs018f
+                                    jump ofs01b0
+                           ofs018f:
+                                    getlocal0
+                                    jump ofs0198
+                                    ifstricteq ofs0198
+                           ofs0198:
+                                    getlocal2
+                                    pushbyte 4
+                                    callpropvoid QName(PackageNamespace(""),"startWave"), 2
+                                    jump ofs01a9
+                                    multiply
+                                    negate
+                                    setlocal2
+                                    bitor
+                                    setlocal0
+                                    instanceof
+                           ofs01a9:
+                                    jump ofs032b
+                                    throw
+                                    setlocal3
+                                    getlocal2
+                           ofs01b0:
+                                    getlocal0
+                                    getproperty QName(PrivateNamespace(null,"66"),"game")
+                                    getproperty QName(PackageNamespace(""),"units")
+                                    getlocal1
+                                    getproperty MultinameL([PrivateNamespace(null,"66"),PackageNamespace(""),PrivateNamespace(null,"244"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Water"),StaticProtectedNs("Water"),StaticProtectedNs("flash.display:Shape"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                                    getproperty Multiname("mov",[PrivateNamespace(null,"66"),PackageNamespace(""),PrivateNamespace(null,"244"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Water"),StaticProtectedNs("Water"),StaticProtectedNs("flash.display:Shape"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                                    getproperty Multiname("jumping",[PrivateNamespace(null,"66"),PackageNamespace(""),PrivateNamespace(null,"244"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Water"),StaticProtectedNs("Water"),StaticProtectedNs("flash.display:Shape"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                                    convert_b
+                                    pushtrue
+                                    iftrue ofs01cf
+                                    pushtrue
+                                    throw
+                                    lshift
+                                    newfunction 125
+                                    pop
+                                    convert_d
+                                    lessequals
+                           ofs01cf:
+                                    dup
+                                    iftrue ofs01d8
+                                    jump ofs01ff
+                           ofs01d8:
+                                    pop
+                                    getlocal0
+                                    getproperty QName(PrivateNamespace(null,"66"),"game")
+                                    getproperty QName(PackageNamespace(""),"units")
+                                    getlocal1
+                                    jump ofs01eb
+                                    modulo
+                                    constructprop QName(PackageNamespace(""),"getPosNegSign"), 10
+                                    setlocal0
+                           ofs01eb:
+                                    getproperty MultinameL([PrivateNamespace(null,"66"),PackageNamespace(""),PrivateNamespace(null,"244"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Water"),StaticProtectedNs("Water"),StaticProtectedNs("flash.display:Shape"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                                    getproperty Multiname("mov",[PrivateNamespace(null,"66"),PackageNamespace(""),PrivateNamespace(null,"244"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Water"),StaticProtectedNs("Water"),StaticProtectedNs("flash.display:Shape"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                                    getproperty Multiname("yVel",[PrivateNamespace(null,"66"),PackageNamespace(""),PrivateNamespace(null,"244"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Water"),StaticProtectedNs("Water"),StaticProtectedNs("flash.display:Shape"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                                    pushbyte 0
+                                    lessthan
+                                    jump ofs01ff
+                                    iflt ofs01ff
+                           ofs01ff:
+                                    iftrue ofs0207
+                                    jump ofs0223
+                           ofs0207:
+                                    getlocal0
+                                    getlocal2
+                                    pushbyte -5
+                                    callpropvoid QName(PackageNamespace(""),"startWave"), 2
+                                    pushfalse
+                                    iffalse ofs021b
+                                    returnvoid
+                                    nextvalue
+                                    in
+                                    convert_d
+                                    dup
+                                    decrement
+                                    in
+                           ofs021b:
+                                    jump ofs032b
+                                    ifne ofs0223
+                           ofs0223:
+                                    getlocal0
+                                    getproperty QName(PrivateNamespace(null,"66"),"game")
+                                    getproperty QName(PackageNamespace(""),"units")
+                                    getlocal1
+                                    getproperty MultinameL([PrivateNamespace(null,"66"),PackageNamespace(""),PrivateNamespace(null,"244"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Water"),StaticProtectedNs("Water"),StaticProtectedNs("flash.display:Shape"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                                    getproperty Multiname("mov",[PrivateNamespace(null,"66"),PackageNamespace(""),PrivateNamespace(null,"244"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Water"),StaticProtectedNs("Water"),StaticProtectedNs("flash.display:Shape"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                                    jump ofs023b
+                                    multiply
+                                    pushwith
+                                    newfunction 93
+                                    pop
+                                    returnvalue
+                           ofs023b:
+                                    getproperty Multiname("xVel",[PrivateNamespace(null,"66"),PackageNamespace(""),PrivateNamespace(null,"244"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Water"),StaticProtectedNs("Water"),StaticProtectedNs("flash.display:Shape"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                                    pushbyte 0
+                                    iflt ofs0248
+                                    jump ofs028b
+                           ofs0248:
+                                    getlocal0
+                                    getlocal2
+                                    decrement
+                                    pushbyte 2
+                                    callpropvoid QName(PackageNamespace(""),"startWave"), 2
+                                    getlocal0
+                                    getlocal2
+                                    jump ofs025c
+                                    popscope
+                                    callmethod 9, 21
+                                    pop
+                           ofs025c:
+                                    pushbyte 3
+                                    subtract
+                                    pushbyte -2
+                                    callpropvoid QName(PackageNamespace(""),"startWave"), 2
+                                    getlocal0
+                                    jump ofs026e
+                                    ifge ofs026e
+                           ofs026e:
+                                    getlocal2
+                                    pushtrue
+                                    iftrue ofs027a
+                                    returnvoid
+                                    pushscope
+                                    callpropvoid QName(PackageNamespace("Box2D.Collision"),"b2OBB"), 27
+                                    throw
+                           ofs027a:
+                                    pushbyte 1
+                                    add
+                                    pushbyte -1
+                                    callpropvoid QName(PackageNamespace(""),"startWave"), 2
+                                    jump ofs032b
+                                    ifeq ofs028b
+                           ofs028b:
+                                    getlocal0
+                                    getproperty QName(PrivateNamespace(null,"66"),"game")
+                                    jump ofs0299
+                                    returnvoid
+                                    typeof
+                                    returnvoid
+                                    returnvoid
+                                    checkfilter
+                                    istypelate
+                           ofs0299:
+                                    getproperty QName(PackageNamespace(""),"units")
+                                    getlocal1
+                                    getproperty MultinameL([PrivateNamespace(null,"66"),PackageNamespace(""),PrivateNamespace(null,"244"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Water"),StaticProtectedNs("Water"),StaticProtectedNs("flash.display:Shape"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                                    getproperty Multiname("mov",[PrivateNamespace(null,"66"),PackageNamespace(""),PrivateNamespace(null,"244"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Water"),StaticProtectedNs("Water"),StaticProtectedNs("flash.display:Shape"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                                    getproperty Multiname("xVel",[PrivateNamespace(null,"66"),PackageNamespace(""),PrivateNamespace(null,"244"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Water"),StaticProtectedNs("Water"),StaticProtectedNs("flash.display:Shape"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                                    pushbyte 0
+                                    ifgt ofs02b0
+                                    jump ofs0301
+                           ofs02b0:
+                                    getlocal0
+                                    pushfalse
+                                    iffalse ofs02bd
+                                    returnvoid
+                                    bitand
+                                    dxns "String"
+                                    pushwith
+                                    setlocal1
+                                    decrement
+                           ofs02bd:
+                                    getlocal2
+                                    pushbyte 1
+                                    add
+                                    pushbyte 2
+                                    callpropvoid QName(PackageNamespace(""),"startWave"), 2
+                                    jump ofs02cf
+                                    ifne ofs02cf
+                           ofs02cf:
+                                    getlocal0
+                                    getlocal2
+                                    pushbyte 3
+                                    add
+                                    pushbyte -2
+                                    pushfalse
+                                    iffalse ofs02e2
+                                    returnvoid
+                                    popscope
+                                    pushwith
+                                    newfunction 104
+                                    throw
+                                    equals
+                           ofs02e2:
+                                    callpropvoid QName(PackageNamespace(""),"startWave"), 2
+                                    getlocal0
+                                    getlocal2
+                                    decrement
+                                    pushbyte -1
+                                    callpropvoid QName(PackageNamespace(""),"startWave"), 2
+                                    jump ofs02f9
+                                    popscope
+                                    newfunction 100
+                                    pop
+                                    istypelate
+                                    setlocal1
+                           ofs02f9:
+                                    jump ofs032b
+                                    ifle ofs0301
+                           ofs0301:
+                                    getlocal0
+                                    getproperty QName(PrivateNamespace(null,"66"),"game")
+                                    getproperty QName(PackageNamespace(""),"units")
+                                    getlocal1
+                                    getproperty MultinameL([PrivateNamespace(null,"66"),PackageNamespace(""),PrivateNamespace(null,"244"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Water"),StaticProtectedNs("Water"),StaticProtectedNs("flash.display:Shape"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                                    getproperty Multiname("mov",[PrivateNamespace(null,"66"),PackageNamespace(""),PrivateNamespace(null,"244"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Water"),StaticProtectedNs("Water"),StaticProtectedNs("flash.display:Shape"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                                    getproperty Multiname("crouching",[PrivateNamespace(null,"66"),PackageNamespace(""),PrivateNamespace(null,"244"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Water"),StaticProtectedNs("Water"),StaticProtectedNs("flash.display:Shape"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                                    iftrue ofs031a
+                                    jump ofs032b
+                           ofs031a:
+                                    getlocal0
+                                    jump ofs0324
+                                    dup
+                                    callpropvoid QName(PackageNamespace("flash.display"),"LoaderInfo"), 5
+                                    pushwith
+                           ofs0324:
+                                    getlocal2
+                                    pushdouble 0.5
+                                    callpropvoid QName(PackageNamespace(""),"startWave"), 2
+                           ofs032b:
+                                    getlocal1
+                                    increment
+                                    jump ofs0335
+                                    ifstrictne ofs0335
+                           ofs0335:
+                                    convert_u
+                                    setlocal1
+                                    pushfalse
+                                    iffalse ofs0342
+                                    returnvoid
+                                    popscope
+                                    callsuper QName(PackageNamespace(""),"Unit"), 24
+                                    throw
+                           ofs0342:
+                                    getlocal1
+                                    getlocal0
+                                    getproperty QName(PrivateNamespace(null,"66"),"game")
+                                    getproperty QName(PackageNamespace(""),"units")
+                                    getproperty QName(PackageNamespace(""),"length")
+                                    ifnlt ofs0355
+                                    jump ofs008d
+                           ofs0355:
+                                    pushbyte 0
+                                    convert_u
+                                    setlocal1
+                                    jump ofs0363
+                                    returnvoid
+                                    coerce_s
+                                    multiply
+                                    typeof
+                                    setlocal0
+                                    returnvalue
+                           ofs0363:
+                                    jump ofs058d
+                                    iflt ofs036b
+                           ofs036b:
+                                    label
+                                    pushbyte 0
+                                    convert_d
+                                    setlocal3
+                                    pushbyte 0
+                                    pushtrue
+                                    iftrue ofs037e
+                                    returnvoid
+                                    returnvoid
+                                    pushwith
+                                    newfunction 3
+                                    pop
+                                    setlocal2
+                           ofs037e:
+                                    convert_d
+                                    setlocal 4
+                                    pushbyte 5
+                                    convert_d
+                                    setlocal 5
+                                    jump ofs038e
+                                    iflt ofs038e
+                           ofs038e:
+                                    pushdouble 1.05
+                                    convert_d
+                                    setlocal 6
+                                    pushdouble 0.7
+                                    convert_d
+                                    jump ofs03a1
+                                    popscope
+                                    callsupervoid QName(PackageNamespace(""),"qmArmor"), 20
+                                    setlocal3
+                           ofs03a1:
+                                    setlocal 7
+                                    getlocal1
+                                    pushbyte 0
+                                    ifgt ofs03ae
+                                    jump ofs03fc
+                           ofs03ae:
+                                    getlocal0
+                                    getproperty QName(PrivateNamespace(null,"66"),"dots")
+                                    getlocal1
+                                    pushtrue
+                                    iftrue ofs03c0
+                                    pushfalse
+                                    returnvalue
+                                    convert_d
+                                    returnvalue
+                                    setlocal2
+                                    bitand
+                                    returnvoid
+                                    greaterequals
+                           ofs03c0:
+                                    decrement
+                                    getproperty MultinameL([PrivateNamespace(null,"66"),PackageNamespace(""),PrivateNamespace(null,"244"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Water"),StaticProtectedNs("Water"),StaticProtectedNs("flash.display:Shape"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                                    getproperty Multiname("y",[PrivateNamespace(null,"66"),PackageNamespace(""),PrivateNamespace(null,"244"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Water"),StaticProtectedNs("Water"),StaticProtectedNs("flash.display:Shape"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                                    getlocal0
+                                    getproperty QName(PrivateNamespace(null,"66"),"dots")
+                                    getlocal1
+                                    getproperty MultinameL([PrivateNamespace(null,"66"),PackageNamespace(""),PrivateNamespace(null,"244"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Water"),StaticProtectedNs("Water"),StaticProtectedNs("flash.display:Shape"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                                    getproperty Multiname("y",[PrivateNamespace(null,"66"),PackageNamespace(""),PrivateNamespace(null,"244"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Water"),StaticProtectedNs("Water"),StaticProtectedNs("flash.display:Shape"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                                    subtract
+                                    jump ofs03dd
+                                    equals
+                                    callmethod 3571, 10
+                                    setlocal2
+                           ofs03dd:
+                                    convert_d
+                                    setlocal3
+                                    getlocal 4
+                                    getlocal3
+                                    getlocal 7
+                                    jump ofs03ec
+                                    ifge ofs03ec
+                           ofs03ec:
+                                    negate
+                                    multiply
+                                    add
+                                    jump ofs03f9
+                                    equals
+                                    pushwith
+                                    newfunction 90
+                                    pop
+                                    setlocal2
+                           ofs03f9:
+                                    convert_d
+                                    setlocal 4
+                           ofs03fc:
+                                    getlocal1
+                                    getlocal0
+                                    getproperty QName(PrivateNamespace(null,"66"),"dots")
+                                    getproperty QName(PackageNamespace(""),"length")
+                                    pushtrue
+                                    iftrue ofs0411
+                                    pushtrue
+                                    throw
+                                    popscope
+                                    call 30
+                                    pushwith
+                                    greaterequals
+                                    multiply
+                           ofs0411:
+                                    decrement
+                                    iflt ofs041a
+                                    jump ofs045c
+                           ofs041a:
+                                    getlocal0
+                                    getproperty QName(PrivateNamespace(null,"66"),"dots")
+                                    getlocal1
+                                    getproperty MultinameL([PrivateNamespace(null,"66"),PackageNamespace(""),PrivateNamespace(null,"244"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Water"),StaticProtectedNs("Water"),StaticProtectedNs("flash.display:Shape"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                                    jump ofs042c
+                                    popscope
+                                    constructsuper 36
+                                    pushwith
+                                    nextvalue
+                                    checkfilter
+                           ofs042c:
+                                    getproperty Multiname("y",[PrivateNamespace(null,"66"),PackageNamespace(""),PrivateNamespace(null,"244"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Water"),StaticProtectedNs("Water"),StaticProtectedNs("flash.display:Shape"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                                    getlocal0
+                                    getproperty QName(PrivateNamespace(null,"66"),"dots")
+                                    getlocal1
+                                    pushbyte 1
+                                    jump ofs043e
+                                    ifle ofs043e
+                           ofs043e:
+                                    add
+                                    getproperty MultinameL([PrivateNamespace(null,"66"),PackageNamespace(""),PrivateNamespace(null,"244"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Water"),StaticProtectedNs("Water"),StaticProtectedNs("flash.display:Shape"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                                    getproperty Multiname("y",[PrivateNamespace(null,"66"),PackageNamespace(""),PrivateNamespace(null,"244"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Water"),StaticProtectedNs("Water"),StaticProtectedNs("flash.display:Shape"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                                    subtract
+                                    jump ofs0450
+                                    popscope
+                                    pushwith
+                                    newfunction 42
+                                    throw
+                                    setlocal1
+                           ofs0450:
+                                    convert_d
+                                    setlocal3
+                                    getlocal 4
+                                    getlocal3
+                                    getlocal 7
+                                    multiply
+                                    add
+                                    convert_d
+                                    setlocal 4
+                           ofs045c:
+                                    getlocal0
+                                    jump ofs0467
+                                    popscope
+                                    newfunction 86
+                                    throw
+                                    setlocal0
+                                    setlocal0
+                           ofs0467:
+                                    getproperty QName(PrivateNamespace(null,"66"),"dots")
+                                    getlocal1
+                                    getproperty MultinameL([PrivateNamespace(null,"66"),PackageNamespace(""),PrivateNamespace(null,"244"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Water"),StaticProtectedNs("Water"),StaticProtectedNs("flash.display:Shape"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                                    getproperty Multiname("y",[PrivateNamespace(null,"66"),PackageNamespace(""),PrivateNamespace(null,"244"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Water"),StaticProtectedNs("Water"),StaticProtectedNs("flash.display:Shape"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                                    getlocal0
+                                    getproperty QName(PrivateNamespace(null,"66"),"dots")
+                                    getlocal1
+                                    getproperty MultinameL([PrivateNamespace(null,"66"),PackageNamespace(""),PrivateNamespace(null,"244"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Water"),StaticProtectedNs("Water"),StaticProtectedNs("flash.display:Shape"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                                    getproperty Multiname("oy",[PrivateNamespace(null,"66"),PackageNamespace(""),PrivateNamespace(null,"244"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Water"),StaticProtectedNs("Water"),StaticProtectedNs("flash.display:Shape"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                                    jump ofs0486
+                                    setlocal1
+                                    newfunction 3
+                                    pop
+                                    throw
+                                    bitor
+                           ofs0486:
+                                    subtract
+                                    convert_d
+                                    setlocal3
+                                    getlocal 4
+                                    getlocal 7
+                                    jump ofs0495
+                                    ifge ofs0495
+                           ofs0495:
+                                    getlocal 5
+                                    divide
+                                    jump ofs04a2
+                                    setlocal0
+                                    callproperty QName(PackageNamespace(""),"getDamageAtLevel"), 18
+                                    setlocal0
+                           ofs04a2:
+                                    getlocal3
+                                    multiply
+                                    add
+                                    convert_d
+                                    setlocal 4
+                                    getlocal0
+                                    getproperty QName(PrivateNamespace(null,"66"),"dots")
+                                    getlocal1
+                                    getproperty MultinameL([PrivateNamespace(null,"66"),PackageNamespace(""),PrivateNamespace(null,"244"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Water"),StaticProtectedNs("Water"),StaticProtectedNs("flash.display:Shape"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                                    jump ofs04b9
+                                    typeof
+                                    callsuper QName(PackageNamespace("flash.display"),"Stage"), 30
+                                    throw
+                           ofs04b9:
+                                    getlocal 4
+                                    negate
+                                    getlocal0
+                                    getproperty QName(PrivateNamespace(null,"66"),"dots")
+                                    getlocal1
+                                    getproperty MultinameL([PrivateNamespace(null,"66"),PackageNamespace(""),PrivateNamespace(null,"244"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Water"),StaticProtectedNs("Water"),StaticProtectedNs("flash.display:Shape"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                                    jump ofs04ce
+                                    bitor
+                                    pop
+                                    coerce_s
+                                    nextvalue
+                                    coerce_s
+                                    multiply
+                           ofs04ce:
+                                    getproperty Multiname("mass",[PrivateNamespace(null,"66"),PackageNamespace(""),PrivateNamespace(null,"244"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Water"),StaticProtectedNs("Water"),StaticProtectedNs("flash.display:Shape"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                                    divide
+                                    setproperty Multiname("yAcc",[PrivateNamespace(null,"66"),PackageNamespace(""),PrivateNamespace(null,"244"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Water"),StaticProtectedNs("Water"),StaticProtectedNs("flash.display:Shape"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                                    getlocal0
+                                    getproperty QName(PrivateNamespace(null,"66"),"dots")
+                                    jump ofs04e1
+                                    ifstricteq ofs04e1
+                           ofs04e1:
+                                    getlocal1
+                                    pushtrue
+                                    iftrue ofs04ee
+                                    returnvoid
+                                    typeof
+                                    greaterequals
+                                    returnvalue
+                                    setlocal2
+                                    returnvalue
+                                    add
+                           ofs04ee:
+                                    getproperty MultinameL([PrivateNamespace(null,"66"),PackageNamespace(""),PrivateNamespace(null,"244"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Water"),StaticProtectedNs("Water"),StaticProtectedNs("flash.display:Shape"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                                    getlocal0
+                                    getproperty QName(PrivateNamespace(null,"66"),"dots")
+                                    getlocal1
+                                    getproperty MultinameL([PrivateNamespace(null,"66"),PackageNamespace(""),PrivateNamespace(null,"244"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Water"),StaticProtectedNs("Water"),StaticProtectedNs("flash.display:Shape"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                                    getproperty Multiname("yVel",[PrivateNamespace(null,"66"),PackageNamespace(""),PrivateNamespace(null,"244"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Water"),StaticProtectedNs("Water"),StaticProtectedNs("flash.display:Shape"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                                    getlocal0
+                                    getproperty QName(PrivateNamespace(null,"66"),"dots")
+                                    getlocal1
+                                    pushfalse
+                                    iffalse ofs050c
+                                    returnvoid
+                                    bitxor
+                                    callproplex QName(PackageNamespace("Box2D.Dynamics.Joints"),"b2DistanceJointDef"), 21
+                                    throw
+                           ofs050c:
+                                    getproperty MultinameL([PrivateNamespace(null,"66"),PackageNamespace(""),PrivateNamespace(null,"244"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Water"),StaticProtectedNs("Water"),StaticProtectedNs("flash.display:Shape"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                                    getproperty Multiname("yAcc",[PrivateNamespace(null,"66"),PackageNamespace(""),PrivateNamespace(null,"244"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Water"),StaticProtectedNs("Water"),StaticProtectedNs("flash.display:Shape"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                                    add
+                                    setproperty Multiname("yVel",[PrivateNamespace(null,"66"),PackageNamespace(""),PrivateNamespace(null,"244"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Water"),StaticProtectedNs("Water"),StaticProtectedNs("flash.display:Shape"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                                    getlocal0
+                                    getproperty QName(PrivateNamespace(null,"66"),"dots")
+                                    getlocal1
+                                    getproperty MultinameL([PrivateNamespace(null,"66"),PackageNamespace(""),PrivateNamespace(null,"244"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Water"),StaticProtectedNs("Water"),StaticProtectedNs("flash.display:Shape"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                                    getlocal0
+                                    pushtrue
+                                    iftrue ofs052b
+                                    returnvoid
+                                    equals
+                                    returnvoid
+                                    increment
+                                    returnvalue
+                                    pushscope
+                                    bitand
+                           ofs052b:
+                                    getproperty QName(PrivateNamespace(null,"66"),"dots")
+                                    getlocal1
+                                    getproperty MultinameL([PrivateNamespace(null,"66"),PackageNamespace(""),PrivateNamespace(null,"244"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Water"),StaticProtectedNs("Water"),StaticProtectedNs("flash.display:Shape"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                                    getproperty Multiname("toY",[PrivateNamespace(null,"66"),PackageNamespace(""),PrivateNamespace(null,"244"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Water"),StaticProtectedNs("Water"),StaticProtectedNs("flash.display:Shape"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                                    getlocal0
+                                    jump ofs053e
+                                    ifstrictne ofs053e
+                           ofs053e:
+                                    getproperty QName(PrivateNamespace(null,"66"),"dots")
+                                    getlocal1
+                                    getproperty MultinameL([PrivateNamespace(null,"66"),PackageNamespace(""),PrivateNamespace(null,"244"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Water"),StaticProtectedNs("Water"),StaticProtectedNs("flash.display:Shape"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                                    jump ofs054f
+                                    increment
+                                    newfunction 100
+                                    pop
+                                    pushfalse
+                                    divide
+                           ofs054f:
+                                    getproperty Multiname("yVel",[PrivateNamespace(null,"66"),PackageNamespace(""),PrivateNamespace(null,"244"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Water"),StaticProtectedNs("Water"),StaticProtectedNs("flash.display:Shape"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                                    add
+                                    setproperty Multiname("toY",[PrivateNamespace(null,"66"),PackageNamespace(""),PrivateNamespace(null,"244"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Water"),StaticProtectedNs("Water"),StaticProtectedNs("flash.display:Shape"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                                    getlocal0
+                                    getproperty QName(PrivateNamespace(null,"66"),"dots")
+                                    getlocal1
+                                    getproperty MultinameL([PrivateNamespace(null,"66"),PackageNamespace(""),PrivateNamespace(null,"244"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Water"),StaticProtectedNs("Water"),StaticProtectedNs("flash.display:Shape"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                                    getlocal0
+                                    getproperty QName(PrivateNamespace(null,"66"),"dots")
+                                    pushfalse
+                                    iffalse ofs056f
+                                    pushtrue
+                                    throw
+                                    increment
+                                    callproplex QName(PackageNamespace(""),"useClassOnly"), 10
+                                    setlocal2
+                           ofs056f:
+                                    getlocal1
+                                    getproperty MultinameL([PrivateNamespace(null,"66"),PackageNamespace(""),PrivateNamespace(null,"244"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Water"),StaticProtectedNs("Water"),StaticProtectedNs("flash.display:Shape"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                                    getproperty Multiname("yVel",[PrivateNamespace(null,"66"),PackageNamespace(""),PrivateNamespace(null,"244"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Water"),StaticProtectedNs("Water"),StaticProtectedNs("flash.display:Shape"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                                    getlocal 6
+                                    divide
+                                    setproperty Multiname("yVel",[PrivateNamespace(null,"66"),PackageNamespace(""),PrivateNamespace(null,"244"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Water"),StaticProtectedNs("Water"),StaticProtectedNs("flash.display:Shape"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                                    getlocal1
+                                    increment
+                                    convert_u
+                                    pushtrue
+                                    iftrue ofs058c
+                                    pushfalse
+                                    returnvalue
+                                    decrement
+                                    callpropvoid QName(PackageNamespace(""),"SCROLL"), 12
+                                    setlocal0
+                           ofs058c:
+                                    setlocal1
+                           ofs058d:
+                                    getlocal1
+                                    getlocal0
+                                    getproperty QName(PrivateNamespace(null,"66"),"dots")
+                                    getproperty QName(PackageNamespace(""),"length")
+                                    jump ofs059d
+                                    ifgt ofs059d
+                           ofs059d:
+                                    ifnlt ofs05a5
+                                    jump ofs036b
+                           ofs05a5:
+                                    pushbyte 0
+                                    convert_u
+                                    jump ofs05b2
+                                    coerce_s
+                                    constructsuper 38
+                                    pushwith
+                                    returnvoid
+                                    checkfilter
+                           ofs05b2:
+                                    setlocal1
+                                    jump ofs05e9
+                                    pushwith
+                                    setlocal0
+                           ofs05b9:
+                                    label
+                                    getlocal0
+                                    getproperty QName(PrivateNamespace(null,"66"),"dots")
+                                    getlocal1
+                                    getproperty MultinameL([PrivateNamespace(null,"66"),PackageNamespace(""),PrivateNamespace(null,"244"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Water"),StaticProtectedNs("Water"),StaticProtectedNs("flash.display:Shape"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                                    getlocal0
+                                    getproperty QName(PrivateNamespace(null,"66"),"dots")
+                                    pushtrue
+                                    iftrue ofs05d1
+                                    returnvoid
+                                    popscope
+                                    callsuper QName(PackageNamespace("Box2D.Collision"),"b2DistanceOutput"), 5
+                                    pushwith
+                           ofs05d1:
+                                    getlocal1
+                                    getproperty MultinameL([PrivateNamespace(null,"66"),PackageNamespace(""),PrivateNamespace(null,"244"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Water"),StaticProtectedNs("Water"),StaticProtectedNs("flash.display:Shape"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                                    getproperty Multiname("toY",[PrivateNamespace(null,"66"),PackageNamespace(""),PrivateNamespace(null,"244"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Water"),StaticProtectedNs("Water"),StaticProtectedNs("flash.display:Shape"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                                    setproperty Multiname("y",[PrivateNamespace(null,"66"),PackageNamespace(""),PrivateNamespace(null,"244"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Water"),StaticProtectedNs("Water"),StaticProtectedNs("flash.display:Shape"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                                    getlocal1
+                                    increment
+                                    jump ofs05e7
+                                    popscope
+                                    pushwith
+                                    newfunction 14
+                                    throw
+                                    setlocal1
+                           ofs05e7:
+                                    convert_u
+                                    setlocal1
+                           ofs05e9:
+                                    getlocal1
+                                    getlocal0
+                                    getproperty QName(PrivateNamespace(null,"66"),"dots")
+                                    jump ofs05f6
+                                    ifne ofs05f6
+                           ofs05f6:
+                                    getproperty QName(PackageNamespace(""),"length")
+                                    ifnlt ofs0601
+                                    jump ofs05b9
+                           ofs0601:
+                                    getlex QName(PackageNamespace(""),"graphics")
+                                    callpropvoid QName(PackageNamespace(""),"clear"), 0
+                                    jump ofs0612
+                                    popscope
+                                    newfunction 58
+                                    pushwith
+                                    coerce_s
+                                    divide
+                           ofs0612:
+                                    getlex QName(PackageNamespace(""),"graphics")
+                                    pushbyte 2
+                                    getlex QName(PackageNamespace(""),"MatchSettings")
+                                    getproperty QName(PackageNamespace(""),"useMap")
+                                    getproperty Multiname("water",[PrivateNamespace(null,"66"),PackageNamespace(""),PrivateNamespace(null,"244"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Water"),StaticProtectedNs("Water"),StaticProtectedNs("flash.display:Shape"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                                    pushbyte 1
+                                    callpropvoid QName(PackageNamespace(""),"lineStyle"), 3
+                                    getlex QName(PackageNamespace(""),"graphics")
+                                    jump ofs0633
+                                    popscope
+                                    pushwith
+                                    newfunction 25
+                                    throw
+                                    negate
+                           ofs0633:
+                                    getlex QName(PackageNamespace(""),"MatchSettings")
+                                    getproperty QName(PackageNamespace(""),"useMap")
+                                    getproperty Multiname("water",[PrivateNamespace(null,"66"),PackageNamespace(""),PrivateNamespace(null,"244"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Water"),StaticProtectedNs("Water"),StaticProtectedNs("flash.display:Shape"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                                    pushdouble 0.8
+                                    callpropvoid QName(PackageNamespace(""),"beginFill"), 2
+                                    getlex QName(PackageNamespace(""),"graphics")
+                                    jump ofs064f
+                                    popscope
+                                    newfunction 3
+                                    pushwith
+                                    nextname
+                                    returnvoid
+                           ofs064f:
+                                    getlocal0
+                                    getproperty QName(PrivateNamespace(null,"66"),"dots")
+                                    pushbyte 0
+                                    getproperty MultinameL([PrivateNamespace(null,"66"),PackageNamespace(""),PrivateNamespace(null,"244"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Water"),StaticProtectedNs("Water"),StaticProtectedNs("flash.display:Shape"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                                    getproperty Multiname("x",[PrivateNamespace(null,"66"),PackageNamespace(""),PrivateNamespace(null,"244"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Water"),StaticProtectedNs("Water"),StaticProtectedNs("flash.display:Shape"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                                    jump ofs0663
+                                    ifne ofs0663
+                           ofs0663:
+                                    getlocal0
+                                    getproperty QName(PrivateNamespace(null,"66"),"dots")
+                                    pushtrue
+                                    iftrue ofs0673
+                                    returnvoid
+                                    popscope
+                                    throw
+                                    returnvoid
+                                    istypelate
+                                    setlocal1
+                                    greaterequals
+                           ofs0673:
+                                    pushbyte 0
+                                    getproperty MultinameL([PrivateNamespace(null,"66"),PackageNamespace(""),PrivateNamespace(null,"244"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Water"),StaticProtectedNs("Water"),StaticProtectedNs("flash.display:Shape"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                                    getproperty Multiname("y",[PrivateNamespace(null,"66"),PackageNamespace(""),PrivateNamespace(null,"244"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Water"),StaticProtectedNs("Water"),StaticProtectedNs("flash.display:Shape"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                                    callpropvoid QName(PackageNamespace(""),"moveTo"), 2
+                                    pushbyte 1
+                                    convert_u
+                                    setlocal1
+                                    jump ofs07d9
+                                    pushwith
+                                    setlocal0
+                                    jump ofs068d
+                           ofs068d:
+                                    setlocal0
+                                    newfunction 20
+                                    pop
+                                    returnvoid
+                                    greaterequals
+                           ofs0693:
+                                    label
+                                    getlocal1
+                                    pushbyte 1
+                                    ifeq ofs069f
+                                    jump ofs0714
+                           ofs069f:
+                                    getlex QName(PackageNamespace(""),"graphics")
+                                    getlocal0
+                                    getproperty QName(PrivateNamespace(null,"66"),"dots")
+                                    getlocal1
+                                    decrement
+                                    getproperty MultinameL([PrivateNamespace(null,"66"),PackageNamespace(""),PrivateNamespace(null,"244"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Water"),StaticProtectedNs("Water"),StaticProtectedNs("flash.display:Shape"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                                    jump ofs06b5
+                                    returnvalue
+                                    newarray 118
+                                    pushwith
+                                    setlocal1
+                                    divide
+                           ofs06b5:
+                                    getproperty Multiname("x",[PrivateNamespace(null,"66"),PackageNamespace(""),PrivateNamespace(null,"244"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Water"),StaticProtectedNs("Water"),StaticProtectedNs("flash.display:Shape"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                                    getlocal0
+                                    getproperty QName(PrivateNamespace(null,"66"),"dots")
+                                    getlocal1
+                                    getproperty MultinameL([PrivateNamespace(null,"66"),PackageNamespace(""),PrivateNamespace(null,"244"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Water"),StaticProtectedNs("Water"),StaticProtectedNs("flash.display:Shape"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                                    jump ofs06c8
+                                    iflt ofs06c8
+                           ofs06c8:
+                                    getproperty Multiname("x",[PrivateNamespace(null,"66"),PackageNamespace(""),PrivateNamespace(null,"244"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Water"),StaticProtectedNs("Water"),StaticProtectedNs("flash.display:Shape"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                                    jump ofs06d5
+                                    popscope
+                                    returnvoid
+                                    setlocal3
+                                    setlocal3
+                                    setlocal0
+                                    setlocal1
+                           ofs06d5:
+                                    add
+                                    pushbyte 2
+                                    divide
+                                    getlocal0
+                                    getproperty QName(PrivateNamespace(null,"66"),"dots")
+                                    getlocal1
+                                    decrement
+                                    getproperty MultinameL([PrivateNamespace(null,"66"),PackageNamespace(""),PrivateNamespace(null,"244"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Water"),StaticProtectedNs("Water"),StaticProtectedNs("flash.display:Shape"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                                    pushtrue
+                                    iftrue ofs06ef
+                                    pushfalse
+                                    returnvalue
+                                    in
+                                    lessequals
+                                    returnvoid
+                                    setlocal1
+                                    nextname
+                                    pushscope
+                           ofs06ef:
+                                    getproperty Multiname("y",[PrivateNamespace(null,"66"),PackageNamespace(""),PrivateNamespace(null,"244"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Water"),StaticProtectedNs("Water"),StaticProtectedNs("flash.display:Shape"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                                    getlocal0
+                                    getproperty QName(PrivateNamespace(null,"66"),"dots")
+                                    getlocal1
+                                    getproperty MultinameL([PrivateNamespace(null,"66"),PackageNamespace(""),PrivateNamespace(null,"244"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Water"),StaticProtectedNs("Water"),StaticProtectedNs("flash.display:Shape"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                                    getproperty Multiname("y",[PrivateNamespace(null,"66"),PackageNamespace(""),PrivateNamespace(null,"244"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Water"),StaticProtectedNs("Water"),StaticProtectedNs("flash.display:Shape"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                                    add
+                                    pushbyte 2
+                                    divide
+                                    callpropvoid QName(PackageNamespace(""),"lineTo"), 2
+                                    jump ofs070e
+                                    pop
+                                    callproplex QName(PackageNamespace("Playtomic"),"PlayerScore"), 27
+                                    pop
+                           ofs070e:
+                                    jump ofs07cb
+                                    pushwith
+                                    setlocal3
+                           ofs0714:
+                                    getlocal1
+                                    getlocal0
+                                    getproperty QName(PrivateNamespace(null,"66"),"dots")
+                                    getproperty QName(PackageNamespace(""),"length")
+                                    jump ofs0724
+                                    iflt ofs0724
+                           ofs0724:
+                                    decrement
+                                    iflt ofs072d
+                                    jump ofs07cb
+                           ofs072d:
+                                    getlex QName(PackageNamespace(""),"graphics")
+                                    pushtrue
+                                    iftrue ofs073c
+                                    returnvoid
+                                    setlocal1
+                                    dxns "Vector"
+                                    pushwith
+                                    decrement
+                                    pushwith
+                           ofs073c:
+                                    getlocal0
+                                    getproperty QName(PrivateNamespace(null,"66"),"dots")
+                                    getlocal1
+                                    decrement
+                                    getproperty MultinameL([PrivateNamespace(null,"66"),PackageNamespace(""),PrivateNamespace(null,"244"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Water"),StaticProtectedNs("Water"),StaticProtectedNs("flash.display:Shape"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                                    getproperty Multiname("x",[PrivateNamespace(null,"66"),PackageNamespace(""),PrivateNamespace(null,"244"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Water"),StaticProtectedNs("Water"),StaticProtectedNs("flash.display:Shape"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                                    getlocal0
+                                    getproperty QName(PrivateNamespace(null,"66"),"dots")
+                                    jump ofs0755
+                                    popscope
+                                    callsupervoid QName(PackageNamespace("fl.core"),"UIComponent"), 10
+                                    pushwith
+                           ofs0755:
+                                    getlocal1
+                                    decrement
+                                    getproperty MultinameL([PrivateNamespace(null,"66"),PackageNamespace(""),PrivateNamespace(null,"244"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Water"),StaticProtectedNs("Water"),StaticProtectedNs("flash.display:Shape"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                                    getproperty Multiname("y",[PrivateNamespace(null,"66"),PackageNamespace(""),PrivateNamespace(null,"244"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Water"),StaticProtectedNs("Water"),StaticProtectedNs("flash.display:Shape"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                                    getlocal0
+                                    getproperty QName(PrivateNamespace(null,"66"),"dots")
+                                    jump ofs076a
+                                    popscope
+                                    callpropvoid QName(PackageNamespace(""),"Stats_Classes"), 27
+                                    throw
+                           ofs076a:
+                                    getlocal1
+                                    decrement
+                                    getproperty MultinameL([PrivateNamespace(null,"66"),PackageNamespace(""),PrivateNamespace(null,"244"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Water"),StaticProtectedNs("Water"),StaticProtectedNs("flash.display:Shape"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                                    getproperty Multiname("x",[PrivateNamespace(null,"66"),PackageNamespace(""),PrivateNamespace(null,"244"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Water"),StaticProtectedNs("Water"),StaticProtectedNs("flash.display:Shape"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                                    getlocal0
+                                    jump ofs077b
+                                    ifne ofs077b
+                           ofs077b:
+                                    getproperty QName(PrivateNamespace(null,"66"),"dots")
+                                    getlocal1
+                                    getproperty MultinameL([PrivateNamespace(null,"66"),PackageNamespace(""),PrivateNamespace(null,"244"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Water"),StaticProtectedNs("Water"),StaticProtectedNs("flash.display:Shape"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                                    jump ofs078b
+                                    setlocal3
+                                    callsuper QName(PackageNamespace("flash.display"),"DisplayObjectContainer"), 8
+                                    pushwith
+                           ofs078b:
+                                    getproperty Multiname("x",[PrivateNamespace(null,"66"),PackageNamespace(""),PrivateNamespace(null,"244"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Water"),StaticProtectedNs("Water"),StaticProtectedNs("flash.display:Shape"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                                    add
+                                    pushbyte 2
+                                    divide
+                                    getlocal0
+                                    getproperty QName(PrivateNamespace(null,"66"),"dots")
+                                    getlocal1
+                                    jump ofs07a0
+                                    popscope
+                                    callproperty QName(PackageNamespace("Box2D.Collision"),"b2OBB"), 21
+                                    throw
+                           ofs07a0:
+                                    decrement
+                                    getproperty MultinameL([PrivateNamespace(null,"66"),PackageNamespace(""),PrivateNamespace(null,"244"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Water"),StaticProtectedNs("Water"),StaticProtectedNs("flash.display:Shape"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                                    getproperty Multiname("y",[PrivateNamespace(null,"66"),PackageNamespace(""),PrivateNamespace(null,"244"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Water"),StaticProtectedNs("Water"),StaticProtectedNs("flash.display:Shape"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                                    getlocal0
+                                    getproperty QName(PrivateNamespace(null,"66"),"dots")
+                                    getlocal1
+                                    jump ofs07b5
+                                    equals
+                                    constructprop QName(PackageNamespace("Box2D.Dynamics"),"b2ContactImpulse"), 30
+                                    pop
+                           ofs07b5:
+                                    getproperty MultinameL([PrivateNamespace(null,"66"),PackageNamespace(""),PrivateNamespace(null,"244"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Water"),StaticProtectedNs("Water"),StaticProtectedNs("flash.display:Shape"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                                    getproperty Multiname("y",[PrivateNamespace(null,"66"),PackageNamespace(""),PrivateNamespace(null,"244"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Water"),StaticProtectedNs("Water"),StaticProtectedNs("flash.display:Shape"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                                    add
+                                    pushbyte 2
+                                    divide
+                                    jump ofs07c7
+                                    ifeq ofs07c7
+                           ofs07c7:
+                                    callpropvoid QName(PackageNamespace(""),"curveTo"), 4
+                           ofs07cb:
+                                    getlocal1
+                                    increment
+                                    jump ofs07d7
+                                    setlocal2
+                                    callsupervoid QName(PackageNamespace(""),"caStage"), 14
+                                    setlocal2
+                           ofs07d7:
+                                    convert_u
+                                    setlocal1
+                           ofs07d9:
+                                    getlocal1
+                                    getlocal0
+                                    getproperty QName(PrivateNamespace(null,"66"),"dots")
+                                    getproperty QName(PackageNamespace(""),"length")
+                                    pushtrue
+                                    iftrue ofs07ed
+                                    pushtrue
+                                    throw
+                                    decrement
+                                    callsuper QName(PackageNamespace(""),"void"), 5
+                                    pushwith
+                           ofs07ed:
+                                    ifnlt ofs07f5
+                                    jump ofs0693
+                           ofs07f5:
+                                    getlex QName(PackageNamespace(""),"graphics")
+                                    getlocal0
+                                    getproperty QName(PrivateNamespace(null,"66"),"dots")
+                                    getlocal0
+                                    getproperty QName(PrivateNamespace(null,"66"),"dots")
+                                    pushtrue
+                                    iftrue ofs080c
+                                    pushtrue
+                                    throw
+                                    popscope
+                                    callpropvoid QName(PackageNamespace("Playtomic"),"Response"), 27
+                                    throw
+                           ofs080c:
+                                    getproperty QName(PackageNamespace(""),"length")
+                                    decrement
+                                    getproperty MultinameL([PrivateNamespace(null,"66"),PackageNamespace(""),PrivateNamespace(null,"244"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Water"),StaticProtectedNs("Water"),StaticProtectedNs("flash.display:Shape"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                                    getproperty Multiname("x",[PrivateNamespace(null,"66"),PackageNamespace(""),PrivateNamespace(null,"244"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Water"),StaticProtectedNs("Water"),StaticProtectedNs("flash.display:Shape"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                                    getlocal0
+                                    jump ofs081f
+                                    ifge ofs081f
+                           ofs081f:
+                                    getproperty QName(PrivateNamespace(null,"66"),"dots")
+                                    jump ofs082b
+                                    add
+                                    callproperty QName(PackageNamespace("Box2D.Collision"),"b2WorldManifold"), 24
+                                    throw
+                           ofs082b:
+                                    getlocal0
+                                    getproperty QName(PrivateNamespace(null,"66"),"dots")
+                                    getproperty QName(PackageNamespace(""),"length")
+                                    decrement
+                                    getproperty MultinameL([PrivateNamespace(null,"66"),PackageNamespace(""),PrivateNamespace(null,"244"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Water"),StaticProtectedNs("Water"),StaticProtectedNs("flash.display:Shape"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                                    getproperty Multiname("y",[PrivateNamespace(null,"66"),PackageNamespace(""),PrivateNamespace(null,"244"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Water"),StaticProtectedNs("Water"),StaticProtectedNs("flash.display:Shape"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                                    callpropvoid QName(PackageNamespace(""),"lineTo"), 2
+                                    getlex QName(PackageNamespace(""),"graphics")
+                                    getlocal0
+                                    jump ofs084b
+                                    setlocal1
+                                    pushwith
+                                    newfunction 91
+                                    throw
+                                    lessequals
+                           ofs084b:
+                                    getproperty QName(PrivateNamespace(null,"66"),"MC")
+                                    getproperty QName(PackageNamespace(""),"x")
+                                    getlocal0
+                                    getproperty QName(PrivateNamespace(null,"66"),"MC")
+                                    getproperty QName(PackageNamespace(""),"width")
+                                    add
+                                    getlocal0
+                                    getproperty QName(PrivateNamespace(null,"66"),"MC")
+                                    jump ofs0867
+                                    popscope
+                                    callstatic 3513, 20
+                                    setlocal3
+                           ofs0867:
+                                    getproperty QName(PackageNamespace(""),"y")
+                                    getlocal0
+                                    getproperty QName(PrivateNamespace(null,"66"),"MC")
+                                    getproperty QName(PackageNamespace(""),"height")
+                                    add
+                                    jump ofs087a
+                                    ifgt ofs087a
+                           ofs087a:
+                                    callpropvoid QName(PackageNamespace(""),"lineTo"), 2
+                                    getlex QName(PackageNamespace(""),"graphics")
+                                    getlocal0
+                                    jump ofs088c
+                                    pushwith
+                                    setlocal1
+                                    convert_d
+                                    newactivation
+                                    setlocal2
+                                    pushscope
+                           ofs088c:
+                                    getproperty QName(PrivateNamespace(null,"66"),"MC")
+                                    getproperty QName(PackageNamespace(""),"x")
+                                    getlocal0
+                                    getproperty QName(PrivateNamespace(null,"66"),"MC")
+                                    getproperty QName(PackageNamespace(""),"y")
+                                    getlocal0
+                                    getproperty QName(PrivateNamespace(null,"66"),"MC")
+                                    jump ofs08a7
+                                    setlocal3
+                                    newobject 22
+                                    pushwith
+                                    add
+                                    multiply
+                           ofs08a7:
+                                    getproperty QName(PackageNamespace(""),"height")
+                                    add
+                                    callpropvoid QName(PackageNamespace(""),"lineTo"), 2
+                                    getlex QName(PackageNamespace(""),"graphics")
+                                    getlocal0
+                                    getproperty QName(PrivateNamespace(null,"66"),"dots")
+                                    pushbyte 0
+                                    pushtrue
+                                    iftrue ofs08c3
+                                    returnvoid
+                                    popscope
+                                    callstatic 105, 7
+                                    pushwith
+                           ofs08c3:
+                                    getproperty MultinameL([PrivateNamespace(null,"66"),PackageNamespace(""),PrivateNamespace(null,"244"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Water"),StaticProtectedNs("Water"),StaticProtectedNs("flash.display:Shape"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                                    getproperty Multiname("x",[PrivateNamespace(null,"66"),PackageNamespace(""),PrivateNamespace(null,"244"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Water"),StaticProtectedNs("Water"),StaticProtectedNs("flash.display:Shape"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                                    getlocal0
+                                    getproperty QName(PrivateNamespace(null,"66"),"dots")
+                                    pushbyte 0
+                                    jump ofs08d7
+                                    ifstricteq ofs08d7
+                           ofs08d7:
+                                    getproperty MultinameL([PrivateNamespace(null,"66"),PackageNamespace(""),PrivateNamespace(null,"244"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Water"),StaticProtectedNs("Water"),StaticProtectedNs("flash.display:Shape"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                                    pushfalse
+                                    iffalse ofs08e6
+                                    returnvoid
+                                    popscope
+                                    nextname
+                                    modulo
+                                    lshift
+                                    in
+                                    bitxor
+                           ofs08e6:
+                                    getproperty Multiname("y",[PrivateNamespace(null,"66"),PackageNamespace(""),PrivateNamespace(null,"244"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Water"),StaticProtectedNs("Water"),StaticProtectedNs("flash.display:Shape"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                                    callpropvoid QName(PackageNamespace(""),"lineTo"), 2
+                                    getlex QName(PackageNamespace(""),"graphics")
+                                    callpropvoid QName(PackageNamespace(""),"endFill"), 0
+                                    returnvoid
+                                 end ; code
+                              end ; body
+                           end ; method
+                        }
+                     }
+                  }
