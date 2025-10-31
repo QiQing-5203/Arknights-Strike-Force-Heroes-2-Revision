@@ -1,0 +1,1523 @@
+package
+{
+   import Playtomic.Log;
+   import flash.display.MovieClip;
+   import flash.text.TextField;
+   
+   public class Stats_Achievements extends MovieClip
+   {
+      
+      public static var achOrder:Array;
+      
+      public static var ach:Stats_Achievements;
+      
+      {
+         method
+            name null
+            returns null
+            
+            body
+               maxstack 4
+               localcount 1
+               initscopedepth 9
+               maxscopedepth 10
+               
+               code
+                  getlocal0
+                  jump ofs000b
+                  newfunction 3492
+                  call 5
+                  throw
+         ofs000b:
+                  pushscope
+                  returnvoid
+               end ; code
+            end ; body
+         end ; method
+      }
+      
+      public var icon:MovieClip;
+      
+      public var txt_desc:TextField;
+      
+      public var txt_name:TextField;
+      
+      public var txt_unlock:TextField;
+      
+      public function Stats_Achievements()
+      {
+         method
+            name null
+            returns null
+            
+            body
+               maxstack 6
+               localcount 1
+               initscopedepth 10
+               maxscopedepth 11
+               
+               code
+                  jump ofs000a
+                  call 5
+                  throw
+                  newclass 479
+         ofs000a:
+                  getlocal0
+                  pushscope
+                  getlocal0
+                  constructsuper 0
+                  findpropstrict QName(PackageNamespace(""),"addFrameScript")
+                  jump ofs001a
+                  ifle ofs001a
+         ofs001a:
+                  pushbyte 0
+                  pushtrue
+                  iftrue ofs0029
+                  pushtrue
+                  throw
+                  multiply
+                  nextname
+                  bitand
+                  newactivation
+                  istypelate
+                  lessequals
+         ofs0029:
+                  getlocal0
+                  getproperty QName(PackageInternalNs(""),"frame1")
+                  callpropvoid QName(PackageNamespace(""),"addFrameScript"), 2
+                  findpropstrict QName(PackageNamespace(""),"stop")
+                  callpropvoid QName(PackageNamespace(""),"stop"), 0
+                  getlex QName(PackageNamespace(""),"Stats_Achievements")
+                  jump ofs0045
+                  setlocal1
+                  callsuper QName(PackageNamespace(""),"removeBot"), 16
+                  setlocal0
+         ofs0045:
+                  getlocal0
+                  setproperty QName(PackageNamespace(""),"ach")
+                  returnvoid
+               end ; code
+            end ; body
+         end ; method
+      }
+      
+      public static function Init() : void
+      {
+         trait method QName(PackageNamespace(""),"Init")
+            flag FINAL
+            dispid 3
+            method
+               name null
+               returns QName(PackageNamespace(""),"void")
+               
+               body
+                  maxstack 16
+                  localcount 1
+                  initscopedepth 9
+                  maxscopedepth 10
+                  
+                  code
+                     jump ofs000a
+                     newclass 480
+                     call 8
+                     throw
+            ofs000a:
+                     getlocal0
+                     pushscope
+                     findproperty QName(PackageNamespace(""),"achOrder")
+                     newarray 0
+                     setproperty QName(PackageNamespace(""),"achOrder")
+                     jump ofs001c
+                     ifne ofs001c
+            ofs001c:
+                     getlex QName(PackageNamespace(""),"achOrder")
+                     pushstring "campaign"
+                     jump ofs002c
+                     bitand
+                     setlocal3
+                     negate
+                     multiply
+                     in
+                     checkfilter
+            ofs002c:
+                     pushstring "challenges"
+                     pushstring "level50"
+                     pushstring "hard"
+                     pushstring "insane"
+                     pushstring "camo"
+                     callpropvoid QName(Namespace("http://adobe.com/AS3/2006/builtin"),"push"), 6
+                     getlex QName(PackageNamespace(""),"achOrder")
+                     pushstring "gambler"
+                     pushstring "sell"
+                     pushstring "globex"
+                     jump ofs0055
+                     typeof
+                     setlocal0
+                     increment
+                     convert_s
+                     convert_s
+                     pushnull
+            ofs0055:
+                     pushstring "engi"
+                     pushstring "merc"
+                     pushstring "general"
+                     pushstring "sniper"
+                     pushstring "jugg"
+                     pushstring "melee"
+                     pushstring "health"
+                     pushstring "ammo"
+                     pushstring "armor"
+                     callpropvoid QName(Namespace("http://adobe.com/AS3/2006/builtin"),"push"), 12
+                     jump ofs007d
+                     pushwith
+                     callstatic 81, 8
+                     pushwith
+            ofs007d:
+                     getlex QName(PackageNamespace(""),"achOrder")
+                     pushstring "fruit"
+                     pushstring "tesla"
+                     pushstring "party"
+                     callpropvoid QName(Namespace("http://adobe.com/AS3/2006/builtin"),"push"), 3
+                     jump ofs0095
+                     ifle ofs0095
+            ofs0095:
+                     returnvoid
+                  end ; code
+               end ; body
+            end ; method
+         }
+         
+         public static function getAchievementNum(param1:*) : Object
+         {
+            trait method QName(PackageNamespace(""),"getAchievementNum")
+               flag FINAL
+               dispid 4
+               method
+                  name null
+                  param null
+                  returns QName(PackageNamespace(""),"Object")
+                  
+                  body
+                     maxstack 6
+                     localcount 2
+                     initscopedepth 9
+                     maxscopedepth 10
+                     
+                     code
+                        jump ofs000b
+                        call 5
+                        throw
+                        callmethod 3490, 5
+               ofs000b:
+                        getlocal0
+                        pushscope
+                        findpropstrict QName(PackageNamespace(""),"getAchievement")
+                        getlex QName(PackageNamespace(""),"achOrder")
+                        getlocal1
+                        jump ofs001c
+                        iflt ofs001c
+               ofs001c:
+                        getproperty MultinameL([PrivateNamespace(null,"121"),PackageNamespace(""),Namespace("http://adobe.com/AS3/2006/builtin"),PrivateNamespace(null,"272"),PackageInternalNs(""),PackageNamespace("Playtomic"),ProtectedNamespace("Stats_Achievements"),StaticProtectedNs("Stats_Achievements"),StaticProtectedNs("flash.display:MovieClip"),StaticProtectedNs("flash.display:Sprite"),StaticProtectedNs("flash.display:DisplayObjectContainer"),StaticProtectedNs("flash.display:InteractiveObject"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                        callproperty QName(PackageNamespace(""),"getAchievement"), 1
+                        returnvalue
+                     end ; code
+                  end ; body
+               end ; method
+            }
+            
+            public static function getAchievement(param1:String) : Object
+            {
+               trait method QName(PackageNamespace(""),"getAchievement")
+                  flag FINAL
+                  dispid 5
+                  method
+                     name null
+                     param QName(PackageNamespace(""),"String")
+                     returns QName(PackageNamespace(""),"Object")
+                     
+                     body
+                        maxstack 5
+                        localcount 4
+                        initscopedepth 9
+                        maxscopedepth 10
+                        
+                        code
+                           getlocal0
+                           jump ofs000b
+                           call 7
+                           throw
+                           newfunction 3493
+                  ofs000b:
+                           pushscope
+                           newobject 0
+                           coerce QName(PackageNamespace(""),"Object")
+                           setlocal2
+                           getlocal2
+                           jump ofs001a
+                           ifne ofs001a
+                  ofs001a:
+                           getlocal1
+                           setproperty Multiname("id",[PrivateNamespace(null,"121"),PackageNamespace(""),Namespace("http://adobe.com/AS3/2006/builtin"),PrivateNamespace(null,"272"),PackageInternalNs(""),PackageNamespace("Playtomic"),ProtectedNamespace("Stats_Achievements"),StaticProtectedNs("Stats_Achievements"),StaticProtectedNs("flash.display:MovieClip"),StaticProtectedNs("flash.display:Sprite"),StaticProtectedNs("flash.display:DisplayObjectContainer"),StaticProtectedNs("flash.display:InteractiveObject"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                           getlocal2
+                           getlocal1
+                           setproperty Multiname("sprite",[PrivateNamespace(null,"121"),PackageNamespace(""),Namespace("http://adobe.com/AS3/2006/builtin"),PrivateNamespace(null,"272"),PackageInternalNs(""),PackageNamespace("Playtomic"),ProtectedNamespace("Stats_Achievements"),StaticProtectedNs("Stats_Achievements"),StaticProtectedNs("flash.display:MovieClip"),StaticProtectedNs("flash.display:Sprite"),StaticProtectedNs("flash.display:DisplayObjectContainer"),StaticProtectedNs("flash.display:InteractiveObject"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                           jump ofs002d
+                           popscope
+                           newfunction 115
+                           throw
+                           pop
+                           in
+                  ofs002d:
+                           jump ofs0460
+                           pushwith
+                           setlocal3
+                           getlocal3
+                  ofs0034:
+                           label
+                           getlocal2
+                           pushstring "“苏醒”"
+                           setproperty Multiname("name",[PrivateNamespace(null,"121"),PackageNamespace(""),Namespace("http://adobe.com/AS3/2006/builtin"),PrivateNamespace(null,"272"),PackageInternalNs(""),PackageNamespace("Playtomic"),ProtectedNamespace("Stats_Achievements"),StaticProtectedNs("Stats_Achievements"),StaticProtectedNs("flash.display:MovieClip"),StaticProtectedNs("flash.display:Sprite"),StaticProtectedNs("flash.display:DisplayObjectContainer"),StaticProtectedNs("flash.display:InteractiveObject"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                           getlocal2
+                           pushstring "名为整合运动的大火已然熄灭，但依然有人将火种藏于手心。"
+                           jump ofs004a
+                           setlocal0
+                           newfunction 63
+                           pushwith
+                           istypelate
+                           setlocal3
+                  ofs004a:
+                           setproperty Multiname("desc",[PrivateNamespace(null,"121"),PackageNamespace(""),Namespace("http://adobe.com/AS3/2006/builtin"),PrivateNamespace(null,"272"),PackageInternalNs(""),PackageNamespace("Playtomic"),ProtectedNamespace("Stats_Achievements"),StaticProtectedNs("Stats_Achievements"),StaticProtectedNs("flash.display:MovieClip"),StaticProtectedNs("flash.display:Sprite"),StaticProtectedNs("flash.display:DisplayObjectContainer"),StaticProtectedNs("flash.display:InteractiveObject"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                           jump ofs06fd
+                           ifle ofs0055
+                  ofs0055:
+                           label
+                           getlocal2
+                           pushstring "恢宏试炼奖章"
+                           setproperty Multiname("name",[PrivateNamespace(null,"121"),PackageNamespace(""),Namespace("http://adobe.com/AS3/2006/builtin"),PrivateNamespace(null,"272"),PackageInternalNs(""),PackageNamespace("Playtomic"),ProtectedNamespace("Stats_Achievements"),StaticProtectedNs("Stats_Achievements"),StaticProtectedNs("flash.display:MovieClip"),StaticProtectedNs("flash.display:Sprite"),StaticProtectedNs("flash.display:DisplayObjectContainer"),StaticProtectedNs("flash.display:InteractiveObject"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                           getlocal2
+                           pushstring "击败《明日方舟》制作人及其搬来的救兵。"
+                           jump ofs006b
+                           popscope
+                           setlocal1
+                           istypelate
+                           setlocal2
+                           increment
+                           setlocal0
+                  ofs006b:
+                           setproperty Multiname("desc",[PrivateNamespace(null,"121"),PackageNamespace(""),Namespace("http://adobe.com/AS3/2006/builtin"),PrivateNamespace(null,"272"),PackageInternalNs(""),PackageNamespace("Playtomic"),ProtectedNamespace("Stats_Achievements"),StaticProtectedNs("Stats_Achievements"),StaticProtectedNs("flash.display:MovieClip"),StaticProtectedNs("flash.display:Sprite"),StaticProtectedNs("flash.display:DisplayObjectContainer"),StaticProtectedNs("flash.display:InteractiveObject"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                           jump ofs06fd
+                           popscope
+                           setlocal2
+                           getlocal0
+                  ofs0075:
+                           label
+                           getlocal2
+                           pushstring "千锤百炼奖章·III"
+                           jump ofs0082
+                           ifne ofs0082
+                  ofs0082:
+                           setproperty Multiname("name",[PrivateNamespace(null,"121"),PackageNamespace(""),Namespace("http://adobe.com/AS3/2006/builtin"),PrivateNamespace(null,"272"),PackageInternalNs(""),PackageNamespace("Playtomic"),ProtectedNamespace("Stats_Achievements"),StaticProtectedNs("Stats_Achievements"),StaticProtectedNs("flash.display:MovieClip"),StaticProtectedNs("flash.display:Sprite"),StaticProtectedNs("flash.display:DisplayObjectContainer"),StaticProtectedNs("flash.display:InteractiveObject"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                           getlocal2
+                           pushfalse
+                           iffalse ofs0093
+                           pushfalse
+                           returnvalue
+                           dup
+                           pushwith
+                           newfunction 100
+                           throw
+                           bitor
+                  ofs0093:
+                           pushstring "仍在成长，仍在挖掘，仍在前进。"
+                           setproperty Multiname("desc",[PrivateNamespace(null,"121"),PackageNamespace(""),Namespace("http://adobe.com/AS3/2006/builtin"),PrivateNamespace(null,"272"),PackageInternalNs(""),PackageNamespace("Playtomic"),ProtectedNamespace("Stats_Achievements"),StaticProtectedNs("Stats_Achievements"),StaticProtectedNs("flash.display:MovieClip"),StaticProtectedNs("flash.display:Sprite"),StaticProtectedNs("flash.display:DisplayObjectContainer"),StaticProtectedNs("flash.display:InteractiveObject"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                           jump ofs06fd
+                           pushwith
+                           setlocal3
+                           getlocal2
+                  ofs00a0:
+                           label
+                           getlocal2
+                           pushstring "突袭作战奖章"
+                           pushtrue
+                           iftrue ofs00b0
+                           returnvoid
+                           popscope
+                           callstatic 97, 9
+                           pushwith
+                  ofs00b0:
+                           setproperty Multiname("name",[PrivateNamespace(null,"121"),PackageNamespace(""),Namespace("http://adobe.com/AS3/2006/builtin"),PrivateNamespace(null,"272"),PackageInternalNs(""),PackageNamespace("Playtomic"),ProtectedNamespace("Stats_Achievements"),StaticProtectedNs("Stats_Achievements"),StaticProtectedNs("flash.display:MovieClip"),StaticProtectedNs("flash.display:Sprite"),StaticProtectedNs("flash.display:DisplayObjectContainer"),StaticProtectedNs("flash.display:InteractiveObject"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                           getlocal2
+                           pushstring "您已具备在多变战场贯彻目标的能力。"
+                           setproperty Multiname("desc",[PrivateNamespace(null,"121"),PackageNamespace(""),Namespace("http://adobe.com/AS3/2006/builtin"),PrivateNamespace(null,"272"),PackageInternalNs(""),PackageNamespace("Playtomic"),ProtectedNamespace("Stats_Achievements"),StaticProtectedNs("Stats_Achievements"),StaticProtectedNs("flash.display:MovieClip"),StaticProtectedNs("flash.display:Sprite"),StaticProtectedNs("flash.display:DisplayObjectContainer"),StaticProtectedNs("flash.display:InteractiveObject"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                           jump ofs06fd
+                           pushwith
+                           setlocal2
+                  ofs00c0:
+                           label
+                           getlocal2
+                           pushstring "绝境磨难奖章"
+                           jump ofs00cf
+                           popscope
+                           call 69
+                           pushwith
+                           in
+                           multiply
+                  ofs00cf:
+                           setproperty Multiname("name",[PrivateNamespace(null,"121"),PackageNamespace(""),Namespace("http://adobe.com/AS3/2006/builtin"),PrivateNamespace(null,"272"),PackageInternalNs(""),PackageNamespace("Playtomic"),ProtectedNamespace("Stats_Achievements"),StaticProtectedNs("Stats_Achievements"),StaticProtectedNs("flash.display:MovieClip"),StaticProtectedNs("flash.display:Sprite"),StaticProtectedNs("flash.display:DisplayObjectContainer"),StaticProtectedNs("flash.display:InteractiveObject"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                           getlocal2
+                           pushstring "您的衣角还残留着一点余温。"
+                           setproperty Multiname("desc",[PrivateNamespace(null,"121"),PackageNamespace(""),Namespace("http://adobe.com/AS3/2006/builtin"),PrivateNamespace(null,"272"),PackageInternalNs(""),PackageNamespace("Playtomic"),ProtectedNamespace("Stats_Achievements"),StaticProtectedNs("Stats_Achievements"),StaticProtectedNs("flash.display:MovieClip"),StaticProtectedNs("flash.display:Sprite"),StaticProtectedNs("flash.display:DisplayObjectContainer"),StaticProtectedNs("flash.display:InteractiveObject"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                           jump ofs06fd
+                           throw
+                           setlocal1
+                  ofs00df:
+                           label
+                           jump ofs00f2
+                           iflt ofs00e8
+                  ofs00e8:
+                           jump ofs00ec
+                  ofs00ec:
+                           popscope
+                           newarray 101
+                           pushwith
+                           bitor
+                           increment
+                  ofs00f2:
+                           getlocal2
+                           pushstring "涂装狂热奖章"
+                           setproperty Multiname("name",[PrivateNamespace(null,"121"),PackageNamespace(""),Namespace("http://adobe.com/AS3/2006/builtin"),PrivateNamespace(null,"272"),PackageInternalNs(""),PackageNamespace("Playtomic"),ProtectedNamespace("Stats_Achievements"),StaticProtectedNs("Stats_Achievements"),StaticProtectedNs("flash.display:MovieClip"),StaticProtectedNs("flash.display:Sprite"),StaticProtectedNs("flash.display:DisplayObjectContainer"),StaticProtectedNs("flash.display:InteractiveObject"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                           getlocal2
+                           pushstring "您帮助可露希尔完成了多种迷彩涂装的创想。"
+                           setproperty Multiname("desc",[PrivateNamespace(null,"121"),PackageNamespace(""),Namespace("http://adobe.com/AS3/2006/builtin"),PrivateNamespace(null,"272"),PackageInternalNs(""),PackageNamespace("Playtomic"),ProtectedNamespace("Stats_Achievements"),StaticProtectedNs("Stats_Achievements"),StaticProtectedNs("flash.display:MovieClip"),StaticProtectedNs("flash.display:Sprite"),StaticProtectedNs("flash.display:DisplayObjectContainer"),StaticProtectedNs("flash.display:InteractiveObject"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                           jump ofs0109
+                           popscope
+                           callproplex QName(PackageNamespace("Box2D.Dynamics"),"b2DebugDraw"), 27
+                           throw
+                  ofs0109:
+                           jump ofs06fd
+                           pushwith
+                           setlocal1
+                  ofs010f:
+                           label
+                           getlocal2
+                           pushstring "豪掷千金奖章"
+                           setproperty Multiname("name",[PrivateNamespace(null,"121"),PackageNamespace(""),Namespace("http://adobe.com/AS3/2006/builtin"),PrivateNamespace(null,"272"),PackageInternalNs(""),PackageNamespace("Playtomic"),ProtectedNamespace("Stats_Achievements"),StaticProtectedNs("Stats_Achievements"),StaticProtectedNs("flash.display:MovieClip"),StaticProtectedNs("flash.display:Sprite"),StaticProtectedNs("flash.display:DisplayObjectContainer"),StaticProtectedNs("flash.display:InteractiveObject"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                           getlocal2
+                           jump ofs0121
+                           setlocal2
+                           callproperty QName(PackageNamespace("Box2D.Dynamics"),"b2FixtureDef"), 7
+                           pushwith
+                  ofs0121:
+                           pushstring "您为战备采办部的经营做出了巨大贡献。"
+                           setproperty Multiname("desc",[PrivateNamespace(null,"121"),PackageNamespace(""),Namespace("http://adobe.com/AS3/2006/builtin"),PrivateNamespace(null,"272"),PackageInternalNs(""),PackageNamespace("Playtomic"),ProtectedNamespace("Stats_Achievements"),StaticProtectedNs("Stats_Achievements"),StaticProtectedNs("flash.display:MovieClip"),StaticProtectedNs("flash.display:Sprite"),StaticProtectedNs("flash.display:DisplayObjectContainer"),StaticProtectedNs("flash.display:InteractiveObject"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                           getlocal2
+                           pushint 3000000
+                           setproperty Multiname("max",[PrivateNamespace(null,"121"),PackageNamespace(""),Namespace("http://adobe.com/AS3/2006/builtin"),PrivateNamespace(null,"272"),PackageInternalNs(""),PackageNamespace("Playtomic"),ProtectedNamespace("Stats_Achievements"),StaticProtectedNs("Stats_Achievements"),StaticProtectedNs("flash.display:MovieClip"),StaticProtectedNs("flash.display:Sprite"),StaticProtectedNs("flash.display:DisplayObjectContainer"),StaticProtectedNs("flash.display:InteractiveObject"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                           jump ofs0136
+                           iflt ofs0136
+                  ofs0136:
+                           getlocal2
+                           pushstring "已花费@ 龙门币"
+                           setproperty Multiname("progress",[PrivateNamespace(null,"121"),PackageNamespace(""),Namespace("http://adobe.com/AS3/2006/builtin"),PrivateNamespace(null,"272"),PackageInternalNs(""),PackageNamespace("Playtomic"),ProtectedNamespace("Stats_Achievements"),StaticProtectedNs("Stats_Achievements"),StaticProtectedNs("flash.display:MovieClip"),StaticProtectedNs("flash.display:Sprite"),StaticProtectedNs("flash.display:DisplayObjectContainer"),StaticProtectedNs("flash.display:InteractiveObject"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                           jump ofs06fd
+                           ifne ofs0145
+                  ofs0145:
+                           label
+                           jump ofs0150
+                           popscope
+                           pushnull
+                           modulo
+                           returnvoid
+                           setlocal2
+                           lessequals
+                  ofs0150:
+                           getlocal2
+                           pushstring "经营有方奖章"
+                           setproperty Multiname("name",[PrivateNamespace(null,"121"),PackageNamespace(""),Namespace("http://adobe.com/AS3/2006/builtin"),PrivateNamespace(null,"272"),PackageInternalNs(""),PackageNamespace("Playtomic"),ProtectedNamespace("Stats_Achievements"),StaticProtectedNs("Stats_Achievements"),StaticProtectedNs("flash.display:MovieClip"),StaticProtectedNs("flash.display:Sprite"),StaticProtectedNs("flash.display:DisplayObjectContainer"),StaticProtectedNs("flash.display:InteractiveObject"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                           getlocal2
+                           pushstring "您倒卖的军备破坏了泰拉军火市场的平衡。"
+                           setproperty Multiname("desc",[PrivateNamespace(null,"121"),PackageNamespace(""),Namespace("http://adobe.com/AS3/2006/builtin"),PrivateNamespace(null,"272"),PackageInternalNs(""),PackageNamespace("Playtomic"),ProtectedNamespace("Stats_Achievements"),StaticProtectedNs("Stats_Achievements"),StaticProtectedNs("flash.display:MovieClip"),StaticProtectedNs("flash.display:Sprite"),StaticProtectedNs("flash.display:DisplayObjectContainer"),StaticProtectedNs("flash.display:InteractiveObject"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                           pushtrue
+                           iftrue ofs016a
+                           returnvoid
+                           returnvalue
+                           pushwith
+                           newfunction 23
+                           throw
+                           setlocal3
+                  ofs016a:
+                           getlocal2
+                           pushint 1000000
+                           setproperty Multiname("max",[PrivateNamespace(null,"121"),PackageNamespace(""),Namespace("http://adobe.com/AS3/2006/builtin"),PrivateNamespace(null,"272"),PackageInternalNs(""),PackageNamespace("Playtomic"),ProtectedNamespace("Stats_Achievements"),StaticProtectedNs("Stats_Achievements"),StaticProtectedNs("flash.display:MovieClip"),StaticProtectedNs("flash.display:Sprite"),StaticProtectedNs("flash.display:DisplayObjectContainer"),StaticProtectedNs("flash.display:InteractiveObject"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                           getlocal2
+                           pushstring "已收获@ 龙门币"
+                           setproperty Multiname("progress",[PrivateNamespace(null,"121"),PackageNamespace(""),Namespace("http://adobe.com/AS3/2006/builtin"),PrivateNamespace(null,"272"),PackageInternalNs(""),PackageNamespace("Playtomic"),ProtectedNamespace("Stats_Achievements"),StaticProtectedNs("Stats_Achievements"),StaticProtectedNs("flash.display:MovieClip"),StaticProtectedNs("flash.display:Sprite"),StaticProtectedNs("flash.display:DisplayObjectContainer"),StaticProtectedNs("flash.display:InteractiveObject"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                           jump ofs06fd
+                           pushwith
+                           setlocal1
+                  ofs017e:
+                           label
+                           jump ofs0189
+                           popscope
+                           bitand
+                           convert_s
+                           instanceof
+                           nextname
+                           setlocal1
+                  ofs0189:
+                           getlocal2
+                           pushstring "诛邪除奸奖章·III"
+                           setproperty Multiname("name",[PrivateNamespace(null,"121"),PackageNamespace(""),Namespace("http://adobe.com/AS3/2006/builtin"),PrivateNamespace(null,"272"),PackageInternalNs(""),PackageNamespace("Playtomic"),ProtectedNamespace("Stats_Achievements"),StaticProtectedNs("Stats_Achievements"),StaticProtectedNs("flash.display:MovieClip"),StaticProtectedNs("flash.display:Sprite"),StaticProtectedNs("flash.display:DisplayObjectContainer"),StaticProtectedNs("flash.display:InteractiveObject"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                           getlocal2
+                           pushstring "您没有给敌人喘息的机会。"
+                           jump ofs019c
+                           ifeq ofs019c
+                  ofs019c:
+                           setproperty Multiname("desc",[PrivateNamespace(null,"121"),PackageNamespace(""),Namespace("http://adobe.com/AS3/2006/builtin"),PrivateNamespace(null,"272"),PackageInternalNs(""),PackageNamespace("Playtomic"),ProtectedNamespace("Stats_Achievements"),StaticProtectedNs("Stats_Achievements"),StaticProtectedNs("flash.display:MovieClip"),StaticProtectedNs("flash.display:Sprite"),StaticProtectedNs("flash.display:DisplayObjectContainer"),StaticProtectedNs("flash.display:InteractiveObject"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                           getlocal2
+                           pushshort 500
+                           setproperty Multiname("max",[PrivateNamespace(null,"121"),PackageNamespace(""),Namespace("http://adobe.com/AS3/2006/builtin"),PrivateNamespace(null,"272"),PackageInternalNs(""),PackageNamespace("Playtomic"),ProtectedNamespace("Stats_Achievements"),StaticProtectedNs("Stats_Achievements"),StaticProtectedNs("flash.display:MovieClip"),StaticProtectedNs("flash.display:Sprite"),StaticProtectedNs("flash.display:DisplayObjectContainer"),StaticProtectedNs("flash.display:InteractiveObject"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                           getlocal2
+                           jump ofs01b1
+                           returnvalue
+                           newarray 16
+                           pushwith
+                           checkfilter
+                           setlocal3
+                  ofs01b1:
+                           pushstring "已击杀 @ 名 克隆体"
+                           setproperty Multiname("progress",[PrivateNamespace(null,"121"),PackageNamespace(""),Namespace("http://adobe.com/AS3/2006/builtin"),PrivateNamespace(null,"272"),PackageInternalNs(""),PackageNamespace("Playtomic"),ProtectedNamespace("Stats_Achievements"),StaticProtectedNs("Stats_Achievements"),StaticProtectedNs("flash.display:MovieClip"),StaticProtectedNs("flash.display:Sprite"),StaticProtectedNs("flash.display:DisplayObjectContainer"),StaticProtectedNs("flash.display:InteractiveObject"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                           jump ofs06fd
+                           pushwith
+                           setlocal2
+                  ofs01bd:
+                           label
+                           getlocal2
+                           pushstring "机械化矿牢爬行"
+                           setproperty Multiname("name",[PrivateNamespace(null,"121"),PackageNamespace(""),Namespace("http://adobe.com/AS3/2006/builtin"),PrivateNamespace(null,"272"),PackageInternalNs(""),PackageNamespace("Playtomic"),ProtectedNamespace("Stats_Achievements"),StaticProtectedNs("Stats_Achievements"),StaticProtectedNs("flash.display:MovieClip"),StaticProtectedNs("flash.display:Sprite"),StaticProtectedNs("flash.display:DisplayObjectContainer"),StaticProtectedNs("flash.display:InteractiveObject"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                           jump ofs01ce
+                           popscope
+                           callpropvoid QName(PackageNamespace("Box2D.Collision.Shapes"),"b2CircleShape"), 27
+                           throw
+                  ofs01ce:
+                           getlocal2
+                           pushstring "您对支援装置的使用已经得心应手。"
+                           setproperty Multiname("desc",[PrivateNamespace(null,"121"),PackageNamespace(""),Namespace("http://adobe.com/AS3/2006/builtin"),PrivateNamespace(null,"272"),PackageInternalNs(""),PackageNamespace("Playtomic"),ProtectedNamespace("Stats_Achievements"),StaticProtectedNs("Stats_Achievements"),StaticProtectedNs("flash.display:MovieClip"),StaticProtectedNs("flash.display:Sprite"),StaticProtectedNs("flash.display:DisplayObjectContainer"),StaticProtectedNs("flash.display:InteractiveObject"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                           getlocal2
+                           pushshort 300
+                           setproperty Multiname("max",[PrivateNamespace(null,"121"),PackageNamespace(""),Namespace("http://adobe.com/AS3/2006/builtin"),PrivateNamespace(null,"272"),PackageInternalNs(""),PackageNamespace("Playtomic"),ProtectedNamespace("Stats_Achievements"),StaticProtectedNs("Stats_Achievements"),StaticProtectedNs("flash.display:MovieClip"),StaticProtectedNs("flash.display:Sprite"),StaticProtectedNs("flash.display:DisplayObjectContainer"),StaticProtectedNs("flash.display:InteractiveObject"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                           getlocal2
+                           pushstring "已击杀 @ 人"
+                           setproperty Multiname("progress",[PrivateNamespace(null,"121"),PackageNamespace(""),Namespace("http://adobe.com/AS3/2006/builtin"),PrivateNamespace(null,"272"),PackageInternalNs(""),PackageNamespace("Playtomic"),ProtectedNamespace("Stats_Achievements"),StaticProtectedNs("Stats_Achievements"),StaticProtectedNs("flash.display:MovieClip"),StaticProtectedNs("flash.display:Sprite"),StaticProtectedNs("flash.display:DisplayObjectContainer"),StaticProtectedNs("flash.display:InteractiveObject"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                           jump ofs01ed
+                           pushwith
+                           pushwith
+                           pushscope
+                           setlocal2
+                           returnvalue
+                           newactivation
+                  ofs01ed:
+                           jump ofs06fd
+                           ifstrictne ofs01f5
+                  ofs01f5:
+                           label
+                           getlocal2
+                           pushstring "过载的武器和过热的心脏"
+                           setproperty Multiname("name",[PrivateNamespace(null,"121"),PackageNamespace(""),Namespace("http://adobe.com/AS3/2006/builtin"),PrivateNamespace(null,"272"),PackageInternalNs(""),PackageNamespace("Playtomic"),ProtectedNamespace("Stats_Achievements"),StaticProtectedNs("Stats_Achievements"),StaticProtectedNs("flash.display:MovieClip"),StaticProtectedNs("flash.display:Sprite"),StaticProtectedNs("flash.display:DisplayObjectContainer"),StaticProtectedNs("flash.display:InteractiveObject"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                           jump ofs0205
+                           ifstrictne ofs0205
+                  ofs0205:
+                           getlocal2
+                           pushtrue
+                           iftrue ofs0212
+                           returnvoid
+                           dup
+                           equals
+                           setlocal0
+                           increment
+                           setlocal0
+                           setlocal3
+                  ofs0212:
+                           pushstring "您让近卫干员对怒气的掌握炉火纯青。"
+                           setproperty Multiname("desc",[PrivateNamespace(null,"121"),PackageNamespace(""),Namespace("http://adobe.com/AS3/2006/builtin"),PrivateNamespace(null,"272"),PackageInternalNs(""),PackageNamespace("Playtomic"),ProtectedNamespace("Stats_Achievements"),StaticProtectedNs("Stats_Achievements"),StaticProtectedNs("flash.display:MovieClip"),StaticProtectedNs("flash.display:Sprite"),StaticProtectedNs("flash.display:DisplayObjectContainer"),StaticProtectedNs("flash.display:InteractiveObject"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                           getlocal2
+                           pushshort 500
+                           setproperty Multiname("max",[PrivateNamespace(null,"121"),PackageNamespace(""),Namespace("http://adobe.com/AS3/2006/builtin"),PrivateNamespace(null,"272"),PackageInternalNs(""),PackageNamespace("Playtomic"),ProtectedNamespace("Stats_Achievements"),StaticProtectedNs("Stats_Achievements"),StaticProtectedNs("flash.display:MovieClip"),StaticProtectedNs("flash.display:Sprite"),StaticProtectedNs("flash.display:DisplayObjectContainer"),StaticProtectedNs("flash.display:InteractiveObject"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                           getlocal2
+                           pushstring "已击杀 @ 人"
+                           setproperty Multiname("progress",[PrivateNamespace(null,"121"),PackageNamespace(""),Namespace("http://adobe.com/AS3/2006/builtin"),PrivateNamespace(null,"272"),PackageInternalNs(""),PackageNamespace("Playtomic"),ProtectedNamespace("Stats_Achievements"),StaticProtectedNs("Stats_Achievements"),StaticProtectedNs("flash.display:MovieClip"),StaticProtectedNs("flash.display:Sprite"),StaticProtectedNs("flash.display:DisplayObjectContainer"),StaticProtectedNs("flash.display:InteractiveObject"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                           jump ofs0230
+                           newactivation
+                           pushwith
+                           newfunction 58
+                           pop
+                           setlocal1
+                  ofs0230:
+                           jump ofs06fd
+                           pushwith
+                           setlocal3
+                  ofs0236:
+                           label
+                           getlocal2
+                           pushstring "大庇天下寒士俱欢颜"
+                           setproperty Multiname("name",[PrivateNamespace(null,"121"),PackageNamespace(""),Namespace("http://adobe.com/AS3/2006/builtin"),PrivateNamespace(null,"272"),PackageInternalNs(""),PackageNamespace("Playtomic"),ProtectedNamespace("Stats_Achievements"),StaticProtectedNs("Stats_Achievements"),StaticProtectedNs("flash.display:MovieClip"),StaticProtectedNs("flash.display:Sprite"),StaticProtectedNs("flash.display:DisplayObjectContainer"),StaticProtectedNs("flash.display:InteractiveObject"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                           getlocal2
+                           pushstring "队友知道什么时候该伸出援手，您也是。"
+                           pushfalse
+                           iffalse ofs024e
+                           returnvoid
+                           popscope
+                           callmethod 3558, 14
+                           setlocal0
+                  ofs024e:
+                           setproperty Multiname("desc",[PrivateNamespace(null,"121"),PackageNamespace(""),Namespace("http://adobe.com/AS3/2006/builtin"),PrivateNamespace(null,"272"),PackageInternalNs(""),PackageNamespace("Playtomic"),ProtectedNamespace("Stats_Achievements"),StaticProtectedNs("Stats_Achievements"),StaticProtectedNs("flash.display:MovieClip"),StaticProtectedNs("flash.display:Sprite"),StaticProtectedNs("flash.display:DisplayObjectContainer"),StaticProtectedNs("flash.display:InteractiveObject"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                           getlocal2
+                           pushshort 300
+                           setproperty Multiname("max",[PrivateNamespace(null,"121"),PackageNamespace(""),Namespace("http://adobe.com/AS3/2006/builtin"),PrivateNamespace(null,"272"),PackageInternalNs(""),PackageNamespace("Playtomic"),ProtectedNamespace("Stats_Achievements"),StaticProtectedNs("Stats_Achievements"),StaticProtectedNs("flash.display:MovieClip"),StaticProtectedNs("flash.display:Sprite"),StaticProtectedNs("flash.display:DisplayObjectContainer"),StaticProtectedNs("flash.display:InteractiveObject"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                           getlocal2
+                           jump ofs0261
+                           iflt ofs0261
+                  ofs0261:
+                           pushstring "已使用 @ 次御敌指令"
+                           pushfalse
+                           iffalse ofs0270
+                           returnvoid
+                           add
+                           newfunction 73
+                           pop
+                           setlocal2
+                           negate
+                  ofs0270:
+                           setproperty Multiname("progress",[PrivateNamespace(null,"121"),PackageNamespace(""),Namespace("http://adobe.com/AS3/2006/builtin"),PrivateNamespace(null,"272"),PackageInternalNs(""),PackageNamespace("Playtomic"),ProtectedNamespace("Stats_Achievements"),StaticProtectedNs("Stats_Achievements"),StaticProtectedNs("flash.display:MovieClip"),StaticProtectedNs("flash.display:Sprite"),StaticProtectedNs("flash.display:DisplayObjectContainer"),StaticProtectedNs("flash.display:InteractiveObject"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                           jump ofs06fd
+                           ifne ofs027b
+                  ofs027b:
+                           label
+                           getlocal2
+                           pushstring "我，即是枪神"
+                           setproperty Multiname("name",[PrivateNamespace(null,"121"),PackageNamespace(""),Namespace("http://adobe.com/AS3/2006/builtin"),PrivateNamespace(null,"272"),PackageInternalNs(""),PackageNamespace("Playtomic"),ProtectedNamespace("Stats_Achievements"),StaticProtectedNs("Stats_Achievements"),StaticProtectedNs("flash.display:MovieClip"),StaticProtectedNs("flash.display:Sprite"),StaticProtectedNs("flash.display:DisplayObjectContainer"),StaticProtectedNs("flash.display:InteractiveObject"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                           pushtrue
+                           iftrue ofs028f
+                           returnvoid
+                           lessequals
+                           call 120
+                           pushwith
+                           setlocal2
+                           divide
+                  ofs028f:
+                           getlocal2
+                           pushstring "您的枪法令众多狙击干员都为之汗颜。"
+                           setproperty Multiname("desc",[PrivateNamespace(null,"121"),PackageNamespace(""),Namespace("http://adobe.com/AS3/2006/builtin"),PrivateNamespace(null,"272"),PackageInternalNs(""),PackageNamespace("Playtomic"),ProtectedNamespace("Stats_Achievements"),StaticProtectedNs("Stats_Achievements"),StaticProtectedNs("flash.display:MovieClip"),StaticProtectedNs("flash.display:Sprite"),StaticProtectedNs("flash.display:DisplayObjectContainer"),StaticProtectedNs("flash.display:InteractiveObject"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                           getlocal2
+                           pushshort 1000
+                           setproperty Multiname("max",[PrivateNamespace(null,"121"),PackageNamespace(""),Namespace("http://adobe.com/AS3/2006/builtin"),PrivateNamespace(null,"272"),PackageInternalNs(""),PackageNamespace("Playtomic"),ProtectedNamespace("Stats_Achievements"),StaticProtectedNs("Stats_Achievements"),StaticProtectedNs("flash.display:MovieClip"),StaticProtectedNs("flash.display:Sprite"),StaticProtectedNs("flash.display:DisplayObjectContainer"),StaticProtectedNs("flash.display:InteractiveObject"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                           getlocal2
+                           pushstring "已爆头击杀 @ 次"
+                           setproperty Multiname("progress",[PrivateNamespace(null,"121"),PackageNamespace(""),Namespace("http://adobe.com/AS3/2006/builtin"),PrivateNamespace(null,"272"),PackageInternalNs(""),PackageNamespace("Playtomic"),ProtectedNamespace("Stats_Achievements"),StaticProtectedNs("Stats_Achievements"),StaticProtectedNs("flash.display:MovieClip"),StaticProtectedNs("flash.display:Sprite"),StaticProtectedNs("flash.display:DisplayObjectContainer"),StaticProtectedNs("flash.display:InteractiveObject"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                           jump ofs06fd
+                           ifgt ofs02ac
+                  ofs02ac:
+                           jump ofs02b0
+                  ofs02b0:
+                           popscope
+                           returnvalue
+                           pushfalse
+                           pop
+                           returnvoid
+                           coerce_s
+                  ofs02b6:
+                           label
+                           getlocal2
+                           pushstring "罗德岛的基石"
+                           setproperty Multiname("name",[PrivateNamespace(null,"121"),PackageNamespace(""),Namespace("http://adobe.com/AS3/2006/builtin"),PrivateNamespace(null,"272"),PackageInternalNs(""),PackageNamespace("Playtomic"),ProtectedNamespace("Stats_Achievements"),StaticProtectedNs("Stats_Achievements"),StaticProtectedNs("flash.display:MovieClip"),StaticProtectedNs("flash.display:Sprite"),StaticProtectedNs("flash.display:DisplayObjectContainer"),StaticProtectedNs("flash.display:InteractiveObject"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                           getlocal2
+                           jump ofs02c7
+                           ifstricteq ofs02c7
+                  ofs02c7:
+                           pushstring "由您指挥的堡垒绝不会轻易倒下。"
+                           setproperty Multiname("desc",[PrivateNamespace(null,"121"),PackageNamespace(""),Namespace("http://adobe.com/AS3/2006/builtin"),PrivateNamespace(null,"272"),PackageInternalNs(""),PackageNamespace("Playtomic"),ProtectedNamespace("Stats_Achievements"),StaticProtectedNs("Stats_Achievements"),StaticProtectedNs("flash.display:MovieClip"),StaticProtectedNs("flash.display:Sprite"),StaticProtectedNs("flash.display:DisplayObjectContainer"),StaticProtectedNs("flash.display:InteractiveObject"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                           getlocal2
+                           pushfalse
+                           iffalse ofs02da
+                           returnvoid
+                           setlocal0
+                           dxns "b2ContactEdge"
+                           pushwith
+                           equals
+                           istypelate
+                  ofs02da:
+                           pushint 300000
+                           setproperty Multiname("max",[PrivateNamespace(null,"121"),PackageNamespace(""),Namespace("http://adobe.com/AS3/2006/builtin"),PrivateNamespace(null,"272"),PackageInternalNs(""),PackageNamespace("Playtomic"),ProtectedNamespace("Stats_Achievements"),StaticProtectedNs("Stats_Achievements"),StaticProtectedNs("flash.display:MovieClip"),StaticProtectedNs("flash.display:Sprite"),StaticProtectedNs("flash.display:DisplayObjectContainer"),StaticProtectedNs("flash.display:InteractiveObject"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                           getlocal2
+                           pushstring "已承受 @ 点伤害"
+                           setproperty Multiname("progress",[PrivateNamespace(null,"121"),PackageNamespace(""),Namespace("http://adobe.com/AS3/2006/builtin"),PrivateNamespace(null,"272"),PackageInternalNs(""),PackageNamespace("Playtomic"),ProtectedNamespace("Stats_Achievements"),StaticProtectedNs("Stats_Achievements"),StaticProtectedNs("flash.display:MovieClip"),StaticProtectedNs("flash.display:Sprite"),StaticProtectedNs("flash.display:DisplayObjectContainer"),StaticProtectedNs("flash.display:InteractiveObject"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                           jump ofs06fd
+                           pushwith
+                           setlocal0
+                  ofs02ed:
+                           label
+                           getlocal2
+                           jump ofs02f9
+                           popscope
+                           callproplex QName(PackageNamespace(""),"registerInstance"), 16
+                           setlocal3
+                  ofs02f9:
+                           pushstring "剑光如我，斩尽芜杂！"
+                           setproperty Multiname("name",[PrivateNamespace(null,"121"),PackageNamespace(""),Namespace("http://adobe.com/AS3/2006/builtin"),PrivateNamespace(null,"272"),PackageInternalNs(""),PackageNamespace("Playtomic"),ProtectedNamespace("Stats_Achievements"),StaticProtectedNs("Stats_Achievements"),StaticProtectedNs("flash.display:MovieClip"),StaticProtectedNs("flash.display:Sprite"),StaticProtectedNs("flash.display:DisplayObjectContainer"),StaticProtectedNs("flash.display:InteractiveObject"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                           getlocal2
+                           pushstring "敌人永远不知道您什么时候拔刀。"
+                           setproperty Multiname("desc",[PrivateNamespace(null,"121"),PackageNamespace(""),Namespace("http://adobe.com/AS3/2006/builtin"),PrivateNamespace(null,"272"),PackageInternalNs(""),PackageNamespace("Playtomic"),ProtectedNamespace("Stats_Achievements"),StaticProtectedNs("Stats_Achievements"),StaticProtectedNs("flash.display:MovieClip"),StaticProtectedNs("flash.display:Sprite"),StaticProtectedNs("flash.display:DisplayObjectContainer"),StaticProtectedNs("flash.display:InteractiveObject"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                           getlocal2
+                           pushshort 1000
+                           setproperty Multiname("max",[PrivateNamespace(null,"121"),PackageNamespace(""),Namespace("http://adobe.com/AS3/2006/builtin"),PrivateNamespace(null,"272"),PackageInternalNs(""),PackageNamespace("Playtomic"),ProtectedNamespace("Stats_Achievements"),StaticProtectedNs("Stats_Achievements"),StaticProtectedNs("flash.display:MovieClip"),StaticProtectedNs("flash.display:Sprite"),StaticProtectedNs("flash.display:DisplayObjectContainer"),StaticProtectedNs("flash.display:InteractiveObject"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                           getlocal2
+                           pushstring "已击杀 @ 人"
+                           pushfalse
+                           iffalse ofs031d
+                           returnvoid
+                           convert_d
+                           callpropvoid QName(PackageNamespace(""),"getAiLevel"), 18
+                           setlocal1
+                  ofs031d:
+                           setproperty Multiname("progress",[PrivateNamespace(null,"121"),PackageNamespace(""),Namespace("http://adobe.com/AS3/2006/builtin"),PrivateNamespace(null,"272"),PackageInternalNs(""),PackageNamespace("Playtomic"),ProtectedNamespace("Stats_Achievements"),StaticProtectedNs("Stats_Achievements"),StaticProtectedNs("flash.display:MovieClip"),StaticProtectedNs("flash.display:Sprite"),StaticProtectedNs("flash.display:DisplayObjectContainer"),StaticProtectedNs("flash.display:InteractiveObject"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                           jump ofs06fd
+                           ifle ofs0328
+                  ofs0328:
+                           label
+                           getlocal2
+                           pushstring "生死一线奖章"
+                           jump ofs0335
+                           ifstricteq ofs0335
+                  ofs0335:
+                           setproperty Multiname("name",[PrivateNamespace(null,"121"),PackageNamespace(""),Namespace("http://adobe.com/AS3/2006/builtin"),PrivateNamespace(null,"272"),PackageInternalNs(""),PackageNamespace("Playtomic"),ProtectedNamespace("Stats_Achievements"),StaticProtectedNs("Stats_Achievements"),StaticProtectedNs("flash.display:MovieClip"),StaticProtectedNs("flash.display:Sprite"),StaticProtectedNs("flash.display:DisplayObjectContainer"),StaticProtectedNs("flash.display:InteractiveObject"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                           getlocal2
+                           pushstring "您坚持到了补给来临前的最后一刻。"
+                           setproperty Multiname("desc",[PrivateNamespace(null,"121"),PackageNamespace(""),Namespace("http://adobe.com/AS3/2006/builtin"),PrivateNamespace(null,"272"),PackageInternalNs(""),PackageNamespace("Playtomic"),ProtectedNamespace("Stats_Achievements"),StaticProtectedNs("Stats_Achievements"),StaticProtectedNs("flash.display:MovieClip"),StaticProtectedNs("flash.display:Sprite"),StaticProtectedNs("flash.display:DisplayObjectContainer"),StaticProtectedNs("flash.display:InteractiveObject"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                           getlocal2
+                           jump ofs034a
+                           setlocal0
+                           newfunction 36
+                           throw
+                           multiply
+                           setlocal3
+                  ofs034a:
+                           pushbyte 50
+                           setproperty Multiname("max",[PrivateNamespace(null,"121"),PackageNamespace(""),Namespace("http://adobe.com/AS3/2006/builtin"),PrivateNamespace(null,"272"),PackageInternalNs(""),PackageNamespace("Playtomic"),ProtectedNamespace("Stats_Achievements"),StaticProtectedNs("Stats_Achievements"),StaticProtectedNs("flash.display:MovieClip"),StaticProtectedNs("flash.display:Sprite"),StaticProtectedNs("flash.display:DisplayObjectContainer"),StaticProtectedNs("flash.display:InteractiveObject"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                           getlocal2
+                           pushstring "已拾取 @ 次"
+                           setproperty Multiname("progress",[PrivateNamespace(null,"121"),PackageNamespace(""),Namespace("http://adobe.com/AS3/2006/builtin"),PrivateNamespace(null,"272"),PackageInternalNs(""),PackageNamespace("Playtomic"),ProtectedNamespace("Stats_Achievements"),StaticProtectedNs("Stats_Achievements"),StaticProtectedNs("flash.display:MovieClip"),StaticProtectedNs("flash.display:Sprite"),StaticProtectedNs("flash.display:DisplayObjectContainer"),StaticProtectedNs("flash.display:InteractiveObject"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                           jump ofs06fd
+                           ifgt ofs035e
+                  ofs035e:
+                           label
+                           getlocal2
+                           pushstring "弹足粮盈奖章"
+                           jump ofs036c
+                           returnvalue
+                           constructprop QName(PackageNamespace("fl.motion"),"AnimatorBase"), 6
+                           pushwith
+                  ofs036c:
+                           setproperty Multiname("name",[PrivateNamespace(null,"121"),PackageNamespace(""),Namespace("http://adobe.com/AS3/2006/builtin"),PrivateNamespace(null,"272"),PackageInternalNs(""),PackageNamespace("Playtomic"),ProtectedNamespace("Stats_Achievements"),StaticProtectedNs("Stats_Achievements"),StaticProtectedNs("flash.display:MovieClip"),StaticProtectedNs("flash.display:Sprite"),StaticProtectedNs("flash.display:DisplayObjectContainer"),StaticProtectedNs("flash.display:InteractiveObject"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                           getlocal2
+                           pushstring "您精湛的指挥技艺不会让罗德岛落到弹尽粮绝的局面。"
+                           setproperty Multiname("desc",[PrivateNamespace(null,"121"),PackageNamespace(""),Namespace("http://adobe.com/AS3/2006/builtin"),PrivateNamespace(null,"272"),PackageInternalNs(""),PackageNamespace("Playtomic"),ProtectedNamespace("Stats_Achievements"),StaticProtectedNs("Stats_Achievements"),StaticProtectedNs("flash.display:MovieClip"),StaticProtectedNs("flash.display:Sprite"),StaticProtectedNs("flash.display:DisplayObjectContainer"),StaticProtectedNs("flash.display:InteractiveObject"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                           getlocal2
+                           pushbyte 100
+                           setproperty Multiname("max",[PrivateNamespace(null,"121"),PackageNamespace(""),Namespace("http://adobe.com/AS3/2006/builtin"),PrivateNamespace(null,"272"),PackageInternalNs(""),PackageNamespace("Playtomic"),ProtectedNamespace("Stats_Achievements"),StaticProtectedNs("Stats_Achievements"),StaticProtectedNs("flash.display:MovieClip"),StaticProtectedNs("flash.display:Sprite"),StaticProtectedNs("flash.display:DisplayObjectContainer"),StaticProtectedNs("flash.display:InteractiveObject"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                           getlocal2
+                           jump ofs0386
+                           popscope
+                           constructprop QName(PackageNamespace(""),"int"), 5
+                           pushwith
+                  ofs0386:
+                           pushstring "已拾取 @ 次"
+                           setproperty Multiname("progress",[PrivateNamespace(null,"121"),PackageNamespace(""),Namespace("http://adobe.com/AS3/2006/builtin"),PrivateNamespace(null,"272"),PackageInternalNs(""),PackageNamespace("Playtomic"),ProtectedNamespace("Stats_Achievements"),StaticProtectedNs("Stats_Achievements"),StaticProtectedNs("flash.display:MovieClip"),StaticProtectedNs("flash.display:Sprite"),StaticProtectedNs("flash.display:DisplayObjectContainer"),StaticProtectedNs("flash.display:InteractiveObject"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                           jump ofs06fd
+                           pushwith
+                           setlocal2
+                  ofs0392:
+                           label
+                           getlocal2
+                           jump ofs039c
+                           ifstrictne ofs039c
+                  ofs039c:
+                           pushstring "人型盾甲奖章"
+                           setproperty Multiname("name",[PrivateNamespace(null,"121"),PackageNamespace(""),Namespace("http://adobe.com/AS3/2006/builtin"),PrivateNamespace(null,"272"),PackageInternalNs(""),PackageNamespace("Playtomic"),ProtectedNamespace("Stats_Achievements"),StaticProtectedNs("Stats_Achievements"),StaticProtectedNs("flash.display:MovieClip"),StaticProtectedNs("flash.display:Sprite"),StaticProtectedNs("flash.display:DisplayObjectContainer"),StaticProtectedNs("flash.display:InteractiveObject"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                           getlocal2
+                           pushstring "您无处不在的武装是取胜的关键。"
+                           setproperty Multiname("desc",[PrivateNamespace(null,"121"),PackageNamespace(""),Namespace("http://adobe.com/AS3/2006/builtin"),PrivateNamespace(null,"272"),PackageInternalNs(""),PackageNamespace("Playtomic"),ProtectedNamespace("Stats_Achievements"),StaticProtectedNs("Stats_Achievements"),StaticProtectedNs("flash.display:MovieClip"),StaticProtectedNs("flash.display:Sprite"),StaticProtectedNs("flash.display:DisplayObjectContainer"),StaticProtectedNs("flash.display:InteractiveObject"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                           jump ofs03b3
+                           popscope
+                           construct 110
+                           pushwith
+                           lessequals
+                           pushnull
+                  ofs03b3:
+                           getlocal2
+                           pushbyte 100
+                           setproperty Multiname("max",[PrivateNamespace(null,"121"),PackageNamespace(""),Namespace("http://adobe.com/AS3/2006/builtin"),PrivateNamespace(null,"272"),PackageInternalNs(""),PackageNamespace("Playtomic"),ProtectedNamespace("Stats_Achievements"),StaticProtectedNs("Stats_Achievements"),StaticProtectedNs("flash.display:MovieClip"),StaticProtectedNs("flash.display:Sprite"),StaticProtectedNs("flash.display:DisplayObjectContainer"),StaticProtectedNs("flash.display:InteractiveObject"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                           getlocal2
+                           pushstring "已拾取 @ 次"
+                           setproperty Multiname("progress",[PrivateNamespace(null,"121"),PackageNamespace(""),Namespace("http://adobe.com/AS3/2006/builtin"),PrivateNamespace(null,"272"),PackageInternalNs(""),PackageNamespace("Playtomic"),ProtectedNamespace("Stats_Achievements"),StaticProtectedNs("Stats_Achievements"),StaticProtectedNs("flash.display:MovieClip"),StaticProtectedNs("flash.display:Sprite"),StaticProtectedNs("flash.display:DisplayObjectContainer"),StaticProtectedNs("flash.display:InteractiveObject"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                           jump ofs06fd
+                           pushwith
+                           setlocal0
+                  ofs03c6:
+                           label
+                           getlocal2
+                           jump ofs03d2
+                           popscope
+                           newfunction 67
+                           pushwith
+                           nextname
+                           setlocal2
+                  ofs03d2:
+                           pushstring "你他妈劈我瓜是吧！"
+                           setproperty Multiname("name",[PrivateNamespace(null,"121"),PackageNamespace(""),Namespace("http://adobe.com/AS3/2006/builtin"),PrivateNamespace(null,"272"),PackageInternalNs(""),PackageNamespace("Playtomic"),ProtectedNamespace("Stats_Achievements"),StaticProtectedNs("Stats_Achievements"),StaticProtectedNs("flash.display:MovieClip"),StaticProtectedNs("flash.display:Sprite"),StaticProtectedNs("flash.display:DisplayObjectContainer"),StaticProtectedNs("flash.display:InteractiveObject"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                           getlocal2
+                           pushstring "完全破坏龙门市区中的水果摊"
+                           setproperty Multiname("desc",[PrivateNamespace(null,"121"),PackageNamespace(""),Namespace("http://adobe.com/AS3/2006/builtin"),PrivateNamespace(null,"272"),PackageInternalNs(""),PackageNamespace("Playtomic"),ProtectedNamespace("Stats_Achievements"),StaticProtectedNs("Stats_Achievements"),StaticProtectedNs("flash.display:MovieClip"),StaticProtectedNs("flash.display:Sprite"),StaticProtectedNs("flash.display:DisplayObjectContainer"),StaticProtectedNs("flash.display:InteractiveObject"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                           getlocal2
+                           pushstring "协同战术：羸弱"
+                           setproperty Multiname("unlock",[PrivateNamespace(null,"121"),PackageNamespace(""),Namespace("http://adobe.com/AS3/2006/builtin"),PrivateNamespace(null,"272"),PackageInternalNs(""),PackageNamespace("Playtomic"),ProtectedNamespace("Stats_Achievements"),StaticProtectedNs("Stats_Achievements"),StaticProtectedNs("flash.display:MovieClip"),StaticProtectedNs("flash.display:Sprite"),StaticProtectedNs("flash.display:DisplayObjectContainer"),StaticProtectedNs("flash.display:InteractiveObject"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                           jump ofs03ef
+                           popscope
+                           callproplex QName(PackageNamespace(""),"Date"), 9
+                           pushwith
+                  ofs03ef:
+                           jump ofs06fd
+                           ifgt ofs03f7
+                  ofs03f7:
+                           label
+                           getlocal2
+                           pushstring "鏅憺璧涙柉锛�?"
+                           setproperty Multiname("name",[PrivateNamespace(null,"121"),PackageNamespace(""),Namespace("http://adobe.com/AS3/2006/builtin"),PrivateNamespace(null,"272"),PackageInternalNs(""),PackageNamespace("Playtomic"),ProtectedNamespace("Stats_Achievements"),StaticProtectedNs("Stats_Achievements"),StaticProtectedNs("flash.display:MovieClip"),StaticProtectedNs("flash.display:Sprite"),StaticProtectedNs("flash.display:DisplayObjectContainer"),StaticProtectedNs("flash.display:InteractiveObject"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                           jump ofs0407
+                           ifle ofs0407
+                  ofs0407:
+                           getlocal2
+                           pushstring "“博士……我一直在看着你——”"
+                           setproperty Multiname("desc",[PrivateNamespace(null,"121"),PackageNamespace(""),Namespace("http://adobe.com/AS3/2006/builtin"),PrivateNamespace(null,"272"),PackageInternalNs(""),PackageNamespace("Playtomic"),ProtectedNamespace("Stats_Achievements"),StaticProtectedNs("Stats_Achievements"),StaticProtectedNs("flash.display:MovieClip"),StaticProtectedNs("flash.display:Sprite"),StaticProtectedNs("flash.display:DisplayObjectContainer"),StaticProtectedNs("flash.display:InteractiveObject"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                           getlocal2
+                           pushstring "协同战术：无限"
+                           pushtrue
+                           iftrue ofs041e
+                           returnvoid
+                           popscope
+                           callsupervoid QName(PrivateNamespace(null,"9"),"setSharedStyles"), 10
+                           setlocal2
+                  ofs041e:
+                           setproperty Multiname("unlock",[PrivateNamespace(null,"121"),PackageNamespace(""),Namespace("http://adobe.com/AS3/2006/builtin"),PrivateNamespace(null,"272"),PackageInternalNs(""),PackageNamespace("Playtomic"),ProtectedNamespace("Stats_Achievements"),StaticProtectedNs("Stats_Achievements"),StaticProtectedNs("flash.display:MovieClip"),StaticProtectedNs("flash.display:Sprite"),StaticProtectedNs("flash.display:DisplayObjectContainer"),StaticProtectedNs("flash.display:InteractiveObject"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                           jump ofs06fd
+                           throw
+                           setlocal3
+                  ofs0427:
+                           label
+                           getlocal2
+                           pushstring "我爱摸鱼"
+                           setproperty Multiname("name",[PrivateNamespace(null,"121"),PackageNamespace(""),Namespace("http://adobe.com/AS3/2006/builtin"),PrivateNamespace(null,"272"),PackageInternalNs(""),PackageNamespace("Playtomic"),ProtectedNamespace("Stats_Achievements"),StaticProtectedNs("Stats_Achievements"),StaticProtectedNs("flash.display:MovieClip"),StaticProtectedNs("flash.display:Sprite"),StaticProtectedNs("flash.display:DisplayObjectContainer"),StaticProtectedNs("flash.display:InteractiveObject"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                           pushfalse
+                           iffalse ofs043c
+                           pushtrue
+                           throw
+                           newactivation
+                           newfunction 110
+                           throw
+                           typeof
+                           returnvalue
+                  ofs043c:
+                           getlocal2
+                           pushstring "你叫我去做我就去做啊？那我岂不是很没面子？"
+                           setproperty Multiname("desc",[PrivateNamespace(null,"121"),PackageNamespace(""),Namespace("http://adobe.com/AS3/2006/builtin"),PrivateNamespace(null,"272"),PackageInternalNs(""),PackageNamespace("Playtomic"),ProtectedNamespace("Stats_Achievements"),StaticProtectedNs("Stats_Achievements"),StaticProtectedNs("flash.display:MovieClip"),StaticProtectedNs("flash.display:Sprite"),StaticProtectedNs("flash.display:DisplayObjectContainer"),StaticProtectedNs("flash.display:InteractiveObject"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                           getlocal2
+                           pushstring "协同战术：随机"
+                           setproperty Multiname("unlock",[PrivateNamespace(null,"121"),PackageNamespace(""),Namespace("http://adobe.com/AS3/2006/builtin"),PrivateNamespace(null,"272"),PackageInternalNs(""),PackageNamespace("Playtomic"),ProtectedNamespace("Stats_Achievements"),StaticProtectedNs("Stats_Achievements"),StaticProtectedNs("flash.display:MovieClip"),StaticProtectedNs("flash.display:Sprite"),StaticProtectedNs("flash.display:DisplayObjectContainer"),StaticProtectedNs("flash.display:InteractiveObject"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                           jump ofs0454
+                           pushwith
+                           constructprop QName(PackageNamespace(""),"registerInstance"), 18
+                           setlocal0
+                  ofs0454:
+                           jump ofs06fd
+                           popscope
+                           setlocal1
+                           getlocal3
+                  ofs045b:
+                           label
+                           jump ofs06fd
+                  ofs0460:
+                           getlocal1
+                           setlocal3
+                           jump ofs046a
+                           ifge ofs046a
+                  ofs046a:
+                           pushstring "campaign"
+                           getlocal3
+                           ifstricteq ofs0483
+                           jump ofs048d
+                           pushfalse
+                           iffalse ofs047b
+                  ofs047b:
+                           pushtrue
+                           throw
+                           setlocal2
+                           newfunction 86
+                           throw
+                           modulo
+                           returnvalue
+                  ofs0483:
+                           pushbyte 0
+                           jump ofs06b4
+                           ifeq ofs048d
+                  ofs048d:
+                           pushstring "challenges"
+                           getlocal3
+                           ifstricteq ofs0499
+                           jump ofs04a8
+                  ofs0499:
+                           pushbyte 1
+                           jump ofs06b4
+                           jump ofs04a3
+                  ofs04a3:
+                           negate
+                           constructprop QName(PackageNamespace("Box2D.Collision.Shapes"),"b2PolygonShape"), 5
+                           pushwith
+                  ofs04a8:
+                           pushstring "level50"
+                           getlocal3
+                           ifstricteq ofs04b4
+                           jump ofs04be
+                  ofs04b4:
+                           pushbyte 2
+                           jump ofs06b4
+                           ifgt ofs04be
+                  ofs04be:
+                           pushstring "hard"
+                           getlocal3
+                           ifstrictne ofs04d9
+                           pushfalse
+                           iffalse ofs04d1
+                           returnvoid
+                           popscope
+                           constructprop QName(PackageNamespace("Playtomic"),"PlayerScore"), 6
+                           pushwith
+                  ofs04d1:
+                           pushbyte 3
+                           jump ofs06b4
+                           pushwith
+                           setlocal0
+                  ofs04d9:
+                           pushstring "insane"
+                           getlocal3
+                           ifstricteq ofs04e5
+                           jump ofs04f3
+                  ofs04e5:
+                           pushbyte 4
+                           jump ofs04ef
+                           ifle ofs04ef
+                  ofs04ef:
+                           jump ofs06b4
+                  ofs04f3:
+                           pushstring "camo"
+                           getlocal3
+                           ifstrictne ofs050f
+                           pushtrue
+                           iftrue ofs0507
+                           returnvoid
+                           popscope
+                           convert_d
+                           lessequals
+                           pushwith
+                           returnvoid
+                           returnvalue
+                  ofs0507:
+                           pushbyte 5
+                           jump ofs06b4
+                           popscope
+                           setlocal3
+                  ofs050f:
+                           pushstring "gambler"
+                           getlocal3
+                           ifstricteq ofs051b
+                           jump ofs052b
+                  ofs051b:
+                           pushbyte 6
+                           jump ofs06b4
+                           jump ofs0525
+                  ofs0525:
+                           negate
+                           lshift
+                           setlocal0
+                           returnvalue
+                           setlocal2
+                           setlocal2
+                  ofs052b:
+                           pushstring "sell"
+                           getlocal3
+                           ifstricteq ofs0537
+                           jump ofs0541
+                  ofs0537:
+                           pushbyte 7
+                           jump ofs06b4
+                           ifge ofs0541
+                  ofs0541:
+                           pushstring "globex"
+                           getlocal3
+                           pushfalse
+                           iffalse ofs0551
+                           pushtrue
+                           throw
+                           setlocal0
+                           callsupervoid QName(PackageNamespace("Box2D.Collision.Shapes"),"b2CircleShape"), 8
+                           pushwith
+                  ofs0551:
+                           ifstricteq ofs0559
+                           jump ofs0563
+                  ofs0559:
+                           pushbyte 8
+                           jump ofs06b4
+                           ifne ofs0563
+                  ofs0563:
+                           pushstring "engi"
+                           getlocal3
+                           jump ofs056f
+                           ifgt ofs056f
+                  ofs056f:
+                           ifstrictne ofs0585
+                           pushbyte 9
+                           jump ofs057f
+                           popscope
+                           newfunction 59
+                           throw
+                           convert_s
+                           returnvalue
+                  ofs057f:
+                           jump ofs06b4
+                           pushwith
+                           setlocal2
+                  ofs0585:
+                           pushstring "merc"
+                           getlocal3
+                           ifstricteq ofs0591
+                           jump ofs0597
+                  ofs0591:
+                           pushbyte 10
+                           jump ofs06b4
+                  ofs0597:
+                           pushstring "general"
+                           jump ofs05a4
+                           setlocal0
+                           setlocal2
+                           instanceof
+                           setlocal1
+                           equals
+                           setlocal2
+                  ofs05a4:
+                           getlocal3
+                           ifstricteq ofs05ad
+                           jump ofs05b5
+                  ofs05ad:
+                           pushbyte 11
+                           jump ofs06b4
+                           pushwith
+                           setlocal1
+                  ofs05b5:
+                           pushstring "sniper"
+                           getlocal3
+                           ifstrictne ofs05ce
+                           pushbyte 12
+                           jump ofs05c8
+                           negate
+                           callstatic 110, 6
+                           pushwith
+                  ofs05c8:
+                           jump ofs06b4
+                           popscope
+                           setlocal1
+                  ofs05ce:
+                           pushstring "jugg"
+                           getlocal3
+                           ifstricteq ofs05da
+                           jump ofs05e8
+                  ofs05da:
+                           pushbyte 13
+                           jump ofs05e4
+                           iflt ofs05e4
+                  ofs05e4:
+                           jump ofs06b4
+                  ofs05e8:
+                           pushstring "melee"
+                           getlocal3
+                           pushtrue
+                           iftrue ofs05f8
+                           returnvoid
+                           popscope
+                           increment
+                           setlocal0
+                           convert_s
+                           nextname
+                           istypelate
+                  ofs05f8:
+                           ifstricteq ofs0600
+                           jump ofs060a
+                  ofs0600:
+                           pushbyte 14
+                           jump ofs06b4
+                           ifstrictne ofs060a
+                  ofs060a:
+                           pushstring "health"
+                           getlocal3
+                           ifstrictne ofs0618
+                           pushbyte 15
+                           jump ofs06b4
+                  ofs0618:
+                           pushstring "ammo"
+                           getlocal3
+                           jump ofs0626
+                           typeof
+                           newclass 4
+                           pushwith
+                           returnvoid
+                           decrement
+                  ofs0626:
+                           ifstricteq ofs062e
+                           jump ofs0636
+                  ofs062e:
+                           pushbyte 16
+                           jump ofs06b4
+                           popscope
+                           setlocal0
+                  ofs0636:
+                           pushstring "armor"
+                           getlocal3
+                           ifstrictne ofs0650
+                           pushbyte 17
+                           jump ofs06b4
+                           pushtrue
+                           iftrue ofs0649
+                  ofs0649:
+                           pushtrue
+                           throw
+                           popscope
+                           callstatic 13, 15
+                           throw
+                  ofs0650:
+                           pushstring "fruit"
+                           getlocal3
+                           ifstricteq ofs065c
+                           jump ofs0666
+                  ofs065c:
+                           pushbyte 18
+                           jump ofs06b4
+                           ifeq ofs0666
+                  ofs0666:
+                           pushstring "tesla"
+                           jump ofs0671
+                           ifge ofs0671
+                  ofs0671:
+                           getlocal3
+                           ifstrictne ofs068a
+                           jump ofs0680
+                           returnvoid
+                           newfunction 28
+                           throw
+                           lessequals
+                           lessequals
+                  ofs0680:
+                           pushbyte 19
+                           jump ofs06b4
+                           iflt ofs068a
+                  ofs068a:
+                           pushstring "party"
+                           getlocal3
+                           ifstricteq ofs0696
+                           jump ofs069c
+                  ofs0696:
+                           pushbyte 20
+                           jump ofs06b4
+                  ofs069c:
+                           jump ofs06b2
+                           pushbyte 21
+                           jump ofs06a6
+                  ofs06a6:
+                           returnvalue
+                           call 13
+                           pushwith
+                           decrement
+                           checkfilter
+                           jump ofs06b0
+                  ofs06b0:
+                           pushwith
+                           setlocal1
+                  ofs06b2:
+                           pushbyte 21
+                  ofs06b4:
+                           kill 3
+                           lookupswitch ofs045b, [ofs0034, ofs0055, ofs0075, ofs00a0, ofs00c0, ofs00df, ofs010f, ofs0145, ofs017e, ofs01bd, ofs01f5, ofs0236, ofs027b, ofs02b6, ofs02ed, ofs0328, ofs035e, ofs0392, ofs03c6, ofs03f7, ofs0427, ofs045b]
+                  ofs06fd:
+                           getlocal2
+                           returnvalue
+                        end ; code
+                     end ; body
+                  end ; method
+               }
+               
+               private static function idToNum(param1:String) : uint
+               {
+                  trait method QName(PrivateNamespace(null,"121"),"idToNum")
+                     flag FINAL
+                     dispid 6
+                     method
+                        name null
+                        param QName(PackageNamespace(""),"String")
+                        returns QName(PackageNamespace(""),"uint")
+                        
+                        body
+                           maxstack 5
+                           localcount 2
+                           initscopedepth 9
+                           maxscopedepth 10
+                           
+                           code
+                              getlocal0
+                              pushscope
+                              jump ofs000d
+                              callmethod 3492, 10
+                              call 10
+                              throw
+                     ofs000d:
+                              getlex QName(PackageNamespace(""),"achOrder")
+                              getlocal1
+                              callproperty QName(Namespace("http://adobe.com/AS3/2006/builtin"),"indexOf"), 1
+                              returnvalue
+                           end ; code
+                        end ; body
+                     end ; method
+                  }
+                  
+                  public static function checkAchVariable(param1:String, param2:uint) : void
+                  {
+                     trait method QName(PackageNamespace(""),"checkAchVariable")
+                        flag FINAL
+                        dispid 7
+                        method
+                           name null
+                           param QName(PackageNamespace(""),"String")
+                           param QName(PackageNamespace(""),"uint")
+                           returns QName(PackageNamespace(""),"void")
+                           
+                           body
+                              maxstack 7
+                              localcount 3
+                              initscopedepth 9
+                              maxscopedepth 10
+                              
+                              code
+                                 getlocal0
+                                 pushscope
+                                 jump ofs000d
+                                 callstatic 3491, 6
+                                 call 6
+                                 throw
+                        ofs000d:
+                                 findpropstrict QName(PackageNamespace(""),"isNaN")
+                                 getlex QName(PackageNamespace(""),"SD")
+                                 getproperty QName(PackageNamespace(""),"achOb")
+                                 getlocal1
+                                 getproperty MultinameL([PrivateNamespace(null,"121"),PackageNamespace(""),Namespace("http://adobe.com/AS3/2006/builtin"),PrivateNamespace(null,"272"),PackageInternalNs(""),PackageNamespace("Playtomic"),ProtectedNamespace("Stats_Achievements"),StaticProtectedNs("Stats_Achievements"),StaticProtectedNs("flash.display:MovieClip"),StaticProtectedNs("flash.display:Sprite"),StaticProtectedNs("flash.display:DisplayObjectContainer"),StaticProtectedNs("flash.display:InteractiveObject"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                                 jump ofs0022
+                                 ifeq ofs0022
+                        ofs0022:
+                                 callproperty QName(PackageNamespace(""),"isNaN"), 1
+                                 convert_b
+                                 dup
+                                 iffalse ofs0039
+                                 jump ofs0046
+                                 jump ofs0034
+                        ofs0034:
+                                 popscope
+                                 callmethod 114, 5
+                                 pushwith
+                        ofs0039:
+                                 pop
+                                 getlex QName(PackageNamespace(""),"SD")
+                                 getproperty QName(PackageNamespace(""),"achOb")
+                                 getlocal1
+                                 getproperty MultinameL([PrivateNamespace(null,"121"),PackageNamespace(""),Namespace("http://adobe.com/AS3/2006/builtin"),PrivateNamespace(null,"272"),PackageInternalNs(""),PackageNamespace("Playtomic"),ProtectedNamespace("Stats_Achievements"),StaticProtectedNs("Stats_Achievements"),StaticProtectedNs("flash.display:MovieClip"),StaticProtectedNs("flash.display:Sprite"),StaticProtectedNs("flash.display:DisplayObjectContainer"),StaticProtectedNs("flash.display:InteractiveObject"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                                 pushnull
+                                 equals
+                        ofs0046:
+                                 iftrue ofs005a
+                                 jump ofs0066
+                                 pushfalse
+                                 iffalse ofs0053
+                        ofs0053:
+                                 returnvoid
+                                 popscope
+                                 call 11
+                                 pushwith
+                                 divide
+                                 checkfilter
+                        ofs005a:
+                                 getlex QName(PackageNamespace(""),"SD")
+                                 getproperty QName(PackageNamespace(""),"achOb")
+                                 getlocal1
+                                 pushbyte 0
+                                 setproperty MultinameL([PrivateNamespace(null,"121"),PackageNamespace(""),Namespace("http://adobe.com/AS3/2006/builtin"),PrivateNamespace(null,"272"),PackageInternalNs(""),PackageNamespace("Playtomic"),ProtectedNamespace("Stats_Achievements"),StaticProtectedNs("Stats_Achievements"),StaticProtectedNs("flash.display:MovieClip"),StaticProtectedNs("flash.display:Sprite"),StaticProtectedNs("flash.display:DisplayObjectContainer"),StaticProtectedNs("flash.display:InteractiveObject"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                        ofs0066:
+                                 getlex QName(PackageNamespace(""),"SD")
+                                 getproperty QName(PackageNamespace(""),"achOb")
+                                 getlocal1
+                                 getlex QName(PackageNamespace(""),"SD")
+                                 getproperty QName(PackageNamespace(""),"achOb")
+                                 pushfalse
+                                 iffalse ofs007f
+                                 returnvoid
+                                 popscope
+                                 pushwith
+                                 newfunction 104
+                                 pop
+                                 setlocal1
+                        ofs007f:
+                                 getlocal1
+                                 getproperty MultinameL([PrivateNamespace(null,"121"),PackageNamespace(""),Namespace("http://adobe.com/AS3/2006/builtin"),PrivateNamespace(null,"272"),PackageInternalNs(""),PackageNamespace("Playtomic"),ProtectedNamespace("Stats_Achievements"),StaticProtectedNs("Stats_Achievements"),StaticProtectedNs("flash.display:MovieClip"),StaticProtectedNs("flash.display:Sprite"),StaticProtectedNs("flash.display:DisplayObjectContainer"),StaticProtectedNs("flash.display:InteractiveObject"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                                 getlocal2
+                                 add
+                                 setproperty MultinameL([PrivateNamespace(null,"121"),PackageNamespace(""),Namespace("http://adobe.com/AS3/2006/builtin"),PrivateNamespace(null,"272"),PackageInternalNs(""),PackageNamespace("Playtomic"),ProtectedNamespace("Stats_Achievements"),StaticProtectedNs("Stats_Achievements"),StaticProtectedNs("flash.display:MovieClip"),StaticProtectedNs("flash.display:Sprite"),StaticProtectedNs("flash.display:DisplayObjectContainer"),StaticProtectedNs("flash.display:InteractiveObject"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                                 jump ofs0090
+                                 ifle ofs0090
+                        ofs0090:
+                                 getlex QName(PackageNamespace(""),"SD")
+                                 getproperty QName(PackageNamespace(""),"achOb")
+                                 getlocal1
+                                 pushfalse
+                                 iffalse ofs00a2
+                                 returnvoid
+                                 popscope
+                                 callpropvoid QName(PackageNamespace("Box2D.Dynamics.Joints"),"b2MouseJointDef"), 5
+                                 pushwith
+                        ofs00a2:
+                                 getproperty MultinameL([PrivateNamespace(null,"121"),PackageNamespace(""),Namespace("http://adobe.com/AS3/2006/builtin"),PrivateNamespace(null,"272"),PackageInternalNs(""),PackageNamespace("Playtomic"),ProtectedNamespace("Stats_Achievements"),StaticProtectedNs("Stats_Achievements"),StaticProtectedNs("flash.display:MovieClip"),StaticProtectedNs("flash.display:Sprite"),StaticProtectedNs("flash.display:DisplayObjectContainer"),StaticProtectedNs("flash.display:InteractiveObject"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                                 findpropstrict QName(PackageNamespace(""),"getAchievement")
+                                 getlocal1
+                                 callproperty QName(PackageNamespace(""),"getAchievement"), 1
+                                 getproperty Multiname("max",[PrivateNamespace(null,"121"),PackageNamespace(""),Namespace("http://adobe.com/AS3/2006/builtin"),PrivateNamespace(null,"272"),PackageInternalNs(""),PackageNamespace("Playtomic"),ProtectedNamespace("Stats_Achievements"),StaticProtectedNs("Stats_Achievements"),StaticProtectedNs("flash.display:MovieClip"),StaticProtectedNs("flash.display:Sprite"),StaticProtectedNs("flash.display:DisplayObjectContainer"),StaticProtectedNs("flash.display:InteractiveObject"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                                 ifge ofs00b8
+                                 jump ofs00c0
+                        ofs00b8:
+                                 findpropstrict QName(PackageNamespace(""),"setAchievement")
+                                 getlocal1
+                                 callpropvoid QName(PackageNamespace(""),"setAchievement"), 1
+                        ofs00c0:
+                                 returnvoid
+                              end ; code
+                           end ; body
+                        end ; method
+                     }
+                     
+                     public static function setAchievement(param1:*) : void
+                     {
+                        trait method QName(PackageNamespace(""),"setAchievement")
+                           flag FINAL
+                           dispid 8
+                           method
+                              name null
+                              param null
+                              returns QName(PackageNamespace(""),"void")
+                              
+                              body
+                                 maxstack 6
+                                 localcount 4
+                                 initscopedepth 9
+                                 maxscopedepth 10
+                                 
+                                 code
+                                    getlocal0
+                                    jump ofs000c
+                                    call 6
+                                    callstatic 3494, 6
+                                    throw
+                           ofs000c:
+                                    pushscope
+                                    findpropstrict QName(PrivateNamespace(null,"121"),"idToNum")
+                                    getlocal1
+                                    callproperty QName(PrivateNamespace(null,"121"),"idToNum"), 1
+                                    convert_u
+                                    jump ofs001e
+                                    ifne ofs001e
+                           ofs001e:
+                                    setlocal2
+                                    getlex QName(PackageNamespace(""),"SD")
+                                    getproperty QName(PackageNamespace(""),"achievements")
+                                    getlocal2
+                                    pushfalse
+                                    iffalse ofs0031
+                                    returnvoid
+                                    popscope
+                                    callstatic 37, 21
+                                    throw
+                           ofs0031:
+                                    callproperty QName(Namespace("http://adobe.com/AS3/2006/builtin"),"indexOf"), 1
+                                    pushbyte -1
+                                    ifne ofs003f
+                                    jump ofs0040
+                           ofs003f:
+                                    returnvoid
+                           ofs0040:
+                                    findpropstrict QName(PackageNamespace(""),"getAchievement")
+                                    getlocal1
+                                    callproperty QName(PackageNamespace(""),"getAchievement"), 1
+                                    coerce QName(PackageNamespace(""),"Object")
+                                    setlocal3
+                                    getlex QName(PackageNamespace(""),"SD")
+                                    jump ofs0057
+                                    setlocal2
+                                    callpropvoid QName(PackageNamespace("fl.core"),"UIComponent"), 5
+                                    pushwith
+                           ofs0057:
+                                    getproperty QName(PackageNamespace(""),"achievements")
+                                    getlocal2
+                                    callpropvoid QName(Namespace("http://adobe.com/AS3/2006/builtin"),"push"), 1
+                                    getlex QName(PackageNamespace(""),"SH")
+                                    getlex QName(PackageNamespace(""),"S_Medal")
+                                    pushtrue
+                                    callpropvoid QName(PackageNamespace(""),"playSound"), 2
+                                    jump ofs0074
+                                    popscope
+                                    newfunction 115
+                                    pop
+                                    setlocal0
+                                    setlocal2
+                           ofs0074:
+                                    getlex QName(PackageNamespace(""),"SD")
+                                    callpropvoid QName(PackageNamespace(""),"saveGame"), 0
+                                    findpropstrict QName(PackageNamespace(""),"trace")
+                                    pushstring "Got achievement"
+                                    getlocal3
+                                    jump ofs008a
+                                    ifne ofs008a
+                           ofs008a:
+                                    getproperty Multiname("name",[PrivateNamespace(null,"121"),PackageNamespace(""),Namespace("http://adobe.com/AS3/2006/builtin"),PrivateNamespace(null,"272"),PackageInternalNs(""),PackageNamespace("Playtomic"),ProtectedNamespace("Stats_Achievements"),StaticProtectedNs("Stats_Achievements"),StaticProtectedNs("flash.display:MovieClip"),StaticProtectedNs("flash.display:Sprite"),StaticProtectedNs("flash.display:DisplayObjectContainer"),StaticProtectedNs("flash.display:InteractiveObject"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                                    callpropvoid QName(PackageNamespace(""),"trace"), 2
+                                    getlex QName(PackageNamespace("Playtomic"),"Log")
+                                    getlocal3
+                                    pushtrue
+                                    iftrue ofs00a1
+                                    returnvoid
+                                    setlocal2
+                                    add
+                                    istypelate
+                                    setlocal0
+                                    newactivation
+                                    setlocal0
+                           ofs00a1:
+                                    getproperty Multiname("name",[PrivateNamespace(null,"121"),PackageNamespace(""),Namespace("http://adobe.com/AS3/2006/builtin"),PrivateNamespace(null,"272"),PackageInternalNs(""),PackageNamespace("Playtomic"),ProtectedNamespace("Stats_Achievements"),StaticProtectedNs("Stats_Achievements"),StaticProtectedNs("flash.display:MovieClip"),StaticProtectedNs("flash.display:Sprite"),StaticProtectedNs("flash.display:DisplayObjectContainer"),StaticProtectedNs("flash.display:InteractiveObject"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                                    pushstring "Achievemens"
+                                    callpropvoid QName(PackageNamespace(""),"CustomMetric"), 2
+                                    getlex QName(PackageNamespace(""),"ach")
+                                    getproperty QName(PackageNamespace(""),"icon")
+                                    getlocal3
+                                    getproperty Multiname("sprite",[PrivateNamespace(null,"121"),PackageNamespace(""),Namespace("http://adobe.com/AS3/2006/builtin"),PrivateNamespace(null,"272"),PackageInternalNs(""),PackageNamespace("Playtomic"),ProtectedNamespace("Stats_Achievements"),StaticProtectedNs("Stats_Achievements"),StaticProtectedNs("flash.display:MovieClip"),StaticProtectedNs("flash.display:Sprite"),StaticProtectedNs("flash.display:DisplayObjectContainer"),StaticProtectedNs("flash.display:InteractiveObject"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                                    callpropvoid QName(PackageNamespace(""),"gotoAndStop"), 1
+                                    getlex QName(PackageNamespace(""),"ach")
+                                    getproperty QName(PackageNamespace(""),"txt_name")
+                                    jump ofs00c9
+                                    returnvalue
+                                    pushwith
+                                    newfunction 67
+                                    throw
+                                    equals
+                           ofs00c9:
+                                    getlocal3
+                                    getproperty Multiname("name",[PrivateNamespace(null,"121"),PackageNamespace(""),Namespace("http://adobe.com/AS3/2006/builtin"),PrivateNamespace(null,"272"),PackageInternalNs(""),PackageNamespace("Playtomic"),ProtectedNamespace("Stats_Achievements"),StaticProtectedNs("Stats_Achievements"),StaticProtectedNs("flash.display:MovieClip"),StaticProtectedNs("flash.display:Sprite"),StaticProtectedNs("flash.display:DisplayObjectContainer"),StaticProtectedNs("flash.display:InteractiveObject"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                                    setproperty QName(PackageNamespace(""),"text")
+                                    getlex QName(PackageNamespace(""),"ach")
+                                    getproperty QName(PackageNamespace(""),"txt_desc")
+                                    getlocal3
+                                    getproperty Multiname("desc",[PrivateNamespace(null,"121"),PackageNamespace(""),Namespace("http://adobe.com/AS3/2006/builtin"),PrivateNamespace(null,"272"),PackageInternalNs(""),PackageNamespace("Playtomic"),ProtectedNamespace("Stats_Achievements"),StaticProtectedNs("Stats_Achievements"),StaticProtectedNs("flash.display:MovieClip"),StaticProtectedNs("flash.display:Sprite"),StaticProtectedNs("flash.display:DisplayObjectContainer"),StaticProtectedNs("flash.display:InteractiveObject"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                                    setproperty QName(PackageNamespace(""),"text")
+                                    getlex QName(PackageNamespace(""),"ach")
+                                    getproperty QName(PackageNamespace(""),"txt_unlock")
+                                    jump ofs00ed
+                                    popscope
+                                    newfunction 82
+                                    throw
+                                    convert_s
+                                    setlocal0
+                           ofs00ed:
+                                    getlocal3
+                                    getproperty Multiname("unlock",[PrivateNamespace(null,"121"),PackageNamespace(""),Namespace("http://adobe.com/AS3/2006/builtin"),PrivateNamespace(null,"272"),PackageInternalNs(""),PackageNamespace("Playtomic"),ProtectedNamespace("Stats_Achievements"),StaticProtectedNs("Stats_Achievements"),StaticProtectedNs("flash.display:MovieClip"),StaticProtectedNs("flash.display:Sprite"),StaticProtectedNs("flash.display:DisplayObjectContainer"),StaticProtectedNs("flash.display:InteractiveObject"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                                    iftrue ofs00f9
+                                    jump ofs0127
+                           ofs00f9:
+                                    getlex QName(PackageNamespace(""),"Stats_Misc")
+                                    getlocal3
+                                    jump ofs0105
+                                    ifne ofs0105
+                           ofs0105:
+                                    getproperty Multiname("unlock",[PrivateNamespace(null,"121"),PackageNamespace(""),Namespace("http://adobe.com/AS3/2006/builtin"),PrivateNamespace(null,"272"),PackageInternalNs(""),PackageNamespace("Playtomic"),ProtectedNamespace("Stats_Achievements"),StaticProtectedNs("Stats_Achievements"),StaticProtectedNs("flash.display:MovieClip"),StaticProtectedNs("flash.display:Sprite"),StaticProtectedNs("flash.display:DisplayObjectContainer"),StaticProtectedNs("flash.display:InteractiveObject"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                                    callproperty QName(PackageNamespace(""),"getMod"), 1
+                                    pushtrue
+                                    iftrue ofs0118
+                                    pushtrue
+                                    throw
+                                    throw
+                                    constructprop QName(PackageNamespace("Box2D.Collision.Shapes"),"b2CircleShape"), 7
+                                    pushwith
+                           ofs0118:
+                                    getproperty Multiname("name",[PrivateNamespace(null,"121"),PackageNamespace(""),Namespace("http://adobe.com/AS3/2006/builtin"),PrivateNamespace(null,"272"),PackageInternalNs(""),PackageNamespace("Playtomic"),ProtectedNamespace("Stats_Achievements"),StaticProtectedNs("Stats_Achievements"),StaticProtectedNs("flash.display:MovieClip"),StaticProtectedNs("flash.display:Sprite"),StaticProtectedNs("flash.display:DisplayObjectContainer"),StaticProtectedNs("flash.display:InteractiveObject"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                                    pushstring " 支援合约 已解锁！"
+                                    add
+                                    jump ofs0129
+                                    ifeq ofs0127
+                           ofs0127:
+                                    pushstring ""
+                           ofs0129:
+                                    setproperty QName(PackageNamespace(""),"text")
+                                    getlex QName(PackageNamespace(""),"ach")
+                                    pushbyte 2
+                                    callpropvoid QName(PackageNamespace(""),"gotoAndPlay"), 1
+                                    jump ofs013e
+                                    popscope
+                                    callproplex QName(PackageNamespace("Box2D.Collision"),"b2AABB"), 24
+                                    throw
+                           ofs013e:
+                                    returnvoid
+                                 end ; code
+                              end ; body
+                           end ; method
+                        }
+                        
+                        function frame1() : *
+                        {
+                           trait method QName(PackageInternalNs(""),"frame1")
+                              dispid 0
+                              method
+                                 name null
+                                 returns null
+                                 
+                                 body
+                                    maxstack 4
+                                    localcount 1
+                                    initscopedepth 10
+                                    maxscopedepth 11
+                                    
+                                    code
+                                       jump ofs000a
+                                       newclass 476
+                                       call 6
+                                       throw
+                              ofs000a:
+                                       getlocal0
+                                       pushscope
+                                       findpropstrict QName(PackageNamespace(""),"stop")
+                                       callpropvoid QName(PackageNamespace(""),"stop"), 0
+                                       returnvoid
+                                       jump ofs0018
+                              ofs0018:
+                                       ifle ofs001c
+                                    end ; code
+                                 end ; body
+                              end ; method
+                           }
+                        }
+                     }

@@ -1,0 +1,2248 @@
+package
+{
+   public class Stats_Armor
+   {
+      
+      public static var itemOb:Object;
+      
+      public static var itemAr:Array;
+      
+      public static var typeAr:Array;
+      
+      {
+         method
+            name null
+            returns null
+            
+            body
+               maxstack 4
+               localcount 1
+               initscopedepth 3
+               maxscopedepth 4
+               
+               code
+                  getlocal0
+                  pushscope
+                  jump ofs000d
+                  call 9
+                  callstatic 3490, 9
+                  throw
+         ofs000d:
+                  returnvoid
+               end ; code
+            end ; body
+         end ; method
+      }
+      
+      public var type:uint;
+      
+      public var id:String;
+      
+      public var sprite:String;
+      
+      public var name:String;
+      
+      public var cost:uint;
+      
+      public var costMod:Number;
+      
+      public var armorRange:Range;
+      
+      public var armor:uint;
+      
+      public var desc:String;
+      
+      public var shit:Boolean;
+      
+      public var healthMod:Number = 1;
+      
+      public var ammoMod:Number = 0;
+      
+      public var regenMod:Number = 0;
+      
+      public var explosiveRes:Number = 0;
+      
+      public var meleeMod:Number = 1;
+      
+      public var reflect:Number = 0;
+      
+      public function Stats_Armor()
+      {
+         method
+            name null
+            returns null
+            
+            body
+               maxstack 4
+               localcount 1
+               initscopedepth 4
+               maxscopedepth 5
+               
+               code
+                  jump ofs000a
+                  call 9
+                  throw
+                  newclass 480
+         ofs000a:
+                  getlocal0
+                  pushscope
+                  getlocal0
+                  constructsuper 0
+                  returnvoid
+                  jump ofs0014
+         ofs0014:
+                  ifgt ofs0018
+               end ; code
+            end ; body
+         end ; method
+      }
+      
+      public static function Init() : void
+      {
+         trait method QName(PackageNamespace(""),"Init")
+            flag FINAL
+            dispid 3
+            method
+               name null
+               returns QName(PackageNamespace(""),"void")
+               
+               body
+                  maxstack 20
+                  localcount 4
+                  initscopedepth 3
+                  maxscopedepth 4
+                  
+                  code
+                     getlocal0
+                     pushscope
+                     jump ofs000d
+                     callmethod 3492, 7
+                     call 7
+                     throw
+            ofs000d:
+                     findproperty QName(PackageNamespace(""),"itemOb")
+                     newobject 0
+                     setproperty QName(PackageNamespace(""),"itemOb")
+                     findproperty QName(PackageNamespace(""),"itemAr")
+                     newarray 0
+                     jump ofs0022
+                     iflt ofs0022
+            ofs0022:
+                     setproperty QName(PackageNamespace(""),"itemAr")
+                     findproperty QName(PackageNamespace(""),"typeAr")
+                     newarray 0
+                     setproperty QName(PackageNamespace(""),"typeAr")
+                     pushbyte 0
+                     pushfalse
+                     iffalse ofs003b
+                     returnvoid
+                     popscope
+                     newfunction 30
+                     throw
+                     setlocal0
+                     throw
+            ofs003b:
+                     convert_u
+                     setlocal1
+                     jump ofs005f
+                     ifstricteq ofs0045
+            ofs0045:
+                     label
+                     getlex QName(PackageNamespace(""),"typeAr")
+                     newarray 0
+                     callpropvoid QName(Namespace("http://adobe.com/AS3/2006/builtin"),"push"), 1
+                     getlocal1
+                     increment
+                     pushfalse
+                     iffalse ofs005d
+                     pushfalse
+                     returnvalue
+                     pushwith
+                     callproperty QName(PackageNamespace(""),"Boolean"), 15
+                     pop
+            ofs005d:
+                     convert_u
+                     setlocal1
+            ofs005f:
+                     getlocal1
+                     pushbyte 7
+                     ifnlt ofs006a
+                     jump ofs0045
+            ofs006a:
+                     findpropstrict QName(PackageNamespace(""),"addItem")
+                     pushbyte 0
+                     pushstring "Old Boot"
+                     jump ofs007b
+                     instanceof
+                     callpropvoid QName(PackageNamespace("Box2D.Collision"),"IBroadPhase"), 24
+                     throw
+            ofs007b:
+                     pushstring ""
+                     pushstring "热水壶"
+                     pushdouble 25.0
+                     pushbyte 0
+                     dup
+                     jump ofs008e
+                     ifgt ofs008e
+            ofs008e:
+                     newarray 2
+                     pushstring "shit"
+                     jump ofs009d
+                     returnvoid
+                     newarray 59
+                     pushwith
+                     divide
+                     setlocal3
+            ofs009d:
+                     pushtrue
+                     newobject 1
+                     pushstring "罗德岛办公室里的同款热水壶，有人经常大半夜用热水壶煮速食面吃，这种生活习惯不是很健康......"
+                     callpropvoid QName(PackageNamespace(""),"addItem"), 8
+                     findpropstrict QName(PackageNamespace(""),"addItem")
+                     pushbyte 0
+                     jump ofs00b5
+                     popscope
+                     callstatic 72, 6
+                     pushwith
+            ofs00b5:
+                     pushstring "Empty Bottle"
+                     pushstring ""
+                     pushstring "芙蓉的健康餐"
+                     pushdouble 0.1
+                     pushbyte 0
+                     dup
+                     jump ofs00cc
+                     popscope
+                     newfunction 103
+                     pushwith
+                     nextname
+                     returnvalue
+            ofs00cc:
+                     newarray 2
+                     pushstring "shit"
+                     pushtrue
+                     newobject 1
+                     pushstring "身体健康但是心理不太健康，只吃这样的东西就没心思作战了。"
+                     jump ofs00df
+                     ifeq ofs00df
+            ofs00df:
+                     callpropvoid QName(PackageNamespace(""),"addItem"), 8
+                     pushtrue
+                     iftrue ofs00ef
+                     returnvoid
+                     popscope
+                     pushnull
+                     multiply
+                     bitxor
+                     coerce_s
+                     dup
+            ofs00ef:
+                     findpropstrict QName(PackageNamespace(""),"addItem")
+                     pushbyte 0
+                     pushstring "Fish Bones"
+                     pushstring ""
+                     pushstring "巅峰作战记录"
+                     pushdouble 10.0
+                     pushbyte 0
+                     dup
+                     newarray 2
+                     pushstring "shit"
+                     jump ofs0111
+                     returnvalue
+                     pushwith
+                     newfunction 34
+                     throw
+                     setlocal3
+            ofs0111:
+                     pushtrue
+                     newobject 1
+                     pushstring "《 全 撤 了 》"
+                     callpropvoid QName(PackageNamespace(""),"addItem"), 8
+                     findpropstrict QName(PackageNamespace(""),"addItem")
+                     pushbyte 0
+                     pushstring "Tin Can"
+                     pushstring ""
+                     pushstring "鲱鱼罐头"
+                     pushdouble 0.1
+                     jump ofs0134
+                     popscope
+                     callpropvoid QName(PackageNamespace(""),"qmMap"), 10
+                     setlocal3
+            ofs0134:
+                     pushbyte 0
+                     dup
+                     newarray 2
+                     pushstring "shit"
+                     pushtrue
+                     jump ofs0145
+                     ifstrictne ofs0145
+            ofs0145:
+                     newobject 1
+                     pushstring "打开后，十米内无人敢近身。"
+                     callpropvoid QName(PackageNamespace(""),"addItem"), 8
+                     findpropstrict QName(PackageNamespace(""),"addItem")
+                     pushbyte 0
+                     jump ofs015d
+                     negate
+                     dup
+                     increment
+                     setlocal1
+                     throw
+                     modulo
+            ofs015d:
+                     pushstring "Sock with Hole"
+                     pushstring ""
+                     pushstring "报纸"
+                     pushdouble 0.1
+                     pushbyte 0
+                     dup
+                     newarray 2
+                     pushstring "shit"
+                     pushtrue
+                     newobject 1
+                     pushfalse
+                     iffalse ofs017d
+                     returnvoid
+                     bitand
+                     callsupervoid QName(PackageNamespace("Box2D.Collision"),"b2ManifoldPoint"), 30
+                     throw
+            ofs017d:
+                     pushstring "玛恩纳随身携带的红酒报报纸。就是一张普通的报纸。"
+                     callpropvoid QName(PackageNamespace(""),"addItem"), 8
+                     findpropstrict QName(PackageNamespace(""),"addItem")
+                     pushbyte 0
+                     pushstring "Turtle Shell"
+                     pushstring ""
+                     pushstring "“文明的存续”"
+                     pushtrue
+                     iftrue ofs019d
+                     returnvoid
+                     setlocal2
+                     pushwith
+                     newfunction 27
+                     throw
+                     greaterequals
+            ofs019d:
+                     pushdouble 25.0
+                     pushbyte 0
+                     dup
+                     newarray 2
+                     pushstring "shit"
+                     jump ofs01b0
+                     iflt ofs01b0
+            ofs01b0:
+                     pushtrue
+                     newobject 1
+                     pushfalse
+                     iffalse ofs01c0
+                     pushfalse
+                     returnvalue
+                     popscope
+                     returnvoid
+                     checkfilter
+                     setlocal0
+                     returnvoid
+                     decrement
+            ofs01c0:
+                     pushstring "小小的黑色王冠。"
+                     callpropvoid QName(PackageNamespace(""),"addItem"), 8
+                     findpropstrict QName(PackageNamespace(""),"addItem")
+                     pushbyte 0
+                     pushstring "Riot Shield"
+                     pushstring ""
+                     pushstring "明日方舟美术设定集Vol.1"
+                     jump ofs01de
+                     bitor
+                     modulo
+                     pushscope
+                     multiply
+                     add
+                     typeof
+            ofs01de:
+                     pushdouble 25.0
+                     pushbyte 0
+                     dup
+                     newarray 2
+                     pushstring "shit"
+                     pushtrue
+                     newobject 1
+                     pushstring "预售，200天内发货"
+                     callpropvoid QName(PackageNamespace(""),"addItem"), 8
+                     findpropstrict QName(PackageNamespace(""),"addItem")
+                     pushbyte 0
+                     pushstring "Waste-Rock Gold"
+                     pushstring ""
+                     pushstring "荒金"
+                     pushdouble 0.75
+                     pushbyte 0
+                     dup
+                     newarray 2
+                     pushstring "shit"
+                     pushtrue
+                     newobject 1
+                     pushstring "小矿床中的金粒可能无法满足富豪们的需求，但要落在孩子手中，依旧是堪比太阳般闪耀的珍宝。出售后只能换取少量龙门币"
+                     callpropvoid QName(PackageNamespace(""),"addItem"), 8
+                     findpropstrict QName(PackageNamespace(""),"addItem")
+                     pushbyte 0
+                     pushstring "Scrap Fusion Cube"
+                     pushstring ""
+                     pushstring "混色金"
+                     pushdouble 1.25
+                     pushbyte 0
+                     dup
+                     newarray 2
+                     pushstring "shit"
+                     pushtrue
+                     newobject 1
+                     pushstring "正规矿场里依照流程开采出的金矿，成色虽然稍显不足，但只要稍加精炼的话……出售后可以换取较多龙门币"
+                     callpropvoid QName(PackageNamespace(""),"addItem"), 8
+                     findpropstrict QName(PackageNamespace(""),"addItem")
+                     pushbyte 0
+                     pushstring "Orirock Cube"
+                     pushstring ""
+                     pushstring "赤金"
+                     pushdouble 1.75
+                     pushbyte 0
+                     dup
+                     newarray 2
+                     pushstring "shit"
+                     pushtrue
+                     newobject 1
+                     pushstring "需要多少矿石才能提炼出如此贵重的金条呢——之类的想法已经不重要了。现在它正整整齐齐堆在你眼前，这才是关键啊。可以换取大量龙门币。"
+                     callpropvoid QName(PackageNamespace(""),"addItem"), 8
+                     findpropstrict QName(PackageNamespace(""),"addItem")
+                     pushbyte 0
+                     pushstring "A Wheelbarrow of Orirock Cube"
+                     pushstring ""
+                     pushstring "赤金的远征"
+                     pushdouble 6.3
+                     pushbyte 0
+                     dup
+                     newarray 2
+                     pushstring "shit"
+                     pushtrue
+                     newobject 1
+                     pushstring "君王自荒地出发，集市在她的裙下如春芽萌发，财富之路连通高山密林，直到她消失在西方浪涛的边崖。——萨尔贡古老童话"
+                     callpropvoid QName(PackageNamespace(""),"addItem"), 8
+                     findpropstrict QName(PackageNamespace(""),"addItem")
+                     pushbyte 0
+                     pushstring "CEOBE1"
+                     pushstring ""
+                     pushstring "乌萨斯列巴"
+                     pushdouble 0.1
+                     pushbyte 0
+                     dup
+                     newarray 2
+                     pushstring "shit"
+                     pushtrue
+                     newobject 1
+                     pushstring "一种来自乌萨斯的食物，吃起来有一股子浓烈的发酵味儿。就是酸。"
+                     callpropvoid QName(PackageNamespace(""),"addItem"), 8
+                     findpropstrict QName(PackageNamespace(""),"addItem")
+                     pushbyte 0
+                     pushstring "CEOBE2"
+                     pushstring ""
+                     pushstring "脱水仙人掌干"
+                     pushdouble 0.1
+                     pushbyte 0
+                     dup
+                     newarray 2
+                     pushstring "shit"
+                     pushtrue
+                     newobject 1
+                     pushstring "这种干缩的奇怪植物看起来并不好吃，而玻利瓦尔人则拿它来泡水喝。"
+                     callpropvoid QName(PackageNamespace(""),"addItem"), 8
+                     findpropstrict QName(PackageNamespace(""),"addItem")
+                     pushbyte 0
+                     pushstring "CEOBE3"
+                     pushstring ""
+                     pushstring "风干大蕉果"
+                     pushdouble 0.2
+                     pushbyte 0
+                     dup
+                     newarray 2
+                     pushstring "shit"
+                     pushtrue
+                     newobject 1
+                     pushstring "蕉兰果是一种生长在干旱地区的水果，口味极佳，风干后更容易保存。"
+                     callpropvoid QName(PackageNamespace(""),"addItem"), 8
+                     findpropstrict QName(PackageNamespace(""),"addItem")
+                     pushbyte 0
+                     pushstring "CEOBE4"
+                     pushstring ""
+                     pushstring "商队盒饭"
+                     pushdouble 0.3
+                     pushbyte 0
+                     dup
+                     newarray 2
+                     pushstring "shit"
+                     pushtrue
+                     newobject 1
+                     pushstring "哥伦比亚城际商队内部发放的方便食品，油炸，热量很高，味道很好，不太健康。"
+                     callpropvoid QName(PackageNamespace(""),"addItem"), 8
+                     findpropstrict QName(PackageNamespace(""),"addItem")
+                     pushbyte 0
+                     pushstring "CEOBE5"
+                     pushstring ""
+                     pushstring "半盒沙虫罐头"
+                     pushdouble 0.3
+                     pushbyte 0
+                     dup
+                     newarray 2
+                     pushstring "shit"
+                     pushtrue
+                     newobject 1
+                     pushstring "“切碎的沙虫用橄榄油浸泡，散发着自然的清香！”广告是这么说的，别当真。恶......"
+                     callpropvoid QName(PackageNamespace(""),"addItem"), 8
+                     findpropstrict QName(PackageNamespace(""),"addItem")
+                     pushbyte 0
+                     pushstring "CEOBE6"
+                     pushstring ""
+                     pushstring "维多利亚军粮"
+                     pushdouble 0.4
+                     pushbyte 0
+                     dup
+                     newarray 2
+                     pushstring "shit"
+                     pushtrue
+                     newobject 1
+                     pushstring "前维多利亚士官这么描述：“量大管饱，难以下咽，吃不死人。”"
+                     callpropvoid QName(PackageNamespace(""),"addItem"), 8
+                     findpropstrict QName(PackageNamespace(""),"addItem")
+                     pushbyte 0
+                     pushstring "CEOBE14"
+                     pushstring ""
+                     pushstring "噪音引擎"
+                     pushdouble 0.4
+                     pushbyte 0
+                     dup
+                     newarray 2
+                     pushstring "shit"
+                     pushtrue
+                     newobject 1
+                     pushstring "哥伦比亚最新工业产品，在中小型城镇的移动拖车上非常常见，性价比很高。噪音很大。也太大了点。"
+                     callpropvoid QName(PackageNamespace(""),"addItem"), 8
+                     findpropstrict QName(PackageNamespace(""),"addItem")
+                     pushbyte 0
+                     pushstring "CEOBE15"
+                     pushstring ""
+                     pushstring "豌豆花盆"
+                     pushdouble 0.2
+                     pushbyte 0
+                     dup
+                     newarray 2
+                     pushstring "shit"
+                     pushtrue
+                     newobject 1
+                     pushstring "造型古怪的哥伦比亚后院豌豆盆栽，既能装点室内又能收获作物，说不定还有其他功效。"
+                     callpropvoid QName(PackageNamespace(""),"addItem"), 8
+                     findpropstrict QName(PackageNamespace(""),"addItem")
+                     pushbyte 0
+                     pushstring "CEOBE16"
+                     pushstring ""
+                     pushstring "综合园艺成果"
+                     pushdouble 0.2
+                     pushbyte 0
+                     dup
+                     newarray 2
+                     pushstring "shit"
+                     pushtrue
+                     newobject 1
+                     pushstring "原本可能是一盆放在公共区域的普通盆栽，经由调香师、铃兰、炎客等多位干员之手后，开始变得复杂起来。"
+                     callpropvoid QName(PackageNamespace(""),"addItem"), 8
+                     findpropstrict QName(PackageNamespace(""),"addItem")
+                     pushbyte 0
+                     pushstring "CEOBE17"
+                     pushstring ""
+                     pushstring "炭化烤肉棒"
+                     pushdouble 0.3
+                     pushbyte 0
+                     dup
+                     newarray 2
+                     pushstring "shit"
+                     pushtrue
+                     newobject 1
+                     pushstring "因为某人糟糕的厨艺而被烤到整个焦黑的大块带骨肉，足以成为凶器。"
+                     callpropvoid QName(PackageNamespace(""),"addItem"), 8
+                     findpropstrict QName(PackageNamespace(""),"addItem")
+                     pushbyte 0
+                     pushstring "CEOBE18"
+                     pushstring ""
+                     pushstring "压缩糖砖"
+                     pushdouble 0.3
+                     pushbyte 0
+                     dup
+                     newarray 2
+                     pushstring "shit"
+                     pushtrue
+                     newobject 1
+                     pushstring "这种压缩食品的制作工艺不明，坚硬无比，甚至可以砌墙。比普通的烹饪失败产物更具杀伤力。"
+                     callpropvoid QName(PackageNamespace(""),"addItem"), 8
+                     pushfalse
+                     iffalse ofs03f0
+                     pushtrue
+                     throw
+                     returnvoid
+                     callproperty QName(PackageNamespace(""),"Unit"), 6
+                     pushwith
+            ofs03f0:
+                     findpropstrict QName(PackageNamespace(""),"addItem")
+                     pushbyte 1
+                     pushstring "Kevlar"
+                     pushstring ""
+                     pushstring "干员制服（方舟地牢搬运）"
+                     jump ofs0405
+                     ifgt ofs0405
+            ofs0405:
+                     pushdouble 2.1
+                     pushfalse
+                     iffalse ofs0413
+                     returnvoid
+                     popscope
+                     newobject 35
+                     pushwith
+                     bitor
+                     throw
+            ofs0413:
+                     pushbyte 50
+                     pushbyte 120
+                     newarray 2
+                     newobject 0
+                     pushstring "干员穿着最舒适的搭配之一，很简便。"
+                     callpropvoid QName(PackageNamespace(""),"addItem"), 8
+                     findpropstrict QName(PackageNamespace(""),"addItem")
+                     pushbyte 1
+                     jump ofs0431
+                     popscope
+                     newfunction 59
+                     throw
+                     typeof
+                     setlocal1
+            ofs0431:
+                     pushstring "Military"
+                     pushstring ""
+                     pushstring "罗德岛战术护甲（方舟地牢搬运）"
+                     pushdouble 2.3
+                     pushbyte 80
+                     pushint 150
+                     newarray 2
+                     pushstring "ammoMod"
+                     pushdouble 0.75
+                     jump ofs0451
+                     throw
+                     callmethod 3607, 20
+                     setlocal2
+            ofs0451:
+                     newobject 1
+                     pushstring "“再说一遍，坚雷，这里不是存放零食的地方。”\n前方的背心口袋中可以存放救灾物资、医药品和手套。"
+                     callpropvoid QName(PackageNamespace(""),"addItem"), 8
+                     findpropstrict QName(PackageNamespace(""),"addItem")
+                     pushbyte 1
+                     jump ofs0467
+                     ifstricteq ofs0467
+            ofs0467:
+                     pushstring "Superalloy"
+                     pushstring ""
+                     pushstring "炽合金轻型护甲"
+                     jump ofs0479
+                     bitxor
+                     constructsuper 11
+                     pushwith
+                     returnvalue
+                     throw
+            ofs0479:
+                     pushbyte 3
+                     pushbyte 15
+                     pushbyte 60
+                     newarray 2
+                     pushstring "healthMod"
+                     pushint 2
+                     newobject 1
+                     jump ofs0492
+                     popscope
+                     newfunction 117
+                     throw
+                     setlocal1
+                     modulo
+            ofs0492:
+                     pushstring "高温炽合金材料制造，大幅度提升存活率\n提高100%的生命值。"
+                     callpropvoid QName(PackageNamespace(""),"addItem"), 8
+                     findpropstrict QName(PackageNamespace(""),"addItem")
+                     pushbyte 1
+                     pushstring "Aerogel"
+                     pushstring ""
+                     pushstring "气凝胶特制防弹衣"
+                     pushdouble 2.2
+                     jump ofs04b2
+                     convert_s
+                     newactivation
+                     decrement
+                     nextname
+                     coerce_s
+                     divide
+            ofs04b2:
+                     pushbyte 35
+                     pushbyte 90
+                     newarray 2
+                     pushstring "regenMod"
+                     pushbyte 1
+                     jump ofs04c5
+                     ifstricteq ofs04c5
+            ofs04c5:
+                     newobject 1
+                     pushstring "特种气凝胶材料特制而成，具有一定的可再生性\n护甲值可缓慢恢复"
+                     callpropvoid QName(PackageNamespace(""),"addItem"), 8
+                     jump ofs04d8
+                     in
+                     call 62
+                     pushwith
+                     bitand
+                     nextvalue
+            ofs04d8:
+                     findpropstrict QName(PackageNamespace(""),"addItem")
+                     pushbyte 1
+                     pushstring "Magnetic"
+                     pushstring ""
+                     pushstring "先进强磁护甲"
+                     pushdouble 2.3
+                     pushbyte 25
+                     jump ofs04f3
+                     popscope
+                     pushwith
+                     newfunction 114
+                     pop
+                     equals
+            ofs04f3:
+                     pushbyte 75
+                     newarray 2
+                     pushstring "reflect"
+                     pushdouble 0.15
+                     newobject 1
+                     pushstring "利用强磁材料对子弹的斥力而实现概率性的反射\n有15%的几率反射子弹"
+                     callpropvoid QName(PackageNamespace(""),"addItem"), 8
+                     findpropstrict QName(PackageNamespace(""),"addItem")
+                     pushbyte 1
+                     pushstring "Oobleck"
+                     jump ofs0517
+                     nextvalue
+                     callmethod 3504, 14
+                     setlocal0
+            ofs0517:
+                     pushstring ""
+                     pushstring "卡西米尔护胸（方舟地牢搬运）"
+                     pushdouble 2.2
+                     pushbyte 25
+                     pushbyte 75
+                     newarray 2
+                     pushstring "regenMod"
+                     pushbyte 3
+                     newobject 1
+                     pushfalse
+                     iffalse ofs0537
+                     returnvoid
+                     decrement
+                     pushwith
+                     newfunction 88
+                     throw
+                     multiply
+            ofs0537:
+                     pushstring "“这样穿真的合适吗？你怎么只保护你的胸部……”\n它只保护身体的要害，忽略了身体的其他部位。"
+                     callpropvoid QName(PackageNamespace(""),"addItem"), 8
+                     findpropstrict QName(PackageNamespace(""),"addItem")
+                     pushbyte 2
+                     jump ofs054d
+                     popscope
+                     setlocal0
+                     decrement
+                     setlocal1
+                     setlocal2
+                     lessequals
+            ofs054d:
+                     pushstring "Kevlar"
+                     pushstring ""
+                     pushstring "干员制服（方舟地牢搬运）"
+                     pushdouble 2.1
+                     pushbyte 50
+                     jump ofs0561
+                     ifeq ofs0561
+            ofs0561:
+                     pushbyte 120
+                     newarray 2
+                     jump ofs056e
+                     setlocal0
+                     callproperty QName(PackageNamespace("Box2D.Collision"),"b2RayCastInput"), 15
+                     throw
+            ofs056e:
+                     newobject 0
+                     pushstring "干员穿着最舒适的搭配之一，很简便。"
+                     callpropvoid QName(PackageNamespace(""),"addItem"), 8
+                     findpropstrict QName(PackageNamespace(""),"addItem")
+                     pushbyte 2
+                     pushstring "Military"
+                     pushstring ""
+                     pushstring "罗德岛战术护甲（方舟地牢搬运）"
+                     jump ofs058e
+                     increment
+                     pushnull
+                     increment
+                     bitxor
+                     lessequals
+                     instanceof
+            ofs058e:
+                     pushdouble 2.3
+                     pushbyte 40
+                     pushbyte 100
+                     newarray 2
+                     pushstring "ammoMod"
+                     pushdouble 0.75
+                     newobject 1
+                     pushtrue
+                     iftrue ofs05a9
+                     returnvoid
+                     newactivation
+                     convert_s
+                     divide
+                     returnvoid
+                     pushwith
+                     setlocal2
+            ofs05a9:
+                     pushstring "“再说一遍，坚雷，这里不是存放零食的地方。”\n前方的背心口袋中可以存放救灾物资、医药品和手套。"
+                     callpropvoid QName(PackageNamespace(""),"addItem"), 8
+                     findpropstrict QName(PackageNamespace(""),"addItem")
+                     pushbyte 2
+                     pushstring "Titanium"
+                     jump ofs05c0
+                     iflt ofs05c0
+            ofs05c0:
+                     pushstring ""
+                     pushstring "帝国之盾 2型（方舟地牢搬运）"
+                     pushbyte 3
+                     pushbyte 100
+                     pushshort 240
+                     jump ofs05d6
+                     throw
+                     newfunction 49
+                     throw
+                     setlocal3
+                     instanceof
+            ofs05d6:
+                     newarray 2
+                     pushstring "ammoMod"
+                     pushdouble -0.3
+                     newobject 1
+                     pushstring "乌萨斯游击队的精锐部队过去身着的重甲。\n得到这件护甲的同时，你明白了为什么乌萨斯经\n历的每一场战斗最终都获得了胜利。"
+                     callpropvoid QName(PackageNamespace(""),"addItem"), 8
+                     findpropstrict QName(PackageNamespace(""),"addItem")
+                     jump ofs05f3
+                     lessequals
+                     callmethod 3582, 12
+                     setlocal0
+            ofs05f3:
+                     pushbyte 2
+                     pushstring "Aerogel"
+                     pushstring ""
+                     pushstring "气凝胶特制防弹衣"
+                     pushdouble 2.2
+                     pushbyte 35
+                     pushbyte 90
+                     pushtrue
+                     iftrue ofs060f
+                     returnvoid
+                     returnvalue
+                     callstatic 3607, 10
+                     setlocal3
+            ofs060f:
+                     newarray 2
+                     pushstring "regenMod"
+                     pushbyte 1
+                     newobject 1
+                     pushstring "特种气凝胶材料特制而成，具有一定的可再生性\n护甲值可缓慢恢复"
+                     jump ofs0623
+                     ifstrictne ofs0623
+            ofs0623:
+                     callpropvoid QName(PackageNamespace(""),"addItem"), 8
+                     findpropstrict QName(PackageNamespace(""),"addItem")
+                     pushbyte 2
+                     pushstring "Blast"
+                     jump ofs0639
+                     pushwith
+                     newclass 26
+                     pushwith
+                     coerce_s
+                     add
+            ofs0639:
+                     pushstring ""
+                     pushstring "龙门战术护甲（方舟地牢搬运）"
+                     pushdouble 2.2
+                     pushbyte 35
+                     pushbyte 90
+                     newarray 2
+                     pushstring "explosiveRes"
+                     pushdouble -0.3
+                     newobject 1
+                     jump ofs0657
+                     popscope
+                     newclass 112
+                     pushwith
+                     returnvoid
+                     typeof
+            ofs0657:
+                     pushstring "龙门战斗警察使用的正规战术护甲。\n正面的三排钢板为穿着者提供了极大的安全保\n护。"
+                     callpropvoid QName(PackageNamespace(""),"addItem"), 8
+                     findpropstrict QName(PackageNamespace(""),"addItem")
+                     pushbyte 2
+                     pushstring "Static"
+                     jump ofs066e
+                     ifge ofs066e
+            ofs066e:
+                     pushstring ""
+                     pushstring "实验性外骨骼战甲"
+                     pushfalse
+                     iffalse ofs067f
+                     pushfalse
+                     returnvalue
+                     popscope
+                     callstatic 23, 30
+                     throw
+            ofs067f:
+                     pushdouble 2.2
+                     pushbyte 35
+                     pushbyte 90
+                     newarray 2
+                     pushstring "meleeMod"
+                     pushdouble 1.15
+                     newobject 1
+                     pushstring "电流持续刺激肌肉以强化力量并提升兴奋性\n提升15%的近战武器伤害"
+                     callpropvoid QName(PackageNamespace(""),"addItem"), 8
+                     jump ofs069f
+                     multiply
+                     newfunction 38
+                     throw
+                     setlocal1
+                     setlocal3
+            ofs069f:
+                     findpropstrict QName(PackageNamespace(""),"addItem")
+                     pushbyte 3
+                     pushstring "Kevlar"
+                     pushstring ""
+                     pushstring "干员制服（方舟地牢搬运）"
+                     jump ofs06b6
+                     popscope
+                     pushwith
+                     newfunction 90
+                     throw
+                     setlocal2
+            ofs06b6:
+                     pushdouble 2.1
+                     pushbyte 50
+                     pushbyte 120
+                     newarray 2
+                     newobject 0
+                     jump ofs06c8
+                     ifgt ofs06c8
+            ofs06c8:
+                     pushstring "干员穿着最舒适的搭配之一，很简便。"
+                     callpropvoid QName(PackageNamespace(""),"addItem"), 8
+                     pushfalse
+                     iffalse ofs06db
+                     returnvoid
+                     popscope
+                     pushwith
+                     newfunction 25
+                     throw
+                     nextvalue
+            ofs06db:
+                     findpropstrict QName(PackageNamespace(""),"addItem")
+                     pushbyte 3
+                     pushstring "Military"
+                     pushstring ""
+                     pushstring "罗德岛战术护甲（方舟地牢搬运）"
+                     pushdouble 2.3
+                     pushbyte 40
+                     pushbyte 100
+                     newarray 2
+                     jump ofs06fa
+                     popscope
+                     pushwith
+                     newfunction 121
+                     throw
+                     returnvoid
+            ofs06fa:
+                     pushstring "ammoMod"
+                     pushdouble 0.75
+                     newobject 1
+                     pushstring "”再说一遍，坚雷，这里不是存放零食的地方。”\n前方的背心口袋中可以存放救灾物资、医药品和手套。"
+                     callpropvoid QName(PackageNamespace(""),"addItem"), 8
+                     findpropstrict QName(PackageNamespace(""),"addItem")
+                     pushbyte 3
+                     pushstring "Superalloy"
+                     jump ofs0719
+                     popscope
+                     callsuper QName(PackageNamespace(""),"Inventory_Attachment"), 9
+                     pushwith
+            ofs0719:
+                     pushstring ""
+                     pushstring "炽合金轻型护甲"
+                     pushbyte 3
+                     pushbyte 15
+                     pushbyte 60
+                     jump ofs072c
+                     ifstrictne ofs072c
+            ofs072c:
+                     newarray 2
+                     pushstring "healthMod"
+                     pushfalse
+                     iffalse ofs073d
+                     returnvoid
+                     popscope
+                     add
+                     bitand
+                     greaterequals
+                     convert_d
+                     setlocal3
+            ofs073d:
+                     pushint 2
+                     newobject 1
+                     pushstring "高温炽合金材料制成，大幅度提升存活率\n提高100%的生命值"
+                     callpropvoid QName(PackageNamespace(""),"addItem"), 8
+                     findpropstrict QName(PackageNamespace(""),"addItem")
+                     pushbyte 3
+                     pushstring "Oobleck"
+                     jump ofs075a
+                     nextvalue
+                     callmethod 3504, 14
+                     setlocal0
+            ofs075a:
+                     pushstring ""
+                     pushstring "卡西米尔护胸（方舟地牢搬运）"
+                     pushdouble 2.2
+                     pushbyte 25
+                     pushbyte 75
+                     newarray 2
+                     pushstring "regenMod"
+                     pushbyte 3
+                     newobject 1
+                     pushfalse
+                     iffalse ofs077a
+                     returnvoid
+                     decrement
+                     pushwith
+                     newfunction 88
+                     throw
+                     multiply
+            ofs077a:
+                     pushstring "“这样穿真的合适吗？你怎么只保护你的胸部……”\n它只保护身体的要害，忽略了身体的其他部位。"
+                     callpropvoid QName(PackageNamespace(""),"addItem"), 8
+                     findpropstrict QName(PackageNamespace(""),"addItem")
+                     pushbyte 3
+                     pushstring "Static"
+                     jump ofs0791
+                     ifge ofs0791
+            ofs0791:
+                     pushstring ""
+                     pushstring "实验性外骨骼战甲"
+                     pushfalse
+                     iffalse ofs07a2
+                     pushfalse
+                     returnvalue
+                     popscope
+                     callstatic 23, 30
+                     throw
+            ofs07a2:
+                     pushdouble 2.2
+                     pushbyte 35
+                     pushbyte 90
+                     newarray 2
+                     pushstring "meleeMod"
+                     pushdouble 1.15
+                     newobject 1
+                     pushstring "电流持续刺激肌肉以强化力量并提升兴奋性\n提升15%的近战武器伤害"
+                     callpropvoid QName(PackageNamespace(""),"addItem"), 8
+                     jump ofs07c2
+                     multiply
+                     newfunction 38
+                     throw
+                     setlocal1
+                     setlocal3
+            ofs07c2:
+                     findpropstrict QName(PackageNamespace(""),"addItem")
+                     pushbyte 3
+                     pushstring "Aerogel"
+                     pushstring ""
+                     pushstring "气凝胶特制防弹衣"
+                     pushdouble 2.2
+                     jump ofs07db
+                     convert_s
+                     newactivation
+                     decrement
+                     nextname
+                     coerce_s
+                     divide
+            ofs07db:
+                     pushbyte 35
+                     pushbyte 90
+                     newarray 2
+                     pushstring "regenMod"
+                     pushbyte 1
+                     jump ofs07ee
+                     ifstricteq ofs07ee
+            ofs07ee:
+                     newobject 1
+                     pushstring "特种气凝胶材料特制而成，具有一定的可再生性\n护甲值可缓慢恢复"
+                     callpropvoid QName(PackageNamespace(""),"addItem"), 8
+                     findpropstrict QName(PackageNamespace(""),"addItem")
+                     pushbyte 3
+                     pushstring "LankaWood Safety Suit"
+                     pushstring ""
+                     pushstring "蓝卡坞安全衣"
+                     pushdouble 2.5
+                     pushint 50
+                     pushint 120
+                     newarray 2
+                     pushstring "healthMod"
+                     pushdouble 3.0
+                     newobject 1
+                     pushstring "蓝卡坞片场定制护具，用以帮助演员完成超高难度动作戏的拍摄，设计原型为某种军用器械。食铁兽曾在合作拍摄时拒绝使用该护具。"
+                     callpropvoid QName(PackageNamespace(""),"addItem"), 8
+                     jump ofs0827
+                     in
+                     call 62
+                     pushwith
+                     bitand
+                     nextvalue
+            ofs0827:
+                     findpropstrict QName(PackageNamespace(""),"addItem")
+                     pushbyte 4
+                     pushstring "Kevlar"
+                     pushstring ""
+                     pushstring "干员制服（方舟地牢搬运）"
+                     pushdouble 2.1
+                     pushbyte 50
+                     pushbyte 120
+                     jump ofs0844
+                     lessequals
+                     returnvalue
+                     convert_s
+                     pushscope
+                     equals
+                     modulo
+            ofs0844:
+                     newarray 2
+                     newobject 0
+                     pushstring "干员穿着最舒适的搭配之一，很简便。"
+                     callpropvoid QName(PackageNamespace(""),"addItem"), 8
+                     findpropstrict QName(PackageNamespace(""),"addItem")
+                     jump ofs085a
+                     ifstrictne ofs085a
+            ofs085a:
+                     pushbyte 4
+                     jump ofs0866
+                     convert_d
+                     pushwith
+                     newfunction 54
+                     pop
+                     nextvalue
+            ofs0866:
+                     pushstring "Superalloy"
+                     pushstring ""
+                     pushstring "炽合金轻型护甲"
+                     pushbyte 3
+                     pushbyte 15
+                     pushbyte 60
+                     jump ofs087e
+                     popscope
+                     callsuper QName(PackageNamespace(""),"randomPri"), 20
+                     setlocal3
+            ofs087e:
+                     newarray 2
+                     pushstring "healthMod"
+                     pushint 2
+                     newobject 1
+                     pushstring "高温炽合金材料制成，大幅度提升存活率\n提高100%的生命值"
+                     callpropvoid QName(PackageNamespace(""),"addItem"), 8
+                     findpropstrict QName(PackageNamespace(""),"addItem")
+                     pushbyte 4
+                     jump ofs089d
+                     convert_d
+                     pushwith
+                     newfunction 66
+                     pop
+                     nextname
+            ofs089d:
+                     pushstring "Oobleck"
+                     pushstring ""
+                     pushstring "卡西米尔护胸（方舟地牢搬运）"
+                     pushdouble 2.2
+                     pushbyte 25
+                     jump ofs08b1
+                     iflt ofs08b1
+            ofs08b1:
+                     pushbyte 75
+                     newarray 2
+                     pushstring "regenMod"
+                     pushtrue
+                     iftrue ofs08c4
+                     returnvoid
+                     popscope
+                     nextvalue
+                     pushnull
+                     modulo
+                     lshift
+                     returnvoid
+            ofs08c4:
+                     pushbyte 3
+                     newobject 1
+                     pushstring "“这样穿真的合适吗？你怎么只保护你的胸部……”\n它只保护身体的要害，忽略了身体的其他部位。"
+                     callpropvoid QName(PackageNamespace(""),"addItem"), 8
+                     findpropstrict QName(PackageNamespace(""),"addItem")
+                     pushbyte 4
+                     pushtrue
+                     iftrue ofs08e0
+                     returnvoid
+                     returnvoid
+                     dxns "ClassSave"
+                     pushwith
+                     equals
+                     typeof
+            ofs08e0:
+                     pushstring "Magnetic"
+                     pushstring ""
+                     pushstring "先进强磁护甲"
+                     pushdouble 2.3
+                     pushbyte 25
+                     pushbyte 75
+                     newarray 2
+                     pushstring "reflect"
+                     pushdouble 0.15
+                     jump ofs08ff
+                     popscope
+                     setlocal2
+                     istypelate
+                     returnvoid
+                     pop
+                     bitxor
+            ofs08ff:
+                     newobject 1
+                     pushstring "利用强磁材料对子弹的斥力而实现概率性的反射\n有15%的几率反弹子弹"
+                     callpropvoid QName(PackageNamespace(""),"addItem"), 8
+                     findpropstrict QName(PackageNamespace(""),"addItem")
+                     pushbyte 4
+                     jump ofs0915
+                     ifle ofs0915
+            ofs0915:
+                     pushstring "Static"
+                     pushstring ""
+                     pushstring "实验性外骨骼战甲"
+                     pushdouble 2.2
+                     pushtrue
+                     iftrue ofs092a
+                     returnvoid
+                     pop
+                     constructprop QName(PackageNamespace("flash.display"),"Sprite"), 5
+                     pushwith
+            ofs092a:
+                     pushbyte 35
+                     pushbyte 90
+                     newarray 2
+                     pushstring "meleeMod"
+                     pushdouble 1.15
+                     newobject 1
+                     pushstring "电流持续刺激肌肉以强化力量并提升兴奋性\n提升15%的近战武器伤害"
+                     jump ofs0944
+                     popscope
+                     newfunction 96
+                     throw
+                     setlocal2
+                     returnvalue
+            ofs0944:
+                     callpropvoid QName(PackageNamespace(""),"addItem"), 8
+                     findpropstrict QName(PackageNamespace(""),"addItem")
+                     pushbyte 4
+                     pushstring "Military"
+                     pushstring ""
+                     pushstring "罗德岛战术护甲（方舟地牢搬运）"
+                     jump ofs095f
+                     increment
+                     pushnull
+                     increment
+                     bitxor
+                     lessequals
+                     instanceof
+            ofs095f:
+                     pushdouble 2.3
+                     pushbyte 40
+                     pushbyte 100
+                     newarray 2
+                     pushstring "ammoMod"
+                     pushdouble 0.75
+                     newobject 1
+                     pushtrue
+                     iftrue ofs097a
+                     returnvoid
+                     newactivation
+                     convert_s
+                     divide
+                     returnvoid
+                     pushwith
+                     setlocal2
+            ofs097a:
+                     pushstring "“再说一遍，坚雷，这里不是存放零食的地方。”\n前方的背心口袋中可以存放救灾物资、医药品和手套。"
+                     callpropvoid QName(PackageNamespace(""),"addItem"), 8
+                     findpropstrict QName(PackageNamespace(""),"addItem")
+                     pushbyte 4
+                     pushstring "Gill-Lurker\'s Slicker"
+                     pushstring ""
+                     pushstring "捕鳞蓑"
+                     pushdouble 2.0
+                     pushbyte 1
+                     pushbyte 1
+                     newarray 2
+                     pushstring "reflect"
+                     pushdouble 0.85
+                     pushstring "healthMod"
+                     pushdouble 0.001
+                     newobject 2
+                     pushstring "伊比利亚海民在浅滩捕杀巨鳞时常穿的外衣，独特的造型与颜色让他们看起来像是普通的礁石。罗德岛工程部以此为原型设计了具有视觉隐匿效果的作战服，目前尚在测试阶段。"
+                     callpropvoid QName(PackageNamespace(""),"addItem"), 8
+                     findpropstrict QName(PackageNamespace(""),"addItem")
+                     pushbyte 5
+                     pushstring "Heavy HP"
+                     pushstring ""
+                     pushstring "炽合金重型防弹护甲"
+                     pushdouble 3.1
+                     pushshort 35
+                     jump ofs09c6
+                     add
+                     pushwith
+                     newfunction 104
+                     throw
+                     coerce_s
+            ofs09c6:
+                     pushshort 150
+                     newarray 2
+                     pushstring "healthMod"
+                     pushint 3
+                     newobject 1
+                     pushstring "高温超炽合金材料制成，极大幅度提升存活率\n重装干员特制，提高200%的生命值"
+                     callpropvoid QName(PackageNamespace(""),"addItem"), 8
+                     jump ofs09e1
+                     ifle ofs09e1
+            ofs09e1:
+                     findpropstrict QName(PackageNamespace(""),"addItem")
+                     jump ofs09ee
+                     popscope
+                     nextvalue
+                     multiply
+                     setlocal1
+                     negate
+                     negate
+            ofs09ee:
+                     pushbyte 5
+                     pushstring "Heavy Armor"
+                     pushstring ""
+                     pushstring "D32钢超重型防弹护甲"
+                     pushbyte 4
+                     pushshort 225
+                     pushfalse
+                     iffalse ofs0a09
+                     returnvoid
+                     pushwith
+                     pushwith
+                     newfunction 100
+                     throw
+                     newactivation
+            ofs0a09:
+                     pushshort 540
+                     newarray 2
+                     pushstring "ammoMod"
+                     pushdouble -1.3
+                     newobject 1
+                     pushstring "超强韧D32钢材料制成，带来极其恐怖的防御力\n重装干员特制，超高护甲值，但备弹量降低130%"
+                     callpropvoid QName(PackageNamespace(""),"addItem"), 8
+                     findpropstrict QName(PackageNamespace(""),"addItem")
+                     jump ofs0a2a
+                     popscope
+                     constructprop QName(PackageNamespace(""),"clearComponentStyle"), 12
+                     setlocal0
+            ofs0a2a:
+                     pushbyte 5
+                     pushstring "Heavy R1"
+                     pushstring ""
+                     pushstring "致密气凝胶重型防弹护甲"
+                     pushdouble 3.2
+                     jump ofs0a3f
+                     ifstricteq ofs0a3f
+            ofs0a3f:
+                     pushbyte 75
+                     jump ofs0a4b
+                     instanceof
+                     pushwith
+                     newfunction 106
+                     pop
+                     setlocal0
+            ofs0a4b:
+                     pushshort 200
+                     newarray 2
+                     pushstring "regenMod"
+                     pushbyte 1
+                     newobject 1
+                     pushstring "由致密的特种气凝胶制成，具有一定的可再生性\n重装干员特制，护甲值可缓慢恢复"
+                     callpropvoid QName(PackageNamespace(""),"addItem"), 8
+                     findpropstrict QName(PackageNamespace(""),"addItem")
+                     pushtrue
+                     iftrue ofs0a6d
+                     returnvoid
+                     popscope
+                     add
+                     returnvalue
+                     returnvalue
+                     lessequals
+                     increment
+            ofs0a6d:
+                     pushbyte 5
+                     pushstring "Heavy R2"
+                     pushstring ""
+                     pushstring "卡西米尔重型战甲"
+                     pushdouble 3.2
+                     pushbyte 55
+                     pushshort 165
+                     newarray 2
+                     pushstring "regenMod"
+                     pushdouble 3.0
+                     pushfalse
+                     iffalse ofs0a94
+                     pushtrue
+                     throw
+                     in
+                     constructsuper 96
+                     pushwith
+                     returnvalue
+                     negate
+            ofs0a94:
+                     newobject 1
+                     pushstring "非牛顿流体材料特制而成，具有较强的可再生性\n重装干员特制，护甲值可较快恢复"
+                     callpropvoid QName(PackageNamespace(""),"addItem"), 8
+                     findpropstrict QName(PackageNamespace(""),"addItem")
+                     pushbyte 5
+                     jump ofs0aaa
+                     ifgt ofs0aaa
+            ofs0aaa:
+                     pushstring "Heavy Power"
+                     pushstring ""
+                     pushstring "实验性致密外骨骼战甲"
+                     jump ofs0abc
+                     popscope
+                     callproperty QName(PackageNamespace(""),"qmTeams"), 10
+                     returnvalue
+            ofs0abc:
+                     pushdouble 3.2
+                     pushbyte 75
+                     pushshort 200
+                     newarray 2
+                     pushstring "meleeMod"
+                     pushdouble 1.3
+                     newobject 1
+                     jump ofs0ad7
+                     setlocal0
+                     pushwith
+                     newfunction 14
+                     pop
+                     divide
+            ofs0ad7:
+                     pushstring "高频电流持续刺激肌肉以强化力量并提升兴奋性\n重装干员特制，提升30%的近战武器伤害"
+                     callpropvoid QName(PackageNamespace(""),"addItem"), 8
+                     findpropstrict QName(PackageNamespace(""),"addItem")
+                     pushbyte 5
+                     pushstring "Heavy Explode"
+                     pushstring ""
+                     pushstring "龙门特战重型防爆护甲"
+                     pushdouble 3.2
+                     pushbyte 75
+                     jump ofs0afa
+                     popscope
+                     pushwith
+                     newfunction 114
+                     pop
+                     equals
+            ofs0afa:
+                     pushshort 200
+                     newarray 2
+                     pushstring "explosiveRes"
+                     pushdouble -0.5
+                     newobject 1
+                     pushstring "内衬特制防爆复合板，并附有大量防火涂层\n重装干员特制，受到爆炸与火焰的伤害降低50%"
+                     callpropvoid QName(PackageNamespace(""),"addItem"), 8
+                     findpropstrict QName(PackageNamespace(""),"addItem")
+                     pushbyte 5
+                     pushstring "Heavy Ammo"
+                     pushstring ""
+                     pushstring "罗德岛军工重型防弹护甲"
+                     pushdouble 3.3
+                     pushbyte 90
+                     pushshort 225
+                     newarray 2
+                     pushstring "ammoMod"
+                     pushdouble 1.0
+                     newobject 1
+                     pushstring "罗德岛标准军用级重型防弹护甲，可携带更多弹药\n重装干员特制，增加100%的后备弹药"
+                     callpropvoid QName(PackageNamespace(""),"addItem"), 8
+                     findpropstrict QName(PackageNamespace(""),"addItem")
+                     pushbyte 6
+                     pushstring "HeroSml"
+                     pushstring ""
+                     jump ofs0b46
+                     popscope
+                     newfunction 81
+                     pop
+                     setlocal3
+                     returnvalue
+            ofs0b46:
+                     pushstring "Armor"
+                     pushbyte 2
+                     pushbyte 40
+                     pushbyte 100
+                     newarray 2
+                     jump ofs0b59
+                     iflt ofs0b59
+            ofs0b59:
+                     pushstring "ammoMod"
+                     pushfalse
+                     iffalse ofs0b67
+                     returnvoid
+                     typeof
+                     callsuper QName(PackageNamespace(""),"Game"), 8
+                     pushwith
+            ofs0b67:
+                     pushdouble 0.5
+                     newobject 1
+                     pushstring ""
+                     callpropvoid QName(PackageNamespace(""),"addItem"), 8
+                     findpropstrict QName(PackageNamespace(""),"addItem")
+                     pushbyte 6
+                     pushstring "HeroMed"
+                     pushstring ""
+                     pushstring "Armor"
+                     jump ofs0b87
+                     popscope
+                     callmethod 110, 6
+                     pushwith
+            ofs0b87:
+                     pushbyte 2
+                     pushbyte 50
+                     pushbyte 120
+                     newarray 2
+                     pushstring "ammoMod"
+                     pushdouble 0.5
+                     newobject 1
+                     jump ofs0b9f
+                     popscope
+                     callsupervoid QName(PackageNamespace("fl.motion"),"MotionBase"), 5
+                     pushwith
+            ofs0b9f:
+                     pushstring ""
+                     callpropvoid QName(PackageNamespace(""),"addItem"), 8
+                     findpropstrict QName(PackageNamespace(""),"addItem")
+                     pushbyte 6
+                     pushstring "HeroBig"
+                     jump ofs0bb5
+                     ifne ofs0bb5
+            ofs0bb5:
+                     pushstring ""
+                     pushstring "Armor"
+                     pushbyte 2
+                     pushbyte 60
+                     jump ofs0bc8
+                     popscope
+                     call 123
+                     pushwith
+                     coerce_s
+                     setlocal2
+            ofs0bc8:
+                     pushshort 140
+                     newarray 2
+                     pushstring "ammoMod"
+                     pushdouble 0.5
+                     newobject 1
+                     pushstring ""
+                     callpropvoid QName(PackageNamespace(""),"addItem"), 8
+                     findpropstrict QName(PackageNamespace(""),"addItem")
+                     pushbyte 6
+                     pushstring "none"
+                     jump ofs0beb
+                     popscope
+                     constructprop QName(PackageNamespace("Box2D.Common.Math"),"b2Vec3"), 21
+                     throw
+            ofs0beb:
+                     pushstring ""
+                     pushstring "Armor"
+                     pushdouble 0.0
+                     pushbyte 1
+                     dup
+                     newarray 2
+                     newobject 0
+                     pushstring ""
+                     callpropvoid QName(PackageNamespace(""),"addItem"), 8
+                     findpropstrict QName(PackageNamespace(""),"addItem")
+                     pushbyte 6
+                     pushstring "Rhine Armor"
+                     pushstring "Heavy HP"
+                     pushstring "莱茵充能护服"
+                     pushdouble 3.2
+                     pushint 230
+                     pushint 400
+                     newarray 2
+                     newobject 0
+                     pushstring "莱茵生命能量科为特殊成员定制的作战服"
+                     callpropvoid QName(PackageNamespace(""),"addItem"), 8
+                     findpropstrict QName(PackageNamespace(""),"addItem")
+                     pushbyte 6
+                     pushstring "Rhine Heavy Armor"
+                     pushstring "Heavy HP"
+                     pushstring "莱茵重型充能护服"
+                     pushdouble 4.0
+                     pushint 600
+                     pushint 1600
+                     newarray 2
+                     pushstring "healthMod"
+                     pushdouble 4.0
+                     newobject 1
+                     pushstring "莱茵生命能量科为防卫科成员量身定制的特种作战服，适应各种复杂环境及各种强度的作战和保卫行动。\n高额护甲值，最大生命值提升至400%"
+                     callpropvoid QName(PackageNamespace(""),"addItem"), 8
+                     findpropstrict QName(PackageNamespace(""),"addItem")
+                     pushbyte 0
+                     pushstring "Civilight Eterna"
+                     pushstring "Turtle Shell"
+                     pushstring "“漆黑王冠”"
+                     pushdouble 16.0
+                     pushint 2829
+                     pushint 8086
+                     newarray 2
+                     pushstring "regenMod"
+                     pushdouble 16.0
+                     pushstring "healthMod"
+                     pushdouble 3.0
+                     pushstring "meleeMod"
+                     pushdouble 2.0
+                     newobject 3
+                     pushstring "“我见你，头顶黑冠，将万千生灵，熬成回忆”"
+                     callpropvoid QName(PackageNamespace(""),"addItem"), 8
+                     jump ofs0c83
+                     convert_s
+                     callpropvoid QName(PackageNamespace("flash.geom"),"Vector3D"), 5
+                     pushwith
+            ofs0c83:
+                     returnvoid
+                  end ; code
+               end ; body
+            end ; method
+         }
+         
+         public static function addItem(param1:uint, param2:String, param3:String, param4:String, param5:Number, param6:Array, param7:Object, param8:String) : void
+         {
+            trait method QName(PackageNamespace(""),"addItem")
+               flag FINAL
+               dispid 4
+               method
+                  name null
+                  param QName(PackageNamespace(""),"uint")
+                  param QName(PackageNamespace(""),"String")
+                  param QName(PackageNamespace(""),"String")
+                  param QName(PackageNamespace(""),"String")
+                  param QName(PackageNamespace(""),"Number")
+                  param QName(PackageNamespace(""),"Array")
+                  param QName(PackageNamespace(""),"Object")
+                  param QName(PackageNamespace(""),"String")
+                  returns QName(PackageNamespace(""),"void")
+                  
+                  body
+                     maxstack 8
+                     localcount 13
+                     initscopedepth 3
+                     maxscopedepth 4
+                     
+                     code
+                        getlocal0
+                        pushscope
+                        jump ofs000c
+                        newclass 476
+                        call 8
+                        throw
+               ofs000c:
+                        pushnull
+                        coerce_s
+                        setlocal 10
+                        getlocal0
+                        construct 0
+                        jump ofs001b
+                        ifgt ofs001b
+               ofs001b:
+                        coerce QName(PackageNamespace(""),"Stats_Armor")
+                        dup
+                        setlocal 9
+                        getlocal1
+                        jump ofs002b
+                        popscope
+                        newobject 5
+                        pushwith
+                        bitxor
+                        negate
+               ofs002b:
+                        setproperty QName(PackageNamespace(""),"type")
+                        getlocal 9
+                        getlocal2
+                        setproperty QName(PackageNamespace(""),"id")
+                        getlocal 9
+                        getlocal3
+                        iftrue ofs003f
+                        jump ofs0053
+               ofs003f:
+                        getlocal3
+                        coerce_s
+                        jump ofs0055
+                        popscope
+                        setlocal1
+                        pushtrue
+                        iftrue ofs004c
+               ofs004c:
+                        returnvoid
+                        popscope
+                        pushwith
+                        newfunction 9
+                        pop
+                        divide
+               ofs0053:
+                        getlocal2
+                        coerce_s
+               ofs0055:
+                        setproperty QName(PackageNamespace(""),"sprite")
+                        getlocal 9
+                        getlocal 4
+                        setproperty QName(PackageNamespace(""),"name")
+                        getlocal 9
+                        getlocal 5
+                        setproperty QName(PackageNamespace(""),"costMod")
+                        jump ofs006e
+                        ifstricteq ofs006e
+               ofs006e:
+                        getlocal 9
+                        pushbyte 0
+                        pushtrue
+                        iftrue ofs007e
+                        returnvoid
+                        setlocal2
+                        in
+                        increment
+                        pushfalse
+                        lshift
+                        bitand
+               ofs007e:
+                        setproperty QName(PackageNamespace(""),"cost")
+                        getlocal 9
+                        findpropstrict QName(PackageNamespace(""),"Range")
+                        getlocal 6
+                        pushbyte 0
+                        getproperty MultinameL([PrivateNamespace(null,"144"),PackageNamespace(""),Namespace("http://adobe.com/AS3/2006/builtin"),PrivateNamespace(null,"145"),PackageInternalNs(""),ProtectedNamespace("Stats_Armor"),StaticProtectedNs("Stats_Armor")])
+                        getlocal 6
+                        pushbyte 1
+                        jump ofs009b
+                        nextname
+                        newfunction 115
+                        throw
+                        instanceof
+                        setlocal3
+               ofs009b:
+                        getproperty MultinameL([PrivateNamespace(null,"144"),PackageNamespace(""),Namespace("http://adobe.com/AS3/2006/builtin"),PrivateNamespace(null,"145"),PackageInternalNs(""),ProtectedNamespace("Stats_Armor"),StaticProtectedNs("Stats_Armor")])
+                        constructprop QName(PackageNamespace(""),"Range"), 2
+                        setproperty QName(PackageNamespace(""),"armorRange")
+                        getlocal 9
+                        pushbyte 0
+                        setproperty QName(PackageNamespace(""),"armor")
+                        getlocal 9
+                        pushtrue
+                        iftrue ofs00bb
+                        pushtrue
+                        throw
+                        pop
+                        newfunction 55
+                        pop
+                        throw
+                        setlocal2
+               ofs00bb:
+                        getlocal 8
+                        setproperty QName(PackageNamespace(""),"desc")
+                        pushbyte 0
+                        setlocal 11
+                        getlocal 7
+                        jump ofs00ce
+                        ifge ofs00ce
+               ofs00ce:
+                        coerce_a
+                        setlocal 12
+                        jump ofs0103
+                        pushwith
+                        setlocal3
+               ofs00d7:
+                        label
+                        getlocal 12
+                        jump ofs00e3
+                        greaterequals
+                        callproperty QName(PackageNamespace("Box2D.Common.Math"),"b2Sweep"), 21
+                        throw
+               ofs00e3:
+                        getlocal 11
+                        nextname
+                        coerce_s
+                        setlocal 10
+                        getlocal 9
+                        getlocal 10
+                        getlocal 7
+                        getlocal 10
+                        getproperty MultinameL([PrivateNamespace(null,"144"),PackageNamespace(""),Namespace("http://adobe.com/AS3/2006/builtin"),PrivateNamespace(null,"145"),PackageInternalNs(""),ProtectedNamespace("Stats_Armor"),StaticProtectedNs("Stats_Armor")])
+                        setproperty MultinameL([PrivateNamespace(null,"144"),PackageNamespace(""),Namespace("http://adobe.com/AS3/2006/builtin"),PrivateNamespace(null,"145"),PackageInternalNs(""),ProtectedNamespace("Stats_Armor"),StaticProtectedNs("Stats_Armor")])
+                        pushfalse
+                        iffalse ofs0103
+                        returnvoid
+                        setlocal3
+                        newfunction 104
+                        throw
+                        setlocal0
+                        pop
+               ofs0103:
+                        hasnext2 12, 11
+                        iffalse ofs010e
+                        jump ofs00d7
+               ofs010e:
+                        kill 12
+                        kill 11
+                        getlex QName(PackageNamespace(""),"itemOb")
+                        getlocal2
+                        getlocal 9
+                        jump ofs0122
+                        convert_s
+                        newfunction 78
+                        pop
+                        setlocal2
+                        returnvalue
+               ofs0122:
+                        setproperty MultinameL([PrivateNamespace(null,"144"),PackageNamespace(""),Namespace("http://adobe.com/AS3/2006/builtin"),PrivateNamespace(null,"145"),PackageInternalNs(""),ProtectedNamespace("Stats_Armor"),StaticProtectedNs("Stats_Armor")])
+                        getlex QName(PackageNamespace(""),"itemAr")
+                        getlocal 9
+                        callpropvoid QName(Namespace("http://adobe.com/AS3/2006/builtin"),"push"), 1
+                        getlex QName(PackageNamespace(""),"typeAr")
+                        jump ofs0139
+                        iflt ofs0139
+               ofs0139:
+                        getlocal1
+                        getproperty MultinameL([PrivateNamespace(null,"144"),PackageNamespace(""),Namespace("http://adobe.com/AS3/2006/builtin"),PrivateNamespace(null,"145"),PackageInternalNs(""),ProtectedNamespace("Stats_Armor"),StaticProtectedNs("Stats_Armor")])
+                        getlocal 9
+                        callpropvoid Multiname("push",[PrivateNamespace(null,"144"),PackageNamespace(""),Namespace("http://adobe.com/AS3/2006/builtin"),PrivateNamespace(null,"145"),PackageInternalNs(""),ProtectedNamespace("Stats_Armor"),StaticProtectedNs("Stats_Armor")]), 1
+                        jump ofs014c
+                        setlocal2
+                        callsuper QName(PackageNamespace(""),"ClassSave"), 6
+                        pushwith
+               ofs014c:
+                        returnvoid
+                     end ; code
+                  end ; body
+               end ; method
+            }
+            
+            public static function getEffectText(param1:Stats_Armor) : Array
+            {
+               trait method QName(PackageNamespace(""),"getEffectText")
+                  flag FINAL
+                  dispid 5
+                  method
+                     name null
+                     param QName(PackageNamespace(""),"Stats_Armor")
+                     returns QName(PackageNamespace(""),"Array")
+                     
+                     body
+                        maxstack 6
+                        localcount 3
+                        initscopedepth 3
+                        maxscopedepth 4
+                        
+                        code
+                           jump ofs000a
+                           newclass 478
+                           call 6
+                           throw
+                  ofs000a:
+                           getlocal0
+                           pushscope
+                           pushstring ""
+                           newarray 1
+                           coerce QName(PackageNamespace(""),"Array")
+                           jump ofs001a
+                           ifle ofs001a
+                  ofs001a:
+                           setlocal2
+                           getlocal2
+                           getlex QName(PackageNamespace(""),"Stats_Armor")
+                           getproperty QName(PackageNamespace(""),"itemOb")
+                           pushfalse
+                           iffalse ofs002d
+                           returnvoid
+                           popscope
+                           lshift
+                           multiply
+                           decrement
+                           lshift
+                           returnvoid
+                  ofs002d:
+                           getlocal1
+                           getproperty QName(PackageNamespace(""),"id")
+                           getproperty MultinameL([PrivateNamespace(null,"144"),PackageNamespace(""),Namespace("http://adobe.com/AS3/2006/builtin"),PrivateNamespace(null,"145"),PackageInternalNs(""),ProtectedNamespace("Stats_Armor"),StaticProtectedNs("Stats_Armor")])
+                           getproperty Multiname("desc",[PrivateNamespace(null,"144"),PackageNamespace(""),Namespace("http://adobe.com/AS3/2006/builtin"),PrivateNamespace(null,"145"),PackageInternalNs(""),ProtectedNamespace("Stats_Armor"),StaticProtectedNs("Stats_Armor")])
+                           callpropvoid QName(Namespace("http://adobe.com/AS3/2006/builtin"),"push"), 1
+                           getlocal2
+                           pushtrue
+                           iftrue ofs0049
+                           pushtrue
+                           throw
+                           returnvalue
+                           call 72
+                           pushwith
+                           returnvalue
+                           nextvalue
+                  ofs0049:
+                           returnvalue
+                        end ; code
+                     end ; body
+                  end ; method
+               }
+               
+               public static function addMods(param1:Inventory_Armor) : void
+               {
+                  trait method QName(PackageNamespace(""),"addMods")
+                     flag FINAL
+                     dispid 6
+                     method
+                        name null
+                        param QName(PackageNamespace(""),"Inventory_Armor")
+                        returns QName(PackageNamespace(""),"void")
+                        
+                        body
+                           maxstack 9
+                           localcount 2
+                           initscopedepth 3
+                           maxscopedepth 4
+                           
+                           code
+                              getlocal0
+                              jump ofs000c
+                              callmethod 3490, 10
+                              call 10
+                              throw
+                     ofs000c:
+                              pushscope
+                              getlocal1
+                              getlex QName(PackageNamespace(""),"UT")
+                              pushdouble 0.9
+                              pushdouble 1.1
+                              jump ofs001d
+                              iflt ofs001d
+                     ofs001d:
+                              callproperty QName(PackageNamespace(""),"rand"), 2
+                              setproperty QName(PackageNamespace(""),"modArmor")
+                              getlocal1
+                              getlocal1
+                              jump ofs0030
+                              popscope
+                              newfunction 11
+                              throw
+                              returnvalue
+                              bitxor
+                     ofs0030:
+                              getproperty QName(PackageNamespace(""),"modArmor")
+                              setproperty QName(PackageNamespace(""),"modCost")
+                              getlocal1
+                              getlocal1
+                              getproperty QName(PackageNamespace(""),"modArmor")
+                              getlex QName(PackageNamespace(""),"UT")
+                              getlocal1
+                              getproperty QName(PackageNamespace(""),"rarity")
+                              pushdouble 0.05
+                              multiply
+                              jump ofs004e
+                              modulo
+                              callproperty QName(PackageNamespace("Box2D.Dynamics"),"b2FixtureDef"), 24
+                              pop
+                     ofs004e:
+                              getlocal1
+                              getproperty QName(PackageNamespace(""),"rarity")
+                              pushdouble 0.08
+                              multiply
+                              callproperty QName(PackageNamespace(""),"rand"), 2
+                              add
+                              setproperty QName(PackageNamespace(""),"modArmor")
+                              pushtrue
+                              iftrue ofs0069
+                              returnvoid
+                              setlocal0
+                              newfunction 15
+                              throw
+                              setlocal0
+                              setlocal0
+                     ofs0069:
+                              getlocal1
+                              getlocal1
+                              getproperty QName(PackageNamespace(""),"modCost")
+                              getlex QName(PackageNamespace(""),"UT")
+                              getlocal1
+                              jump ofs007a
+                              ifgt ofs007a
+                     ofs007a:
+                              getproperty QName(PackageNamespace(""),"rarity")
+                              pushfalse
+                              iffalse ofs0089
+                              returnvoid
+                              setlocal1
+                              callsuper QName(PackageNamespace(""),"startQuickmatch"), 20
+                              setlocal1
+                     ofs0089:
+                              pushdouble 0.15
+                              multiply
+                              getlocal1
+                              getproperty QName(PackageNamespace(""),"rarity")
+                              pushdouble 0.2
+                              multiply
+                              callproperty QName(PackageNamespace(""),"rand"), 2
+                              pushtrue
+                              iftrue ofs00a2
+                              returnvoid
+                              setlocal2
+                              callmethod 96, 18
+                              throw
+                     ofs00a2:
+                              add
+                              setproperty QName(PackageNamespace(""),"modCost")
+                              returnvoid
+                           end ; code
+                        end ; body
+                     end ; method
+                  }
+                  
+                  public static function createFinalItem(param1:Inventory_Armor) : Stats_Armor
+                  {
+                     trait method QName(PackageNamespace(""),"createFinalItem")
+                        flag FINAL
+                        dispid 7
+                        method
+                           name null
+                           param QName(PackageNamespace(""),"Inventory_Armor")
+                           returns QName(PackageNamespace(""),"Stats_Armor")
+                           
+                           body
+                              maxstack 9
+                              localcount 3
+                              initscopedepth 3
+                              maxscopedepth 4
+                              
+                              code
+                                 getlocal0
+                                 pushscope
+                                 jump ofs000d
+                                 call 9
+                                 throw
+                                 callstatic 3492, 9
+                        ofs000d:
+                                 getlex QName(PackageNamespace(""),"UT")
+                                 getlex QName(PackageNamespace(""),"Stats_Armor")
+                                 getproperty QName(PackageNamespace(""),"itemOb")
+                                 getlocal1
+                                 getproperty QName(PackageNamespace(""),"id")
+                                 jump ofs0021
+                                 ifstrictne ofs0021
+                        ofs0021:
+                                 getproperty MultinameL([PrivateNamespace(null,"144"),PackageNamespace(""),Namespace("http://adobe.com/AS3/2006/builtin"),PrivateNamespace(null,"145"),PackageInternalNs(""),ProtectedNamespace("Stats_Armor"),StaticProtectedNs("Stats_Armor")])
+                                 callproperty QName(PackageNamespace(""),"clone"), 1
+                                 getlex QName(PackageNamespace(""),"Stats_Armor")
+                                 astypelate
+                                 coerce QName(PackageNamespace(""),"Stats_Armor")
+                                 jump ofs0037
+                                 setlocal1
+                                 newfunction 18
+                                 pop
+                                 returnvoid
+                                 convert_s
+                        ofs0037:
+                                 setlocal2
+                                 getlocal2
+                                 getlex QName(PackageNamespace(""),"UT")
+                                 getlocal1
+                                 getproperty QName(PackageNamespace(""),"level")
+                                 pushbyte 50
+                                 getlocal2
+                                 jump ofs004d
+                                 returnvalue
+                                 negate
+                                 setlocal1
+                                 instanceof
+                                 setlocal0
+                                 modulo
+                        ofs004d:
+                                 getproperty QName(PackageNamespace(""),"armorRange")
+                                 getproperty QName(PackageNamespace(""),"min")
+                                 getlocal2
+                                 getproperty QName(PackageNamespace(""),"armorRange")
+                                 getproperty QName(PackageNamespace(""),"max")
+                                 callproperty QName(PackageNamespace(""),"getLinearRange"), 4
+                                 setproperty QName(PackageNamespace(""),"armor")
+                                 getlocal2
+                                 getlex QName(PackageNamespace(""),"Stats_Misc")
+                                 getlocal1
+                                 jump ofs0070
+                                 setlocal1
+                                 construct 2
+                                 pushwith
+                                 pushwith
+                                 equals
+                        ofs0070:
+                                 getproperty QName(PackageNamespace(""),"level")
+                                 getlocal2
+                                 getproperty QName(PackageNamespace(""),"costMod")
+                                 callproperty QName(PackageNamespace(""),"getCost"), 2
+                                 setproperty QName(PackageNamespace(""),"cost")
+                                 jump ofs0086
+                                 ifne ofs0086
+                        ofs0086:
+                                 getlocal2
+                                 getlex QName(PackageNamespace(""),"Math")
+                                 getlocal2
+                                 getproperty QName(PackageNamespace(""),"armor")
+                                 getlocal1
+                                 jump ofs0099
+                                 popscope
+                                 setlocal1
+                                 setlocal1
+                                 add
+                                 throw
+                                 lshift
+                        ofs0099:
+                                 getproperty QName(PackageNamespace(""),"modArmor")
+                                 multiply
+                                 callproperty QName(PackageNamespace(""),"round"), 1
+                                 setproperty QName(PackageNamespace(""),"armor")
+                                 getlocal2
+                                 getlex QName(PackageNamespace(""),"Math")
+                                 getlocal2
+                                 getproperty QName(PackageNamespace(""),"cost")
+                                 getlocal1
+                                 getproperty QName(PackageNamespace(""),"modCost")
+                                 pushtrue
+                                 iftrue ofs00bd
+                                 pushfalse
+                                 returnvalue
+                                 modulo
+                                 bitxor
+                                 convert_d
+                                 add
+                                 pushnull
+                                 setlocal3
+                        ofs00bd:
+                                 multiply
+                                 callproperty QName(PackageNamespace(""),"round"), 1
+                                 setproperty QName(PackageNamespace(""),"cost")
+                                 getlocal2
+                                 returnvalue
+                              end ; code
+                           end ; body
+                        end ; method
+                     }
+                     
+                     public static function getRandItemId(param1:uint) : String
+                     {
+                        trait method QName(PackageNamespace(""),"getRandItemId")
+                           flag FINAL
+                           dispid 8
+                           method
+                              name null
+                              param QName(PackageNamespace(""),"uint")
+                              returns QName(PackageNamespace(""),"String")
+                              
+                              body
+                                 maxstack 6
+                                 localcount 2
+                                 initscopedepth 3
+                                 maxscopedepth 4
+                                 
+                                 code
+                                    jump ofs000b
+                                    call 8
+                                    throw
+                                    callmethod 3492, 8
+                           ofs000b:
+                                    getlocal0
+                                    pushscope
+                                    getlex QName(PackageNamespace(""),"UT")
+                                    getlex QName(PackageNamespace(""),"typeAr")
+                                    getlocal1
+                                    jump ofs001c
+                                    iflt ofs001c
+                           ofs001c:
+                                    getproperty MultinameL([PrivateNamespace(null,"144"),PackageNamespace(""),Namespace("http://adobe.com/AS3/2006/builtin"),PrivateNamespace(null,"145"),PackageInternalNs(""),ProtectedNamespace("Stats_Armor"),StaticProtectedNs("Stats_Armor")])
+                                    callproperty QName(PackageNamespace(""),"randEl"), 1
+                                    getproperty Multiname("id",[PrivateNamespace(null,"144"),PackageNamespace(""),Namespace("http://adobe.com/AS3/2006/builtin"),PrivateNamespace(null,"145"),PackageInternalNs(""),ProtectedNamespace("Stats_Armor"),StaticProtectedNs("Stats_Armor")])
+                                    returnvalue
+                                 end ; code
+                              end ; body
+                           end ; method
+                        }
+                        
+                        public static function getRandItem(param1:Stats_Classes) : Inventory_Armor
+                        {
+                           trait method QName(PackageNamespace(""),"getRandItem")
+                              flag FINAL
+                              dispid 9
+                              method
+                                 name null
+                                 param QName(PackageNamespace(""),"Stats_Classes")
+                                 returns QName(PackageNamespace(""),"Inventory_Armor")
+                                 
+                                 body
+                                    maxstack 8
+                                    localcount 2
+                                    initscopedepth 3
+                                    maxscopedepth 4
+                                    
+                                    code
+                                       jump ofs000b
+                                       callstatic 3490, 5
+                                       call 5
+                                       throw
+                              ofs000b:
+                                       getlocal0
+                                       pushscope
+                                       getlex QName(PackageNamespace(""),"Inventory_Armor")
+                                       getlex QName(PackageNamespace(""),"Stats_Armor")
+                                       getlocal1
+                                       jump ofs001a
+                                       iflt ofs001a
+                              ofs001a:
+                                       getproperty QName(PackageNamespace(""),"classNum")
+                                       callproperty QName(PackageNamespace(""),"getRandItemId"), 1
+                                       pushtrue
+                                       iftrue ofs002d
+                                       returnvoid
+                                       negate
+                                       setlocal2
+                                       increment
+                                       setlocal0
+                                       pop
+                                       equals
+                              ofs002d:
+                                       getlocal1
+                                       getproperty QName(PackageNamespace(""),"level")
+                                       getlex QName(PackageNamespace(""),"Stats_Misc")
+                                       pushbyte 0
+                                       callproperty QName(PackageNamespace(""),"getRandRarity"), 1
+                                       callproperty QName(PackageNamespace(""),"createInventoryItem"), 3
+                                       returnvalue
+                                    end ; code
+                                 end ; body
+                              end ; method
+                           }
+                        }
+                     }

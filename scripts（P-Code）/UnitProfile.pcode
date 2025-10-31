@@ -1,0 +1,1282 @@
+package
+{
+   import flash.display.MovieClip;
+   
+   public class UnitProfile extends MovieClip
+   {
+      
+      {
+         method
+            name null
+            returns null
+            
+            body
+               maxstack 4
+               localcount 1
+               initscopedepth 9
+               maxscopedepth 10
+               
+               code
+                  getlocal0
+                  pushscope
+                  jump ofs000c
+                  call 10
+                  throw
+                  newclass 476
+         ofs000c:
+                  returnvoid
+               end ; code
+            end ; body
+         end ; method
+      }
+      
+      public var body:MovieClip;
+      
+      public var legup2:MovieClip;
+      
+      public var foot1:MovieClip;
+      
+      public var foot2:MovieClip;
+      
+      public var arm1:MovieClip;
+      
+      public var head:MovieClip;
+      
+      public var arm2:MovieClip;
+      
+      public var leglow1:MovieClip;
+      
+      public var leglow2:MovieClip;
+      
+      public var legup1:MovieClip;
+      
+      public var curHead:uint;
+      
+      public var curBody:uint;
+      
+      public var curCamo:uint;
+      
+      private var curAnim:String;
+      
+      private var primary:Stats_Guns;
+      
+      private var primaryAttach:Stats_Attachments;
+      
+      public function UnitProfile()
+      {
+         method
+            name null
+            returns null
+            
+            body
+               maxstack 14
+               localcount 1
+               initscopedepth 10
+               maxscopedepth 11
+               
+               code
+                  jump ofs000b
+                  callmethod 3490, 5
+                  call 5
+                  throw
+         ofs000b:
+                  getlocal0
+                  pushscope
+                  getlocal0
+                  constructsuper 0
+                  findpropstrict QName(PackageNamespace(""),"addFrameScript")
+                  jump ofs001b
+                  ifle ofs001b
+         ofs001b:
+                  pushbyte 97
+                  getlocal0
+                  getproperty QName(PackageInternalNs(""),"frame98")
+                  pushshort 150
+                  jump ofs002e
+                  popscope
+                  pushwith
+                  newfunction 83
+                  throw
+                  pushwith
+         ofs002e:
+                  getlocal0
+                  getproperty QName(PackageInternalNs(""),"frame151")
+                  pushshort 248
+                  getlocal0
+                  getproperty QName(PackageInternalNs(""),"frame249")
+                  pushshort 353
+                  getlocal0
+                  getproperty QName(PackageInternalNs(""),"frame354")
+                  jump ofs004a
+                  popscope
+                  construct 109
+                  pushwith
+                  multiply
+                  setlocal2
+         ofs004a:
+                  pushshort 434
+                  getlocal0
+                  getproperty QName(PackageInternalNs(""),"frame435")
+                  callpropvoid QName(PackageNamespace(""),"addFrameScript"), 10
+                  getlocal0
+                  pushbyte 1
+                  initproperty QName(PackageNamespace(""),"curHead")
+                  jump ofs0065
+                  popscope
+                  setlocal0
+                  istypelate
+                  throw
+                  throw
+                  istypelate
+         ofs0065:
+                  getlocal0
+                  pushbyte 1
+                  initproperty QName(PackageNamespace(""),"curBody")
+                  getlocal0
+                  pushbyte 1
+                  jump ofs0076
+                  ifstricteq ofs0076
+         ofs0076:
+                  initproperty QName(PackageNamespace(""),"curCamo")
+                  returnvoid
+               end ; code
+            end ; body
+         end ; method
+      }
+      
+      public function goto(param1:String) : void
+      {
+         trait method QName(PackageNamespace(""),"goto")
+            dispid 0
+            method
+               name null
+               param QName(PackageNamespace(""),"String")
+               returns QName(PackageNamespace(""),"void")
+               
+               body
+                  maxstack 5
+                  localcount 2
+                  initscopedepth 10
+                  maxscopedepth 11
+                  
+                  code
+                     getlocal0
+                     jump ofs000c
+                     call 5
+                     throw
+                     callmethod 3492, 5
+            ofs000c:
+                     pushscope
+                     getlocal1
+                     getlocal0
+                     getproperty QName(PrivateNamespace(null,"96"),"curAnim")
+                     ifeq ofs001a
+                     jump ofs0023
+            ofs001a:
+                     returnvoid
+                     jump ofs001f
+            ofs001f:
+                     iflt ofs0023
+            ofs0023:
+                     getlocal0
+                     pushtrue
+                     iftrue ofs0030
+                     returnvoid
+                     returnvoid
+                     newfunction 13
+                     throw
+                     pushnull
+                     returnvoid
+            ofs0030:
+                     getlocal1
+                     initproperty QName(PrivateNamespace(null,"96"),"curAnim")
+                     findpropstrict QName(PackageNamespace(""),"gotoAndPlay")
+                     getlocal0
+                     getproperty QName(PrivateNamespace(null,"96"),"curAnim")
+                     callpropvoid QName(PackageNamespace(""),"gotoAndPlay"), 1
+                     returnvoid
+                  end ; code
+               end ; body
+            end ; method
+         }
+         
+         public function setWeaponSprite(param1:MovieClip) : void
+         {
+            trait method QName(PackageNamespace(""),"setWeaponSprite")
+               dispid 0
+               method
+                  name null
+                  param QName(PackageNamespace("flash.display"),"MovieClip")
+                  returns QName(PackageNamespace(""),"void")
+                  
+                  body
+                     maxstack 6
+                     localcount 2
+                     initscopedepth 10
+                     maxscopedepth 11
+                     
+                     code
+                        getlocal0
+                        pushscope
+                        jump ofs000d
+                        callmethod 3493, 5
+                        call 5
+                        throw
+               ofs000d:
+                        getlocal1
+                        getlocal0
+                        getproperty QName(PrivateNamespace(null,"96"),"primary")
+                        getproperty QName(PackageNamespace(""),"sprite")
+                        callpropvoid QName(PackageNamespace(""),"gotoAndStop"), 1
+                        jump ofs0021
+                        ifgt ofs0021
+               ofs0021:
+                        getlex QName(PackageNamespace(""),"Stats_Attachments")
+                        jump ofs002d
+                        returnvalue
+                        pushwith
+                        newfunction 52
+                        throw
+                        setlocal3
+               ofs002d:
+                        getlocal1
+                        getlocal0
+                        getproperty QName(PrivateNamespace(null,"96"),"primaryAttach")
+                        callpropvoid QName(PackageNamespace(""),"display"), 2
+                        returnvoid
+                     end ; code
+                  end ; body
+               end ; method
+            }
+            
+            public function setClip(param1:MovieClip) : void
+            {
+               trait method QName(PackageNamespace(""),"setClip")
+                  dispid 0
+                  method
+                     name null
+                     param QName(PackageNamespace("flash.display"),"MovieClip")
+                     returns QName(PackageNamespace(""),"void")
+                     
+                     body
+                        maxstack 5
+                        localcount 3
+                        initscopedepth 10
+                        maxscopedepth 11
+                        
+                        code
+                           jump ofs000b
+                           call 9
+                           callmethod 3490, 9
+                           throw
+                  ofs000b:
+                           getlocal0
+                           pushscope
+                           getlocal1
+                           pushfalse
+                           setproperty QName(PackageNamespace(""),"visible")
+                           jump ofs001a
+                           ifstrictne ofs001a
+                  ofs001a:
+                           pushbyte 0
+                           convert_u
+                           setlocal2
+                           jump ofs007c
+                           pushwith
+                           setlocal2
+                           jump ofs0028
+                  ofs0028:
+                           popscope
+                           pushwith
+                           newfunction 113
+                           throw
+                           checkfilter
+                  ofs002e:
+                           label
+                           getlocal1
+                           getproperty QName(PackageNamespace(""),"currentLabels")
+                           getlocal2
+                           getproperty MultinameL([PrivateNamespace(null,"96"),PackageNamespace(""),PackageInternalNs(""),PrivateNamespace(null,"275"),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("UnitProfile"),StaticProtectedNs("UnitProfile"),StaticProtectedNs("flash.display:MovieClip"),StaticProtectedNs("flash.display:Sprite"),StaticProtectedNs("flash.display:DisplayObjectContainer"),StaticProtectedNs("flash.display:InteractiveObject"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                           getproperty Multiname("name",[PrivateNamespace(null,"96"),PackageNamespace(""),PackageInternalNs(""),PrivateNamespace(null,"275"),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("UnitProfile"),StaticProtectedNs("UnitProfile"),StaticProtectedNs("flash.display:MovieClip"),StaticProtectedNs("flash.display:Sprite"),StaticProtectedNs("flash.display:DisplayObjectContainer"),StaticProtectedNs("flash.display:InteractiveObject"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                           pushfalse
+                           iffalse ofs0047
+                           pushfalse
+                           returnvalue
+                           popscope
+                           in
+                           lessequals
+                           add
+                           increment
+                           lessequals
+                  ofs0047:
+                           getlocal0
+                           getproperty QName(PrivateNamespace(null,"96"),"primary")
+                           getproperty QName(PackageNamespace(""),"sprite")
+                           ifeq ofs0056
+                           jump ofs0070
+                  ofs0056:
+                           getlocal1
+                           pushtrue
+                           setproperty QName(PackageNamespace(""),"visible")
+                           getlocal1
+                           getlocal0
+                           jump ofs0066
+                           returnvoid
+                           constructprop QName(PackageNamespace("flash.events"),"KeyboardEvent"), 30
+                           pop
+                  ofs0066:
+                           getproperty QName(PrivateNamespace(null,"96"),"primary")
+                           getproperty QName(PackageNamespace(""),"sprite")
+                           callpropvoid QName(PackageNamespace(""),"gotoAndStop"), 1
+                  ofs0070:
+                           getlocal2
+                           increment
+                           jump ofs007a
+                           ifle ofs007a
+                  ofs007a:
+                           convert_u
+                           setlocal2
+                  ofs007c:
+                           getlocal2
+                           jump ofs0087
+                           instanceof
+                           pushwith
+                           newfunction 111
+                           throw
+                           typeof
+                  ofs0087:
+                           getlocal1
+                           getproperty QName(PackageNamespace(""),"currentLabels")
+                           getproperty QName(PackageNamespace(""),"length")
+                           ifnlt ofs0096
+                           jump ofs002e
+                  ofs0096:
+                           returnvoid
+                        end ; code
+                     end ; body
+                  end ; method
+               }
+               
+               public function loadSkin() : void
+               {
+                  trait method QName(PackageNamespace(""),"loadSkin")
+                     dispid 0
+                     method
+                        name null
+                        returns QName(PackageNamespace(""),"void")
+                        
+                        body
+                           maxstack 7
+                           localcount 2
+                           initscopedepth 10
+                           maxscopedepth 11
+                           
+                           code
+                              jump ofs000a
+                              call 6
+                              throw
+                              newclass 476
+                     ofs000a:
+                              getlocal0
+                              pushscope
+                              getlocal0
+                              getlex QName(PackageNamespace(""),"SD")
+                              callproperty QName(PackageNamespace(""),"getSelCass"), 0
+                              jump ofs001c
+                              ifeq ofs001c
+                     ofs001c:
+                              getproperty QName(PackageNamespace(""),"head")
+                              initproperty QName(PackageNamespace(""),"curHead")
+                              getlocal0
+                              jump ofs002d
+                              popscope
+                              pushwith
+                              newfunction 41
+                              throw
+                              bitand
+                     ofs002d:
+                              getlex QName(PackageNamespace(""),"SD")
+                              callproperty QName(PackageNamespace(""),"getSelCass"), 0
+                              getproperty QName(PackageNamespace(""),"body")
+                              initproperty QName(PackageNamespace(""),"curBody")
+                              getlocal0
+                              getlex QName(PackageNamespace(""),"SD")
+                              jump ofs0047
+                              popscope
+                              constructprop QName(PackageNamespace("Box2D.Collision.Shapes"),"b2Shape"), 30
+                              throw
+                     ofs0047:
+                              callproperty QName(PackageNamespace(""),"getSelCass"), 0
+                              getproperty QName(PackageNamespace(""),"camo")
+                              initproperty QName(PackageNamespace(""),"curCamo")
+                              getlocal0
+                              callpropvoid QName(PackageNamespace(""),"setSkin"), 0
+                              getlocal0
+                              getlex QName(PackageNamespace(""),"SD")
+                              callproperty QName(PackageNamespace(""),"getSelCass"), 0
+                              pushfalse
+                              iffalse ofs006a
+                              returnvoid
+                              istypelate
+                              pushwith
+                              newfunction 5
+                              throw
+                              pushwith
+                     ofs006a:
+                              getproperty QName(PackageNamespace(""),"primary")
+                              callproperty QName(PackageNamespace(""),"createFinalItem"), 0
+                              initproperty QName(PrivateNamespace(null,"96"),"primary")
+                              getlex QName(PackageNamespace(""),"SD")
+                              callproperty QName(PackageNamespace(""),"getSelCass"), 0
+                              jump ofs0083
+                              ifgt ofs0083
+                     ofs0083:
+                              getproperty QName(PackageNamespace(""),"secondary")
+                              callproperty QName(PackageNamespace(""),"createFinalItem"), 0
+                              coerce QName(PackageNamespace(""),"Stats_Guns")
+                              setlocal1
+                              jump ofs0097
+                              popscope
+                              constructsuper 20
+                              pushwith
+                              pushwith
+                              returnvalue
+                     ofs0097:
+                              getlocal0
+                              getproperty QName(PackageNamespace(""),"arm1")
+                              getlocal0
+                              getproperty QName(PrivateNamespace(null,"96"),"primary")
+                              getproperty QName(PackageNamespace(""),"frameIdle")
+                              callpropvoid QName(PackageNamespace(""),"gotoAndStop"), 1
+                              getlocal0
+                              getproperty QName(PackageNamespace(""),"arm1")
+                              getproperty Multiname("gun",[PrivateNamespace(null,"96"),PackageNamespace(""),PackageInternalNs(""),PrivateNamespace(null,"275"),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("UnitProfile"),StaticProtectedNs("UnitProfile"),StaticProtectedNs("flash.display:MovieClip"),StaticProtectedNs("flash.display:Sprite"),StaticProtectedNs("flash.display:DisplayObjectContainer"),StaticProtectedNs("flash.display:InteractiveObject"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                              jump ofs00b7
+                              popscope
+                              callproplex QName(PackageNamespace(""),"getEl"), 16
+                              setlocal2
+                     ofs00b7:
+                              getlocal0
+                              getproperty QName(PrivateNamespace(null,"96"),"primary")
+                              getproperty QName(PackageNamespace(""),"sprite")
+                              callpropvoid Multiname("gotoAndStop",[PrivateNamespace(null,"96"),PackageNamespace(""),PackageInternalNs(""),PrivateNamespace(null,"275"),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("UnitProfile"),StaticProtectedNs("UnitProfile"),StaticProtectedNs("flash.display:MovieClip"),StaticProtectedNs("flash.display:Sprite"),StaticProtectedNs("flash.display:DisplayObjectContainer"),StaticProtectedNs("flash.display:InteractiveObject"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")]), 1
+                              getlocal0
+                              getproperty QName(PackageNamespace(""),"arm2")
+                              getlocal0
+                              getproperty QName(PrivateNamespace(null,"96"),"primary")
+                              pushtrue
+                              iftrue ofs00d7
+                              pushtrue
+                              throw
+                              returnvalue
+                              pushnull
+                              pushnull
+                              multiply
+                              setlocal0
+                              pop
+                     ofs00d7:
+                              getproperty QName(PackageNamespace(""),"frameIdle")
+                              callpropvoid QName(PackageNamespace(""),"gotoAndStop"), 1
+                              getlocal0
+                              getproperty QName(PackageNamespace(""),"body")
+                              getproperty Multiname("gunside",[PrivateNamespace(null,"96"),PackageNamespace(""),PackageInternalNs(""),PrivateNamespace(null,"275"),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("UnitProfile"),StaticProtectedNs("UnitProfile"),StaticProtectedNs("flash.display:MovieClip"),StaticProtectedNs("flash.display:Sprite"),StaticProtectedNs("flash.display:DisplayObjectContainer"),StaticProtectedNs("flash.display:InteractiveObject"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                              jump ofs00ed
+                              ifgt ofs00ed
+                     ofs00ed:
+                              pushfalse
+                              setproperty Multiname("visible",[PrivateNamespace(null,"96"),PackageNamespace(""),PackageInternalNs(""),PrivateNamespace(null,"275"),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("UnitProfile"),StaticProtectedNs("UnitProfile"),StaticProtectedNs("flash.display:MovieClip"),StaticProtectedNs("flash.display:Sprite"),StaticProtectedNs("flash.display:DisplayObjectContainer"),StaticProtectedNs("flash.display:InteractiveObject"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                              getlocal0
+                              getproperty QName(PackageNamespace(""),"body")
+                              jump ofs00ff
+                              pushfalse
+                              setlocal2
+                              setlocal0
+                              decrement
+                              lessequals
+                              multiply
+                     ofs00ff:
+                              getproperty Multiname("gunback",[PrivateNamespace(null,"96"),PackageNamespace(""),PackageInternalNs(""),PrivateNamespace(null,"275"),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("UnitProfile"),StaticProtectedNs("UnitProfile"),StaticProtectedNs("flash.display:MovieClip"),StaticProtectedNs("flash.display:Sprite"),StaticProtectedNs("flash.display:DisplayObjectContainer"),StaticProtectedNs("flash.display:InteractiveObject"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                              pushfalse
+                              setproperty Multiname("visible",[PrivateNamespace(null,"96"),PackageNamespace(""),PackageInternalNs(""),PrivateNamespace(null,"275"),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("UnitProfile"),StaticProtectedNs("UnitProfile"),StaticProtectedNs("flash.display:MovieClip"),StaticProtectedNs("flash.display:Sprite"),StaticProtectedNs("flash.display:DisplayObjectContainer"),StaticProtectedNs("flash.display:InteractiveObject"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                              getlocal0
+                              getproperty QName(PackageNamespace(""),"body")
+                              pushstring "gun"
+                              getlocal1
+                              pushtrue
+                              iftrue ofs011a
+                              returnvoid
+                              bitor
+                              setlocal2
+                              lshift
+                              bitxor
+                              decrement
+                              setlocal0
+                     ofs011a:
+                              getproperty QName(PackageNamespace(""),"unequip")
+                              add
+                              getproperty MultinameL([PrivateNamespace(null,"96"),PackageNamespace(""),PackageInternalNs(""),PrivateNamespace(null,"275"),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("UnitProfile"),StaticProtectedNs("UnitProfile"),StaticProtectedNs("flash.display:MovieClip"),StaticProtectedNs("flash.display:Sprite"),StaticProtectedNs("flash.display:DisplayObjectContainer"),StaticProtectedNs("flash.display:InteractiveObject"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                              pushtrue
+                              setproperty Multiname("visible",[PrivateNamespace(null,"96"),PackageNamespace(""),PackageInternalNs(""),PrivateNamespace(null,"275"),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("UnitProfile"),StaticProtectedNs("UnitProfile"),StaticProtectedNs("flash.display:MovieClip"),StaticProtectedNs("flash.display:Sprite"),StaticProtectedNs("flash.display:DisplayObjectContainer"),StaticProtectedNs("flash.display:InteractiveObject"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                              getlocal0
+                              getproperty QName(PackageNamespace(""),"body")
+                              jump ofs0133
+                              setlocal2
+                              setlocal0
+                              bitor
+                              returnvalue
+                              coerce_s
+                              throw
+                     ofs0133:
+                              pushstring "gun"
+                              getlocal1
+                              getproperty QName(PackageNamespace(""),"unequip")
+                              add
+                              getproperty MultinameL([PrivateNamespace(null,"96"),PackageNamespace(""),PackageInternalNs(""),PrivateNamespace(null,"275"),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("UnitProfile"),StaticProtectedNs("UnitProfile"),StaticProtectedNs("flash.display:MovieClip"),StaticProtectedNs("flash.display:Sprite"),StaticProtectedNs("flash.display:DisplayObjectContainer"),StaticProtectedNs("flash.display:InteractiveObject"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                              jump ofs0146
+                              iflt ofs0146
+                     ofs0146:
+                              getlocal1
+                              getproperty QName(PackageNamespace(""),"sprite")
+                              callpropvoid Multiname("gotoAndStop",[PrivateNamespace(null,"96"),PackageNamespace(""),PackageInternalNs(""),PrivateNamespace(null,"275"),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("UnitProfile"),StaticProtectedNs("UnitProfile"),StaticProtectedNs("flash.display:MovieClip"),StaticProtectedNs("flash.display:Sprite"),StaticProtectedNs("flash.display:DisplayObjectContainer"),StaticProtectedNs("flash.display:InteractiveObject"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")]), 1
+                              getlex QName(PackageNamespace(""),"Stats_Attachments")
+                              getlocal0
+                              jump ofs015b
+                              returnvoid
+                              pushwith
+                              newfunction 11
+                              throw
+                              negate
+                     ofs015b:
+                              getproperty QName(PackageNamespace(""),"arm1")
+                              getproperty Multiname("gun",[PrivateNamespace(null,"96"),PackageNamespace(""),PackageInternalNs(""),PrivateNamespace(null,"275"),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("UnitProfile"),StaticProtectedNs("UnitProfile"),StaticProtectedNs("flash.display:MovieClip"),StaticProtectedNs("flash.display:Sprite"),StaticProtectedNs("flash.display:DisplayObjectContainer"),StaticProtectedNs("flash.display:InteractiveObject"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                              callpropvoid QName(PackageNamespace(""),"display"), 1
+                              getlocal0
+                              getproperty QName(PrivateNamespace(null,"96"),"primary")
+                              getproperty QName(PackageNamespace(""),"defaultTop")
+                              jump ofs0176
+                              popscope
+                              newarray 10
+                              pushwith
+                              setlocal0
+                              divide
+                     ofs0176:
+                              iftrue ofs017e
+                              jump ofs01af
+                     ofs017e:
+                              getlex QName(PackageNamespace(""),"Stats_Attachments")
+                              getlocal0
+                              getproperty QName(PackageNamespace(""),"arm1")
+                              getproperty Multiname("gun",[PrivateNamespace(null,"96"),PackageNamespace(""),PackageInternalNs(""),PrivateNamespace(null,"275"),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("UnitProfile"),StaticProtectedNs("UnitProfile"),StaticProtectedNs("flash.display:MovieClip"),StaticProtectedNs("flash.display:Sprite"),StaticProtectedNs("flash.display:DisplayObjectContainer"),StaticProtectedNs("flash.display:InteractiveObject"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                              getlex QName(PackageNamespace(""),"Stats_Attachments")
+                              jump ofs0192
+                              popscope
+                              callmethod 90, 18
+                              pop
+                     ofs0192:
+                              getlocal0
+                              getproperty QName(PrivateNamespace(null,"96"),"primary")
+                              getproperty QName(PackageNamespace(""),"defaultTop")
+                              callproperty QName(PackageNamespace(""),"createBasicItem"), 1
+                              callpropvoid QName(PackageNamespace(""),"display"), 2
+                              jump ofs01a9
+                              ifeq ofs01a9
+                     ofs01a9:
+                              jump ofs01c7
+                              pushwith
+                              setlocal3
+                     ofs01af:
+                              getlocal0
+                              getproperty QName(PackageNamespace(""),"arm1")
+                              getproperty Multiname("gun",[PrivateNamespace(null,"96"),PackageNamespace(""),PackageInternalNs(""),PrivateNamespace(null,"275"),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("UnitProfile"),StaticProtectedNs("UnitProfile"),StaticProtectedNs("flash.display:MovieClip"),StaticProtectedNs("flash.display:Sprite"),StaticProtectedNs("flash.display:DisplayObjectContainer"),StaticProtectedNs("flash.display:InteractiveObject"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                              jump ofs01c0
+                              nextvalue
+                              newfunction 87
+                              pop
+                              setlocal1
+                              setlocal0
+                     ofs01c0:
+                              getproperty Multiname("top",[PrivateNamespace(null,"96"),PackageNamespace(""),PackageInternalNs(""),PrivateNamespace(null,"275"),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("UnitProfile"),StaticProtectedNs("UnitProfile"),StaticProtectedNs("flash.display:MovieClip"),StaticProtectedNs("flash.display:Sprite"),StaticProtectedNs("flash.display:DisplayObjectContainer"),StaticProtectedNs("flash.display:InteractiveObject"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                              pushfalse
+                              setproperty Multiname("visible",[PrivateNamespace(null,"96"),PackageNamespace(""),PackageInternalNs(""),PrivateNamespace(null,"275"),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("UnitProfile"),StaticProtectedNs("UnitProfile"),StaticProtectedNs("flash.display:MovieClip"),StaticProtectedNs("flash.display:Sprite"),StaticProtectedNs("flash.display:DisplayObjectContainer"),StaticProtectedNs("flash.display:InteractiveObject"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                     ofs01c7:
+                              getlex QName(PackageNamespace(""),"SD")
+                              callproperty QName(PackageNamespace(""),"getSelCass"), 0
+                              getproperty QName(PackageNamespace(""),"primaryAttach")
+                              iftrue ofs01d9
+                              jump ofs0221
+                     ofs01d9:
+                              getlocal0
+                              jump ofs01e3
+                              equals
+                              callsuper QName(PackageNamespace("flash.geom"),"Vector3D"), 9
+                              pushwith
+                     ofs01e3:
+                              getlex QName(PackageNamespace(""),"Stats_Attachments")
+                              getlex QName(PackageNamespace(""),"SD")
+                              callproperty QName(PackageNamespace(""),"getSelCass"), 0
+                              getproperty QName(PackageNamespace(""),"primaryAttach")
+                              callproperty QName(PackageNamespace(""),"createFinalItem"), 1
+                              initproperty QName(PrivateNamespace(null,"96"),"primaryAttach")
+                              getlex QName(PackageNamespace(""),"Stats_Attachments")
+                              getlocal0
+                              jump ofs0203
+                              popscope
+                              setlocal1
+                              greaterequals
+                              increment
+                              modulo
+                              add
+                     ofs0203:
+                              getproperty QName(PackageNamespace(""),"arm1")
+                              getproperty Multiname("gun",[PrivateNamespace(null,"96"),PackageNamespace(""),PackageInternalNs(""),PrivateNamespace(null,"275"),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("UnitProfile"),StaticProtectedNs("UnitProfile"),StaticProtectedNs("flash.display:MovieClip"),StaticProtectedNs("flash.display:Sprite"),StaticProtectedNs("flash.display:DisplayObjectContainer"),StaticProtectedNs("flash.display:InteractiveObject"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                              getlocal0
+                              getproperty QName(PrivateNamespace(null,"96"),"primaryAttach")
+                              callpropvoid QName(PackageNamespace(""),"display"), 2
+                              jump ofs0219
+                              ifstrictne ofs0219
+                     ofs0219:
+                              jump ofs0226
+                              ifstricteq ofs0221
+                     ofs0221:
+                              getlocal0
+                              pushnull
+                              initproperty QName(PrivateNamespace(null,"96"),"primaryAttach")
+                     ofs0226:
+                              returnvoid
+                           end ; code
+                        end ; body
+                     end ; method
+                  }
+                  
+                  public function soldierFirstSkin() : void
+                  {
+                     trait method QName(PackageNamespace(""),"soldierFirstSkin")
+                        dispid 0
+                        method
+                           name null
+                           returns QName(PackageNamespace(""),"void")
+                           
+                           body
+                              maxstack 6
+                              localcount 2
+                              initscopedepth 10
+                              maxscopedepth 11
+                              
+                              code
+                                 getlocal0
+                                 pushscope
+                                 jump ofs000d
+                                 call 8
+                                 throw
+                                 callstatic 3492, 8
+                        ofs000d:
+                                 getlocal0
+                                 pushbyte 2
+                                 initproperty QName(PackageNamespace(""),"curHead")
+                                 getlocal0
+                                 pushbyte 3
+                                 jump ofs001e
+                                 iflt ofs001e
+                        ofs001e:
+                                 initproperty QName(PackageNamespace(""),"curBody")
+                                 getlocal0
+                                 pushbyte 20
+                                 initproperty QName(PackageNamespace(""),"curCamo")
+                                 getlocal0
+                                 jump ofs0032
+                                 lessequals
+                                 pushwith
+                                 newfunction 26
+                                 pop
+                                 istypelate
+                        ofs0032:
+                                 callpropvoid QName(PackageNamespace(""),"setSkin"), 0
+                                 getlocal0
+                                 getlex QName(PackageNamespace(""),"Stats_Guns")
+                                 getproperty QName(PackageNamespace(""),"itemOb")
+                                 pushstring "M4EX"
+                                 getproperty MultinameL([PrivateNamespace(null,"96"),PackageNamespace(""),PackageInternalNs(""),PrivateNamespace(null,"275"),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("UnitProfile"),StaticProtectedNs("UnitProfile"),StaticProtectedNs("flash.display:MovieClip"),StaticProtectedNs("flash.display:Sprite"),StaticProtectedNs("flash.display:DisplayObjectContainer"),StaticProtectedNs("flash.display:InteractiveObject"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                                 initproperty QName(PrivateNamespace(null,"96"),"primary")
+                                 getlex QName(PackageNamespace(""),"Stats_Guns")
+                                 getproperty QName(PackageNamespace(""),"itemOb")
+                                 pushstring "Katana"
+                                 pushfalse
+                                 iffalse ofs005a
+                                 pushtrue
+                                 throw
+                                 popscope
+                                 newclass 126
+                                 pushwith
+                                 convert_d
+                                 pushwith
+                        ofs005a:
+                                 getproperty MultinameL([PrivateNamespace(null,"96"),PackageNamespace(""),PackageInternalNs(""),PrivateNamespace(null,"275"),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("UnitProfile"),StaticProtectedNs("UnitProfile"),StaticProtectedNs("flash.display:MovieClip"),StaticProtectedNs("flash.display:Sprite"),StaticProtectedNs("flash.display:DisplayObjectContainer"),StaticProtectedNs("flash.display:InteractiveObject"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                                 coerce QName(PackageNamespace(""),"Stats_Guns")
+                                 setlocal1
+                                 getlocal0
+                                 getproperty QName(PackageNamespace(""),"arm1")
+                                 getlocal0
+                                 getproperty QName(PrivateNamespace(null,"96"),"primary")
+                                 getproperty QName(PackageNamespace(""),"frameIdle")
+                                 callpropvoid QName(PackageNamespace(""),"gotoAndStop"), 1
+                                 pushfalse
+                                 iffalse ofs007a
+                                 returnvoid
+                                 popscope
+                                 callstatic 87, 9
+                                 pushwith
+                        ofs007a:
+                                 getlocal0
+                                 getproperty QName(PackageNamespace(""),"arm1")
+                                 getproperty Multiname("gun",[PrivateNamespace(null,"96"),PackageNamespace(""),PackageInternalNs(""),PrivateNamespace(null,"275"),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("UnitProfile"),StaticProtectedNs("UnitProfile"),StaticProtectedNs("flash.display:MovieClip"),StaticProtectedNs("flash.display:Sprite"),StaticProtectedNs("flash.display:DisplayObjectContainer"),StaticProtectedNs("flash.display:InteractiveObject"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                                 getlocal0
+                                 getproperty QName(PrivateNamespace(null,"96"),"primary")
+                                 jump ofs008d
+                                 ifstricteq ofs008d
+                        ofs008d:
+                                 getproperty QName(PackageNamespace(""),"sprite")
+                                 callpropvoid Multiname("gotoAndStop",[PrivateNamespace(null,"96"),PackageNamespace(""),PackageInternalNs(""),PrivateNamespace(null,"275"),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("UnitProfile"),StaticProtectedNs("UnitProfile"),StaticProtectedNs("flash.display:MovieClip"),StaticProtectedNs("flash.display:Sprite"),StaticProtectedNs("flash.display:DisplayObjectContainer"),StaticProtectedNs("flash.display:InteractiveObject"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")]), 1
+                                 getlocal0
+                                 getproperty QName(PackageNamespace(""),"arm2")
+                                 getlocal0
+                                 jump ofs00a3
+                                 popscope
+                                 call 81
+                                 pushwith
+                                 pushfalse
+                                 setlocal1
+                        ofs00a3:
+                                 getproperty QName(PrivateNamespace(null,"96"),"primary")
+                                 getproperty QName(PackageNamespace(""),"frameIdle")
+                                 callpropvoid QName(PackageNamespace(""),"gotoAndStop"), 1
+                                 getlocal0
+                                 getproperty QName(PackageNamespace(""),"body")
+                                 getproperty Multiname("gunside",[PrivateNamespace(null,"96"),PackageNamespace(""),PackageInternalNs(""),PrivateNamespace(null,"275"),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("UnitProfile"),StaticProtectedNs("UnitProfile"),StaticProtectedNs("flash.display:MovieClip"),StaticProtectedNs("flash.display:Sprite"),StaticProtectedNs("flash.display:DisplayObjectContainer"),StaticProtectedNs("flash.display:InteractiveObject"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                                 pushfalse
+                                 setproperty Multiname("visible",[PrivateNamespace(null,"96"),PackageNamespace(""),PackageInternalNs(""),PrivateNamespace(null,"275"),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("UnitProfile"),StaticProtectedNs("UnitProfile"),StaticProtectedNs("flash.display:MovieClip"),StaticProtectedNs("flash.display:Sprite"),StaticProtectedNs("flash.display:DisplayObjectContainer"),StaticProtectedNs("flash.display:InteractiveObject"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                                 getlocal0
+                                 getproperty QName(PackageNamespace(""),"body")
+                                 jump ofs00c6
+                                 popscope
+                                 newfunction 2
+                                 throw
+                                 checkfilter
+                                 pushfalse
+                        ofs00c6:
+                                 getproperty Multiname("gunback",[PrivateNamespace(null,"96"),PackageNamespace(""),PackageInternalNs(""),PrivateNamespace(null,"275"),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("UnitProfile"),StaticProtectedNs("UnitProfile"),StaticProtectedNs("flash.display:MovieClip"),StaticProtectedNs("flash.display:Sprite"),StaticProtectedNs("flash.display:DisplayObjectContainer"),StaticProtectedNs("flash.display:InteractiveObject"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                                 pushfalse
+                                 setproperty Multiname("visible",[PrivateNamespace(null,"96"),PackageNamespace(""),PackageInternalNs(""),PrivateNamespace(null,"275"),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("UnitProfile"),StaticProtectedNs("UnitProfile"),StaticProtectedNs("flash.display:MovieClip"),StaticProtectedNs("flash.display:Sprite"),StaticProtectedNs("flash.display:DisplayObjectContainer"),StaticProtectedNs("flash.display:InteractiveObject"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                                 getlocal0
+                                 getproperty QName(PackageNamespace(""),"body")
+                                 pushstring "gun"
+                                 jump ofs00dd
+                                 pushwith
+                                 callsuper QName(PackageNamespace(""),"Array"), 15
+                                 throw
+                        ofs00dd:
+                                 getlocal1
+                                 getproperty QName(PackageNamespace(""),"unequip")
+                                 add
+                                 getproperty MultinameL([PrivateNamespace(null,"96"),PackageNamespace(""),PackageInternalNs(""),PrivateNamespace(null,"275"),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("UnitProfile"),StaticProtectedNs("UnitProfile"),StaticProtectedNs("flash.display:MovieClip"),StaticProtectedNs("flash.display:Sprite"),StaticProtectedNs("flash.display:DisplayObjectContainer"),StaticProtectedNs("flash.display:InteractiveObject"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                                 pushtrue
+                                 jump ofs00ee
+                                 ifstricteq ofs00ee
+                        ofs00ee:
+                                 setproperty Multiname("visible",[PrivateNamespace(null,"96"),PackageNamespace(""),PackageInternalNs(""),PrivateNamespace(null,"275"),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("UnitProfile"),StaticProtectedNs("UnitProfile"),StaticProtectedNs("flash.display:MovieClip"),StaticProtectedNs("flash.display:Sprite"),StaticProtectedNs("flash.display:DisplayObjectContainer"),StaticProtectedNs("flash.display:InteractiveObject"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                                 getlocal0
+                                 getproperty QName(PackageNamespace(""),"body")
+                                 pushstring "gun"
+                                 getlocal1
+                                 jump ofs0102
+                                 setlocal1
+                                 constructprop QName(PackageNamespace(""),"Menu"), 30
+                                 pop
+                        ofs0102:
+                                 getproperty QName(PackageNamespace(""),"unequip")
+                                 add
+                                 getproperty MultinameL([PrivateNamespace(null,"96"),PackageNamespace(""),PackageInternalNs(""),PrivateNamespace(null,"275"),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("UnitProfile"),StaticProtectedNs("UnitProfile"),StaticProtectedNs("flash.display:MovieClip"),StaticProtectedNs("flash.display:Sprite"),StaticProtectedNs("flash.display:DisplayObjectContainer"),StaticProtectedNs("flash.display:InteractiveObject"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                                 getlocal1
+                                 getproperty QName(PackageNamespace(""),"sprite")
+                                 callpropvoid Multiname("gotoAndStop",[PrivateNamespace(null,"96"),PackageNamespace(""),PackageInternalNs(""),PrivateNamespace(null,"275"),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("UnitProfile"),StaticProtectedNs("UnitProfile"),StaticProtectedNs("flash.display:MovieClip"),StaticProtectedNs("flash.display:Sprite"),StaticProtectedNs("flash.display:DisplayObjectContainer"),StaticProtectedNs("flash.display:InteractiveObject"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")]), 1
+                                 getlocal0
+                                 jump ofs011b
+                                 returnvoid
+                                 callsuper QName(PackageNamespace("Box2D.Dynamics.Controllers"),"b2Controller"), 18
+                                 throw
+                        ofs011b:
+                                 getlex QName(PackageNamespace(""),"Stats_Attachments")
+                                 getproperty QName(PackageNamespace(""),"itemOb")
+                                 pushstring "HAMR"
+                                 getproperty MultinameL([PrivateNamespace(null,"96"),PackageNamespace(""),PackageInternalNs(""),PrivateNamespace(null,"275"),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("UnitProfile"),StaticProtectedNs("UnitProfile"),StaticProtectedNs("flash.display:MovieClip"),StaticProtectedNs("flash.display:Sprite"),StaticProtectedNs("flash.display:DisplayObjectContainer"),StaticProtectedNs("flash.display:InteractiveObject"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                                 initproperty QName(PrivateNamespace(null,"96"),"primaryAttach")
+                                 getlex QName(PackageNamespace(""),"Stats_Attachments")
+                                 jump ofs0135
+                                 convert_d
+                                 construct 69
+                                 pushwith
+                                 equals
+                                 typeof
+                        ofs0135:
+                                 getlocal0
+                                 getproperty QName(PackageNamespace(""),"arm1")
+                                 getproperty Multiname("gun",[PrivateNamespace(null,"96"),PackageNamespace(""),PackageInternalNs(""),PrivateNamespace(null,"275"),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("UnitProfile"),StaticProtectedNs("UnitProfile"),StaticProtectedNs("flash.display:MovieClip"),StaticProtectedNs("flash.display:Sprite"),StaticProtectedNs("flash.display:DisplayObjectContainer"),StaticProtectedNs("flash.display:InteractiveObject"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                                 getlocal0
+                                 getproperty QName(PrivateNamespace(null,"96"),"primaryAttach")
+                                 jump ofs0148
+                                 ifstrictne ofs0148
+                        ofs0148:
+                                 callpropvoid QName(PackageNamespace(""),"display"), 2
+                                 returnvoid
+                              end ; code
+                           end ; body
+                        end ; method
+                     }
+                     
+                     public function setSkin() : void
+                     {
+                        trait method QName(PackageNamespace(""),"setSkin")
+                           dispid 0
+                           method
+                              name null
+                              returns QName(PackageNamespace(""),"void")
+                              
+                              body
+                                 maxstack 6
+                                 localcount 1
+                                 initscopedepth 10
+                                 maxscopedepth 11
+                                 
+                                 code
+                                    getlocal0
+                                    pushscope
+                                    jump ofs000c
+                                    call 10
+                                    throw
+                                    newfunction 3494
+                           ofs000c:
+                                    getlocal0
+                                    getlocal0
+                                    getproperty QName(PackageNamespace(""),"head")
+                                    getlocal0
+                                    getproperty QName(PackageNamespace(""),"curHead")
+                                    jump ofs001d
+                                    ifle ofs001d
+                           ofs001d:
+                                    callpropvoid QName(PackageNamespace(""),"setPart"), 2
+                                    pushfalse
+                                    iffalse ofs002e
+                                    pushtrue
+                                    throw
+                                    popscope
+                                    divide
+                                    returnvalue
+                                    convert_d
+                                    setlocal0
+                                    lessequals
+                           ofs002e:
+                                    getlocal0
+                                    getlocal0
+                                    getproperty QName(PackageNamespace(""),"body")
+                                    getlocal0
+                                    getproperty QName(PackageNamespace(""),"curBody")
+                                    callpropvoid QName(PackageNamespace(""),"setPart"), 2
+                                    jump ofs0045
+                                    returnvalue
+                                    convert_d
+                                    setlocal0
+                                    setlocal3
+                                    pushfalse
+                                    in
+                           ofs0045:
+                                    getlocal0
+                                    getlocal0
+                                    getproperty QName(PackageNamespace(""),"arm2")
+                                    getproperty Multiname("armup2",[PrivateNamespace(null,"96"),PackageNamespace(""),PackageInternalNs(""),PrivateNamespace(null,"275"),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("UnitProfile"),StaticProtectedNs("UnitProfile"),StaticProtectedNs("flash.display:MovieClip"),StaticProtectedNs("flash.display:Sprite"),StaticProtectedNs("flash.display:DisplayObjectContainer"),StaticProtectedNs("flash.display:InteractiveObject"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                                    getlocal0
+                                    getproperty QName(PackageNamespace(""),"curBody")
+                                    callpropvoid QName(PackageNamespace(""),"setPart"), 2
+                                    getlocal0
+                                    getlocal0
+                                    getproperty QName(PackageNamespace(""),"arm2")
+                                    pushtrue
+                                    iftrue ofs0066
+                                    returnvoid
+                                    checkfilter
+                                    convert_d
+                                    coerce_s
+                                    bitxor
+                                    dup
+                                    setlocal3
+                           ofs0066:
+                                    getproperty Multiname("armlow2",[PrivateNamespace(null,"96"),PackageNamespace(""),PackageInternalNs(""),PrivateNamespace(null,"275"),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("UnitProfile"),StaticProtectedNs("UnitProfile"),StaticProtectedNs("flash.display:MovieClip"),StaticProtectedNs("flash.display:Sprite"),StaticProtectedNs("flash.display:DisplayObjectContainer"),StaticProtectedNs("flash.display:InteractiveObject"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                                    getlocal0
+                                    getproperty QName(PackageNamespace(""),"curBody")
+                                    callpropvoid QName(PackageNamespace(""),"setPart"), 2
+                                    getlocal0
+                                    jump ofs007a
+                                    iflt ofs007a
+                           ofs007a:
+                                    getlocal0
+                                    getproperty QName(PackageNamespace(""),"arm2")
+                                    getproperty Multiname("hand2",[PrivateNamespace(null,"96"),PackageNamespace(""),PackageInternalNs(""),PrivateNamespace(null,"275"),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("UnitProfile"),StaticProtectedNs("UnitProfile"),StaticProtectedNs("flash.display:MovieClip"),StaticProtectedNs("flash.display:Sprite"),StaticProtectedNs("flash.display:DisplayObjectContainer"),StaticProtectedNs("flash.display:InteractiveObject"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                                    getlocal0
+                                    pushtrue
+                                    iftrue ofs008e
+                                    returnvoid
+                                    setlocal2
+                                    callsupervoid QName(PackageNamespace(""),"useExtra"), 10
+                                    setlocal0
+                           ofs008e:
+                                    getproperty QName(PackageNamespace(""),"curBody")
+                                    callpropvoid QName(PackageNamespace(""),"setPart"), 2
+                                    getlocal0
+                                    getlocal0
+                                    getproperty QName(PackageNamespace(""),"arm1")
+                                    getproperty Multiname("armup1",[PrivateNamespace(null,"96"),PackageNamespace(""),PackageInternalNs(""),PrivateNamespace(null,"275"),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("UnitProfile"),StaticProtectedNs("UnitProfile"),StaticProtectedNs("flash.display:MovieClip"),StaticProtectedNs("flash.display:Sprite"),StaticProtectedNs("flash.display:DisplayObjectContainer"),StaticProtectedNs("flash.display:InteractiveObject"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                                    getlocal0
+                                    jump ofs00a8
+                                    returnvalue
+                                    newobject 86
+                                    pushwith
+                                    typeof
+                                    pushnull
+                           ofs00a8:
+                                    getproperty QName(PackageNamespace(""),"curBody")
+                                    callpropvoid QName(PackageNamespace(""),"setPart"), 2
+                                    getlocal0
+                                    getlocal0
+                                    getproperty QName(PackageNamespace(""),"arm1")
+                                    getproperty Multiname("armlow1",[PrivateNamespace(null,"96"),PackageNamespace(""),PackageInternalNs(""),PrivateNamespace(null,"275"),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("UnitProfile"),StaticProtectedNs("UnitProfile"),StaticProtectedNs("flash.display:MovieClip"),StaticProtectedNs("flash.display:Sprite"),StaticProtectedNs("flash.display:DisplayObjectContainer"),StaticProtectedNs("flash.display:InteractiveObject"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                                    getlocal0
+                                    getproperty QName(PackageNamespace(""),"curBody")
+                                    callpropvoid QName(PackageNamespace(""),"setPart"), 2
+                                    getlocal0
+                                    jump ofs00ca
+                                    popscope
+                                    bitor
+                                    returnvoid
+                                    returnvalue
+                                    pushwith
+                                    setlocal2
+                           ofs00ca:
+                                    getlocal0
+                                    getproperty QName(PackageNamespace(""),"arm1")
+                                    getproperty Multiname("hand1",[PrivateNamespace(null,"96"),PackageNamespace(""),PackageInternalNs(""),PrivateNamespace(null,"275"),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("UnitProfile"),StaticProtectedNs("UnitProfile"),StaticProtectedNs("flash.display:MovieClip"),StaticProtectedNs("flash.display:Sprite"),StaticProtectedNs("flash.display:DisplayObjectContainer"),StaticProtectedNs("flash.display:InteractiveObject"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                                    getlocal0
+                                    getproperty QName(PackageNamespace(""),"curBody")
+                                    jump ofs00dd
+                                    ifstrictne ofs00dd
+                           ofs00dd:
+                                    callpropvoid QName(PackageNamespace(""),"setPart"), 2
+                                    getlocal0
+                                    getlocal0
+                                    getproperty QName(PackageNamespace(""),"legup1")
+                                    jump ofs00ef
+                                    throw
+                                    callpropvoid QName(PackageNamespace("Box2D.Dynamics"),"b2TimeStep"), 18
+                                    throw
+                           ofs00ef:
+                                    getlocal0
+                                    getproperty QName(PackageNamespace(""),"curBody")
+                                    callpropvoid QName(PackageNamespace(""),"setPart"), 2
+                                    getlocal0
+                                    getlocal0
+                                    getproperty QName(PackageNamespace(""),"legup2")
+                                    getlocal0
+                                    getproperty QName(PackageNamespace(""),"curBody")
+                                    callpropvoid QName(PackageNamespace(""),"setPart"), 2
+                                    getlocal0
+                                    jump ofs010f
+                                    returnvoid
+                                    callproperty QName(PackageNamespace(""),"getRatio"), 12
+                                    setlocal2
+                           ofs010f:
+                                    getlocal0
+                                    getproperty QName(PackageNamespace(""),"leglow1")
+                                    getlocal0
+                                    getproperty QName(PackageNamespace(""),"curBody")
+                                    callpropvoid QName(PackageNamespace(""),"setPart"), 2
+                                    getlocal0
+                                    pushfalse
+                                    iffalse ofs0128
+                                    returnvoid
+                                    increment
+                                    newclass 33
+                                    pushwith
+                                    setlocal1
+                                    lessequals
+                           ofs0128:
+                                    getlocal0
+                                    getproperty QName(PackageNamespace(""),"leglow2")
+                                    getlocal0
+                                    getproperty QName(PackageNamespace(""),"curBody")
+                                    callpropvoid QName(PackageNamespace(""),"setPart"), 2
+                                    jump ofs013c
+                                    iflt ofs013c
+                           ofs013c:
+                                    getlocal0
+                                    getlocal0
+                                    getproperty QName(PackageNamespace(""),"foot1")
+                                    getlocal0
+                                    pushfalse
+                                    iffalse ofs014d
+                                    returnvoid
+                                    popscope
+                                    constructprop QName(PackageNamespace(""),"Function"), 7
+                                    pushwith
+                           ofs014d:
+                                    getproperty QName(PackageNamespace(""),"curBody")
+                                    callpropvoid QName(PackageNamespace(""),"setPart"), 2
+                                    getlocal0
+                                    getlocal0
+                                    getproperty QName(PackageNamespace(""),"foot2")
+                                    getlocal0
+                                    getproperty QName(PackageNamespace(""),"curBody")
+                                    callpropvoid QName(PackageNamespace(""),"setPart"), 2
+                                    pushtrue
+                                    iftrue ofs016d
+                                    pushtrue
+                                    throw
+                                    popscope
+                                    callsupervoid QName(PackageNamespace("Box2D.Collision.Shapes"),"b2MassData"), 6
+                                    pushwith
+                           ofs016d:
+                                    returnvoid
+                                 end ; code
+                              end ; body
+                           end ; method
+                        }
+                        
+                        public function setPart(param1:MovieClip, param2:uint) : void
+                        {
+                           trait method QName(PackageNamespace(""),"setPart")
+                              dispid 0
+                              method
+                                 name null
+                                 param QName(PackageNamespace("flash.display"),"MovieClip")
+                                 param QName(PackageNamespace(""),"uint")
+                                 returns QName(PackageNamespace(""),"void")
+                                 
+                                 body
+                                    maxstack 7
+                                    localcount 3
+                                    initscopedepth 10
+                                    maxscopedepth 11
+                                    
+                                    code
+                                       getlocal0
+                                       pushscope
+                                       jump ofs000d
+                                       call 9
+                                       throw
+                                       callstatic 3494, 9
+                              ofs000d:
+                                       getlocal1
+                                       getlocal2
+                                       getlex QName(PackageNamespace(""),"Stats_Classes")
+                                       getlex QName(PackageNamespace(""),"SD")
+                                       getproperty QName(PackageNamespace(""),"selClass")
+                                       jump ofs001f
+                                       ifeq ofs001f
+                              ofs001f:
+                                       callproperty QName(PackageNamespace(""),"getClass"), 1
+                                       getproperty Multiname("startFrame",[PrivateNamespace(null,"96"),PackageNamespace(""),PackageInternalNs(""),PrivateNamespace(null,"275"),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("UnitProfile"),StaticProtectedNs("UnitProfile"),StaticProtectedNs("flash.display:MovieClip"),StaticProtectedNs("flash.display:Sprite"),StaticProtectedNs("flash.display:DisplayObjectContainer"),StaticProtectedNs("flash.display:InteractiveObject"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                                       add
+                                       callpropvoid QName(PackageNamespace(""),"gotoAndStop"), 1
+                                       pushtrue
+                                       iftrue ofs0037
+                                       returnvoid
+                                       popscope
+                                       callproperty QName(PackageNamespace(""),"rand"), 18
+                                       setlocal1
+                              ofs0037:
+                                       getlocal1
+                                       getproperty Multiname("camo",[PrivateNamespace(null,"96"),PackageNamespace(""),PackageInternalNs(""),PrivateNamespace(null,"275"),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("UnitProfile"),StaticProtectedNs("UnitProfile"),StaticProtectedNs("flash.display:MovieClip"),StaticProtectedNs("flash.display:Sprite"),StaticProtectedNs("flash.display:DisplayObjectContainer"),StaticProtectedNs("flash.display:InteractiveObject"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                                       iftrue ofs0043
+                                       jump ofs0059
+                              ofs0043:
+                                       getlocal1
+                                       getproperty Multiname("camo",[PrivateNamespace(null,"96"),PackageNamespace(""),PackageInternalNs(""),PrivateNamespace(null,"275"),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("UnitProfile"),StaticProtectedNs("UnitProfile"),StaticProtectedNs("flash.display:MovieClip"),StaticProtectedNs("flash.display:Sprite"),StaticProtectedNs("flash.display:DisplayObjectContainer"),StaticProtectedNs("flash.display:InteractiveObject"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")])
+                                       getlocal0
+                                       getproperty QName(PackageNamespace(""),"curCamo")
+                                       jump ofs0055
+                                       setlocal0
+                                       increment
+                                       increment
+                                       istypelate
+                                       newactivation
+                                       decrement
+                              ofs0055:
+                                       callpropvoid Multiname("gotoAndStop",[PrivateNamespace(null,"96"),PackageNamespace(""),PackageInternalNs(""),PrivateNamespace(null,"275"),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("UnitProfile"),StaticProtectedNs("UnitProfile"),StaticProtectedNs("flash.display:MovieClip"),StaticProtectedNs("flash.display:Sprite"),StaticProtectedNs("flash.display:DisplayObjectContainer"),StaticProtectedNs("flash.display:InteractiveObject"),StaticProtectedNs("flash.display:DisplayObject"),StaticProtectedNs("flash.events:EventDispatcher")]), 1
+                              ofs0059:
+                                       returnvoid
+                                    end ; code
+                                 end ; body
+                              end ; method
+                           }
+                           
+                           function frame98() : *
+                           {
+                              trait method QName(PackageInternalNs(""),"frame98")
+                                 dispid 0
+                                 method
+                                    name null
+                                    returns null
+                                    
+                                    body
+                                       maxstack 5
+                                       localcount 1
+                                       initscopedepth 10
+                                       maxscopedepth 11
+                                       
+                                       code
+                                          getlocal0
+                                          jump ofs000c
+                                          call 6
+                                          throw
+                                          callstatic 3491, 6
+                                 ofs000c:
+                                          pushscope
+                                          findpropstrict QName(PackageNamespace(""),"gotoAndPlay")
+                                          pushstring "idle1"
+                                          callpropvoid QName(PackageNamespace(""),"gotoAndPlay"), 1
+                                          returnvoid
+                                          jump ofs001c
+                                 ofs001c:
+                                          ifle ofs0020
+                                       end ; code
+                                    end ; body
+                                 end ; method
+                              }
+                              
+                              function frame151() : *
+                              {
+                                 trait method QName(PackageInternalNs(""),"frame151")
+                                    dispid 0
+                                    method
+                                       name null
+                                       returns null
+                                       
+                                       body
+                                          maxstack 5
+                                          localcount 1
+                                          initscopedepth 10
+                                          maxscopedepth 11
+                                          
+                                          code
+                                             jump ofs000a
+                                             newclass 480
+                                             call 10
+                                             throw
+                                    ofs000a:
+                                             getlocal0
+                                             pushscope
+                                             findpropstrict QName(PackageNamespace(""),"gotoAndPlay")
+                                             pushstring "idle2"
+                                             callpropvoid QName(PackageNamespace(""),"gotoAndPlay"), 1
+                                             jump ofs001e
+                                             ifeq ofs001e
+                                    ofs001e:
+                                             returnvoid
+                                          end ; code
+                                       end ; body
+                                    end ; method
+                                 }
+                                 
+                                 function frame249() : *
+                                 {
+                                    trait method QName(PackageInternalNs(""),"frame249")
+                                       dispid 0
+                                       method
+                                          name null
+                                          returns null
+                                          
+                                          body
+                                             maxstack 5
+                                             localcount 1
+                                             initscopedepth 10
+                                             maxscopedepth 11
+                                             
+                                             code
+                                                jump ofs000a
+                                                newfunction 3491
+                                                call 5
+                                                throw
+                                       ofs000a:
+                                                getlocal0
+                                                pushscope
+                                                findpropstrict QName(PackageNamespace(""),"gotoAndPlay")
+                                                pushstring "idle3"
+                                                callpropvoid QName(PackageNamespace(""),"gotoAndPlay"), 1
+                                                jump ofs001e
+                                                ifne ofs001e
+                                       ofs001e:
+                                                returnvoid
+                                             end ; code
+                                          end ; body
+                                       end ; method
+                                    }
+                                    
+                                    function frame354() : *
+                                    {
+                                       trait method QName(PackageInternalNs(""),"frame354")
+                                          dispid 0
+                                          method
+                                             name null
+                                             returns null
+                                             
+                                             body
+                                                maxstack 5
+                                                localcount 1
+                                                initscopedepth 10
+                                                maxscopedepth 11
+                                                
+                                                code
+                                                   getlocal0
+                                                   pushscope
+                                                   jump ofs000c
+                                                   newclass 477
+                                                   call 8
+                                                   throw
+                                          ofs000c:
+                                                   findpropstrict QName(PackageNamespace(""),"gotoAndPlay")
+                                                   pushstring "idle4"
+                                                   callpropvoid QName(PackageNamespace(""),"gotoAndPlay"), 1
+                                                   returnvoid
+                                                end ; code
+                                             end ; body
+                                          end ; method
+                                       }
+                                       
+                                       function frame435() : *
+                                       {
+                                          trait method QName(PackageInternalNs(""),"frame435")
+                                             dispid 0
+                                             method
+                                                name null
+                                                returns null
+                                                
+                                                body
+                                                   maxstack 5
+                                                   localcount 1
+                                                   initscopedepth 10
+                                                   maxscopedepth 11
+                                                   
+                                                   code
+                                                      getlocal0
+                                                      pushscope
+                                                      jump ofs000c
+                                                      newclass 478
+                                                      call 5
+                                                      throw
+                                             ofs000c:
+                                                      findpropstrict QName(PackageNamespace(""),"gotoAndPlay")
+                                                      pushstring "idle5"
+                                                      callpropvoid QName(PackageNamespace(""),"gotoAndPlay"), 1
+                                                      returnvoid
+                                                   end ; code
+                                                end ; body
+                                             end ; method
+                                          }
+                                       }
+                                    }

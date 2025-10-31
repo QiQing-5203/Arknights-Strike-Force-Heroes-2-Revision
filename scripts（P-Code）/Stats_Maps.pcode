@@ -1,0 +1,1417 @@
+package
+{
+   public class Stats_Maps
+   {
+      
+      public static var mapOrder:Array;
+      
+      {
+         method
+            name null
+            returns null
+            
+            body
+               maxstack 4
+               localcount 1
+               initscopedepth 3
+               maxscopedepth 4
+               
+               code
+                  jump ofs000b
+                  call 10
+                  throw
+                  callmethod 3490, 10
+         ofs000b:
+                  getlocal0
+                  pushscope
+                  returnvoid
+               end ; code
+            end ; body
+         end ; method
+      }
+      
+      public function Stats_Maps()
+      {
+         method
+            name null
+            returns null
+            
+            body
+               maxstack 4
+               localcount 1
+               initscopedepth 4
+               maxscopedepth 5
+               
+               code
+                  getlocal0
+                  jump ofs000c
+                  callstatic 3490, 9
+                  call 9
+                  throw
+         ofs000c:
+                  pushscope
+                  getlocal0
+                  constructsuper 0
+                  returnvoid
+               end ; code
+            end ; body
+         end ; method
+      }
+      
+      public static function Init() : void
+      {
+         trait method QName(PackageNamespace(""),"Init")
+            flag FINAL
+            dispid 3
+            method
+               name null
+               returns QName(PackageNamespace(""),"void")
+               
+               body
+                  maxstack 14
+                  localcount 1
+                  initscopedepth 3
+                  maxscopedepth 4
+                  
+                  code
+                     getlocal0
+                     pushscope
+                     jump ofs000d
+                     callmethod 3494, 9
+                     call 9
+                     throw
+            ofs000d:
+                     findproperty QName(PackageNamespace(""),"mapOrder")
+                     pushstring "factory"
+                     pushstring "space"
+                     pushstring "base"
+                     pushstring "convoy"
+                     jump ofs0024
+                     ifne ofs0024
+            ofs0024:
+                     pushstring "convoyStill"
+                     pushstring "mansion"
+                     pushtrue
+                     iftrue ofs0036
+                     returnvoid
+                     pushscope
+                     newfunction 56
+                     throw
+                     bitxor
+                     in
+            ofs0036:
+                     pushstring "mansionFull"
+                     pushstring "mansionLab"
+                     pushstring "market"
+                     pushstring "marketDay"
+                     pushstring "mech"
+                     pushstring "doubleMech"
+                     pushstring "factoryMech"
+                     newarray 13
+                     setproperty QName(PackageNamespace(""),"mapOrder")
+                     returnvoid
+                  end ; code
+               end ; body
+            end ; method
+         }
+         
+         public static function getMap(param1:String) : Object
+         {
+            trait method QName(PackageNamespace(""),"getMap")
+               flag FINAL
+               dispid 4
+               method
+                  name null
+                  param QName(PackageNamespace(""),"String")
+                  returns QName(PackageNamespace(""),"Object")
+                  
+                  body
+                     maxstack 5
+                     localcount 4
+                     initscopedepth 3
+                     maxscopedepth 4
+                     
+                     code
+                        getlocal0
+                        pushscope
+                        jump ofs000d
+                        callmethod 3490, 9
+                        call 9
+                        throw
+               ofs000d:
+                        newobject 0
+                        coerce QName(PackageNamespace(""),"Object")
+                        setlocal2
+                        getlocal2
+                        getlocal1
+                        jump ofs001c
+                        ifeq ofs001c
+               ofs001c:
+                        setproperty Multiname("id",[PrivateNamespace(null,"160"),PackageNamespace(""),PrivateNamespace(null,"161"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Stats_Maps"),StaticProtectedNs("Stats_Maps")])
+                        jump ofs0798
+                        pushwith
+                        setlocal2
+                        pushfalse
+                        iffalse ofs002a
+               ofs002a:
+                        returnvoid
+                        coerce_s
+                        newfunction 120
+                        throw
+                        setlocal3
+                        lshift
+               ofs0031:
+                        label
+                        getlocal2
+                        pushstring "factory"
+                        setproperty Multiname("map",[PrivateNamespace(null,"160"),PackageNamespace(""),PrivateNamespace(null,"161"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Stats_Maps"),StaticProtectedNs("Stats_Maps")])
+                        getlocal2
+                        pushstring "mechCovered"
+                        setproperty Multiname("bg1",[PrivateNamespace(null,"160"),PackageNamespace(""),PrivateNamespace(null,"161"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Stats_Maps"),StaticProtectedNs("Stats_Maps")])
+                        getlocal2
+                        pushstring "factoryb"
+                        pushtrue
+                        iftrue ofs004f
+                        returnvoid
+                        bitxor
+                        callmethod 102, 24
+                        pop
+               ofs004f:
+                        setproperty Multiname("bg2",[PrivateNamespace(null,"160"),PackageNamespace(""),PrivateNamespace(null,"161"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Stats_Maps"),StaticProtectedNs("Stats_Maps")])
+                        getlocal2
+                        pushstring ""
+                        setproperty Multiname("sky",[PrivateNamespace(null,"160"),PackageNamespace(""),PrivateNamespace(null,"161"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Stats_Maps"),StaticProtectedNs("Stats_Maps")])
+                        getlocal2
+                        pushstring "factory"
+                        setproperty Multiname("particles",[PrivateNamespace(null,"160"),PackageNamespace(""),PrivateNamespace(null,"161"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Stats_Maps"),StaticProtectedNs("Stats_Maps")])
+                        getlocal2
+                        jump ofs006a
+                        in
+                        newfunction 25
+                        pushwith
+                        pushfalse
+                        pop
+               ofs006a:
+                        pushstring "切尔诺伯格 荒废工厂"
+                        setproperty Multiname("name",[PrivateNamespace(null,"160"),PackageNamespace(""),PrivateNamespace(null,"161"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Stats_Maps"),StaticProtectedNs("Stats_Maps")])
+                        getlocal2
+                        pushstring "A speeding train carrying a live nuclear missile."
+                        setproperty Multiname("desc",[PrivateNamespace(null,"160"),PackageNamespace(""),PrivateNamespace(null,"161"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Stats_Maps"),StaticProtectedNs("Stats_Maps")])
+                        jump ofs007f
+                        ifeq ofs007f
+               ofs007f:
+                        getlocal2
+                        pushstring ""
+                        setproperty Multiname("phys",[PrivateNamespace(null,"160"),PackageNamespace(""),PrivateNamespace(null,"161"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Stats_Maps"),StaticProtectedNs("Stats_Maps")])
+                        getlocal2
+                        pushstring ""
+                        jump ofs0092
+                        popscope
+                        newfunction 53
+                        pop
+                        modulo
+                        setlocal2
+               ofs0092:
+                        setproperty Multiname("extra",[PrivateNamespace(null,"160"),PackageNamespace(""),PrivateNamespace(null,"161"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Stats_Maps"),StaticProtectedNs("Stats_Maps")])
+                        getlocal2
+                        pushbyte 0
+                        setproperty Multiname("water",[PrivateNamespace(null,"160"),PackageNamespace(""),PrivateNamespace(null,"161"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Stats_Maps"),StaticProtectedNs("Stats_Maps")])
+                        jump ofs096f
+                        ifstricteq ofs00a3
+               ofs00a3:
+                        label
+                        getlocal2
+                        pushstring "factory"
+                        setproperty Multiname("map",[PrivateNamespace(null,"160"),PackageNamespace(""),PrivateNamespace(null,"161"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Stats_Maps"),StaticProtectedNs("Stats_Maps")])
+                        getlocal2
+                        pushfalse
+                        iffalse ofs00b7
+                        returnvoid
+                        greaterequals
+                        constructprop QName(PackageNamespace("Box2D.Dynamics.Contacts"),"b2ContactConstraint"), 18
+                        throw
+               ofs00b7:
+                        pushstring "mech"
+                        setproperty Multiname("bg1",[PrivateNamespace(null,"160"),PackageNamespace(""),PrivateNamespace(null,"161"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Stats_Maps"),StaticProtectedNs("Stats_Maps")])
+                        getlocal2
+                        pushstring "factoryb"
+                        setproperty Multiname("bg2",[PrivateNamespace(null,"160"),PackageNamespace(""),PrivateNamespace(null,"161"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Stats_Maps"),StaticProtectedNs("Stats_Maps")])
+                        getlocal2
+                        pushstring ""
+                        jump ofs00d0
+                        lshift
+                        callsupervoid QName(PackageNamespace("Box2D.Collision"),"b2ManifoldPoint"), 15
+                        throw
+               ofs00d0:
+                        setproperty Multiname("sky",[PrivateNamespace(null,"160"),PackageNamespace(""),PrivateNamespace(null,"161"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Stats_Maps"),StaticProtectedNs("Stats_Maps")])
+                        getlocal2
+                        pushstring "factory"
+                        setproperty Multiname("particles",[PrivateNamespace(null,"160"),PackageNamespace(""),PrivateNamespace(null,"161"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Stats_Maps"),StaticProtectedNs("Stats_Maps")])
+                        getlocal2
+                        jump ofs00e3
+                        ifne ofs00e3
+               ofs00e3:
+                        pushstring "切尔诺伯格 指挥塔 底层"
+                        setproperty Multiname("name",[PrivateNamespace(null,"160"),PackageNamespace(""),PrivateNamespace(null,"161"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Stats_Maps"),StaticProtectedNs("Stats_Maps")])
+                        jump ofs00f3
+                        greaterequals
+                        returnvoid
+                        throw
+                        modulo
+                        greaterequals
+                        returnvalue
+               ofs00f3:
+                        getlocal2
+                        pushstring "A speeding train carrying a live nuclear missile."
+                        setproperty Multiname("desc",[PrivateNamespace(null,"160"),PackageNamespace(""),PrivateNamespace(null,"161"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Stats_Maps"),StaticProtectedNs("Stats_Maps")])
+                        getlocal2
+                        pushstring ""
+                        setproperty Multiname("phys",[PrivateNamespace(null,"160"),PackageNamespace(""),PrivateNamespace(null,"161"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Stats_Maps"),StaticProtectedNs("Stats_Maps")])
+                        pushfalse
+                        iffalse ofs010d
+                        pushfalse
+                        returnvalue
+                        multiply
+                        setlocal1
+                        lshift
+                        setlocal2
+                        setlocal0
+                        setlocal0
+               ofs010d:
+                        getlocal2
+                        pushstring "factoryMech"
+                        setproperty Multiname("extra",[PrivateNamespace(null,"160"),PackageNamespace(""),PrivateNamespace(null,"161"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Stats_Maps"),StaticProtectedNs("Stats_Maps")])
+                        getlocal2
+                        pushbyte 0
+                        setproperty Multiname("water",[PrivateNamespace(null,"160"),PackageNamespace(""),PrivateNamespace(null,"161"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Stats_Maps"),StaticProtectedNs("Stats_Maps")])
+                        jump ofs096f
+                        popscope
+                        setlocal0
+               ofs0120:
+                        label
+                        jump ofs012a
+                        newactivation
+                        constructprop QName(PackageNamespace("Box2D.Dynamics.Joints"),"b2LineJointDef"), 9
+                        pushwith
+               ofs012a:
+                        getlocal2
+                        pushstring "space"
+                        setproperty Multiname("map",[PrivateNamespace(null,"160"),PackageNamespace(""),PrivateNamespace(null,"161"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Stats_Maps"),StaticProtectedNs("Stats_Maps")])
+                        getlocal2
+                        pushstring ""
+                        jump ofs013c
+                        ifstricteq ofs013c
+               ofs013c:
+                        setproperty Multiname("bg1",[PrivateNamespace(null,"160"),PackageNamespace(""),PrivateNamespace(null,"161"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Stats_Maps"),StaticProtectedNs("Stats_Maps")])
+                        getlocal2
+                        jump ofs014a
+                        popscope
+                        newfunction 125
+                        throw
+                        greaterequals
+                        setlocal1
+               ofs014a:
+                        pushstring "earth"
+                        setproperty Multiname("bg2",[PrivateNamespace(null,"160"),PackageNamespace(""),PrivateNamespace(null,"161"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Stats_Maps"),StaticProtectedNs("Stats_Maps")])
+                        getlocal2
+                        pushstring ""
+                        setproperty Multiname("sky",[PrivateNamespace(null,"160"),PackageNamespace(""),PrivateNamespace(null,"161"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Stats_Maps"),StaticProtectedNs("Stats_Maps")])
+                        getlocal2
+                        pushstring "space"
+                        setproperty Multiname("particles",[PrivateNamespace(null,"160"),PackageNamespace(""),PrivateNamespace(null,"161"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Stats_Maps"),StaticProtectedNs("Stats_Maps")])
+                        getlocal2
+                        pushstring "“引航者”空间站"
+                        jump ofs016b
+                        in
+                        pushwith
+                        newfunction 84
+                        throw
+                        setlocal2
+               ofs016b:
+                        setproperty Multiname("name",[PrivateNamespace(null,"160"),PackageNamespace(""),PrivateNamespace(null,"161"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Stats_Maps"),StaticProtectedNs("Stats_Maps")])
+                        getlocal2
+                        pushstring "A speeding train carrying a live nuclear missile."
+                        setproperty Multiname("desc",[PrivateNamespace(null,"160"),PackageNamespace(""),PrivateNamespace(null,"161"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Stats_Maps"),StaticProtectedNs("Stats_Maps")])
+                        getlocal2
+                        pushstring "space"
+                        setproperty Multiname("phys",[PrivateNamespace(null,"160"),PackageNamespace(""),PrivateNamespace(null,"161"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Stats_Maps"),StaticProtectedNs("Stats_Maps")])
+                        getlocal2
+                        jump ofs0187
+                        popscope
+                        callproplex QName(PackageNamespace(""),"getOrdinal"), 12
+                        setlocal3
+               ofs0187:
+                        pushstring "space"
+                        setproperty Multiname("extra",[PrivateNamespace(null,"160"),PackageNamespace(""),PrivateNamespace(null,"161"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Stats_Maps"),StaticProtectedNs("Stats_Maps")])
+                        getlocal2
+                        pushbyte 0
+                        setproperty Multiname("water",[PrivateNamespace(null,"160"),PackageNamespace(""),PrivateNamespace(null,"161"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Stats_Maps"),StaticProtectedNs("Stats_Maps")])
+                        jump ofs019b
+                        ifeq ofs019b
+               ofs019b:
+                        jump ofs096f
+                        pushwith
+                        setlocal1
+               ofs01a1:
+                        label
+                        getlocal2
+                        pushstring "convoy"
+                        jump ofs01af
+                        returnvoid
+                        callproperty QName(PackageNamespace("Box2D.Collision"),"b2DistanceInput"), 18
+                        throw
+               ofs01af:
+                        setproperty Multiname("map",[PrivateNamespace(null,"160"),PackageNamespace(""),PrivateNamespace(null,"161"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Stats_Maps"),StaticProtectedNs("Stats_Maps")])
+                        getlocal2
+                        pushstring "desert"
+                        setproperty Multiname("bg1",[PrivateNamespace(null,"160"),PackageNamespace(""),PrivateNamespace(null,"161"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Stats_Maps"),StaticProtectedNs("Stats_Maps")])
+                        getlocal2
+                        pushstring "desertb"
+                        setproperty Multiname("bg2",[PrivateNamespace(null,"160"),PackageNamespace(""),PrivateNamespace(null,"161"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Stats_Maps"),StaticProtectedNs("Stats_Maps")])
+                        getlocal2
+                        jump ofs01cb
+                        convert_s
+                        setlocal0
+                        istypelate
+                        pop
+                        returnvoid
+                        pushfalse
+               ofs01cb:
+                        pushstring "desert"
+                        setproperty Multiname("sky",[PrivateNamespace(null,"160"),PackageNamespace(""),PrivateNamespace(null,"161"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Stats_Maps"),StaticProtectedNs("Stats_Maps")])
+                        getlocal2
+                        pushstring "convoy"
+                        setproperty Multiname("particles",[PrivateNamespace(null,"160"),PackageNamespace(""),PrivateNamespace(null,"161"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Stats_Maps"),StaticProtectedNs("Stats_Maps")])
+                        getlocal2
+                        pushstring "护航车队"
+                        setproperty Multiname("name",[PrivateNamespace(null,"160"),PackageNamespace(""),PrivateNamespace(null,"161"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Stats_Maps"),StaticProtectedNs("Stats_Maps")])
+                        getlocal2
+                        pushstring "A speeding train carrying a live nuclear missile."
+                        jump ofs01ed
+                        setlocal3
+                        dxns "fl.motion"
+                        pushwith
+                        in
+                        nextname
+               ofs01ed:
+                        setproperty Multiname("desc",[PrivateNamespace(null,"160"),PackageNamespace(""),PrivateNamespace(null,"161"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Stats_Maps"),StaticProtectedNs("Stats_Maps")])
+                        getlocal2
+                        pushstring "convoy"
+                        setproperty Multiname("phys",[PrivateNamespace(null,"160"),PackageNamespace(""),PrivateNamespace(null,"161"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Stats_Maps"),StaticProtectedNs("Stats_Maps")])
+                        getlocal2
+                        jump ofs0200
+                        ifstricteq ofs0200
+               ofs0200:
+                        pushstring "convoy"
+                        setproperty Multiname("extra",[PrivateNamespace(null,"160"),PackageNamespace(""),PrivateNamespace(null,"161"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Stats_Maps"),StaticProtectedNs("Stats_Maps")])
+                        getlocal2
+                        pushbyte 0
+                        setproperty Multiname("water",[PrivateNamespace(null,"160"),PackageNamespace(""),PrivateNamespace(null,"161"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Stats_Maps"),StaticProtectedNs("Stats_Maps")])
+                        pushfalse
+                        iffalse ofs0218
+                        returnvoid
+                        popscope
+                        newfunction 72
+                        throw
+                        bitor
+                        checkfilter
+               ofs0218:
+                        jump ofs096f
+                        pushwith
+                        setlocal2
+               ofs021e:
+                        label
+                        getlocal2
+                        pushstring "convoyStill"
+                        setproperty Multiname("map",[PrivateNamespace(null,"160"),PackageNamespace(""),PrivateNamespace(null,"161"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Stats_Maps"),StaticProtectedNs("Stats_Maps")])
+                        getlocal2
+                        pushstring "desert2"
+                        jump ofs0234
+                        returnvalue
+                        setlocal0
+                        newactivation
+                        returnvalue
+                        returnvoid
+                        pushscope
+               ofs0234:
+                        setproperty Multiname("bg1",[PrivateNamespace(null,"160"),PackageNamespace(""),PrivateNamespace(null,"161"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Stats_Maps"),StaticProtectedNs("Stats_Maps")])
+                        getlocal2
+                        pushstring "desertb2"
+                        setproperty Multiname("bg2",[PrivateNamespace(null,"160"),PackageNamespace(""),PrivateNamespace(null,"161"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Stats_Maps"),StaticProtectedNs("Stats_Maps")])
+                        getlocal2
+                        pushstring "desert2"
+                        jump ofs024c
+                        pushnull
+                        pushwith
+                        setlocal0
+                        greaterequals
+                        setlocal2
+                        pushnull
+               ofs024c:
+                        setproperty Multiname("sky",[PrivateNamespace(null,"160"),PackageNamespace(""),PrivateNamespace(null,"161"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Stats_Maps"),StaticProtectedNs("Stats_Maps")])
+                        getlocal2
+                        pushstring "convoyStill"
+                        setproperty Multiname("particles",[PrivateNamespace(null,"160"),PackageNamespace(""),PrivateNamespace(null,"161"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Stats_Maps"),StaticProtectedNs("Stats_Maps")])
+                        getlocal2
+                        jump ofs025f
+                        ifge ofs025f
+               ofs025f:
+                        pushstring "失联车队"
+                        setproperty Multiname("name",[PrivateNamespace(null,"160"),PackageNamespace(""),PrivateNamespace(null,"161"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Stats_Maps"),StaticProtectedNs("Stats_Maps")])
+                        getlocal2
+                        pushstring "A speeding train carrying a live nuclear missile."
+                        jump ofs0273
+                        setlocal3
+                        pushwith
+                        newfunction 45
+                        throw
+                        convert_s
+               ofs0273:
+                        setproperty Multiname("desc",[PrivateNamespace(null,"160"),PackageNamespace(""),PrivateNamespace(null,"161"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Stats_Maps"),StaticProtectedNs("Stats_Maps")])
+                        getlocal2
+                        pushstring ""
+                        setproperty Multiname("phys",[PrivateNamespace(null,"160"),PackageNamespace(""),PrivateNamespace(null,"161"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Stats_Maps"),StaticProtectedNs("Stats_Maps")])
+                        getlocal2
+                        pushstring ""
+                        setproperty Multiname("extra",[PrivateNamespace(null,"160"),PackageNamespace(""),PrivateNamespace(null,"161"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Stats_Maps"),StaticProtectedNs("Stats_Maps")])
+                        getlocal2
+                        pushbyte 0
+                        setproperty Multiname("water",[PrivateNamespace(null,"160"),PackageNamespace(""),PrivateNamespace(null,"161"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Stats_Maps"),StaticProtectedNs("Stats_Maps")])
+                        pushtrue
+                        iftrue ofs0293
+                        returnvoid
+                        popscope
+                        callstatic 85, 24
+                        pop
+               ofs0293:
+                        jump ofs096f
+                        iflt ofs029b
+               ofs029b:
+                        label
+                        getlocal2
+                        pushstring "mansion"
+                        setproperty Multiname("map",[PrivateNamespace(null,"160"),PackageNamespace(""),PrivateNamespace(null,"161"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Stats_Maps"),StaticProtectedNs("Stats_Maps")])
+                        getlocal2
+                        pushstring "mansion"
+                        setproperty Multiname("bg1",[PrivateNamespace(null,"160"),PackageNamespace(""),PrivateNamespace(null,"161"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Stats_Maps"),StaticProtectedNs("Stats_Maps")])
+                        getlocal2
+                        pushstring "moon"
+                        jump ofs02b8
+                        checkfilter
+                        newfunction 41
+                        throw
+                        returnvalue
+                        returnvalue
+               ofs02b8:
+                        setproperty Multiname("bg2",[PrivateNamespace(null,"160"),PackageNamespace(""),PrivateNamespace(null,"161"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Stats_Maps"),StaticProtectedNs("Stats_Maps")])
+                        getlocal2
+                        pushstring "night"
+                        setproperty Multiname("sky",[PrivateNamespace(null,"160"),PackageNamespace(""),PrivateNamespace(null,"161"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Stats_Maps"),StaticProtectedNs("Stats_Maps")])
+                        getlocal2
+                        jump ofs02cb
+                        ifge ofs02cb
+               ofs02cb:
+                        pushstring "mansionNight"
+                        setproperty Multiname("particles",[PrivateNamespace(null,"160"),PackageNamespace(""),PrivateNamespace(null,"161"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Stats_Maps"),StaticProtectedNs("Stats_Maps")])
+                        getlocal2
+                        jump ofs02dc
+                        setlocal2
+                        setlocal3
+                        decrement
+                        throw
+                        setlocal2
+                        setlocal2
+               ofs02dc:
+                        pushstring "白面鸮的宅邸"
+                        setproperty Multiname("name",[PrivateNamespace(null,"160"),PackageNamespace(""),PrivateNamespace(null,"161"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Stats_Maps"),StaticProtectedNs("Stats_Maps")])
+                        getlocal2
+                        pushstring "A large smelting plant that houses a dark secret. Beware the lava down pour."
+                        setproperty Multiname("desc",[PrivateNamespace(null,"160"),PackageNamespace(""),PrivateNamespace(null,"161"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Stats_Maps"),StaticProtectedNs("Stats_Maps")])
+                        getlocal2
+                        pushstring ""
+                        setproperty Multiname("phys",[PrivateNamespace(null,"160"),PackageNamespace(""),PrivateNamespace(null,"161"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Stats_Maps"),StaticProtectedNs("Stats_Maps")])
+                        jump ofs02f9
+                        setlocal1
+                        lessequals
+                        checkfilter
+                        instanceof
+                        returnvoid
+                        istypelate
+               ofs02f9:
+                        getlocal2
+                        pushstring ""
+                        setproperty Multiname("extra",[PrivateNamespace(null,"160"),PackageNamespace(""),PrivateNamespace(null,"161"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Stats_Maps"),StaticProtectedNs("Stats_Maps")])
+                        getlocal2
+                        pushint 39423
+                        setproperty Multiname("water",[PrivateNamespace(null,"160"),PackageNamespace(""),PrivateNamespace(null,"161"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Stats_Maps"),StaticProtectedNs("Stats_Maps")])
+                        jump ofs096f
+                        ifstricteq ofs030d
+               ofs030d:
+                        jump ofs0311
+               ofs0311:
+                        pop
+                        call 30
+                        pushwith
+                        setlocal2
+                        convert_s
+               ofs0317:
+                        label
+                        getlocal2
+                        pushstring "mansion"
+                        setproperty Multiname("map",[PrivateNamespace(null,"160"),PackageNamespace(""),PrivateNamespace(null,"161"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Stats_Maps"),StaticProtectedNs("Stats_Maps")])
+                        getlocal2
+                        jump ofs0328
+                        ifstricteq ofs0328
+               ofs0328:
+                        pushstring "mansion2"
+                        setproperty Multiname("bg1",[PrivateNamespace(null,"160"),PackageNamespace(""),PrivateNamespace(null,"161"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Stats_Maps"),StaticProtectedNs("Stats_Maps")])
+                        getlocal2
+                        jump ofs0338
+                        popscope
+                        callsupervoid QName(PackageNamespace(""),"Inventory_Gun"), 15
+                        throw
+               ofs0338:
+                        pushstring ""
+                        setproperty Multiname("bg2",[PrivateNamespace(null,"160"),PackageNamespace(""),PrivateNamespace(null,"161"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Stats_Maps"),StaticProtectedNs("Stats_Maps")])
+                        getlocal2
+                        pushstring "dusk"
+                        setproperty Multiname("sky",[PrivateNamespace(null,"160"),PackageNamespace(""),PrivateNamespace(null,"161"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Stats_Maps"),StaticProtectedNs("Stats_Maps")])
+                        getlocal2
+                        pushstring "mansionDay"
+                        setproperty Multiname("particles",[PrivateNamespace(null,"160"),PackageNamespace(""),PrivateNamespace(null,"161"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Stats_Maps"),StaticProtectedNs("Stats_Maps")])
+                        pushtrue
+                        iftrue ofs0358
+                        pushfalse
+                        returnvalue
+                        setlocal2
+                        newfunction 72
+                        throw
+                        nextname
+                        add
+               ofs0358:
+                        getlocal2
+                        pushstring "白面鸮的宅邸（黄昏）"
+                        setproperty Multiname("name",[PrivateNamespace(null,"160"),PackageNamespace(""),PrivateNamespace(null,"161"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Stats_Maps"),StaticProtectedNs("Stats_Maps")])
+                        getlocal2
+                        pushstring "A large smelting plant that houses a dark secret. Beware the lava down pour."
+                        setproperty Multiname("desc",[PrivateNamespace(null,"160"),PackageNamespace(""),PrivateNamespace(null,"161"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Stats_Maps"),StaticProtectedNs("Stats_Maps")])
+                        getlocal2
+                        pushstring ""
+                        pushtrue
+                        iftrue ofs0376
+                        pushfalse
+                        returnvalue
+                        setlocal2
+                        in
+                        typeof
+                        pushscope
+                        nextname
+                        instanceof
+               ofs0376:
+                        setproperty Multiname("phys",[PrivateNamespace(null,"160"),PackageNamespace(""),PrivateNamespace(null,"161"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Stats_Maps"),StaticProtectedNs("Stats_Maps")])
+                        getlocal2
+                        pushstring ""
+                        setproperty Multiname("extra",[PrivateNamespace(null,"160"),PackageNamespace(""),PrivateNamespace(null,"161"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Stats_Maps"),StaticProtectedNs("Stats_Maps")])
+                        getlocal2
+                        jump ofs0388
+                        iflt ofs0388
+               ofs0388:
+                        pushint 39423
+                        setproperty Multiname("water",[PrivateNamespace(null,"160"),PackageNamespace(""),PrivateNamespace(null,"161"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Stats_Maps"),StaticProtectedNs("Stats_Maps")])
+                        jump ofs096f
+                        ifne ofs0395
+               ofs0395:
+                        label
+                        getlocal2
+                        pushtrue
+                        iftrue ofs03a4
+                        pushfalse
+                        returnvalue
+                        lessequals
+                        pushwith
+                        pushfalse
+                        throw
+                        throw
+                        pop
+               ofs03a4:
+                        pushstring "mansionFull"
+                        setproperty Multiname("map",[PrivateNamespace(null,"160"),PackageNamespace(""),PrivateNamespace(null,"161"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Stats_Maps"),StaticProtectedNs("Stats_Maps")])
+                        getlocal2
+                        pushstring "mansion2"
+                        setproperty Multiname("bg1",[PrivateNamespace(null,"160"),PackageNamespace(""),PrivateNamespace(null,"161"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Stats_Maps"),StaticProtectedNs("Stats_Maps")])
+                        getlocal2
+                        jump ofs03bc
+                        negate
+                        pushwith
+                        newfunction 55
+                        throw
+                        pushscope
+               ofs03bc:
+                        pushstring ""
+                        setproperty Multiname("bg2",[PrivateNamespace(null,"160"),PackageNamespace(""),PrivateNamespace(null,"161"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Stats_Maps"),StaticProtectedNs("Stats_Maps")])
+                        getlocal2
+                        pushstring "dusk"
+                        setproperty Multiname("sky",[PrivateNamespace(null,"160"),PackageNamespace(""),PrivateNamespace(null,"161"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Stats_Maps"),StaticProtectedNs("Stats_Maps")])
+                        getlocal2
+                        pushstring "mansionDay"
+                        setproperty Multiname("particles",[PrivateNamespace(null,"160"),PackageNamespace(""),PrivateNamespace(null,"161"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Stats_Maps"),StaticProtectedNs("Stats_Maps")])
+                        getlocal2
+                        pushstring "白面鸮的宅邸与地下实验室"
+                        pushfalse
+                        iffalse ofs03e0
+                        pushfalse
+                        returnvalue
+                        popscope
+                        pushwith
+                        newfunction 74
+                        throw
+                        setlocal0
+               ofs03e0:
+                        setproperty Multiname("name",[PrivateNamespace(null,"160"),PackageNamespace(""),PrivateNamespace(null,"161"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Stats_Maps"),StaticProtectedNs("Stats_Maps")])
+                        getlocal2
+                        pushstring "A large smelting plant that houses a dark secret. Beware the lava down pour."
+                        setproperty Multiname("desc",[PrivateNamespace(null,"160"),PackageNamespace(""),PrivateNamespace(null,"161"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Stats_Maps"),StaticProtectedNs("Stats_Maps")])
+                        getlocal2
+                        jump ofs03f3
+                        ifeq ofs03f3
+               ofs03f3:
+                        pushstring ""
+                        setproperty Multiname("phys",[PrivateNamespace(null,"160"),PackageNamespace(""),PrivateNamespace(null,"161"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Stats_Maps"),StaticProtectedNs("Stats_Maps")])
+                        getlocal2
+                        pushstring ""
+                        jump ofs0405
+                        popscope
+                        newfunction 66
+                        pushwith
+                        bitand
+                        lshift
+               ofs0405:
+                        setproperty Multiname("extra",[PrivateNamespace(null,"160"),PackageNamespace(""),PrivateNamespace(null,"161"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Stats_Maps"),StaticProtectedNs("Stats_Maps")])
+                        getlocal2
+                        pushint 39423
+                        setproperty Multiname("water",[PrivateNamespace(null,"160"),PackageNamespace(""),PrivateNamespace(null,"161"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Stats_Maps"),StaticProtectedNs("Stats_Maps")])
+                        jump ofs096f
+                        pushwith
+                        setlocal1
+                        getlocal3
+               ofs0415:
+                        label
+                        getlocal2
+                        jump ofs0420
+                        popscope
+                        callproplex QName(PackageNamespace("fl.core"),"UIComponent"), 21
+                        pop
+               ofs0420:
+                        pushstring "mansionLab"
+                        setproperty Multiname("map",[PrivateNamespace(null,"160"),PackageNamespace(""),PrivateNamespace(null,"161"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Stats_Maps"),StaticProtectedNs("Stats_Maps")])
+                        getlocal2
+                        pushstring ""
+                        setproperty Multiname("bg1",[PrivateNamespace(null,"160"),PackageNamespace(""),PrivateNamespace(null,"161"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Stats_Maps"),StaticProtectedNs("Stats_Maps")])
+                        getlocal2
+                        pushstring ""
+                        jump ofs0439
+                        nextvalue
+                        newfunction 43
+                        throw
+                        returnvalue
+                        negate
+               ofs0439:
+                        setproperty Multiname("bg2",[PrivateNamespace(null,"160"),PackageNamespace(""),PrivateNamespace(null,"161"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Stats_Maps"),StaticProtectedNs("Stats_Maps")])
+                        getlocal2
+                        pushstring ""
+                        setproperty Multiname("sky",[PrivateNamespace(null,"160"),PackageNamespace(""),PrivateNamespace(null,"161"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Stats_Maps"),StaticProtectedNs("Stats_Maps")])
+                        getlocal2
+                        jump ofs044b
+                        ifge ofs044b
+               ofs044b:
+                        pushstring ""
+                        setproperty Multiname("particles",[PrivateNamespace(null,"160"),PackageNamespace(""),PrivateNamespace(null,"161"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Stats_Maps"),StaticProtectedNs("Stats_Maps")])
+                        getlocal2
+                        jump ofs045b
+                        pushwith
+                        pushwith
+                        newfunction 68
+                        throw
+                        setlocal2
+               ofs045b:
+                        pushstring "白面鸮的地下实验室"
+                        setproperty Multiname("name",[PrivateNamespace(null,"160"),PackageNamespace(""),PrivateNamespace(null,"161"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Stats_Maps"),StaticProtectedNs("Stats_Maps")])
+                        getlocal2
+                        pushstring "A large smelting plant that houses a dark secret. Beware the lava down pour."
+                        setproperty Multiname("desc",[PrivateNamespace(null,"160"),PackageNamespace(""),PrivateNamespace(null,"161"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Stats_Maps"),StaticProtectedNs("Stats_Maps")])
+                        getlocal2
+                        pushstring ""
+                        jump ofs0475
+                        popscope
+                        newfunction 19
+                        throw
+                        bitor
+                        returnvoid
+               ofs0475:
+                        setproperty Multiname("phys",[PrivateNamespace(null,"160"),PackageNamespace(""),PrivateNamespace(null,"161"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Stats_Maps"),StaticProtectedNs("Stats_Maps")])
+                        getlocal2
+                        pushstring ""
+                        setproperty Multiname("extra",[PrivateNamespace(null,"160"),PackageNamespace(""),PrivateNamespace(null,"161"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Stats_Maps"),StaticProtectedNs("Stats_Maps")])
+                        getlocal2
+                        pushint 39423
+                        setproperty Multiname("water",[PrivateNamespace(null,"160"),PackageNamespace(""),PrivateNamespace(null,"161"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Stats_Maps"),StaticProtectedNs("Stats_Maps")])
+                        jump ofs096f
+                        popscope
+                        setlocal1
+               ofs048a:
+                        label
+                        getlocal2
+                        jump ofs0496
+                        bitor
+                        callmethod 3530, 16
+                        setlocal0
+               ofs0496:
+                        pushstring "mansionIagi"
+                        setproperty Multiname("map",[PrivateNamespace(null,"160"),PackageNamespace(""),PrivateNamespace(null,"161"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Stats_Maps"),StaticProtectedNs("Stats_Maps")])
+                        getlocal2
+                        pushstring "mansion2"
+                        setproperty Multiname("bg1",[PrivateNamespace(null,"160"),PackageNamespace(""),PrivateNamespace(null,"161"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Stats_Maps"),StaticProtectedNs("Stats_Maps")])
+                        jump ofs04ab
+                        ifstrictne ofs04ab
+               ofs04ab:
+                        getlocal2
+                        pushstring ""
+                        setproperty Multiname("bg2",[PrivateNamespace(null,"160"),PackageNamespace(""),PrivateNamespace(null,"161"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Stats_Maps"),StaticProtectedNs("Stats_Maps")])
+                        getlocal2
+                        pushstring "dusk"
+                        jump ofs04bf
+                        setlocal1
+                        checkfilter
+                        pushnull
+                        lessequals
+                        decrement
+                        greaterequals
+               ofs04bf:
+                        setproperty Multiname("sky",[PrivateNamespace(null,"160"),PackageNamespace(""),PrivateNamespace(null,"161"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Stats_Maps"),StaticProtectedNs("Stats_Maps")])
+                        getlocal2
+                        pushstring "mansionDay"
+                        setproperty Multiname("particles",[PrivateNamespace(null,"160"),PackageNamespace(""),PrivateNamespace(null,"161"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Stats_Maps"),StaticProtectedNs("Stats_Maps")])
+                        getlocal2
+                        pushstring "白面鸮曾经的宅邸"
+                        setproperty Multiname("name",[PrivateNamespace(null,"160"),PackageNamespace(""),PrivateNamespace(null,"161"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Stats_Maps"),StaticProtectedNs("Stats_Maps")])
+                        pushtrue
+                        iftrue ofs04dc
+                        returnvoid
+                        equals
+                        dup
+                        setlocal1
+                        pushnull
+                        bitxor
+                        setlocal2
+               ofs04dc:
+                        getlocal2
+                        pushstring "A large smelting plant that houses a dark secret. Beware the lava down pour."
+                        setproperty Multiname("desc",[PrivateNamespace(null,"160"),PackageNamespace(""),PrivateNamespace(null,"161"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Stats_Maps"),StaticProtectedNs("Stats_Maps")])
+                        getlocal2
+                        pushstring ""
+                        setproperty Multiname("phys",[PrivateNamespace(null,"160"),PackageNamespace(""),PrivateNamespace(null,"161"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Stats_Maps"),StaticProtectedNs("Stats_Maps")])
+                        getlocal2
+                        pushstring ""
+                        setproperty Multiname("extra",[PrivateNamespace(null,"160"),PackageNamespace(""),PrivateNamespace(null,"161"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Stats_Maps"),StaticProtectedNs("Stats_Maps")])
+                        getlocal2
+                        pushfalse
+                        iffalse ofs04fc
+                        returnvoid
+                        dup
+                        newarray 11
+                        pushwith
+                        pushwith
+                        instanceof
+               ofs04fc:
+                        pushint 39423
+                        setproperty Multiname("water",[PrivateNamespace(null,"160"),PackageNamespace(""),PrivateNamespace(null,"161"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Stats_Maps"),StaticProtectedNs("Stats_Maps")])
+                        jump ofs096f
+                        iflt ofs0509
+               ofs0509:
+                        label
+                        getlocal2
+                        jump ofs0513
+                        ifstricteq ofs0513
+               ofs0513:
+                        pushstring "market"
+                        setproperty Multiname("map",[PrivateNamespace(null,"160"),PackageNamespace(""),PrivateNamespace(null,"161"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Stats_Maps"),StaticProtectedNs("Stats_Maps")])
+                        getlocal2
+                        pushstring "city"
+                        setproperty Multiname("bg1",[PrivateNamespace(null,"160"),PackageNamespace(""),PrivateNamespace(null,"161"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Stats_Maps"),StaticProtectedNs("Stats_Maps")])
+                        pushfalse
+                        iffalse ofs052d
+                        pushtrue
+                        throw
+                        popscope
+                        negate
+                        instanceof
+                        convert_d
+                        returnvalue
+                        setlocal3
+               ofs052d:
+                        getlocal2
+                        pushstring ""
+                        setproperty Multiname("bg2",[PrivateNamespace(null,"160"),PackageNamespace(""),PrivateNamespace(null,"161"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Stats_Maps"),StaticProtectedNs("Stats_Maps")])
+                        getlocal2
+                        pushstring "city"
+                        setproperty Multiname("sky",[PrivateNamespace(null,"160"),PackageNamespace(""),PrivateNamespace(null,"161"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Stats_Maps"),StaticProtectedNs("Stats_Maps")])
+                        getlocal2
+                        pushfalse
+                        iffalse ofs0548
+                        pushfalse
+                        returnvalue
+                        typeof
+                        throw
+                        coerce_s
+                        setlocal1
+                        throw
+                        setlocal2
+               ofs0548:
+                        pushstring "market"
+                        setproperty Multiname("particles",[PrivateNamespace(null,"160"),PackageNamespace(""),PrivateNamespace(null,"161"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Stats_Maps"),StaticProtectedNs("Stats_Maps")])
+                        getlocal2
+                        pushstring "龙门市区"
+                        setproperty Multiname("name",[PrivateNamespace(null,"160"),PackageNamespace(""),PrivateNamespace(null,"161"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Stats_Maps"),StaticProtectedNs("Stats_Maps")])
+                        getlocal2
+                        jump ofs0560
+                        setlocal1
+                        setlocal1
+                        setlocal1
+                        newactivation
+                        istypelate
+                        pushfalse
+               ofs0560:
+                        pushstring "A large smelting plant that houses a dark secret. Beware the lava down pour."
+                        setproperty Multiname("desc",[PrivateNamespace(null,"160"),PackageNamespace(""),PrivateNamespace(null,"161"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Stats_Maps"),StaticProtectedNs("Stats_Maps")])
+                        getlocal2
+                        pushstring ""
+                        setproperty Multiname("phys",[PrivateNamespace(null,"160"),PackageNamespace(""),PrivateNamespace(null,"161"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Stats_Maps"),StaticProtectedNs("Stats_Maps")])
+                        jump ofs0574
+                        ifne ofs0574
+               ofs0574:
+                        getlocal2
+                        pushstring ""
+                        setproperty Multiname("extra",[PrivateNamespace(null,"160"),PackageNamespace(""),PrivateNamespace(null,"161"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Stats_Maps"),StaticProtectedNs("Stats_Maps")])
+                        getlocal2
+                        jump ofs0585
+                        returnvalue
+                        construct 0
+                        pushwith
+                        returnvalue
+                        setlocal2
+               ofs0585:
+                        pushbyte 0
+                        setproperty Multiname("water",[PrivateNamespace(null,"160"),PackageNamespace(""),PrivateNamespace(null,"161"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Stats_Maps"),StaticProtectedNs("Stats_Maps")])
+                        jump ofs096f
+                        pushwith
+                        setlocal1
+               ofs0590:
+                        label
+                        getlocal2
+                        pushstring "market"
+                        setproperty Multiname("map",[PrivateNamespace(null,"160"),PackageNamespace(""),PrivateNamespace(null,"161"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Stats_Maps"),StaticProtectedNs("Stats_Maps")])
+                        getlocal2
+                        jump ofs05a2
+                        popscope
+                        callstatic 34, 5
+                        pushwith
+               ofs05a2:
+                        pushstring "city2"
+                        setproperty Multiname("bg1",[PrivateNamespace(null,"160"),PackageNamespace(""),PrivateNamespace(null,"161"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Stats_Maps"),StaticProtectedNs("Stats_Maps")])
+                        getlocal2
+                        pushstring ""
+                        setproperty Multiname("bg2",[PrivateNamespace(null,"160"),PackageNamespace(""),PrivateNamespace(null,"161"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Stats_Maps"),StaticProtectedNs("Stats_Maps")])
+                        getlocal2
+                        pushstring "city2"
+                        setproperty Multiname("sky",[PrivateNamespace(null,"160"),PackageNamespace(""),PrivateNamespace(null,"161"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Stats_Maps"),StaticProtectedNs("Stats_Maps")])
+                        jump ofs05be
+                        popscope
+                        callmethod 67, 24
+                        throw
+               ofs05be:
+                        getlocal2
+                        pushstring "market"
+                        setproperty Multiname("particles",[PrivateNamespace(null,"160"),PackageNamespace(""),PrivateNamespace(null,"161"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Stats_Maps"),StaticProtectedNs("Stats_Maps")])
+                        getlocal2
+                        pushstring "龙门商业街"
+                        jump ofs05d1
+                        ifle ofs05d1
+               ofs05d1:
+                        setproperty Multiname("name",[PrivateNamespace(null,"160"),PackageNamespace(""),PrivateNamespace(null,"161"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Stats_Maps"),StaticProtectedNs("Stats_Maps")])
+                        getlocal2
+                        pushstring "A large smelting plant that houses a dark secret. Beware the lava down pour."
+                        jump ofs05e2
+                        setlocal1
+                        newobject 78
+                        pushwith
+                        returnvoid
+                        convert_d
+               ofs05e2:
+                        setproperty Multiname("desc",[PrivateNamespace(null,"160"),PackageNamespace(""),PrivateNamespace(null,"161"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Stats_Maps"),StaticProtectedNs("Stats_Maps")])
+                        getlocal2
+                        pushstring ""
+                        setproperty Multiname("phys",[PrivateNamespace(null,"160"),PackageNamespace(""),PrivateNamespace(null,"161"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Stats_Maps"),StaticProtectedNs("Stats_Maps")])
+                        getlocal2
+                        pushstring ""
+                        pushfalse
+                        iffalse ofs05fa
+                        returnvoid
+                        popscope
+                        returnvoid
+                        setlocal2
+                        setlocal0
+                        multiply
+                        dup
+               ofs05fa:
+                        setproperty Multiname("extra",[PrivateNamespace(null,"160"),PackageNamespace(""),PrivateNamespace(null,"161"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Stats_Maps"),StaticProtectedNs("Stats_Maps")])
+                        getlocal2
+                        pushbyte 0
+                        setproperty Multiname("water",[PrivateNamespace(null,"160"),PackageNamespace(""),PrivateNamespace(null,"161"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Stats_Maps"),StaticProtectedNs("Stats_Maps")])
+                        jump ofs096f
+                        throw
+                        setlocal2
+                        getlocal2
+               ofs060a:
+                        label
+                        getlocal2
+                        pushstring "base"
+                        setproperty Multiname("map",[PrivateNamespace(null,"160"),PackageNamespace(""),PrivateNamespace(null,"161"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Stats_Maps"),StaticProtectedNs("Stats_Maps")])
+                        getlocal2
+                        pushfalse
+                        iffalse ofs0620
+                        pushtrue
+                        throw
+                        setlocal3
+                        newfunction 112
+                        throw
+                        pushwith
+                        pushscope
+               ofs0620:
+                        pushstring "base0"
+                        setproperty Multiname("bg1",[PrivateNamespace(null,"160"),PackageNamespace(""),PrivateNamespace(null,"161"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Stats_Maps"),StaticProtectedNs("Stats_Maps")])
+                        getlocal2
+                        pushstring "base2"
+                        setproperty Multiname("bg2",[PrivateNamespace(null,"160"),PackageNamespace(""),PrivateNamespace(null,"161"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Stats_Maps"),StaticProtectedNs("Stats_Maps")])
+                        jump ofs0635
+                        iflt ofs0635
+               ofs0635:
+                        getlocal2
+                        pushstring "brown"
+                        setproperty Multiname("sky",[PrivateNamespace(null,"160"),PackageNamespace(""),PrivateNamespace(null,"161"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Stats_Maps"),StaticProtectedNs("Stats_Maps")])
+                        pushtrue
+                        iftrue ofs0648
+                        pushtrue
+                        throw
+                        pushnull
+                        constructprop QName(PackageNamespace(""),"Inventory_Gun"), 18
+                        pop
+               ofs0648:
+                        getlocal2
+                        pushstring "base"
+                        setproperty Multiname("particles",[PrivateNamespace(null,"160"),PackageNamespace(""),PrivateNamespace(null,"161"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Stats_Maps"),StaticProtectedNs("Stats_Maps")])
+                        getlocal2
+                        pushstring "罗德岛本舰"
+                        setproperty Multiname("name",[PrivateNamespace(null,"160"),PackageNamespace(""),PrivateNamespace(null,"161"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Stats_Maps"),StaticProtectedNs("Stats_Maps")])
+                        jump ofs0660
+                        lshift
+                        pushwith
+                        newfunction 25
+                        pop
+                        typeof
+               ofs0660:
+                        getlocal2
+                        pushstring "A large smelting plant that houses a dark secret. Beware the lava down pour."
+                        setproperty Multiname("desc",[PrivateNamespace(null,"160"),PackageNamespace(""),PrivateNamespace(null,"161"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Stats_Maps"),StaticProtectedNs("Stats_Maps")])
+                        getlocal2
+                        pushstring ""
+                        setproperty Multiname("phys",[PrivateNamespace(null,"160"),PackageNamespace(""),PrivateNamespace(null,"161"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Stats_Maps"),StaticProtectedNs("Stats_Maps")])
+                        getlocal2
+                        pushstring "base"
+                        setproperty Multiname("extra",[PrivateNamespace(null,"160"),PackageNamespace(""),PrivateNamespace(null,"161"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Stats_Maps"),StaticProtectedNs("Stats_Maps")])
+                        jump ofs067d
+                        popscope
+                        callsupervoid QName(PackageNamespace("Box2D.Dynamics"),"b2TimeStep"), 18
+                        throw
+               ofs067d:
+                        getlocal2
+                        pushbyte 0
+                        setproperty Multiname("water",[PrivateNamespace(null,"160"),PackageNamespace(""),PrivateNamespace(null,"161"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Stats_Maps"),StaticProtectedNs("Stats_Maps")])
+                        jump ofs096f
+                        throw
+                        setlocal1
+               ofs0689:
+                        label
+                        jump ofs0692
+                        iflt ofs0692
+               ofs0692:
+                        getlocal2
+                        pushstring "mech"
+                        jump ofs06a0
+                        setlocal0
+                        newarray 118
+                        pushwith
+                        returnvalue
+                        greaterequals
+               ofs06a0:
+                        setproperty Multiname("map",[PrivateNamespace(null,"160"),PackageNamespace(""),PrivateNamespace(null,"161"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Stats_Maps"),StaticProtectedNs("Stats_Maps")])
+                        getlocal2
+                        pushstring ""
+                        setproperty Multiname("bg1",[PrivateNamespace(null,"160"),PackageNamespace(""),PrivateNamespace(null,"161"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Stats_Maps"),StaticProtectedNs("Stats_Maps")])
+                        getlocal2
+                        pushstring ""
+                        jump ofs06b6
+                        popscope
+                        pushwith
+                        newfunction 117
+                        throw
+                        setlocal2
+               ofs06b6:
+                        setproperty Multiname("bg2",[PrivateNamespace(null,"160"),PackageNamespace(""),PrivateNamespace(null,"161"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Stats_Maps"),StaticProtectedNs("Stats_Maps")])
+                        getlocal2
+                        pushstring "skyMove"
+                        setproperty Multiname("sky",[PrivateNamespace(null,"160"),PackageNamespace(""),PrivateNamespace(null,"161"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Stats_Maps"),StaticProtectedNs("Stats_Maps")])
+                        getlocal2
+                        pushstring ""
+                        jump ofs06cd
+                        popscope
+                        constructsuper 85
+                        pushwith
+                        decrement
+                        setlocal2
+               ofs06cd:
+                        setproperty Multiname("particles",[PrivateNamespace(null,"160"),PackageNamespace(""),PrivateNamespace(null,"161"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Stats_Maps"),StaticProtectedNs("Stats_Maps")])
+                        getlocal2
+                        pushstring "机甲之巅"
+                        setproperty Multiname("name",[PrivateNamespace(null,"160"),PackageNamespace(""),PrivateNamespace(null,"161"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Stats_Maps"),StaticProtectedNs("Stats_Maps")])
+                        getlocal2
+                        jump ofs06e0
+                        ifstrictne ofs06e0
+               ofs06e0:
+                        pushstring "A speeding train carrying a live nuclear missile."
+                        setproperty Multiname("desc",[PrivateNamespace(null,"160"),PackageNamespace(""),PrivateNamespace(null,"161"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Stats_Maps"),StaticProtectedNs("Stats_Maps")])
+                        getlocal2
+                        pushstring ""
+                        setproperty Multiname("phys",[PrivateNamespace(null,"160"),PackageNamespace(""),PrivateNamespace(null,"161"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Stats_Maps"),StaticProtectedNs("Stats_Maps")])
+                        jump ofs06f6
+                        popscope
+                        callproplex QName(PackageNamespace(""),"randomSec"), 10
+                        returnvalue
+               ofs06f6:
+                        getlocal2
+                        pushstring "mech"
+                        setproperty Multiname("extra",[PrivateNamespace(null,"160"),PackageNamespace(""),PrivateNamespace(null,"161"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Stats_Maps"),StaticProtectedNs("Stats_Maps")])
+                        getlocal2
+                        pushbyte 0
+                        setproperty Multiname("water",[PrivateNamespace(null,"160"),PackageNamespace(""),PrivateNamespace(null,"161"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Stats_Maps"),StaticProtectedNs("Stats_Maps")])
+                        jump ofs096f
+                        ifgt ofs070b
+               ofs070b:
+                        label
+                        jump ofs0716
+                        returnvoid
+                        setlocal1
+                        bitand
+                        checkfilter
+                        checkfilter
+                        lshift
+               ofs0716:
+                        getlocal2
+                        pushstring "mech"
+                        setproperty Multiname("map",[PrivateNamespace(null,"160"),PackageNamespace(""),PrivateNamespace(null,"161"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Stats_Maps"),StaticProtectedNs("Stats_Maps")])
+                        getlocal2
+                        pushstring "mech"
+                        setproperty Multiname("bg1",[PrivateNamespace(null,"160"),PackageNamespace(""),PrivateNamespace(null,"161"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Stats_Maps"),StaticProtectedNs("Stats_Maps")])
+                        getlocal2
+                        pushstring "base2"
+                        jump ofs0732
+                        modulo
+                        newfunction 64
+                        pop
+                        setlocal2
+                        bitor
+               ofs0732:
+                        setproperty Multiname("bg2",[PrivateNamespace(null,"160"),PackageNamespace(""),PrivateNamespace(null,"161"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Stats_Maps"),StaticProtectedNs("Stats_Maps")])
+                        getlocal2
+                        pushstring "brown"
+                        setproperty Multiname("sky",[PrivateNamespace(null,"160"),PackageNamespace(""),PrivateNamespace(null,"161"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Stats_Maps"),StaticProtectedNs("Stats_Maps")])
+                        getlocal2
+                        jump ofs0745
+                        ifne ofs0745
+               ofs0745:
+                        pushstring ""
+                        setproperty Multiname("particles",[PrivateNamespace(null,"160"),PackageNamespace(""),PrivateNamespace(null,"161"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Stats_Maps"),StaticProtectedNs("Stats_Maps")])
+                        getlocal2
+                        jump ofs0755
+                        modulo
+                        newobject 109
+                        pushwith
+                        modulo
+                        returnvoid
+               ofs0755:
+                        pushstring "机甲之巅（擂台）"
+                        setproperty Multiname("name",[PrivateNamespace(null,"160"),PackageNamespace(""),PrivateNamespace(null,"161"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Stats_Maps"),StaticProtectedNs("Stats_Maps")])
+                        getlocal2
+                        pushstring "A speeding train carrying a live nuclear missile."
+                        setproperty Multiname("desc",[PrivateNamespace(null,"160"),PackageNamespace(""),PrivateNamespace(null,"161"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Stats_Maps"),StaticProtectedNs("Stats_Maps")])
+                        getlocal2
+                        pushfalse
+                        iffalse ofs076f
+                        returnvoid
+                        popscope
+                        pushscope
+                        setlocal2
+                        setlocal0
+                        multiply
+                        setlocal0
+               ofs076f:
+                        pushstring ""
+                        setproperty Multiname("phys",[PrivateNamespace(null,"160"),PackageNamespace(""),PrivateNamespace(null,"161"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Stats_Maps"),StaticProtectedNs("Stats_Maps")])
+                        getlocal2
+                        pushstring "doubleMech"
+                        setproperty Multiname("extra",[PrivateNamespace(null,"160"),PackageNamespace(""),PrivateNamespace(null,"161"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Stats_Maps"),StaticProtectedNs("Stats_Maps")])
+                        getlocal2
+                        pushbyte 0
+                        setproperty Multiname("water",[PrivateNamespace(null,"160"),PackageNamespace(""),PrivateNamespace(null,"161"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Stats_Maps"),StaticProtectedNs("Stats_Maps")])
+                        pushtrue
+                        iftrue ofs078d
+                        returnvoid
+                        setlocal1
+                        setlocal2
+                        setlocal1
+                        checkfilter
+                        bitand
+                        returnvalue
+               ofs078d:
+                        jump ofs096f
+                        popscope
+                        setlocal2
+               ofs0793:
+                        label
+                        jump ofs096f
+               ofs0798:
+                        getlocal1
+                        setlocal3
+                        jump ofs07a2
+                        ifstrictne ofs07a2
+               ofs07a2:
+                        pushstring "factory"
+                        getlocal3
+                        ifstricteq ofs07ae
+                        jump ofs07be
+               ofs07ae:
+                        pushbyte 0
+                        jump ofs092c
+                        jump ofs07b8
+               ofs07b8:
+                        bitand
+                        newfunction 91
+                        throw
+                        nextvalue
+                        pushwith
+               ofs07be:
+                        pushstring "factoryMech"
+                        getlocal3
+                        ifstricteq ofs07ca
+                        jump ofs07d3
+               ofs07ca:
+                        pushbyte 1
+                        jump ofs092c
+                        pushwith
+                        setlocal3
+                        getlocal2
+               ofs07d3:
+                        pushstring "space"
+                        getlocal3
+                        ifstrictne ofs07eb
+                        pushbyte 2
+                        jump ofs092c
+                        jump ofs07e5
+               ofs07e5:
+                        throw
+                        multiply
+                        nextvalue
+                        bitand
+                        returnvoid
+                        typeof
+               ofs07eb:
+                        pushstring "convoy"
+                        getlocal3
+                        ifstricteq ofs07f7
+                        jump ofs07ff
+               ofs07f7:
+                        pushbyte 3
+                        jump ofs092c
+                        pushwith
+                        setlocal3
+               ofs07ff:
+                        pushstring "convoyStill"
+                        getlocal3
+                        ifstrictne ofs0819
+                        pushbyte 4
+                        jump ofs092c
+                        pushfalse
+                        iffalse ofs0812
+               ofs0812:
+                        returnvoid
+                        typeof
+                        constructprop QName(PackageNamespace(""),"getPythagorean"), 16
+                        setlocal3
+               ofs0819:
+                        pushstring "mansion"
+                        getlocal3
+                        ifstricteq ofs0825
+                        jump ofs082d
+               ofs0825:
+                        pushbyte 5
+                        jump ofs092c
+                        pushwith
+                        setlocal1
+               ofs082d:
+                        pushstring "mansionDay"
+                        jump ofs0838
+                        ifstrictne ofs0838
+               ofs0838:
+                        getlocal3
+                        jump ofs0843
+                        convert_d
+                        newfunction 33
+                        throw
+                        negate
+                        nextname
+               ofs0843:
+                        ifstricteq ofs084b
+                        jump ofs0853
+               ofs084b:
+                        pushbyte 6
+                        jump ofs092c
+                        pushwith
+                        setlocal3
+               ofs0853:
+                        pushstring "mansionFull"
+                        getlocal3
+                        ifstrictne ofs086e
+                        pushbyte 7
+                        jump ofs0866
+                        increment
+                        callproplex QName(PackageNamespace("Box2D.Dynamics.Joints"),"b2PulleyJointDef"), 10
+                        pushwith
+               ofs0866:
+                        jump ofs092c
+                        iflt ofs086e
+               ofs086e:
+                        pushstring "mansionLab"
+                        getlocal3
+                        ifstricteq ofs087a
+                        jump ofs0880
+               ofs087a:
+                        pushbyte 8
+                        jump ofs092c
+               ofs0880:
+                        pushstring "mansionIagi"
+                        jump ofs088d
+                        popscope
+                        pushwith
+                        newfunction 19
+                        pop
+                        convert_d
+               ofs088d:
+                        getlocal3
+                        ifstricteq ofs0896
+                        jump ofs089e
+               ofs0896:
+                        pushbyte 9
+                        jump ofs092c
+                        pushwith
+                        setlocal1
+               ofs089e:
+                        pushstring "market"
+                        jump ofs08a9
+                        iflt ofs08a9
+               ofs08a9:
+                        getlocal3
+                        ifstrictne ofs08b4
+                        pushbyte 10
+                        jump ofs092c
+               ofs08b4:
+                        pushstring "marketDay"
+                        pushfalse
+                        iffalse ofs08c3
+                        returnvoid
+                        popscope
+                        bitor
+                        setlocal1
+                        pushscope
+                        negate
+                        nextvalue
+               ofs08c3:
+                        getlocal3
+                        ifstricteq ofs08cc
+                        jump ofs08d4
+               ofs08cc:
+                        pushbyte 11
+                        jump ofs092c
+                        pushwith
+                        setlocal0
+               ofs08d4:
+                        pushstring "base"
+                        getlocal3
+                        ifstrictne ofs08e2
+                        pushbyte 12
+                        jump ofs092c
+               ofs08e2:
+                        pushstring "mech"
+                        jump ofs08ee
+                        pop
+                        callsupervoid QName(PackageNamespace(""),"Number"), 30
+                        throw
+               ofs08ee:
+                        getlocal3
+                        ifstricteq ofs08f7
+                        jump ofs08ff
+               ofs08f7:
+                        pushbyte 13
+                        jump ofs092c
+                        pushwith
+                        setlocal3
+               ofs08ff:
+                        pushstring "doubleMech"
+                        getlocal3
+                        ifstrictne ofs0918
+                        jump ofs0910
+                        dup
+                        callsupervoid QName(PackageNamespace("Box2D.Dynamics"),"b2BodyDef"), 9
+                        pushwith
+               ofs0910:
+                        pushbyte 14
+                        jump ofs092c
+                        pushwith
+                        setlocal2
+               ofs0918:
+                        jump ofs0922
+                        pushbyte 15
+                        jump ofs0922
+               ofs0922:
+                        pushbyte 15
+                        jump ofs092c
+                        ifgt ofs092c
+               ofs092c:
+                        kill 3
+                        pushfalse
+                        iffalse ofs093a
+                        returnvoid
+                        popscope
+                        newarray 9
+                        pushwith
+                        setlocal2
+                        returnvalue
+               ofs093a:
+                        lookupswitch ofs0793, [ofs0031, ofs00a3, ofs0120, ofs01a1, ofs021e, ofs029b, ofs0317, ofs0395, ofs0415, ofs048a, ofs0509, ofs0590, ofs060a, ofs0689, ofs070b, ofs0793]
+               ofs096f:
+                        getlocal2
+                        returnvalue
+                     end ; code
+                  end ; body
+               end ; method
+            }
+         }
+      }

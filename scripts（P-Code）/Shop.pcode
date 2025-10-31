@@ -1,0 +1,694 @@
+package
+{
+   public class Shop
+   {
+      
+      public static var classGunShops:Array;
+      
+      public static var classOtherShops:Array;
+      
+      {
+         method
+            name null
+            returns null
+            
+            body
+               maxstack 4
+               localcount 1
+               initscopedepth 3
+               maxscopedepth 4
+               
+               code
+                  getlocal0
+                  jump ofs000b
+                  newfunction 3492
+                  call 8
+                  throw
+         ofs000b:
+                  pushscope
+                  returnvoid
+               end ; code
+            end ; body
+         end ; method
+      }
+      
+      public function Shop()
+      {
+         method
+            name null
+            returns null
+            
+            body
+               maxstack 4
+               localcount 1
+               initscopedepth 4
+               maxscopedepth 5
+               
+               code
+                  getlocal0
+                  pushscope
+                  jump ofs000c
+                  newfunction 3492
+                  call 7
+                  throw
+         ofs000c:
+                  getlocal0
+                  constructsuper 0
+                  returnvoid
+               end ; code
+            end ; body
+         end ; method
+      }
+      
+      public static function resetShops() : void
+      {
+         trait method QName(PackageNamespace(""),"resetShops")
+            flag FINAL
+            dispid 3
+            method
+               name null
+               returns QName(PackageNamespace(""),"void")
+               
+               body
+                  maxstack 10
+                  localcount 13
+                  initscopedepth 3
+                  maxscopedepth 4
+                  
+                  code
+                     jump ofs000b
+                     call 10
+                     throw
+                     callmethod 3494, 10
+            ofs000b:
+                     getlocal0
+                     pushscope
+                     pushbyte 0
+                     convert_u
+                     setlocal1
+                     jump ofs0019
+                     ifne ofs0019
+            ofs0019:
+                     pushbyte 0
+                     convert_u
+                     setlocal2
+                     jump ofs0026
+                     popscope
+                     callpropvoid QName(PackageNamespace("Playtomic"),"PFQuery"), 9
+                     pushwith
+            ofs0026:
+                     pushbyte 0
+                     convert_u
+                     setlocal3
+                     pushnull
+                     coerce_s
+                     setlocal 4
+                     pushbyte 0
+                     setlocal 5
+                     pushbyte 0
+                     jump ofs003d
+                     popscope
+                     callstatic 88, 18
+                     throw
+            ofs003d:
+                     setlocal 6
+                     pushnull
+                     coerce QName(PackageNamespace(""),"Inventory_Gun")
+                     setlocal 7
+                     pushundefined
+                     coerce_a
+                     setlocal 8
+                     pushfalse
+                     iffalse ofs0054
+                     returnvoid
+                     nextname
+                     lshift
+                     newactivation
+                     setlocal1
+                     setlocal3
+                     convert_d
+            ofs0054:
+                     pushnull
+                     coerce_s
+                     setlocal 9
+                     pushnull
+                     coerce QName(PackageNamespace(""),"Inventory_Attachment")
+                     jump ofs0063
+                     ifle ofs0063
+            ofs0063:
+                     setlocal 10
+                     pushnull
+                     coerce_s
+                     jump ofs0071
+                     divide
+                     callstatic 3511, 16
+                     setlocal0
+            ofs0071:
+                     setlocal 11
+                     pushnull
+                     coerce QName(PackageNamespace(""),"Inventory_Armor")
+                     setlocal 12
+                     findproperty QName(PackageNamespace(""),"classGunShops")
+                     pushbyte 0
+                     pushbyte 1
+                     pushbyte 2
+                     pushbyte 3
+                     pushbyte 4
+                     pushtrue
+                     iftrue ofs0091
+                     returnvoid
+                     setlocal3
+                     newfunction 1
+                     pushwith
+                     pushnull
+                     lshift
+            ofs0091:
+                     pushbyte 5
+                     newarray 6
+                     setproperty QName(PackageNamespace(""),"classGunShops")
+                     pushbyte 1
+                     convert_u
+                     setlocal1
+                     jump ofs01e9
+                     pushwith
+                     setlocal3
+                     getlocal1
+            ofs00a3:
+                     label
+                     pushtrue
+                     iftrue ofs00b0
+                     returnvoid
+                     popscope
+                     setlocal1
+                     setlocal0
+                     returnvalue
+                     multiply
+                     newactivation
+            ofs00b0:
+                     getlex QName(PackageNamespace(""),"classGunShops")
+                     getlocal1
+                     newarray 0
+                     setproperty MultinameL([PrivateNamespace(null,"164"),PackageNamespace(""),PrivateNamespace(null,"165"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Shop"),StaticProtectedNs("Shop")])
+                     pushbyte 0
+                     jump ofs00c3
+                     ifle ofs00c3
+            ofs00c3:
+                     convert_u
+                     jump ofs00cd
+                     setlocal1
+                     callpropvoid QName(PackageNamespace("Box2D.Dynamics.Joints"),"b2RevoluteJointDef"), 7
+                     pushwith
+            ofs00cd:
+                     setlocal2
+                     jump ofs01c6
+                     popscope
+                     setlocal2
+            ofs00d4:
+                     label
+                     getlex QName(PackageNamespace(""),"UT")
+                     getlex QName(PackageNamespace(""),"Stats_Classes")
+                     getlocal1
+                     callproperty QName(PackageNamespace(""),"getClass"), 1
+                     getproperty Multiname("weaponTypes",[PrivateNamespace(null,"164"),PackageNamespace(""),PrivateNamespace(null,"165"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Shop"),StaticProtectedNs("Shop")])
+                     jump ofs00ec
+                     popscope
+                     construct 62
+                     pushwith
+                     decrement
+                     returnvalue
+            ofs00ec:
+                     callproperty QName(PackageNamespace(""),"randEl"), 1
+                     convert_u
+                     setlocal3
+                     getlex QName(PackageNamespace(""),"UT")
+                     getlex QName(PackageNamespace(""),"Stats_Guns")
+                     getproperty QName(PackageNamespace(""),"typeAr")
+                     getlocal3
+                     jump ofs0105
+                     popscope
+                     newfunction 97
+                     throw
+                     setlocal0
+                     modulo
+            ofs0105:
+                     getproperty MultinameL([PrivateNamespace(null,"164"),PackageNamespace(""),PrivateNamespace(null,"165"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Shop"),StaticProtectedNs("Shop")])
+                     callproperty QName(PackageNamespace(""),"randEl"), 1
+                     getproperty Multiname("id",[PrivateNamespace(null,"164"),PackageNamespace(""),PrivateNamespace(null,"165"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Shop"),StaticProtectedNs("Shop")])
+                     coerce_s
+                     setlocal 4
+                     jump ofs011a
+                     ifstrictne ofs011a
+            ofs011a:
+                     getlex QName(PackageNamespace(""),"SD")
+                     getlocal1
+                     callproperty QName(PackageNamespace(""),"getSelCass"), 1
+                     jump ofs012c
+                     throw
+                     newfunction 24
+                     throw
+                     coerce_s
+                     returnvoid
+            ofs012c:
+                     getproperty QName(PackageNamespace(""),"level")
+                     getlex QName(PackageNamespace(""),"UT")
+                     pushbyte -2
+                     pushbyte 1
+                     callproperty QName(PackageNamespace(""),"irand"), 2
+                     add
+                     convert_i
+                     dup
+                     pushfalse
+                     iffalse ofs0149
+                     returnvoid
+                     setlocal2
+                     call 70
+                     pushwith
+                     setlocal3
+                     multiply
+            ofs0149:
+                     setlocal 5
+                     pushbyte 1
+                     iflt ofs0155
+                     jump ofs0159
+            ofs0155:
+                     pushbyte 1
+                     setlocal 5
+            ofs0159:
+                     getlocal 5
+                     pushbyte 50
+                     ifngt ofs0171
+                     pushbyte 50
+                     pushtrue
+                     iftrue ofs016f
+                     returnvoid
+                     popscope
+                     setlocal1
+                     pushfalse
+                     greaterequals
+                     returnvalue
+                     istypelate
+            ofs016f:
+                     setlocal 5
+            ofs0171:
+                     getlex QName(PackageNamespace(""),"Stats_Misc")
+                     pushbyte 0
+                     callproperty QName(PackageNamespace(""),"getRandRarity"), 1
+                     convert_i
+                     jump ofs0183
+                     iflt ofs0183
+            ofs0183:
+                     setlocal 6
+                     getlex QName(PackageNamespace(""),"Inventory_Gun")
+                     pushtrue
+                     iftrue ofs0192
+                     returnvoid
+                     modulo
+                     callpropvoid QName(PackageNamespace("Box2D.Dynamics.Joints"),"b2PrismaticJointDef"), 15
+                     pop
+            ofs0192:
+                     getlocal 4
+                     getlocal 5
+                     getlocal 6
+                     callproperty QName(PackageNamespace(""),"createInventoryItem"), 3
+                     coerce QName(PackageNamespace(""),"Inventory_Gun")
+                     setlocal 7
+                     getlex QName(PackageNamespace(""),"classGunShops")
+                     pushfalse
+                     iffalse ofs01af
+                     pushtrue
+                     throw
+                     setlocal2
+                     callproperty QName(PackageNamespace("Box2D.Dynamics"),"b2Fixture"), 10
+                     pushwith
+            ofs01af:
+                     getlocal1
+                     getproperty MultinameL([PrivateNamespace(null,"164"),PackageNamespace(""),PrivateNamespace(null,"165"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Shop"),StaticProtectedNs("Shop")])
+                     getlocal 7
+                     callpropvoid Multiname("push",[PrivateNamespace(null,"164"),PackageNamespace(""),PrivateNamespace(null,"165"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Shop"),StaticProtectedNs("Shop")]), 1
+                     getlocal2
+                     increment
+                     convert_u
+                     jump ofs01c5
+                     popscope
+                     callproplex QName(PackageNamespace("Box2D.Collision"),"ClipVertex"), 24
+                     throw
+            ofs01c5:
+                     setlocal2
+            ofs01c6:
+                     getlocal2
+                     pushbyte 6
+                     ifnlt ofs01d1
+                     jump ofs00d4
+            ofs01d1:
+                     getlocal1
+                     jump ofs01da
+                     ifgt ofs01da
+            ofs01da:
+                     increment
+                     convert_u
+                     pushfalse
+                     iffalse ofs01e8
+                     returnvoid
+                     setlocal1
+                     newfunction 65
+                     throw
+                     coerce_s
+                     equals
+            ofs01e8:
+                     setlocal1
+            ofs01e9:
+                     getlocal1
+                     pushbyte 5
+                     ifnle ofs01f4
+                     jump ofs00a3
+            ofs01f4:
+                     findproperty QName(PackageNamespace(""),"classOtherShops")
+                     pushbyte 0
+                     pushbyte 1
+                     pushbyte 2
+                     pushbyte 3
+                     pushbyte 4
+                     jump ofs020b
+                     lshift
+                     callsupervoid QName(PackageNamespace(""),"mergeObject"), 18
+                     returnvalue
+            ofs020b:
+                     pushbyte 5
+                     newarray 6
+                     setproperty QName(PackageNamespace(""),"classOtherShops")
+                     pushbyte 1
+                     convert_u
+                     setlocal1
+                     jump ofs0220
+                     equals
+                     newfunction 104
+                     throw
+                     negate
+                     increment
+            ofs0220:
+                     jump ofs044d
+                     ifle ofs0228
+            ofs0228:
+                     label
+                     getlex QName(PackageNamespace(""),"classOtherShops")
+                     getlocal1
+                     newarray 0
+                     jump ofs0237
+                     ifne ofs0237
+            ofs0237:
+                     setproperty MultinameL([PrivateNamespace(null,"164"),PackageNamespace(""),PrivateNamespace(null,"165"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Shop"),StaticProtectedNs("Shop")])
+                     jump ofs0244
+                     throw
+                     pushwith
+                     newfunction 62
+                     pop
+                     setlocal1
+            ofs0244:
+                     pushbyte 0
+                     convert_u
+                     setlocal2
+                     jump ofs042d
+                     popscope
+                     setlocal1
+            ofs024e:
+                     label
+                     getlex QName(PackageNamespace(""),"Math")
+                     callproperty QName(PackageNamespace(""),"random"), 0
+                     pushdouble 0.7
+                     iflt ofs0260
+                     jump ofs0362
+            ofs0260:
+                     getlex QName(PackageNamespace(""),"Stats_Classes")
+                     jump ofs026b
+                     popscope
+                     callproperty QName(PackageNamespace("flash.display"),"MovieClip"), 27
+                     throw
+            ofs026b:
+                     getlocal1
+                     callproperty QName(PackageNamespace(""),"getClass"), 1
+                     getproperty Multiname("weaponTypes",[PrivateNamespace(null,"164"),PackageNamespace(""),PrivateNamespace(null,"165"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Shop"),StaticProtectedNs("Shop")])
+                     coerce_a
+                     dup
+                     setlocal 8
+                     getlex QName(PackageNamespace(""),"UT")
+                     pushbyte 1
+                     jump ofs0286
+                     negate
+                     construct 9
+                     pushwith
+                     setlocal2
+                     returnvalue
+            ofs0286:
+                     getlocal 8
+                     getproperty Multiname("length",[PrivateNamespace(null,"164"),PackageNamespace(""),PrivateNamespace(null,"165"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Shop"),StaticProtectedNs("Shop")])
+                     decrement
+                     callproperty QName(PackageNamespace(""),"irand"), 2
+                     getproperty MultinameL([PrivateNamespace(null,"164"),PackageNamespace(""),PrivateNamespace(null,"165"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Shop"),StaticProtectedNs("Shop")])
+                     jump ofs029b
+                     iflt ofs029b
+            ofs029b:
+                     convert_u
+                     setlocal3
+                     getlex QName(PackageNamespace(""),"UT")
+                     getlex QName(PackageNamespace(""),"Stats_Attachments")
+                     getproperty QName(PackageNamespace(""),"typeAr")
+                     jump ofs02af
+                     popscope
+                     call 44
+                     pushwith
+                     setlocal2
+                     multiply
+            ofs02af:
+                     getlocal3
+                     getproperty MultinameL([PrivateNamespace(null,"164"),PackageNamespace(""),PrivateNamespace(null,"165"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Shop"),StaticProtectedNs("Shop")])
+                     callproperty QName(PackageNamespace(""),"randEl"), 1
+                     getproperty Multiname("id",[PrivateNamespace(null,"164"),PackageNamespace(""),PrivateNamespace(null,"165"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Shop"),StaticProtectedNs("Shop")])
+                     coerce_s
+                     setlocal 9
+                     getlex QName(PackageNamespace(""),"SD")
+                     getlocal1
+                     callproperty QName(PackageNamespace(""),"getSelCass"), 1
+                     pushtrue
+                     iftrue ofs02d1
+                     returnvoid
+                     popscope
+                     construct 61
+                     pushwith
+                     returnvalue
+                     instanceof
+            ofs02d1:
+                     getproperty QName(PackageNamespace(""),"level")
+                     getlex QName(PackageNamespace(""),"UT")
+                     pushbyte -2
+                     pushbyte 1
+                     callproperty QName(PackageNamespace(""),"irand"), 2
+                     add
+                     convert_i
+                     dup
+                     setlocal 5
+                     pushfalse
+                     iffalse ofs02f0
+                     returnvoid
+                     popscope
+                     newfunction 90
+                     throw
+                     divide
+                     divide
+            ofs02f0:
+                     pushbyte 1
+                     iflt ofs02fa
+                     jump ofs02fe
+            ofs02fa:
+                     pushbyte 1
+                     setlocal 5
+            ofs02fe:
+                     getlocal 5
+                     jump ofs0308
+                     iflt ofs0308
+            ofs0308:
+                     pushbyte 50
+                     ifngt ofs031e
+                     pushbyte 50
+                     setlocal 5
+                     pushfalse
+                     iffalse ofs031e
+                     returnvoid
+                     nextname
+                     callsupervoid QName(PackageNamespace(""),"startQuickmatch"), 16
+                     setlocal1
+            ofs031e:
+                     getlex QName(PackageNamespace(""),"Stats_Misc")
+                     pushbyte 0
+                     callproperty QName(PackageNamespace(""),"getRandRarity"), 1
+                     convert_i
+                     setlocal 6
+                     getlex QName(PackageNamespace(""),"Inventory_Attachment")
+                     jump ofs0336
+                     dup
+                     newobject 25
+                     pushwith
+                     setlocal1
+                     convert_d
+            ofs0336:
+                     getlocal 9
+                     getlocal 5
+                     getlocal 6
+                     callproperty QName(PackageNamespace(""),"createInventoryItem"), 3
+                     coerce QName(PackageNamespace(""),"Inventory_Attachment")
+                     setlocal 10
+                     getlex QName(PackageNamespace(""),"classOtherShops")
+                     getlocal1
+                     getproperty MultinameL([PrivateNamespace(null,"164"),PackageNamespace(""),PrivateNamespace(null,"165"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Shop"),StaticProtectedNs("Shop")])
+                     getlocal 10
+                     pushfalse
+                     iffalse ofs0358
+                     returnvoid
+                     popscope
+                     callpropvoid QName(PackageNamespace("Box2D.Collision.Shapes"),"b2MassData"), 15
+                     throw
+            ofs0358:
+                     callpropvoid Multiname("push",[PrivateNamespace(null,"164"),PackageNamespace(""),PrivateNamespace(null,"165"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Shop"),StaticProtectedNs("Shop")]), 1
+                     jump ofs041f
+                     popscope
+                     setlocal0
+            ofs0362:
+                     getlex QName(PackageNamespace(""),"UT")
+                     getlex QName(PackageNamespace(""),"Stats_Armor")
+                     getproperty QName(PackageNamespace(""),"typeAr")
+                     jump ofs0372
+                     ifeq ofs0372
+            ofs0372:
+                     getlocal1
+                     getproperty MultinameL([PrivateNamespace(null,"164"),PackageNamespace(""),PrivateNamespace(null,"165"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Shop"),StaticProtectedNs("Shop")])
+                     callproperty QName(PackageNamespace(""),"randEl"), 1
+                     jump ofs0384
+                     setlocal3
+                     setlocal3
+                     setlocal2
+                     setlocal2
+                     typeof
+                     checkfilter
+            ofs0384:
+                     getproperty Multiname("id",[PrivateNamespace(null,"164"),PackageNamespace(""),PrivateNamespace(null,"165"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Shop"),StaticProtectedNs("Shop")])
+                     coerce_s
+                     setlocal 11
+                     getlex QName(PackageNamespace(""),"SD")
+                     getlocal1
+                     callproperty QName(PackageNamespace(""),"getSelCass"), 1
+                     getproperty QName(PackageNamespace(""),"level")
+                     getlex QName(PackageNamespace(""),"UT")
+                     pushbyte -2
+                     pushfalse
+                     iffalse ofs03a6
+                     returnvoid
+                     bitand
+                     pushwith
+                     newfunction 49
+                     throw
+                     equals
+            ofs03a6:
+                     pushbyte 1
+                     callproperty QName(PackageNamespace(""),"irand"), 2
+                     add
+                     convert_i
+                     dup
+                     setlocal 5
+                     pushbyte 1
+                     iflt ofs03bb
+                     jump ofs03c9
+            ofs03bb:
+                     pushbyte 1
+                     jump ofs03c7
+                     popscope
+                     setlocal1
+                     setlocal0
+                     setlocal0
+                     nextname
+                     decrement
+            ofs03c7:
+                     setlocal 5
+            ofs03c9:
+                     getlocal 5
+                     pushbyte 50
+                     ifgt ofs03d5
+                     jump ofs03e1
+            ofs03d5:
+                     pushbyte 50
+                     jump ofs03df
+                     ifeq ofs03df
+            ofs03df:
+                     setlocal 5
+            ofs03e1:
+                     getlex QName(PackageNamespace(""),"Stats_Misc")
+                     pushbyte 0
+                     callproperty QName(PackageNamespace(""),"getRandRarity"), 1
+                     pushtrue
+                     iftrue ofs03f5
+                     returnvoid
+                     instanceof
+                     callproplex QName(PackageNamespace("Box2D.Dynamics"),"b2ContactFilter"), 6
+                     pushwith
+            ofs03f5:
+                     convert_i
+                     setlocal 6
+                     getlex QName(PackageNamespace(""),"Inventory_Armor")
+                     getlocal 11
+                     getlocal 5
+                     getlocal 6
+                     callproperty QName(PackageNamespace(""),"createInventoryItem"), 3
+                     coerce QName(PackageNamespace(""),"Inventory_Armor")
+                     setlocal 12
+                     jump ofs0412
+                     popscope
+                     callsupervoid QName(PackageNamespace(""),"caBots"), 14
+                     setlocal0
+            ofs0412:
+                     getlex QName(PackageNamespace(""),"classOtherShops")
+                     getlocal1
+                     getproperty MultinameL([PrivateNamespace(null,"164"),PackageNamespace(""),PrivateNamespace(null,"165"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Shop"),StaticProtectedNs("Shop")])
+                     getlocal 12
+                     callpropvoid Multiname("push",[PrivateNamespace(null,"164"),PackageNamespace(""),PrivateNamespace(null,"165"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("Shop"),StaticProtectedNs("Shop")]), 1
+            ofs041f:
+                     getlocal2
+                     increment
+                     convert_u
+                     jump ofs042c
+                     convert_s
+                     bitor
+                     nextname
+                     equals
+                     lshift
+                     add
+            ofs042c:
+                     setlocal2
+            ofs042d:
+                     getlocal2
+                     pushbyte 6
+                     ifnlt ofs0438
+                     jump ofs024e
+            ofs0438:
+                     getlocal1
+                     jump ofs0441
+                     ifeq ofs0441
+            ofs0441:
+                     increment
+                     convert_u
+                     jump ofs044c
+                     instanceof
+                     callpropvoid QName(PrivateNamespace(null),"Command"), 18
+                     pop
+            ofs044c:
+                     setlocal1
+            ofs044d:
+                     getlocal1
+                     pushbyte 5
+                     ifnle ofs0458
+                     jump ofs0228
+            ofs0458:
+                     returnvoid
+                  end ; code
+               end ; body
+            end ; method
+         }
+      }
+   }

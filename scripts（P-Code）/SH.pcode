@@ -1,0 +1,1001 @@
+package
+{
+   import flash.media.SoundChannel;
+   import flash.media.SoundTransform;
+   
+   public class SH
+   {
+      
+      public static var chan:SoundChannel;
+      
+      public static var sound;
+      
+      public static var replayAt:Number;
+      
+      private static var voiceChan:SoundChannel;
+      
+      private static var soundChan:SoundChannel;
+      
+      private static var soundVolLow:SoundTransform;
+      
+      private static var soundVol:SoundTransform;
+      
+      private static var soundVolLoud:SoundTransform;
+      
+      private static var noVol:SoundTransform;
+      
+      private static var musicClass;
+      
+      private static var musicChan:SoundChannel;
+      
+      private static var musicVol:SoundTransform;
+      
+      private static var fadeClass;
+      
+      private static var fadeChan:SoundChannel;
+      
+      private static var fadeVol:SoundTransform;
+      
+      public static var songList:Array;
+      
+      public static var songNames:Array;
+      
+      private static const maxVolume:Number = 0.8;
+      
+      private static var useLowVol:Boolean;
+      
+      {
+         method
+            name null
+            returns null
+            
+            body
+               maxstack 5
+               localcount 1
+               initscopedepth 3
+               maxscopedepth 4
+               
+               code
+                  jump ofs000b
+                  call 5
+                  throw
+                  callmethod 3492, 5
+         ofs000b:
+                  getlocal0
+                  pushscope
+                  findproperty QName(PrivateNamespace(null,"101"),"maxVolume")
+                  pushdouble 0.8
+                  initproperty QName(PrivateNamespace(null,"101"),"maxVolume")
+                  jump ofs001d
+                  ifge ofs001d
+         ofs001d:
+                  returnvoid
+               end ; code
+            end ; body
+         end ; method
+      }
+      
+      public function SH()
+      {
+         method
+            name null
+            returns null
+            
+            body
+               maxstack 4
+               localcount 1
+               initscopedepth 4
+               maxscopedepth 5
+               
+               code
+                  getlocal0
+                  jump ofs000b
+                  call 6
+                  throw
+                  newfunction 3491
+         ofs000b:
+                  pushscope
+                  getlocal0
+                  constructsuper 0
+                  returnvoid
+               end ; code
+            end ; body
+         end ; method
+      }
+      
+      public static function Init() : void
+      {
+         trait method QName(PackageNamespace(""),"Init")
+            flag FINAL
+            dispid 3
+            method
+               name null
+               returns QName(PackageNamespace(""),"void")
+               
+               body
+                  maxstack 10
+                  localcount 1
+                  initscopedepth 3
+                  maxscopedepth 4
+                  
+                  code
+                     getlocal0
+                     jump ofs000c
+                     call 10
+                     callmethod 3491, 10
+                     throw
+            ofs000c:
+                     pushscope
+                     findproperty QName(PrivateNamespace(null,"101"),"soundVolLow")
+                     findpropstrict QName(PackageNamespace("flash.media"),"SoundTransform")
+                     constructprop QName(PackageNamespace("flash.media"),"SoundTransform"), 0
+                     setproperty QName(PrivateNamespace(null,"101"),"soundVolLow")
+                     jump ofs0022
+                     ifeq ofs0022
+            ofs0022:
+                     getlex QName(PrivateNamespace(null,"101"),"soundVolLow")
+                     pushdouble 0.15
+                     setproperty QName(PackageNamespace(""),"volume")
+                     findproperty QName(PrivateNamespace(null,"101"),"soundVol")
+                     jump ofs0037
+                     popscope
+                     pushwith
+                     newfunction 48
+                     pop
+                     in
+            ofs0037:
+                     findpropstrict QName(PackageNamespace("flash.media"),"SoundTransform")
+                     constructprop QName(PackageNamespace("flash.media"),"SoundTransform"), 0
+                     setproperty QName(PrivateNamespace(null,"101"),"soundVol")
+                     getlex QName(PrivateNamespace(null,"101"),"soundVol")
+                     pushdouble 0.4
+                     setproperty QName(PackageNamespace(""),"volume")
+                     findproperty QName(PrivateNamespace(null,"101"),"soundVolLoud")
+                     findpropstrict QName(PackageNamespace("flash.media"),"SoundTransform")
+                     jump ofs0058
+                     popscope
+                     callsupervoid QName(PackageNamespace("Box2D.Dynamics"),"b2ContactFilter"), 18
+                     throw
+            ofs0058:
+                     constructprop QName(PackageNamespace("flash.media"),"SoundTransform"), 0
+                     setproperty QName(PrivateNamespace(null,"101"),"soundVolLoud")
+                     getlex QName(PrivateNamespace(null,"101"),"soundVolLoud")
+                     pushdouble 0.9
+                     setproperty QName(PackageNamespace(""),"volume")
+                     findproperty QName(PrivateNamespace(null,"101"),"noVol")
+                     jump ofs0074
+                     convert_s
+                     istypelate
+                     setlocal3
+                     greaterequals
+                     setlocal2
+                     setlocal2
+            ofs0074:
+                     findpropstrict QName(PackageNamespace("flash.media"),"SoundTransform")
+                     constructprop QName(PackageNamespace("flash.media"),"SoundTransform"), 0
+                     setproperty QName(PrivateNamespace(null,"101"),"noVol")
+                     getlex QName(PrivateNamespace(null,"101"),"noVol")
+                     pushdouble 0.0
+                     jump ofs008b
+                     ifstrictne ofs008b
+            ofs008b:
+                     setproperty QName(PackageNamespace(""),"volume")
+                     findproperty QName(PrivateNamespace(null,"101"),"musicVol")
+                     findpropstrict QName(PackageNamespace("flash.media"),"SoundTransform")
+                     pushtrue
+                     iftrue ofs00a1
+                     pushfalse
+                     returnvalue
+                     lessequals
+                     pushwith
+                     returnvoid
+                     returnvoid
+                     decrement
+                     setlocal0
+            ofs00a1:
+                     constructprop QName(PackageNamespace("flash.media"),"SoundTransform"), 0
+                     setproperty QName(PrivateNamespace(null,"101"),"musicVol")
+                     getlex QName(PrivateNamespace(null,"101"),"musicVol")
+                     getlex QName(PrivateNamespace(null,"101"),"maxVolume")
+                     setproperty QName(PackageNamespace(""),"volume")
+                     findproperty QName(PrivateNamespace(null,"101"),"fadeVol")
+                     jump ofs00be
+                     in
+                     newfunction 37
+                     pushwith
+                     negate
+                     setlocal3
+            ofs00be:
+                     findpropstrict QName(PackageNamespace("flash.media"),"SoundTransform")
+                     constructprop QName(PackageNamespace("flash.media"),"SoundTransform"), 0
+                     setproperty QName(PrivateNamespace(null,"101"),"fadeVol")
+                     getlex QName(PrivateNamespace(null,"101"),"fadeVol")
+                     pushbyte 0
+                     setproperty QName(PackageNamespace(""),"volume")
+                     findproperty QName(PackageNamespace(""),"songList")
+                     jump ofs00dd
+                     popscope
+                     callproplex QName(PackageNamespace(""),"fixRotation360"), 20
+                     setlocal0
+            ofs00dd:
+                     getlex QName(PackageNamespace(""),"M_Robot")
+                     getlex QName(PackageNamespace(""),"M_Rocket")
+                     getlex QName(PackageNamespace(""),"M_Meeting")
+                     getlex QName(PackageNamespace(""),"M_Epic")
+                     getlex QName(PackageNamespace(""),"M_Machine")
+                     jump ofs00f4
+                     ifstrictne ofs00f4
+            ofs00f4:
+                     getlex QName(PackageNamespace(""),"M_Dawn")
+                     getlex QName(PackageNamespace(""),"M_Menu")
+                     getlex QName(PackageNamespace(""),"M_Mute")
+                     newarray 8
+                     setproperty QName(PackageNamespace(""),"songList")
+                     jump ofs010c
+                     istypelate
+                     callstatic 3523, 14
+                     setlocal3
+            ofs010c:
+                     findproperty QName(PackageNamespace(""),"songNames")
+                     pushstring "Wrathful Cerulean Flame"
+                     pushstring "Control\'s Wishes（孤星OST）"
+                     pushstring "切尔诺伯格急行军（游击队的小曲）"
+                     pushstring "塔露拉·雅特利亚斯（黑蛇的小曲）"
+                     pushstring "Absolute Zero（霜星上岛的小曲）"
+                     pushstring "龙门作战-凌云（龙门市区的小曲）"
+                     pushstring "Endspore（水月你带我走吧）"
+                     pushstring "37℃（主线第六章剧情背景音乐）"
+                     newarray 8
+                     jump ofs0133
+                     pushwith
+                     setlocal2
+                     setlocal0
+                     pushscope
+                     setlocal1
+                     setlocal2
+            ofs0133:
+                     setproperty QName(PackageNamespace(""),"songNames")
+                     returnvoid
+                  end ; code
+               end ; body
+            end ; method
+         }
+         
+         public static function playSound(param1:*, param2:Boolean = false) : void
+         {
+            trait method QName(PackageNamespace(""),"playSound")
+               flag FINAL
+               dispid 4
+               method
+                  name null
+                  flag HAS_OPTIONAL
+                  param null
+                  param QName(PackageNamespace(""),"Boolean")
+                  optional False()
+                  returns QName(PackageNamespace(""),"void")
+                  
+                  body
+                     maxstack 5
+                     localcount 3
+                     initscopedepth 3
+                     maxscopedepth 4
+                     
+                     code
+                        getlocal0
+                        jump ofs000c
+                        call 8
+                        throw
+                        callmethod 3491, 8
+               ofs000c:
+                        pushscope
+                        getlex QName(PackageNamespace(""),"SD")
+                        getproperty QName(PackageNamespace(""),"sound")
+                        iffalse ofs001b
+                        jump ofs0024
+               ofs001b:
+                        returnvoid
+                        jump ofs0020
+               ofs0020:
+                        ifge ofs0024
+               ofs0024:
+                        findproperty QName(PrivateNamespace(null,"101"),"soundChan")
+                        getlocal1
+                        pushfalse
+                        iffalse ofs0034
+                        returnvoid
+                        convert_d
+                        newfunction 94
+                        throw
+                        convert_s
+                        nextname
+               ofs0034:
+                        construct 0
+                        callproperty Multiname("play",[PrivateNamespace(null,"101"),PackageNamespace(""),PrivateNamespace(null,"152"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("SH"),StaticProtectedNs("SH")]), 0
+                        setproperty QName(PrivateNamespace(null,"101"),"soundChan")
+                        getlex QName(PrivateNamespace(null,"101"),"useLowVol")
+                        iftrue ofs0048
+                        jump ofs0079
+               ofs0048:
+                        getlex QName(PrivateNamespace(null,"101"),"soundChan")
+                        jump ofs0055
+                        pop
+                        dxns "fl.core"
+                        pushwith
+                        add
+                        bitand
+               ofs0055:
+                        getlocal2
+                        iftrue ofs005e
+                        jump ofs006c
+               ofs005e:
+                        getlex QName(PrivateNamespace(null,"101"),"soundVol")
+                        coerce QName(PackageNamespace("flash.media"),"SoundTransform")
+                        jump ofs0072
+                        ifle ofs006c
+               ofs006c:
+                        getlex QName(PrivateNamespace(null,"101"),"soundVolLow")
+                        coerce QName(PackageNamespace("flash.media"),"SoundTransform")
+               ofs0072:
+                        setproperty QName(PackageNamespace(""),"soundTransform")
+                        jump ofs00b8
+               ofs0079:
+                        getlex QName(PrivateNamespace(null,"101"),"soundChan")
+                        jump ofs0086
+                        popscope
+                        setlocal3
+                        increment
+                        newactivation
+                        setlocal2
+                        returnvoid
+               ofs0086:
+                        getlocal2
+                        iftrue ofs008f
+                        jump ofs009d
+               ofs008f:
+                        getlex QName(PrivateNamespace(null,"101"),"soundVolLoud")
+                        coerce QName(PackageNamespace("flash.media"),"SoundTransform")
+                        jump ofs00ab
+                        ifstrictne ofs009d
+               ofs009d:
+                        getlex QName(PrivateNamespace(null,"101"),"soundVol")
+                        jump ofs00a8
+                        ifeq ofs00a8
+               ofs00a8:
+                        coerce QName(PackageNamespace("flash.media"),"SoundTransform")
+               ofs00ab:
+                        setproperty QName(PackageNamespace(""),"soundTransform")
+                        jump ofs00b8
+                        checkfilter
+                        newclass 87
+                        pushwith
+                        throw
+                        setlocal0
+               ofs00b8:
+                        returnvoid
+                     end ; code
+                  end ; body
+               end ; method
+            }
+            
+            public static function playVoice(param1:*) : Number
+            {
+               trait method QName(PackageNamespace(""),"playVoice")
+                  flag FINAL
+                  dispid 5
+                  method
+                     name null
+                     param null
+                     returns QName(PackageNamespace(""),"Number")
+                     
+                     body
+                        maxstack 5
+                        localcount 3
+                        initscopedepth 3
+                        maxscopedepth 4
+                        
+                        code
+                           jump ofs000a
+                           call 8
+                           throw
+                           newclass 477
+                  ofs000a:
+                           getlocal0
+                           pushscope
+                           getlex QName(PackageNamespace(""),"SD")
+                           getproperty QName(PackageNamespace(""),"voices")
+                           iffalse ofs001a
+                           jump ofs0025
+                  ofs001a:
+                           pushbyte 0
+                           jump ofs0024
+                           ifge ofs0024
+                  ofs0024:
+                           returnvalue
+                  ofs0025:
+                           getlex QName(PrivateNamespace(null,"101"),"voiceChan")
+                           iffalse ofs003f
+                           getlex QName(PrivateNamespace(null,"101"),"voiceChan")
+                           pushfalse
+                           iffalse ofs003b
+                           pushtrue
+                           throw
+                           popscope
+                           callstatic 87, 9
+                           pushwith
+                  ofs003b:
+                           callpropvoid QName(PackageNamespace(""),"stop"), 0
+                  ofs003f:
+                           getlocal1
+                           construct 0
+                           coerce_a
+                           setlocal2
+                           findproperty QName(PrivateNamespace(null,"101"),"voiceChan")
+                           getlocal2
+                           jump ofs0052
+                           popscope
+                           setlocal3
+                           nextvalue
+                           istypelate
+                           newactivation
+                           bitxor
+                  ofs0052:
+                           callproperty Multiname("play",[PrivateNamespace(null,"101"),PackageNamespace(""),PrivateNamespace(null,"152"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("SH"),StaticProtectedNs("SH")]), 0
+                           setproperty QName(PrivateNamespace(null,"101"),"voiceChan")
+                           getlex QName(PrivateNamespace(null,"101"),"voiceChan")
+                           getlex QName(PrivateNamespace(null,"101"),"soundVolLoud")
+                           setproperty QName(PackageNamespace(""),"soundTransform")
+                           getlocal2
+                           getproperty Multiname("length",[PrivateNamespace(null,"101"),PackageNamespace(""),PrivateNamespace(null,"152"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("SH"),StaticProtectedNs("SH")])
+                           pushshort 1000
+                           divide
+                           pushfalse
+                           iffalse ofs0076
+                           returnvoid
+                           negate
+                           pushwith
+                           newfunction 74
+                           pop
+                           bitand
+                  ofs0076:
+                           returnvalue
+                        end ; code
+                     end ; body
+                  end ; method
+               }
+               
+               public static function playMusic(param1:*, param2:Boolean = false) : void
+               {
+                  trait method QName(PackageNamespace(""),"playMusic")
+                     flag FINAL
+                     dispid 6
+                     method
+                        name null
+                        flag HAS_OPTIONAL
+                        param null
+                        param QName(PackageNamespace(""),"Boolean")
+                        optional False()
+                        returns QName(PackageNamespace(""),"void")
+                        
+                        body
+                           maxstack 7
+                           localcount 3
+                           initscopedepth 3
+                           maxscopedepth 4
+                           
+                           code
+                              jump ofs000a
+                              newclass 479
+                              call 7
+                              throw
+                     ofs000a:
+                              getlocal0
+                              pushscope
+                              getlex QName(PrivateNamespace(null,"101"),"musicClass")
+                              getlocal1
+                              ifeq ofs0018
+                              jump ofs0021
+                     ofs0018:
+                              returnvoid
+                              jump ofs001d
+                     ofs001d:
+                              ifle ofs0021
+                     ofs0021:
+                              getlex QName(PrivateNamespace(null,"101"),"musicClass")
+                              iffalse ofs00b0
+                              getlex QName(PrivateNamespace(null,"101"),"fadeClass")
+                              iffalse ofs0040
+                              jump ofs0039
+                              popscope
+                              convert_d
+                              setlocal2
+                              dup
+                              setlocal1
+                              setlocal1
+                     ofs0039:
+                              getlex QName(PrivateNamespace(null,"101"),"fadeChan")
+                              callpropvoid QName(PackageNamespace(""),"stop"), 0
+                     ofs0040:
+                              getlex QName(PrivateNamespace(null,"101"),"fadeVol")
+                              getlex QName(PackageNamespace(""),"SD")
+                              getproperty QName(PackageNamespace(""),"music")
+                              not
+                              dup
+                              jump ofs0055
+                              returnvoid
+                              setlocal2
+                              typeof
+                              throw
+                              lshift
+                              setlocal1
+                     ofs0055:
+                              iffalse ofs005d
+                              jump ofs0060
+                     ofs005d:
+                              pop
+                              getlocal2
+                              convert_b
+                     ofs0060:
+                              iffalse ofs0077
+                              pushbyte 0
+                              convert_d
+                              jump ofs007b
+                              pushwith
+                              setlocal1
+                              jump ofs0071
+                     ofs0071:
+                              increment
+                              callproplex QName(PackageNamespace(""),"qmScore"), 14
+                              returnvalue
+                     ofs0077:
+                              getlex QName(PrivateNamespace(null,"101"),"maxVolume")
+                              convert_d
+                     ofs007b:
+                              setproperty QName(PackageNamespace(""),"volume")
+                              findproperty QName(PrivateNamespace(null,"101"),"fadeClass")
+                              getlex QName(PrivateNamespace(null,"101"),"musicClass")
+                              jump ofs008c
+                              ifne ofs008c
+                     ofs008c:
+                              setproperty QName(PrivateNamespace(null,"101"),"fadeClass")
+                              findproperty QName(PrivateNamespace(null,"101"),"fadeChan")
+                              jump ofs009b
+                              pushnull
+                              callpropvoid null, 15
+                              throw
+                     ofs009b:
+                              getlex QName(PrivateNamespace(null,"101"),"musicChan")
+                              setproperty QName(PrivateNamespace(null,"101"),"fadeChan")
+                              getlex QName(PrivateNamespace(null,"101"),"fadeChan")
+                              getlex QName(PrivateNamespace(null,"101"),"fadeVol")
+                              setproperty QName(PackageNamespace(""),"soundTransform")
+                              jump ofs00bc
+                              pushwith
+                              setlocal0
+                     ofs00b0:
+                              pushtrue
+                              setlocal2
+                              jump ofs00bc
+                              returnvalue
+                              instanceof
+                              equals
+                              decrement
+                              bitand
+                              lshift
+                     ofs00bc:
+                              getlex QName(PrivateNamespace(null,"101"),"musicVol")
+                              getlocal2
+                              convert_b
+                              dup
+                              iftrue ofs00ca
+                              jump ofs00dc
+                     ofs00ca:
+                              pop
+                              getlex QName(PackageNamespace(""),"SD")
+                              getproperty QName(PackageNamespace(""),"music")
+                              convert_b
+                              jump ofs00dc
+                              equals
+                              pushwith
+                              newfunction 13
+                              throw
+                              instanceof
+                     ofs00dc:
+                              iftrue ofs00e4
+                              jump ofs00ee
+                     ofs00e4:
+                              getlex QName(PrivateNamespace(null,"101"),"maxVolume")
+                              convert_d
+                              jump ofs00f9
+                              pushwith
+                              setlocal1
+                     ofs00ee:
+                              pushbyte 0
+                              jump ofs00f8
+                              ifgt ofs00f8
+                     ofs00f8:
+                              convert_d
+                     ofs00f9:
+                              setproperty QName(PackageNamespace(""),"volume")
+                              findproperty QName(PrivateNamespace(null,"101"),"musicClass")
+                              jump ofs0108
+                              popscope
+                              callsuper QName(PackageNamespace("Box2D.Collision"),"b2OBB"), 10
+                              pushwith
+                     ofs0108:
+                              getlocal1
+                              setproperty QName(PrivateNamespace(null,"101"),"musicClass")
+                              findproperty QName(PrivateNamespace(null,"101"),"musicChan")
+                              findpropstrict QName(PrivateNamespace(null,"101"),"musicClass")
+                              constructprop QName(PrivateNamespace(null,"101"),"musicClass"), 0
+                              pushbyte 0
+                              pushshort 1000
+                              callproperty Multiname("play",[PrivateNamespace(null,"101"),PackageNamespace(""),PrivateNamespace(null,"152"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("SH"),StaticProtectedNs("SH")]), 2
+                              jump ofs0129
+                              popscope
+                              callmethod 3613, 16
+                              setlocal3
+                     ofs0129:
+                              setproperty QName(PrivateNamespace(null,"101"),"musicChan")
+                              getlex QName(PrivateNamespace(null,"101"),"musicChan")
+                              getlex QName(PrivateNamespace(null,"101"),"musicVol")
+                              setproperty QName(PackageNamespace(""),"soundTransform")
+                              returnvoid
+                           end ; code
+                        end ; body
+                     end ; method
+                  }
+                  
+                  public static function EnterFrame() : void
+                  {
+                     trait method QName(PackageNamespace(""),"EnterFrame")
+                        flag FINAL
+                        dispid 7
+                        method
+                           name null
+                           returns QName(PackageNamespace(""),"void")
+                           
+                           body
+                              maxstack 6
+                              localcount 2
+                              initscopedepth 3
+                              maxscopedepth 4
+                              
+                              code
+                                 getlocal0
+                                 jump ofs000b
+                                 newfunction 3492
+                                 call 7
+                                 throw
+                        ofs000b:
+                                 pushscope
+                                 pushnan
+                                 setlocal1
+                                 findproperty QName(PrivateNamespace(null,"101"),"useLowVol")
+                                 pushfalse
+                                 jump ofs001a
+                                 ifne ofs001a
+                        ofs001a:
+                                 setproperty QName(PrivateNamespace(null,"101"),"useLowVol")
+                                 getlex QName(PrivateNamespace(null,"101"),"fadeClass")
+                                 iftrue ofs0028
+                                 jump ofs007c
+                        ofs0028:
+                                 getlex QName(PrivateNamespace(null,"101"),"fadeVol")
+                                 getproperty QName(PackageNamespace(""),"volume")
+                                 pushfalse
+                                 iffalse ofs003a
+                                 returnvoid
+                                 pushscope
+                                 pushwith
+                                 pushnull
+                                 equals
+                                 convert_d
+                                 lessequals
+                        ofs003a:
+                                 pushbyte 0
+                                 ifgt ofs0044
+                                 jump ofs006e
+                        ofs0044:
+                                 getlex QName(PrivateNamespace(null,"101"),"fadeVol")
+                                 getlex QName(PrivateNamespace(null,"101"),"fadeVol")
+                                 getproperty QName(PackageNamespace(""),"volume")
+                                 pushdouble 0.025
+                                 subtract
+                                 setproperty QName(PackageNamespace(""),"volume")
+                                 getlex QName(PrivateNamespace(null,"101"),"fadeChan")
+                                 getlex QName(PrivateNamespace(null,"101"),"fadeVol")
+                                 jump ofs0063
+                                 equals
+                                 newfunction 83
+                                 throw
+                                 negate
+                                 greaterequals
+                        ofs0063:
+                                 setproperty QName(PackageNamespace(""),"soundTransform")
+                                 jump ofs007c
+                                 ifstrictne ofs006e
+                        ofs006e:
+                                 findproperty QName(PrivateNamespace(null,"101"),"fadeClass")
+                                 pushnull
+                                 setproperty QName(PrivateNamespace(null,"101"),"fadeClass")
+                                 getlex QName(PrivateNamespace(null,"101"),"fadeChan")
+                                 callpropvoid QName(PackageNamespace(""),"stop"), 0
+                        ofs007c:
+                                 getlex QName(PrivateNamespace(null,"101"),"musicClass")
+                                 jump ofs0089
+                                 convert_s
+                                 newfunction 108
+                                 throw
+                                 dup
+                                 equals
+                        ofs0089:
+                                 iftrue ofs0091
+                                 jump ofs01f5
+                        ofs0091:
+                                 getlex QName(PackageNamespace(""),"SD")
+                                 getproperty QName(PackageNamespace(""),"music")
+                                 iffalse ofs01bb
+                                 getlex QName(PrivateNamespace(null,"101"),"maxVolume")
+                                 jump ofs00a6
+                                 ifne ofs00a6
+                        ofs00a6:
+                                 convert_d
+                                 setlocal1
+                                 getlex QName(PackageNamespace(""),"Main")
+                                 getproperty QName(PackageNamespace(""),"curClass")
+                                 jump ofs00b7
+                                 bitand
+                                 constructprop TypeName(QName(PackageNamespace("__AS3__.vec"),"Vector")<QName(PackageNamespace(""),"Number")>), 21
+                                 throw
+                        ofs00b7:
+                                 getlex QName(PackageNamespace(""),"Game")
+                                 istypelate
+                                 dup
+                                 iftrue ofs00c3
+                                 jump ofs00ca
+                        ofs00c3:
+                                 pop
+                                 getlex QName(PackageNamespace(""),"MatchSettings")
+                                 getproperty QName(PackageNamespace(""),"isCampaign")
+                        ofs00ca:
+                                 dup
+                                 iffalse ofs00e3
+                                 pop
+                                 jump ofs00da
+                                 nextvalue
+                                 nextname
+                                 divide
+                                 checkfilter
+                                 nextname
+                                 bitor
+                        ofs00da:
+                                 getlex QName(PackageNamespace(""),"MatchSettings")
+                                 getproperty QName(PackageNamespace(""),"caType")
+                                 pushbyte 0
+                                 equals
+                        ofs00e3:
+                                 coerce_a
+                                 convert_b
+                                 dup
+                                 iftrue ofs00ee
+                                 jump ofs010f
+                        ofs00ee:
+                                 pop
+                                 jump ofs00f9
+                                 checkfilter
+                                 pushwith
+                                 newfunction 79
+                                 throw
+                                 pushwith
+                        ofs00f9:
+                                 getlex QName(PackageNamespace(""),"Main")
+                                 getproperty QName(PackageNamespace(""),"curClass")
+                                 getproperty Multiname("hud",[PrivateNamespace(null,"101"),PackageNamespace(""),PrivateNamespace(null,"152"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("SH"),StaticProtectedNs("SH")])
+                                 getproperty Multiname("msgTimer",[PrivateNamespace(null,"101"),PackageNamespace(""),PrivateNamespace(null,"152"),PackageInternalNs(""),Namespace("http://adobe.com/AS3/2006/builtin"),ProtectedNamespace("SH"),StaticProtectedNs("SH")])
+                                 coerce_a
+                                 jump ofs010e
+                                 ifeq ofs010e
+                        ofs010e:
+                                 convert_b
+                        ofs010f:
+                                 dup
+                                 iftrue ofs0118
+                                 jump ofs012a
+                        ofs0118:
+                                 pop
+                                 jump ofs0123
+                                 popscope
+                                 constructprop QName(PackageNamespace(""),"getSideFacing"), 16
+                                 setlocal0
+                        ofs0123:
+                                 getlex QName(PackageNamespace(""),"SD")
+                                 getproperty QName(PackageNamespace(""),"voices")
+                                 convert_b
+                        ofs012a:
+                                 iftrue ofs0132
+                                 jump ofs0139
+                        ofs0132:
+                                 findproperty QName(PrivateNamespace(null,"101"),"useLowVol")
+                                 pushtrue
+                                 setproperty QName(PrivateNamespace(null,"101"),"useLowVol")
+                        ofs0139:
+                                 getlex QName(PrivateNamespace(null,"101"),"useLowVol")
+                                 iffalse ofs014e
+                                 jump ofs014a
+                                 decrement
+                                 newobject 95
+                                 pushwith
+                                 add
+                                 coerce_s
+                        ofs014a:
+                                 pushdouble 0.4
+                                 convert_d
+                                 setlocal1
+                        ofs014e:
+                                 getlex QName(PrivateNamespace(null,"101"),"musicVol")
+                                 getproperty QName(PackageNamespace(""),"volume")
+                                 getlocal1
+                                 pushdouble 0.05
+                                 jump ofs0160
+                                 popscope
+                                 constructprop QName(PackageNamespace("flash.utils"),"ByteArray"), 7
+                                 pushwith
+                        ofs0160:
+                                 add
+                                 iflt ofs0169
+                                 jump ofs018a
+                        ofs0169:
+                                 getlex QName(PrivateNamespace(null,"101"),"musicVol")
+                                 getlex QName(PrivateNamespace(null,"101"),"musicVol")
+                                 getproperty QName(PackageNamespace(""),"volume")
+                                 jump ofs017a
+                                 ifne ofs017a
+                        ofs017a:
+                                 pushdouble 0.05
+                                 add
+                                 jump ofs0187
+                                 popscope
+                                 pushwith
+                                 newfunction 59
+                                 throw
+                                 setlocal1
+                        ofs0187:
+                                 setproperty QName(PackageNamespace(""),"volume")
+                        ofs018a:
+                                 getlex QName(PrivateNamespace(null,"101"),"musicVol")
+                                 getproperty QName(PackageNamespace(""),"volume")
+                                 getlocal1
+                                 pushdouble 0.025
+                                 subtract
+                                 jump ofs019e
+                                 popscope
+                                 newfunction 4
+                                 pushwith
+                                 coerce_s
+                                 divide
+                        ofs019e:
+                                 ifgt ofs01a6
+                                 jump ofs01b5
+                        ofs01a6:
+                                 getlex QName(PrivateNamespace(null,"101"),"musicVol")
+                                 getlex QName(PrivateNamespace(null,"101"),"musicVol")
+                                 getproperty QName(PackageNamespace(""),"volume")
+                                 pushdouble 0.025
+                                 subtract
+                                 setproperty QName(PackageNamespace(""),"volume")
+                        ofs01b5:
+                                 jump ofs01f5
+                                 pushwith
+                                 setlocal3
+                        ofs01bb:
+                                 getlex QName(PrivateNamespace(null,"101"),"musicVol")
+                                 getproperty QName(PackageNamespace(""),"volume")
+                                 jump ofs01ca
+                                 popscope
+                                 callsupervoid QName(PackageNamespace("Box2D.Collision.Shapes"),"b2Shape"), 9
+                                 pushwith
+                        ofs01ca:
+                                 pushbyte 0
+                                 ifgt ofs01d4
+                                 jump ofs01f5
+                        ofs01d4:
+                                 getlex QName(PrivateNamespace(null,"101"),"musicVol")
+                                 getlex QName(PrivateNamespace(null,"101"),"musicVol")
+                                 getproperty QName(PackageNamespace(""),"volume")
+                                 jump ofs01e5
+                                 ifle ofs01e5
+                        ofs01e5:
+                                 pushdouble 0.025
+                                 subtract
+                                 jump ofs01f2
+                                 popscope
+                                 pushwith
+                                 newfunction 6
+                                 pop
+                                 divide
+                        ofs01f2:
+                                 setproperty QName(PackageNamespace(""),"volume")
+                        ofs01f5:
+                                 getlex QName(PrivateNamespace(null,"101"),"musicChan")
+                                 iftrue ofs0200
+                                 jump ofs0209
+                        ofs0200:
+                                 getlex QName(PrivateNamespace(null,"101"),"musicChan")
+                                 getlex QName(PrivateNamespace(null,"101"),"musicVol")
+                                 setproperty QName(PackageNamespace(""),"soundTransform")
+                        ofs0209:
+                                 returnvoid
+                              end ; code
+                           end ; body
+                        end ; method
+                     }
+                     
+                     public static function updateMusicVolume() : void
+                     {
+                        trait method QName(PackageNamespace(""),"updateMusicVolume")
+                           flag FINAL
+                           dispid 8
+                           method
+                              name null
+                              returns QName(PackageNamespace(""),"void")
+                              
+                              body
+                                 maxstack 5
+                                 localcount 1
+                                 initscopedepth 3
+                                 maxscopedepth 4
+                                 
+                                 code
+                                    getlocal0
+                                    pushscope
+                                    jump ofs000d
+                                    call 7
+                                    throw
+                                    callmethod 3491, 7
+                           ofs000d:
+                                    getlex QName(PackageNamespace(""),"SD")
+                                    getproperty QName(PackageNamespace(""),"music")
+                                    iftrue ofs001b
+                                    jump ofs0045
+                           ofs001b:
+                                    getlex QName(PrivateNamespace(null,"101"),"fadeVol")
+                                    pushbyte 0
+                                    jump ofs0028
+                                    ifstricteq ofs0028
+                           ofs0028:
+                                    setproperty QName(PackageNamespace(""),"volume")
+                                    jump ofs0035
+                                    popscope
+                                    dup
+                                    convert_s
+                                    setlocal2
+                                    returnvoid
+                                    add
+                           ofs0035:
+                                    getlex QName(PrivateNamespace(null,"101"),"musicVol")
+                                    pushbyte 0
+                                    setproperty QName(PackageNamespace(""),"volume")
+                                    jump ofs0060
+                                    iflt ofs0045
+                           ofs0045:
+                                    getlex QName(PrivateNamespace(null,"101"),"fadeVol")
+                                    pushbyte 0
+                                    setproperty QName(PackageNamespace(""),"volume")
+                                    jump ofs0057
+                                    returnvoid
+                                    newfunction 19
+                                    throw
+                                    bitor
+                                    setlocal2
+                           ofs0057:
+                                    getlex QName(PrivateNamespace(null,"101"),"musicVol")
+                                    getlex QName(PrivateNamespace(null,"101"),"maxVolume")
+                                    setproperty QName(PackageNamespace(""),"volume")
+                           ofs0060:
+                                    returnvoid
+                                 end ; code
+                              end ; body
+                           end ; method
+                        }
+                     }
+                  }
