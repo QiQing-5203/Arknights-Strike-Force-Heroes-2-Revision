@@ -3,8 +3,8 @@
 
 > **铳响涤薪，弹火纷鸣**
 
-[![GitHub release (latest by date)](https://img.shields.io/github/v/release/您的用户名/您的仓库名)](https://github.com/QiQing-5203/Arknights-Strike-Force-Heroes-2-Revision/releases)
-[![GitHub issues](https://img.shields.io/github/issues/您的用户名/您的仓库名)](https://github.com/QiQing-5203/Arknights-Strike-Force-Heroes-2-Revision/issues)
+[![GitHub release (latest by date)](https://img.shields.io/github/v/release/QiQing-5203/Arknights-Strike-Force-Heroes-2-Revision)](https://github.com/QiQing-5203/Arknights-Strike-Force-Heroes-2-Revision/releases)
+[![GitHub issues](https://img.shields.io/github/issues/QiQing-5203/Arknights-Strike-Force-Heroes-2-Revision)](https://github.com/QiQing-5203/Arknights-Strike-Force-Heroes-2-Revision/issues)
 
 **一场连接泰拉与星海的if线巨构……**
 
