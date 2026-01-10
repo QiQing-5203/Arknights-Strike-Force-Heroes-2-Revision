@@ -1,4 +1,4 @@
-# Arknights-Strike-Force-Heroes-2-Revision
+# Arknights：Strike Force Heroes 2 Revision
 # 《明日方舟：战火英雄 2》改版
 
 > **——“铳响涤薪，弹火纷鸣”**
