@@ -59,7 +59,7 @@
 
 ## 关联项目
 
-Arknights：SFH2·莱茵生命：DLC“绝密预案”：
+[Arknights：SFH2·莱茵生命：DLC“绝密预案”](https://github.com/QiQing-5203/Arknights-Strike-Force-Heroes-2-Rhine-Lab-LLC.DLC)
 
 ### 致谢
 感谢所有让这个项目成为可能的贡献者，没有他们的付出，就不会有今天鲜活的泰拉大陆：
